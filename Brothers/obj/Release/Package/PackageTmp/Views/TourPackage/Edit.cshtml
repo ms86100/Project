@@ -1,0 +1,78 @@
+﻿@model Brothers.Entities.ViewModels.MstTourPackageManageModel
+@{
+    ViewBag.Title = "Tour Package Management";
+    ViewBag.ViewHeader = "Edit Tour Package Details";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("edit", "tourpackage", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="col-md-12 col-lg-12">
+        <div class="col-md-10 col-lg-10">
+            <div class="form-horizontal">
+                @Html.HiddenFor(m=>m.MstTourPackage.PackageID)
+                @Html.ValidationSummary(true)
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MstTourPackage.PackageName, new { @class = "control-label col-md-4" })
+                    <div class="col-md-7">
+                        @Html.TextBoxFor(model => model.MstTourPackage.PackageName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.MstTourPackage.PackageName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MstTourPackage.PickupPoint, new { @class = "control-label col-md-4" })
+                    <div class="col-md-7">
+                        @Html.TextBoxFor(model => model.MstTourPackage.PickupPoint, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.MstTourPackage.PickupPoint, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MstTourPackage.DropPoint, new { @class = "control-label col-md-4" })
+                    <div class="col-md-7">
+                        @Html.TextBoxFor(model => model.MstTourPackage.DropPoint, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.MstTourPackage.DropPoint, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MstTourPackage.TotalDays, new { @class = "control-label col-md-4" })
+                    <div class="col-md-7">
+                        @Html.TextBoxFor(model => model.MstTourPackage.TotalDays, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.MstTourPackage.TotalDays, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MstTourPackage.Price, new { @class = "control-label col-md-4" })
+                    <div class="col-md-7">
+                        @Html.TextBoxFor(model => model.MstTourPackage.Price, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.MstTourPackage.Price, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MstTourPackage.PackageTypeID, new { @class = "control-label col-md-4" })
+                    <div class="col-md-7">
+                        @Html.DropDownListFor(c => c.MstTourPackage.PackageTypeID, new SelectList(Model.MstPackageDropDown, "PackageTypeID", "PackageTypeName"), "--- Select Package Type ---", new { @class = "form-control ddl-select2" })
+                        @Html.ValidationMessageFor(model => model.MstTourPackage.PackageTypeID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MstTourPackage.PackageRemarks, new { @class = "control-label col-md-4" })
+                    <div class="col-md-7">
+                        @Html.TextAreaFor(model => model.MstTourPackage.PackageRemarks, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.MstTourPackage.PackageRemarks, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="well well-sm col-md-12 col-lg-12 text-right">
+        @Html.ActionLink("Back to List", "List", null, new { @class = "btn btn-default" })
+        <input type="submit" value="Next >>" class="btn btn-primary" />
+        <div class="clearfix"></div>
+    </div>
+}
+<script>
+    $('.ddl-select2').select2({ width: "100%" });
+</script>

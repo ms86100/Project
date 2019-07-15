@@ -1,0 +1,40 @@
+﻿using Brothers.Entities.DataAccess;
+using Brothers.Entities.ViewModels;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace Brothers.Controllers
+{
+    [Authorize(Roles="Admin,User")]
+    public class EnquiryController : Controller
+    {
+        // GET: Enquiry
+        public dalGenEnquiry db = new dalGenEnquiry();
+        public ActionResult List(int PageNo = 1, int PageSize = 10)
+        {
+            MstEnquiryViewModel obj = new MstEnquiryViewModel();
+            int TotalRow;
+            obj.MstEnquiryList = db.GetEnquiryPaged(PageNo, PageSize, out TotalRow);
+            obj.PagingInfo = new PagingInfo { CurrentPage = PageNo, ItemsPerPage = PageSize, TotalItems = TotalRow };
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("_pvEnquiryList", obj);
+            }
+            return View(obj);
+        }
+
+        public ActionResult View(long id)
+        {
+            var model = db.GetEnquiryByID(id);
+            return PartialView("_pvEnquiryDetails", model);
+        }
+        public ActionResult Reply(long id)
+        {
+            var model = db.GetEnquiryByID(id);
+            return View(model);
+        }
+    }
+}

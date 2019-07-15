@@ -1,0 +1,240 @@
+﻿@model Brothers.Entities.ViewModels.BlogViewModel
+
+@{
+    ViewBag.Title = "Recent";
+    Layout = "~/Views/Shared/_MountPandim.cshtml";
+}
+
+@section metatags
+{
+    <title>@Model.utblBlogs.BlogTitle!</title>
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="@Model.utblBlogs.BlogTitle!" />
+    <meta property="og:description" content="@Model.utblBlogs.BlogDescription." />
+    <meta property="og:url" content="http://pandim.tagalong.travel/Article/Recent/?BlogID=@Model.utblBlogs.BlogID" />
+    <meta property="og:site_name" content="Mount Pandim Tours & Travel" />
+    <meta property="og:type" content="article" />
+    <meta itemprop="image" content="http://pandim.tagalong.travel/UploadedFiles/Blogs/@Model.utblBlogs.BlogID@Model.utblBlogs.BlogFile" />
+    <meta property="fb:app_id" content="213741912058651" />
+    <meta property="og:image:secure_url" content="http://pandim.tagalong.travel/UploadedFiles/Blogs/@Model.utblBlogs.BlogID@Model.utblBlogs.BlogFile" />
+    <meta itemprop="image" content="http://pandim.tagalong.travel/UploadedFiles/Blogs/@Model.utblBlogs.BlogID@Model.utblBlogs.BlogFile" />
+
+}
+
+<div class="main-cont">
+
+    <div class="inner-page">
+        <div class="inner-breadcrumbs">
+            <div class="content-wrapper">
+                <div class="page-title">Blog</div>
+                
+                <div class="clear"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="blog-page">
+        <div class="content-wrapper">
+
+            <div class="blog-sidebar">
+                <div class="blog-sidebar-l">
+                    <div class="blog-sidebar-lb">
+                        <div class="blog-sidebar-p">
+
+                            <div class="blog-row">
+                                <!-- // -->
+                                <div class="blog-post single-post">
+                                    <div class="blog-post-i">
+                                        <div class="blog-post-l">
+                                            <div class="blog-post-date">
+                                                <b>@Model.utblBlogs.BlogCreatedOn.ToString("dd")</b>
+                                                <span>@Model.utblBlogs.BlogCreatedOn.ToString("MMMM , yyyy")</span>
+                                            </div>
+
+                                        </div>
+                                        <div class="blog-post-c">
+                                            <div class="blog-post-cb">
+                                                <div class="blog-post-p">
+                                                    <div class="blog-post-title"><a href="#">@Model.utblBlogs.BlogTitle</a></div>
+                                                    <div class="blog-post-preview">
+                                                        <div class="blog-post-img">
+                                                            <a href="#"><img alt="" src="~/UploadedFiles/Blogs/@Model.utblBlogs.BlogID@Model.utblBlogs.BlogFile"></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="blog-post-txt">
+                                                        <p>@Html.Raw(System.Web.HttpUtility.HtmlDecode(@Model.utblBlogs.BlogContent))</p>
+                                                    </div>
+                                                    <div class="post-comment">
+                                                        <div class="blog-comments-lbl">POST A COMMENT</div>
+                                                        <div class="fb-comments" data-href="http://pandim.tagalong.travel/Article/Recent" data-numposts="15"></div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <!-- \\ -->
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <br class="clear" />
+                </div>
+            </div>
+            <div class="blog-sidebar-r">
+                <!-- // widget // -->
+                <div class="blog-widget search-widget">
+                    @{Html.RenderAction("Enquiry", "Article");}
+                </div>
+                <!-- \\ widget \\ -->
+                <!-- // widget // -->
+                <div class="blog-widget text-widget">
+                    <h2>text widget</h2>
+                    <p>Perspiciatis unde omnis iste natus doxes sit voluptatem accusantium doloremque la dantiumeaque ipsa.</p>
+                </div>
+                <!-- \\ widget \\ -->
+                <!-- // widget // -->
+                <div class="blog-widget recent-widget">
+                    <h2>SHARE POST</h2>
+                    <nav>
+                        <ul>
+                            <li style="margin-bottom: 10px;">
+                                <fb:share-button class="fb-share" href="http://pandim.tagalong.travel/Article/Recent/?BlogID=@Model.utblBlogs.BlogID" type="button_count">
+
+                                </fb:share-button>
+                            </li>
+                            <li style="margin-bottom: 10px;">
+                                <a data-related="MountPandim" href="http://pandim.tagalong.travel/Article/Recent/?BlogID=@Model.utblBlogs.BlogID" class="twitter-share twitter-share-button sh-twitter"><i class="icon-twitter"></i></a>
+                            </li>
+                            <li style="margin-bottom: 10px;"><a href="http://pinterest.com/pin/create/button/?url=http://pandim.tagalong.travel/Article/Recent/?BlogID=@Model.utblBlogs.BlogID/&media=http://pandim.tagalong.travel/UploadedFiles/Blogs/@Model.utblBlogs.BlogID@Model.utblBlogs.BlogFile&description=@Model.utblBlogs.BlogDescription" class="pin-it-button sh-pinterest" data-pin-do="buttonPin" title="Pin It"><i class="icon-pinterest"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+               
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+</div>
+
+
+
+@section Scripts {
+
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12&appId=400646813722499&autoLogAppEvents=1';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('form').submit(function () {
+                if (isValidEmailAddress($("#Email").val())) {
+                    $("#ajaxLoading").css("display", "block");
+                    $("#ajaxLoading").css("top", $(window).height() / 1.8);
+                    $("#ajaxLoading").css("left", $(window).width() / 2);
+                    $("#ajaxLoading").css("position", "fixed");
+                    $("#ajax-backdrop").css("display", "block");
+                    var serializedForm = $(this).serialize();
+                    $.ajax({
+                        url: '@Url.Action("Enquiry")',
+                        type: "POST",
+                        data: serializedForm,
+
+                        success: function (result) {
+                            $("#ajaxLoading").css("display", "none");
+                            $("#ajax-backdrop").css("display", "none");
+                            $('#ErrorView').text(result).show();
+
+                        },
+                        error: function (result) {
+
+                            $('#ErrorView').text(result).show();
+                            //$('#Error').text(result.Email);
+                        }
+
+                    });
+
+                }
+                else {
+                    $("#ErrorView").text("Invalid Email Address!").show().fadeOut("slow");
+                }
+
+                return false;
+            });
+        });
+
+        function isValidEmailAddress(emailAddress) {
+            var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+            return pattern.test(emailAddress);
+        }
+       
+
+    </script>
+
+    <script>
+        var pl_lc_force_back = 0;
+        var pl_lc_page_type = 'single';
+        var pl_lc_redirect = '/';
+        var pl_lc_owner_hide = null		</script>
+
+    <!-- Facebook -->
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, "script", "facebook-jssdk"));
+    </script>
+
+    <!-- Twitter JS -->
+    <script>
+        !function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (!d.getElementById(id)) {
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }
+        }(document, "script", "twitter-wjs");
+    </script>
+
+    <!-- LinkedIn JS -->
+    <script type="text/javascript" src="//platform.linkedin.com/in.js" async=""></script>
+
+    <!-- Pinterest -->
+    <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js" async=""></script>
+
+    <!-- Google+ -->
+    <script type="text/javascript">
+        (function () {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>
+
+    
+}
+
+<style>
+    img{
+            max-height: 430px !important;
+    max-width: 630px !important;
+    }
+</style>

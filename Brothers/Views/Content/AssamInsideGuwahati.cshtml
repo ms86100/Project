@@ -1,0 +1,170 @@
+﻿
+@{
+    ViewBag.Title = "AssamInsideGuwahati";
+    Layout = "~/Views/Shared/AssamLayout.cshtml";
+}
+
+<div class="well subheading-well">
+    <b class="subheading">Inside Guwahati</b>
+</div>
+<div class="col-md-12">
+    <p>
+        To Spend A Wonderful Vacation In The Wilderness, Hearing The Chirping Of Birds, Listening To The Whispers Of Guwahati Is The Largest City Of Assam And One Of The Fastest Growing Cities In India. The Ancient Cities Of Pragjyotishpura And Durjaya Were The Capitals Of The Ancient State Of Kamarupa Under The Varman And Pala Dynasties.
+    </p>
+      <div class="row">
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Assam/Kamakhya-Temple-Assam.jpg" alt="Kamakhya_Temple" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Kamakhya_Temple" />
+                </div>
+            </div>
+            <h5>Kamakhya Temple</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Assam/Regional_Science_Centre_Guwahati.jpg" alt="Regional_Science_Centre_Guwahati" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Regional_Science_Centre_Guwahati" />
+                </div>
+            </div>
+            <h5>Regional Science Centre Guwahati</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Assam/Shiva-Dol-Sivasagar.jpg" alt="Shiva-Dol-Sivasagar" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Shiva-Dol-Sivasagar" />
+                </div>
+            </div>
+            <h5>Shiva Temple</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Assam/Vashistha_Ashram_Assam.jpg" alt="Vashistha_Ashram_Assam" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Vashistha_Ashram_Assam" />
+                </div>
+            </div>
+            <h5>Vashistha Ashram</h5>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Assam/Nehru_Park.jpg" alt="Nehru_Park" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Nehru_Park" />
+                </div>
+            </div>
+            <h5>Nehru Park</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Assam/Nepali-Mandir-Assam.jpg" alt="Nepali-Mandir-Assam" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Nepali-Mandir-Assam" />
+                </div>
+            </div>
+            <h5>Nepali Mandir </h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Assam/Umananda-Temple.jpg" alt="Umananda-Temple" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Umananda-Temple" />
+                </div>
+            </div>
+            <h5>Umananda Temple</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Assam/Brahmaputra-River-Side.jpg" alt="Brahmaputra-River-Side" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Brahmaputra-River-Side" />
+                </div>
+            </div>
+            <h5>Brahmaputra River Side</h5>
+        </div>
+    </div>
+
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "Kamakhya_Temple") {
+            $('#myPicLabel').text('Kamakhya Temple')
+            $('#pic-path').attr('src', '/Content/img/Assam/Kamakhya-Temple-Assam.jpg');
+            $('#pic-details').html("<p>This Temple Is One Of The Most Famous Tourist Attractions In Guwahati. Travelers From Different Parts Of India Come To Visit This Temple. Specially During Manasha Puja And Ambubachi, This Holy Place Is Thronged By Devotees. It Is Located On The Nilachal Hill And It Is At A Distance Of About 10 Km From The Railway Station Of Guwahati. Naranarayan, One Of The Koch Kings Built The Temple Of Kamakhya In 10th Century B.C. This Temple Is Famous For Shakti Worship Or Tantrism. Very Near To This Temple, Bhubaneswari Temple Is Located. It Is Also A Holy Place And Visited By Many Tourists.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Regional_Science_Centre_Guwahati") {
+            $('#myPicLabel').text('Regional Science Centre Guwahati')
+            $('#pic-path').attr('src', '/Content/img/Assam/Regional_Science_Centre_Guwahati.jpg');
+            $('#pic-details').html("<p>Out Of India's 27 Science Centers Administered By The Government Of India's National Council Of Science Museums, The Regional Science Center Of Guwahati Is One. A Popular Place For Students In Guwahati, The Science Center Is A Must Visit For The Visitors Travelling With Kids. There Are A Number Of Exhibitions, Science Shows, Camps And Seminars That Is Held In The Museum. <br/>The Science Center Has Preserved A Number Of Important And Rare Instruments, Machinery And Documents That Can Help Understand Science To The Students. It Is A Very Popular Place In The City That Welcomes A Number Of Visitors Every Year.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Shiva-Dol-Sivasagar") {
+            $('#myPicLabel').text('Shiva Temple')
+            $('#pic-path').attr('src', '/Content/img/Assam/Shiva-Dol-Sivasagar.jpg');
+            $('#pic-details').html("<p>This Temple Is Situated On An Island Of Brahmaputra River. One Has To Climb The Steep Steps To Reach The Temple. Tourists Can Visit This Temple By Taking A Ferry Or Motor Boat From The Umananda Ghat. A Serene Religious Ambiance Prevails In The Temple Premise. The Short Trip To The Shiva Temple In A Motor Boat Or Ferry On River Brahmaputra Is Really A Thrilling Experience For Tourists.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Vashistha_Ashram_Assam") {
+            $('#myPicLabel').text('vashistha Ashram')
+            $('#pic-path').attr('src', '/Content/img/Assam/Vashistha_Ashram_Assam.jpg');
+            $('#pic-details').html("<p>This Popular Ashram Is Located At A Distance Of 12 Km From The Railway Station In Guwahati. This Ashram Is Considered To Be The Abode Of The Vashistha A Sage Of Ancient Times. He Is Considered To Be The Author Of The Great Hindu Epic Ramayana. The Lush Greenery Around The Ashram Pleases The Eye. The Ashram Is Situated Near A Lovely Waterfall Which Makes The Spot More Attractive To Visitors.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Nehru_Park") {
+            $('#myPicLabel').text('Nehru Park')
+            $('#pic-path').attr('src', '/Content/img/Assam/Nehru_Park.jpg');
+            $('#pic-details').html("<p>The Nehru Park, Situated Right Opposite The Famous Cotton College In Guwahati, Is A Very Popular Tourist Attraction In The City. Named After The First Prime Minister Of India Jawaharlal Nehru, This Beautiful Park Is Open For All. The Area Where The Park Is Located Is An Age Old Institutional Area Of The City With A Number Of Reputed Colleges Located Nearby. Right Opposite To The Park Is The Age Old Cotton College, Built By The British Back In The Days. <br/>There Are Various Attractions In The Park. Besides The Numerous Trees That Offers A Pristine And Verdant Environment In The Park, There Are Around 45 Concrete Statutes. The Statues Depict The Various Dance Forms Of The State Including Bihu, Jhumur Dance (Dance Of The Tea Tribes Of Assam), Deodhani Nritya, Ojapali Dance And Bor Taal Dance Etc. There Is Also A Rock Garden And A, Open Air Theater. </p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Nepali-Mandir-Assam") {
+            $('#myPicLabel').text('Nepali Mandir Assam')
+            $('#pic-path').attr('src', '/Content/img/Assam/Nepali-Mandir-Assam.jpg');
+            $('#pic-details').html("<p>This Plot Of Land Was Allotted To Nepali Speaking People By The British Authority To Build Temple In The Year 1926. The Gorkha Community Then Constructed A Radha Krishna Temple There In The Year 1932.The Radha Krishna Nepali Mandir Was Renovated In The Year 1996 Under The Leadership Of Then President Of Nepali Mandir Prabandhak Samity, Sri Ram Prasad Sarmah.<br/>The New Structure Has Ground Floor And 1st Floor, A Hall Is There, Where Different Religious And Social Activities Takes Place. The Main Temple Premises Situated In The 1st Floor Has Three Different Mandirs. The Main Temple Has Radha Krishna Idol. In Its Left Shiv Mandir With Shiv Lingain It.<br/>On The Right Side Of Radha Krishna Mandir Is Hanuman Mandir With Lord Hanuman`S Idol In It.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Umananda-Temple") {
+            $('#myPicLabel').text('Umananda Temple')
+            $('#pic-path').attr('src', '/Content/img/Assam/Umananda-Temple.jpg');
+            $('#pic-details').html("<p>Umananda Devaloi Is A Shiva Temple Located At The Peacock Island In The Middle Of River Brahmaputra Just Opposite The Office Of The Deputy Commissioner Of Kamrup Or The Kachari Ghat In Guwahati. It Was Built By The Ahom King Gadadhar Singh (1681–1696), Who Was A Devout Shaivaite.<br/>It Is Known As Smallest Inhabited Riverine Island In The World. Country Boats That Are Available On The Bank Of Brahmaputra Take The Visitors To The Island. The Mountain On Which The Temple Has Been Built Is Known As Bhasmacala.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Brahmaputra-River-Side") {
+            $('#myPicLabel').text('Brahmaputra River Side')
+            $('#pic-path').attr('src', '/Content/img/Assam/Brahmaputra-River-Side.jpg');
+            $('#pic-details').html("<p>Brahmaputra River Side Has A Spectacular View. In The Month Of April A Vibrant Beach Festival Takes Place Here. On Other Days You Can Just Choose To Spend Hours Enjoying The Cool Breeze On The River Banks Or Take A Serene Boat/Ferry Ride In The Vast River And Catch A Sight Of The River Dolphins Playing In The Water.</p>");
+            $('#myModal').modal('show');
+        }
+    });
+
+</script>

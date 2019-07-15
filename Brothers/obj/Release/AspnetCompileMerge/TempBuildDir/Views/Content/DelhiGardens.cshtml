@@ -1,0 +1,125 @@
+﻿@{
+    ViewBag.Title = "DelhiGardens";
+    Layout = "~/Views/Shared/GoldenTriangleLayout.cshtml";
+}
+
+<div class="well subheading-well">
+    <b class="subheading">Gardens</b>
+</div>
+<div class="col-md-12">
+    <p>
+        The Actual Beauty Of The Capital City Lies In The Empyrean Aura Of Its Gardens. Delhi Has No Dearth Of Some Of The Most Magnificent Parks That Beautify Its Vast Expanse. Parks Are An Integral Part Of The City’s Residential Life. The Government Leaves No Stone Unturned In Maintaining Lush Green Parks In Every Locality. These Parks Are The Best Way To Relax Your Mind Amidst The Hustle - Bustle Of City Life.
+    </p>
+    <p>
+        Though There Are Ample Gardens In Delhi, There Are Some Which Stand Out. These Are The Parks Which Have Nested In Delhi For Years Now And Have Been Popular Amongst All. So, Here Is A List Of Five Most Popular Gardens Of Delhi Which Not Only Are A Treat For The Eyes But Are Also A Good Source Of Peace And Relaxation.
+    </p>
+</div>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Delhi/Gardens/lodhi-gardens.jpg" alt="lodhi-gardens" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="lodhigardens" />
+            </div>
+        </div>
+        <h5>Lodhi Garden</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Delhi/Gardens/garden-of-five-senses.jpg" alt="garden-of-five-senses" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="gardenoffivesenses" />
+            </div>
+        </div>
+        <h5>Garden Of Five Senses </h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Delhi/Gardens/japanese-park.jpg" alt="japanese-park" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="japanesepark" />
+            </div>
+        </div>
+        <h5>Japanese Park</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Delhi/Gardens/Deer-Park.jpg" alt="Deer-Park" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="DeerPark" />
+            </div>
+        </div>
+        <h5>Deer Park</h5>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Delhi/Gardens/Nehru-Park.jpg" alt="Nehru-Park" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="NehruPark" />
+            </div>
+        </div>
+        <h5>Nehru Park</h5>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "lodhigardens") {
+            $('#myPicLabel').text('Lodhi Garden')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Delhi/Gardens/lodhi-gardens.jpg');
+            $('#pic-details').html("<p>Located Near The Safdarjung Tomb, It Is The Most Popular Garden Of Delhi. The Mornings And Evenings Bring In A Huge Crowd Of Regular Joggers, For Whom This Place Is Their Second Home. The Lodhi Garden Has Big Lawns With Ample Greenery, Along With Tombs Of Two Emperors Called Sayyid And Lodi Emperor.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "gardenoffivesenses") {
+            $('#myPicLabel').text('Garden Of Five Senses ')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Delhi/Gardens/garden-of-five-senses.jpg');
+            $('#pic-details').html("<p>Located Near The Mehrauli-Badarpur Road, This Garden Sprawls Across An Area Of 20 Acres. Abiding By Its Name, This Place Most Amazingly Stimulates Our Five Senses With Its Celestial Beauty And Several Other Attractions. It Has Gained Much Popularity Over The Past Few Years All Because Of Its Fine Dining Facilities.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "japanesepark") {
+            $('#myPicLabel').text('Japanese Park')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Delhi/Gardens/japanese-park.jpg');
+            $('#pic-details').html("<p>Located In The Rohini Area Of North-West Delhi, It Is One Of The Biggest Gardens In Delhi. This Park Alone Houses Five Lakes Within Its Boundary. The Japanese Park Is One Of The Most Sought-After Picnic Locations In Delhi. Boating Facilities Are Also Available Here. Lush Greenery Covers The Vast Area Of This Park.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "DeerPark") {
+            $('#myPicLabel').text('Deer Park')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Delhi/Gardens/Deer-Park.jpg');
+            $('#pic-details').html('<p>This Park Is Located In One Of The Most Posh Areas Of The Hauz Khas Village. The Uniqueness Of This Garden Lies In The Fact That It’s More Like An Urban Jungle Than A Park. The Atmosphere Here Is Extremely Quiet And Serene. The Deer Park Boasts A Mughal Feel That Comes Because Of Its Location Right Next To The Hauz Khas Fort. With Enough Luck, You Could Even Spot A Few Deer Here.</p>');
+            $('#myModal').modal('show');
+        }
+        else if (alt == "NehruPark") {
+            $('#myPicLabel').text('Nehru Park')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Delhi/Gardens/Nehru-Park.jpg');
+            $('#pic-details').html("<p>The Nehru Park Is Situated On The Panchsheel Road, Close To The Chanakyapuri Diplomatic Enclave. As Can Be Noticed, It Is Named After Pt. Jawahar Lal Nehru, The First Prime Minister Of India. Famous Here Is Not Only Its Picturesque Beauty But The Number Of Musical Concerts And Art Events That Are Held At This Park. This Park Is A Must-See For The Delhites.</p>");
+            $('#myModal').modal('show');
+        }
+    });
+
+</script>
+

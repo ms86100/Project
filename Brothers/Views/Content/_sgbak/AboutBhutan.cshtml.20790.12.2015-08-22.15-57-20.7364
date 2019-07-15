@@ -1,0 +1,92 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="home-area">
+    <div class="container">
+        @Html.Partial("~/Views/Shared/_pvBhutan.cshtml")
+        <div class="row hidden-xs" style="display:block; padding-top:15px">
+            <div class="col-md-12">
+                <div class="col-md-4 col-sm-4 img-adjust">
+                    <img src="~/Content/img/pdzbhu.jpg" class="resp-img" />
+                </div>
+                <div class="col-md-4 col-sm-4 img-adjust">
+                    <img src="~/Content/img/cchbhu.jpg" class="resp-img" />
+                </div>
+                <div class="col-md-4 col-sm-4 img-adjust">
+                    <img src="~/Content/img/rdzbhu.jpg" class="resp-img" />
+                </div>
+            </div>
+        </div>
+        <div class="row" style="padding-top:20px">
+            <div class="col-md-10 col-sm-9">
+                <p>
+                    Bhutan officially the Kingdom of Bhutan, is a landlocked country in South Asia at the eastern end of the Himalayas. It is bordered to the north by China and to the south, east and west by India. To the west, it is separated from Nepal by the Indian state of Sikkim, while farther south it is separated from Bangladesh by the Indian states of Assam and West Bengal. Bhutan's capital and largest city is Thimphu.
+                </p>
+            </div>
+            <div class="col-md-2 col-sm-3" style="padding-top:20px;padding-bottom:20px">
+                <a href="@Url.Action("bhutantravelinfo","content")" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-plane">&nbsp;</span>Travel Guide</a>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-md-12">
+                <table class="table">
+                    <tr>
+                        <th>Area</th>
+                        <th>Forest Area</th>
+                        <th>Altitude</th>
+                        <th>Population</th>
+                        <th>Currency</th>
+                    </tr>
+                    <tr>
+                        <td>38,394 sq kms</td>
+                        <td>72.5%</td>
+                        <td>240-7541 m above sea-level</td>
+                        <td>Approximately 750,000</td>
+                        <td>Ngultrum</td>
+                    </tr>
+                </table>
+                <hr />
+                <h3><i class="glyphicon glyphicon-share-alt text-info"></i>&nbsp;Language</h3>
+                <p>
+                    The official language is 'Dzongkha', the native language of the Ngalops of western Bhutan. English is also spoken widely.
+                </p>
+                <hr />
+                <h3><i class="glyphicon glyphicon-share-alt text-info"></i>&nbsp;Religion</h3>
+                <p>
+                    The main religion of Bhutan is Vajrayana stream of Mahayana Buddhism (Also known as Tantric Buddhism)
+                </p>
+                <hr />
+                <h3><i class="glyphicon glyphicon-share-alt text-info"></i>&nbsp;People</h3>
+                <p>
+                    The people of Bhutan can be divided into three main ethnic groups: The “Sharchops”, who live in the east of the country and are believed to be the original inhabitants. The “Ngalongs”, who live mostly in western Bhutan and are the descendants of Tibetan immigrants who arrived in Bhutan from the 9th century. The “Lhotshampa”, who are of Nepalese origin and settled in the south of Bhutan in the late 19th century. The Lhotshampa (meaning Southern Bhutanese) represent Nepali- speaking groups.<br />
+                    <a href="@Url.Action("bhutanpeople","content")" class="pull-right">Know More</a>
+                    <br />
+                </p>
+                <hr />
+                <h3><i class="glyphicon glyphicon-share-alt text-info"></i>&nbsp;Geography</h3>
+                <p>
+                    Bhutan, or Kingdom of Bhutan, a country in the Himalayas, bounded by India and the Chinese autonomous region of Tibet. Bhutan's area is about 18,000 square miles (47,000 km2), roughly half that of Indiana. The country consists mainly of rugged mountain ranges separated by deep valleys. Along the Tibetan border, peaks exceed 24,000 feet (7,300 m).<br />
+                    <a href="@Url.Action("bhutangeography","content")" class="pull-right">Know More</a>
+                    <br />
+                </p>
+                <hr />
+                <h3><i class="glyphicon glyphicon-share-alt text-info"></i>&nbsp;History</h3>
+                <p>
+                    Archaeological evidence suggests Bhutan was inhabited possibly as early as 2000 BC. Buddhism was probably introduced in the 2nd century although traditionally its introduction is credited to the first visit of Guru Rinpoche in the 8th century. Guru Rinpoche is one of the most important figures in Bhutan's history, regarded as the second Buddha.<br />
+                    <a href="@Url.Action("bhutanhistory","content")" class="pull-right">Know More</a>
+                    <br />
+                </p>
+                <hr />
+                <h3><i class="glyphicon glyphicon-share-alt text-info"></i>&nbsp;Economy</h3>
+                <p>
+                    The economy of Bhutan, one of the world's smallest and least developed, is based on agriculture and forestry, which provide the main livelihood for more than 60% of the population. Agriculture consists largely of subsistence farming and animal husbandry. Rugged mountains dominate the terrain and make the building of roads and other infrastructure difficult and
+                    expensive. The economy is closely aligned with India's through strong trade and monetary links and dependence on India's financial assistance. The industrial sector is technologically backward, with most production of the cottage industry type. Most development projects, such as road construction, rely on Indian migrant labor. Model education, social, and environment programs are underway with support from multilateral development organizations.
+                    Each economic program takes into account the government's desire to protect the country's environment and cultural traditions. Detailed controls and uncertain policies in areas such as industrial licensing, trade, labor, and finance continue to hamper foreign investment. Hydropower exports to India have
+                    boosted Bhutan's overall growth. New hydropower projects will be the driving force behind Bhutan's ability to create employment and sustain growth in the coming years.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

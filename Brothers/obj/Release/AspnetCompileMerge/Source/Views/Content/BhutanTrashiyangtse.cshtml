@@ -1,0 +1,112 @@
+﻿
+@{
+    Layout = "~/Views/Shared/BhutanLayout.cshtml";
+}
+
+<div class="well subheading-well">
+    <b class="subheading">Trashiyangtse</b>
+</div>
+<div class="well hidden-xs" style="padding:10px;">
+    <img src="~/Content/img/Bhutan/Trashiyangtse.JPG" class="img-rounded resp-img" />
+</div>
+<div class="col-md-12">
+    <h4 class="text-info">Trashiyangtse (Alt. 5580ft)</h4>
+    <p>
+        Trashiyangtse Is A Rapidly Growing Town And Administrative Center Of The District. Situated In A Small River Valley, It Is A Lovely Spot From Which To Take Walks In The Surrounding Countryside. The Dzong Overlooking The Town Was Built In The Late 1990s When The New District Was Created. Trashiyangtse Is Famous For Its Wooden Containers And Bowls, Which Make Inexpensive, Attractive And Useful Mementos Of A Visit To This Remote Region. 
+    </p>
+    <h4 class="text-info">Places Of Interest In Trashiyangtse</h4>
+    <div class="row">
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/ChortenKora.JPG" alt="ChortenKora" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="ChortenKora" />
+                </div>
+            </div>
+            <h5>Chorten Kora</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/TrashiyangtseDzong.jpg" alt="TrashiyangtseDzong" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="TrashiyangtseDzong" />
+                </div>
+            </div>
+            <h5>Trashiyangtse Dzong</h5>
+        </div>
+    </div>
+    <h4 class="text-info">Excursion Around Trashiyangtse</h4>
+    <div class="row">
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/Bomdelling.JPG" alt="Bomdelling" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Bomdelling" />
+                </div>
+            </div>
+            <h5>Bomdelling</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/RanjungChholing.jpg" alt="RanjungChholing" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="RanjungChholing" />
+                </div>
+            </div>
+            <h5>Ranjung Woesel Chholing</h5>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "ChortenKora") {
+            $('#myPicLabel').text('Chorten Kora')
+            $('#pic-path').attr('src', '/Content/img/Bhutan/ChortenKora.JPG');
+            $('#pic-details').html("<p>This Dazzling White Stupa Is Situated On The Riverbank Below The Town. Constructed In 1740 By Lama Ngawang Loday, It Is Built In The Same Style As Bodhnath Stupa In Nepal, With Eyes Painted At The Four Cardinal Points. During The Second Month Of The Lunar Calendar There Is An Interesting Celebration Here, Known As 'Kora'. Bomdeling A Pleasant Walk Of About Three Hours From Chorten Kora, Bomdeling Is An Annual Migration Place For Black-Necked Cranes, Which Fly Over From Nearby Tibet To Pass The Winter Months In A Warmer Climate.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "TrashiyangtseDzong") {
+            $('#myPicLabel').text('Trashiyangtse Dzong')
+            $('#pic-path').attr('src', '/Content/img/Bhutan/TrashiyangtseDzong.jpg');
+            $('#pic-details').html("<p>Trashiyangtse Dzong Meaning ‘Fortress Of Auspicious Fortune’, Was Re-Built In 1656 By Terton Pema Lingpa From The Ruins Of Dongdi Dzong Of 9th Century. It Was Further Renovated And Sanctified By A Sacred Consecration Ceremony In 2005.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Bomdelling") {
+            $('#myPicLabel').text('Bomdelling')
+            $('#pic-path').attr('src', '/Content/img/Bhutan/Bomdelling.JPG');
+            $('#pic-details').html("<p>A Pleasant Walk Of About Three Hours From Chorten Kora, Bomdeling Is An Annual Migration Place For Black-Necked Craens, Which Fly Over From Nearby Tibet To Pass The Winter Months In A Warmer Climate.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "RanjungChholing") {
+            $('#myPicLabel').text('Ranjung Woesel Chholing ')
+            $('#pic-path').attr('src', '/Content/img/Bhutan/RanjungChholing.jpg');
+            $('#pic-details').html("<p>This Monastery Is More Than Half An Hour Drive From Trashigang Town. It Is A Nyingmapa Monastery Founded By Garab Rinpoche In 1990. One Can Get A Good View Of The Valley From The Monastery.</p>");
+            $('#myModal').modal('show');
+        }
+    });
+
+</script>

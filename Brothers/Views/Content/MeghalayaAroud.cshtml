@@ -1,0 +1,176 @@
+﻿
+@{
+    ViewBag.Title = "MeghalayaAroud";
+    Layout = "~/Views/Shared/MeghalayaLayout.cshtml";
+}
+
+    <div class="well subheading-well">
+        <b class="subheading">Shillong</b>
+    </div>
+    <h4 class="text-info">Places Of Interest Around Shillong </h4>
+    <div class="row">
+        
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Meghalaya/Elephant-Falls-(Shillong).jpg" alt="Elephant-Falls-(Shillong)" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Elephant-Falls-(Shillong)" />
+                </div>
+            </div>
+            <h5>Elephant Falls</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Meghalaya/lumpark.jpg" alt="lumpark" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="lumpark" />
+                </div>
+            </div>
+            <h5>Lum Nehru Park</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Meghalaya/Nongkhnum-Island.jpg" alt="Nongkhnum-Island" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Nongkhnum-Island" />
+                </div>
+            </div>
+            <h5>Nongkhnum Island</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Meghalaya/Living-Root-Bridges.jpg" alt="Living-Root-Bridges" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Living-Root-Bridges" />
+                </div>
+            </div>
+            <h5>Living Root Bridges</h5>
+        </div>
+    </div>
+    
+
+    <div class="row">
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Meghalaya/Cherapunjee-(The-Second-Rai.jpg" alt="Cherapunjee-(The-Second-Rai" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Cherapunjee-(The-Second-Rai" />
+                </div>
+            </div>
+            <h5>Cherapunjee </h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Meghalaya/Shillong-Peak.jpg" alt="Shillong-Peak" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Shillong-Peak" />
+                </div>
+            </div>
+            <h5>Shillong Peak</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Meghalaya/Mawlynnong-Village.jpg" alt="Mawlynnong-Village" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Mawlynnong-Village" />
+                </div>
+            </div>
+            <h5>Mawlynnong Village</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Meghalaya/Nohkalikai-Water-Falls.jpg" alt="Nohkalikai-Water-Falls" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Nohkalikai-Water-Falls" />
+                </div>
+            </div>
+            <h5>Nohkalikai Water Falls</h5>
+        </div>
+    </div>
+    
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "Elephant-Falls-(Shillong)") {
+            $('#myPicLabel').text('Elephant Falls ')
+            $('#pic-path').attr('src', '/Content/img/Meghalaya/Elephant-Falls-(Shillong).jpg');
+            $('#pic-details').html("<p>Elephant Falls Is Situated At The Outskirts Of The Main City Of Shillong. It Is Almost 12Kms. Away From The Hustle And Bustle Of The City Life. The Unique Part Of Elephant Falls In Meghalaya Is That It Is A Two-Tier Waterfall Set In The Dingles Of The Rocks. The Beauty Of Meghalaya Elephant Falls Is Increased Manifold By The Two Falls-The Wir Phang Falls And The Wei Iaplam Falls. Though Both Of Them Are Busy Tourist Spots, None Resembles The Voluminous And Elegant Elephant Falls. </p>");
+            $('#myModal').modal('show');
+        }
+      
+        else if (alt == "lumpark") {
+            $('#myPicLabel').text('Lum Nehru Park')
+            $('#pic-path').attr('src', '/Content/img/Meghalaya/lumpark.jpg');
+            $('#pic-details').html("<p>Adjacent To The Orchid Lake Resort, On One Of The Surrounding Spurs, There Is A Charming Park. Besides Beautiful Lawns And Flowers, There Is Also An Orchidarium And Aviary.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Nongkhnum-Island") {
+            $('#myPicLabel').text('Nongkhnum-Island')
+            $('#pic-path').attr('src', '/Content/img/Meghalaya/Nongkhnum-Island.jpg');
+            $('#pic-details').html("<p>The Second Largest Island In Asia, Nongkhnum Island Is Another Tourist Destination Situated A Few Kilometers Away From Nongstoin.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Cherapunjee-(The-Second-Rai") {
+            $('#myPicLabel').text('Cherapunjee')
+            $('#pic-path').attr('src', '/Content/img/Meghalaya/Cherapunjee-(The-Second-Rai.jpg');
+            $('#pic-details').html("<p>The Locals Traditionally Call It Sohra, However, The World Knows It By The More Popular Name Of 'Cherrapunjee' Or 'Cherrapunji'. Once The Wettest Place On Earth, Cherrapunjee Today Is The Second Rainiest Place On Earth After Mawsynram. Cherrapunjee Receives Close To A Whopping 12 M Of Rain Every Year.<br/>Cherrapunji Attracts Lot Of Tourists Because Of Its Abundant Natural Beauty, Package Of Valleys And Waterfalls, Caves And Canyons, Evergreen Misty Landscapes And Heavy Rains.<br/>Cherrapunji Receives The Full Brunt Of The Monsoon Because Of Its Location. Situated At A Height Of About 4500 Feet Above Mean Sea Level On The Summit Of The Southern Ranges Of The Khasi Hills, It Receives The Monsoons Approaching Directly From The Bay Of Bengal On Through The Sylhet District Of Bangladesh. The Average Annual Rainfall Is Around 4900 Mm Per Year. Heavy Rainfall Of 17,930 Mm In 1988, 14,865 Mm In 2003, 14,821 Mm In 2004 And 14,970 Mm Have Also Been Recorded.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Shillong-Peak") {
+            $('#myPicLabel').text('Shillong Peak')
+            $('#pic-path').attr('src', '/Content/img/Meghalaya/Shillong-Peak.jpg');
+            $('#pic-details').html("<p>Shillong Peak Is Considered As The Most Beautiful Scenic Place And Also A Romantic Destination For Newly Weds And Couples. Its A Picnic Spot And Most Visited By Tourists. Its Situated On A Height Of Around 1965Ft. Above The Sea Level. This Peak Adds A Breathtaking View To The Photographs. It Is One Of The Highest Peaks Of The Himalayas. It Is Said That Shillong Is Named After This Hill. Being A Hill Station It Is Famous For Its Panoramic View Of The City From The Top. This Locations Also Serves As A Radar Station For The Indian Air Force, So The Visitors Have To Surrender Their Cameras While Reaching The Point.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Nohkalikai Water Falls") {
+            $('#myPicLabel').text('Nohkalikai Water Falls')
+            $('#pic-path').attr('src', '/Content/img/Meghalaya/Wards-Lake-(Shillong).jpg');
+            $('#pic-details').html("<p>This Place Is Surrounded With The Beautiful View Of Flowers Blooming In An Array. Situated In The Middle Of The City Is This Pleasant Lake With Boating Facility. One Can Enjoy Boating Or Recess On The Grass Of The Garden Nearby And Take A Break From The Busy Life Schedules.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Mawlynnong-Village") {
+            $('#myPicLabel').text('Mawlynnong Village')
+            $('#pic-path').attr('src', '/Content/img/Meghalaya/Mawlynnong-Village.jpg');
+            $('#pic-details').html("<p>Mawlynnong, Also Known As ‘God’s Own Garden’ Is A Village Situated At A Distance Of 90km. From Shillong. The Village Won International Recognition In 2003, When It Was Acclaimed As The Cleanest Village In Asia In 2003 By Discover India Magazine, Before Being Again Declared The Cleanest Village In India In 2005.<br/>There Are A Total Of 82 Households In Mawlynnong, With The Cleanliness Of Their Surroundings Being An Age Old Tradition. Mawlynnong Village Owes Its Cleanliness To The Community That Lives There. The Locals Of The Region Clean The Roads, Picking Up Leaves And Throw Garbage In The Bin. The Main Occupation Of The Villagers Is Agriculture, With The Main Cultivation Being That Of Betel Nut. Mawlynnong Is At Its Prettiest During The Monsoons, With Lush Greenery And Waterfalls Making It A True Delight Of Nature.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Living-Root-Bridges") {
+            $('#myPicLabel').text('Living Root Bridges')
+            $('#pic-path').attr('src', '/Content/img/Meghalaya/Living-Root-Bridges.jpg');
+            $('#pic-details').html("<p>Meghalaya's Double-Decker And Single-Decker Root Bridges Are Unique In The World And Are A Sight To Behold. The Bridges Are Tangles Of Massive Thick Roots, Which Have Been Intermingled To Form A Bridge That Can Hold Several People At A Time. Khasi People Have Been Trained To Grow These Bridges Across The Raised Banks Of Streams To Form A Solid Bridge, Made From Roots. The Living Bridges Are Made From The Roots Of The Ficus Elastica Tree, Which Produces A Series Of Secondary Roots That Are Perched Atop Huge Boulders Along The Streams Or The Riverbanks To Form Bridges.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Nohkalikai-Water-Falls") {
+            $('#myPicLabel').text('Nohkalikai Water Falls')
+            $('#pic-path').attr('src', '/Content/img/Meghalaya/Nohkalikai-Water-Falls.jpg');
+            $('#pic-details').html("<p>One Of The Most Photogenic Waterfalls In India, Nohkalikai In Meghalaya Is The Fifth Highest Waterfall In India. Nohkalikai, Which Means Means ‘Ka Likai’s Leap’ In Khasi Language, Is Located About Seven Km Away From Cherrapunji, The Second Wettest Place On The Planet. Water Plunges From A Height Of 1,100ft. Uninterrupted From The Highest Point To The Foot Of The Falls Making It A Spectacular Site.The Force Of Water Has Carved A Waterhole Which Remains Blue In The Winter And Turns Green In The Summer Months. The Flow Of Water Is Profuse In Summer While The Flow Recedes In The Winter To A Small Stream Giving The Impression Of A White Rope Against The Green Forest.</p>");
+            $('#myModal').modal('show');
+        }
+
+    });
+
+</script>

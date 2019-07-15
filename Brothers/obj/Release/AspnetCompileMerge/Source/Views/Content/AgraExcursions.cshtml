@@ -1,0 +1,105 @@
+﻿@{
+    ViewBag.Title = "AgraExcursions";
+    Layout = "~/Views/Shared/GoldenTriangleLayout.cshtml";
+}
+
+<div class="well subheading-well">
+    <b class="subheading">Excursions</b>
+</div>
+<div class="col-md-12">
+    <p>
+        Not Only Agra But The Whole Region Including Mathura And Vrindavan Have A Unique Place In The Cultural World Of India. While Agra Is Known For Its Historical Monuments, Mathura And Vrindavan Are Basically Known As The Major Pilgrimage Centers For Hindus For Their Long Association With Lord Krishna. Both These Sister Cities Have A Number Of Significant And Beautiful Temples. The Other Place That Is Worth Visiting Near Agra Is The Keladeo Bird Sanctuary Of Bharatpur Where A Number Of Birds Find Their Refuge And Is Ornithologist's Delight.
+    </p>
+</div>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Agra/Excursion/Bharatpur-Bird-Sanctuary.jpg" alt="Bharatpur-Bird-Sanctuary" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Bharatpur-Bird-Sanctuary" />
+            </div>
+        </div>
+        <h5>Bharatpur Bird Sanctuary </h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Agra/Excursion/Vrindavan.jpg" alt="Vrindavan" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Vrindavan" />
+            </div>
+        </div>
+        <h5>Vrindavan </h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Agra/Excursion/mathura.jpg" alt="mathura" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="mathura" />
+            </div>
+        </div>
+        <h5>Mathura</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Agra/Excursion/gwalior.JPG" alt="gwalior" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="gwalior" />
+            </div>
+        </div>
+        <h5>Gwalior</h5>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "Bharatpur-Bird-Sanctuary") {
+            $('#myPicLabel').text('Bharatpur Bird Sanctuary ')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Agra/Excursion/Bharatpur-Bird-Sanctuary.jpg');
+            $('#pic-details').html("<p>The Bharatpur Bird Sanctuary Is Specially Meant For The Bird Lovers And Also For Those Who Wish To Get Unwind By Watching The Amazing Creations Of The Nature. Situated Just 56Kms. Away From Agra. </p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Vrindavan") {
+            $('#myPicLabel').text('Vrindavan')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Agra/Excursion/Vrindavan.jpg');
+            $('#pic-details').html("<p>Vrindavan Is Also Known As Vraj Is Better Known As The Place Where Lord Krishna Spent His Childhood Days The Distance From Agra To Vrindavan Is 66Kms. And It Takes 1 ½Hrs. Drive From Agra To Vrindavan By Car. The Town Showcases Hundreds Of Temples And Other Sacred Places And Is A Must Visit Place At Least Once In A Lifetime. </p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "mathura") {
+            $('#myPicLabel').text('Mathura')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Agra/Excursion/mathura.jpg');
+            $('#pic-details').html("<p>Like Vrindavan Mathura Is Also Associated With The Life Of Lord Krishna. It The Birth Place Of Lord Krishna And Stores Abundance Of His Memories. It Is Located 60Kms. Away From Agra And There Are Lots To Religious Places To Visit Here.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "gwalior") {
+            $('#myPicLabel').text('Gwalior')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Agra/Excursion/gwalior.JPG');
+            $('#pic-details').html("<p>Gwalior Is Located 118Kms. Away From Agra. Named After A Saint, There Are Forts And Temples Which Makes It A Must Visit Place.</p>");
+            $('#myModal').modal('show');
+        }
+    });
+
+</script>
+

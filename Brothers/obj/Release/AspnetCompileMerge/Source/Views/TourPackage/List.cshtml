@@ -1,0 +1,30 @@
+﻿@model Brothers.Entities.ViewModels.MstTourPackageViewModel
+@{
+    ViewBag.Title = "Tour Package Management";
+    ViewBag.ViewHeader = "Tour Package List";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="well well-sm">
+        <div class="col-md-6 pull-left">
+            <form method="get" action="@Url.Action("list","tourpackage")" data-otf-ajax="true" data-otf-target="#DataGrid">
+                <div class="input-group">
+                    <input type="text" name="searchTerm" class="form-control" placeholder="Search by Tour Package Name..." />
+                    <span class="input-group-btn">
+                        <button class="btn btn-danger pull-left" type="submit" value="Search" id="search">Go!</button>
+                    </span>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-3 pull-right">
+            @Html.ActionLink("Add Tour Package ", "create", null, new { data_modal = "", @class = "btn btn-primary pull-right" })
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    @Html.Partial("pvTourPackageList", Model)
+</div>
+<div class="col-md-12" style="display:none" id="allList">
+    <a href="@Url.Action("list","tourpackage")">Show All Entries</a>
+</div>
+

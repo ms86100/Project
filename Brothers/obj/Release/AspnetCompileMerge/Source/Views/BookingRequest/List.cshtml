@@ -1,0 +1,27 @@
+﻿@model Brothers.Entities.ViewModels.MstBookingViewModel
+@{
+    ViewBag.Title = "Booking Request Management";
+    ViewBag.ViewHeader = "Booking Request List";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="well well-sm">
+        <div class="col-md-6 pull-left">
+            <form method="get" action="@Url.Action("list","bookingrequest")" data-otf-ajax="true" data-otf-target="#DataGrid">
+                <div class="input-group">
+                    <input type="text" name="searchTerm" class="form-control" placeholder="Search by Package Name..." />
+                    <span class="input-group-btn">
+                        <button class="btn btn-danger pull-left" type="submit" value="Search" id="search">Go!</button>
+                    </span>
+                </div>
+            </form>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    @Html.Partial("pvBookingList", Model)
+</div>
+<div class="col-md-12" style="display:none" id="allList">
+    <a href="@Url.Action("list","bookingrequest")">Show All Entries</a>
+</div>
+

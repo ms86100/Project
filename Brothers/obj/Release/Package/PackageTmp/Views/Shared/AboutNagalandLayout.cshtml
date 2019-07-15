@@ -1,0 +1,153 @@
+﻿
+@{
+    ViewBag.Title = "AboutNagalandLayout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="col-lg-3 col-md-3 col-sm-5" style="background-color:#ede8e8">
+    <h4 class="text-danger">Activities</h4>
+    <hr class="row-margin-10" />
+    <nav>
+        <ul class="nav11 side-links" style="padding-left:10px;">
+            <li>
+                <a href="@Url.Action("NagalandTrek", "content")">Trekking</a>
+            </li>
+            <li>
+                <a href="@Url.Action("NagalandWhyTrek", "content")">Why Trek In Nagaland</a>
+            </li>
+            <li>
+                <a href="@Url.Action("NagalandWhenTrek", "content")">When To Trek</a>
+            </li>
+            <li>
+                <a href="@Url.Action("NagalandMedical", "content")">Medical Matters & Advice</a>
+            </li>
+            <li>
+                <a href="@Url.Action("NagalandMajorTrek", "content")">Major Trek</a>
+            </li>
+        </ul>
+    </nav>
+    <h4 class="text-danger">Outdoor Activities</h4>
+    <hr class="row-margin-10" />
+    <nav>
+        <ul class="side-links nav11" style="padding-left:10px;">
+
+            <li>
+                <a href="@Url.Action("NagalandAngling", "content")">Angling</a>
+            </li>
+           
+            <li>
+                <a href="@Url.Action("NagalandCamping", "content")">Camping</a>
+            </li>
+            <li>
+                <a href="@Url.Action("NagalandTrekking", "content")">Trekking</a>
+            </li>
+            <li>
+                <a href="@Url.Action("NagalandMountainBiking", "content")">Mountain Biking</a>
+            </li>
+
+        </ul>
+    </nav>
+    <h4 class="text-danger">Attractions</h4>
+    <hr class="row-margin-10" />
+    <nav>
+        <ul class="side-links nav11" style="padding-left:10px;">
+            <li>
+                <a href="@Url.Action("NagalandMuseum", "content")">Museum</a>
+            </li>
+            <li>
+                <a href="@Url.Action("NagalandShopping", "content")">Shopping</a>
+            </li>
+             <li>
+                <a href="@Url.Action("NagalandRestaurant", "content")">Restaurant</a>
+            </li>
+            <li>
+                <a href="@Url.Action("NagalandArt", "content")">Art & Crafts</a>
+            </li>
+
+            <li>
+                <a href="@Url.Action("NagalandWildlife", "content")">Wildlife sanctuary</a>
+            </li>
+            <li>
+                <a href="@Url.Action("NagalandTextile", "content")">Traditional Textile & Jewelries</a>
+            </li>
+
+        </ul>
+    </nav>
+    <h4 class="text-danger">General Information</h4>
+    <hr class="row-margin-10" />
+    <nav>
+        <ul class="side-links nav11" style="padding-left:10px;">
+            <li>
+                <a href="@Url.Action("NagalandGeography", "content")">Geography</a>
+            </li>
+            <li>
+                <a href="@Url.Action("NagalandHistory", "content")">History</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Nagalandreligion", "content")">Religion</a>
+            </li>
+            <li>
+                <a href="@Url.Action("NagalandEconomy", "content")">Economy</a>
+            </li>
+            <li>
+                <a href="@Url.Action("NagalandAgriculture", "content")">Agriculture</a>
+            </li>
+            <li>
+                <a href="@Url.Action("NagalandPeople", "content")">People of Nagaland</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Nagalandfestival", "content")">Festivals</a>
+            </li>
+            <li>
+                <a href="@Url.Action("NagalandFacts", "content")">Facts & Figures</a>
+            </li>
+            <li>
+                <a href="@Url.Action("NagalandDosndonats", "content")">Do's & Dont's</a>
+            </li>
+            <li>
+                <a href="@Url.Action("NagalandClimate", "content")">Climate</a>
+            </li>
+            <li>
+                <a href="@Url.Action("NagalandReligiousplace", "content")">Religious Places</a>
+            </li>
+        </ul>
+    </nav>
+    <h4 class="text-danger">Travel Information</h4>
+    <hr class="row-margin-10" />
+    <nav>
+        <ul class="side-links nav11" style="padding-left:10px;">
+            <li>
+                <a href="@Url.Action("NagalandEntering", "content")">Entering & Leaving</a>
+            </li>
+            <li>
+                <a href="@Url.Action("NagaPermit", "content")">Entry Permit</a>
+            </li>
+            <li>
+                <a href="@Url.Action("NagalandTodo", "content")">Things To Do</a>
+            </li>
+            <li>
+                <a href="@Url.Action("NagalandAdvice", "content")">Personal Advice</a>
+            </li>
+        </ul>
+    </nav>
+    <h4 class="text-danger">What To See</h4>
+    <hr class="row-margin-10" />
+    <ul class="nav11 side-links" style="padding-left:10px;">
+        <li>
+            <a href="@Url.Action("NagalandInside", "content")">Inside Kohima</a>
+        </li>
+        <li>
+            <a href="@Url.Action("NagalandAround", "content")">Around Kohima</a>
+        </li>
+        <li>
+            <a href="@Url.Action("NagalandOutside", "content")">Outside Kohima</a>
+        </li>
+
+    </ul>
+</div>
+
+<div class="col-lg-9 col-md-9 col-sm-7">
+    <div class="section-header text-center">
+        <h2 class="section-title">Nagaland</h2>
+    </div>
+    @RenderBody()
+</div>

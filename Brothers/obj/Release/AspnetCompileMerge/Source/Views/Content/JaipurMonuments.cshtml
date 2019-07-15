@@ -1,0 +1,137 @@
+﻿@{
+    ViewBag.Title = "JaipurMonuments";
+    Layout = "~/Views/Shared/GoldenTriangleLayout.cshtml";
+}
+
+<div class="well subheading-well">
+    <b class="subheading">Monuments</b>
+</div>
+<div class="col-md-12">
+    <p>
+        The City Is Garlanded By The Presence Of Number Of Beautiful Monuments That Echo The Splendid History Of The City. Magnificent Monuments Such As Jaigarh Fort, Amer Fort, City Palace, Nahargarh Fort, Gaitore, Hawa Mahal, Jantar Mantar, Jal Mahal, Rambagh Palace And Statue Circle Etc. Are Spectacular Sights Which Attract Hordes Of Tourists Every Year. Nahargarh Fort, Jaigarh Fort And Amer Fort Are The Three Of The Oldest Forts That Provide Great Visual Treat To The Visitors. Gaitore Is A Shrine Dedicated To The Maharajas Of Jaipur And Is Known For Its Exquisite Carvings. Situated In The Heart Of Jaipur Is The City Palace. The Statue Circle Is A Tribute To The Founder Of Pink City, Maharaja Jai Singh II. With So Much Heritage On Display In The Form Of Monuments, It Is No Surprise Then That Tourists Coming To This City Always Feel The Urge To Come Back.
+    </p>
+</div>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Jaipur/Monument/amber-fort.jpg" alt="amber-fort" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="amberfort" />
+            </div>
+        </div>
+        <h5>Amer Fort</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Jaipur/Monument/City-Palace.jpg" alt="City-Palace" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="City-Palace" />
+            </div>
+        </div>
+        <h5>City Palace</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Jaipur/Monument/JantarMantar.jpg" alt="JantarMantar" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="JantarMantar" />
+            </div>
+        </div>
+        <h5>Jantar Mantar</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Jaipur/Monument/HawaMahal.jpg" alt="HawaMahal" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="HawaMahal" />
+            </div>
+        </div>
+        <h5>Hawa Mahal</h5>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Jaipur/Monument/Jaigarh-Fort.jpg" alt="Jaigarh-Fort" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Jaigarh" />
+            </div>
+        </div>
+        <h5>Jaigarh Fort </h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Jaipur/Monument/Nahargarh-Fort.jpg" alt="Nahargarh-Fort" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Nahargarh" />
+            </div>
+        </div>
+        <h5>Nahargarh Fort </h5>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "amberfort") {
+            $('#myPicLabel').text('Amer Fort')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Jaipur/Monument/amber-fort.jpg');
+            $('#pic-details').html("<p>It Is One Of The Finest And The Best Preserved Forts, Having Served As The Royal Capital For Seven Long Years Before The City Of Jaipur Was Built. It Has A Complex Of Several Palaces, Meeting Halls, Pavilions, Gardens And Temples. The Fort Was Built In The Later Half Of The 10th Century By Raja Man Singh.  </p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "City-Palace") {
+            $('#myPicLabel').text('City Palace')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Jaipur/Monument/City-Palace.jpg');
+            $('#pic-details').html("<p>Built By Sawai Jai Singh, It Became The Official Seat Of The Jaipur Royal Family After 1922. A Large Part Of The Brilliant Palace Is Now A Museum, Displaying An Excellent Collection Of Artifacts Used By The Rajput Royalty.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "JantarMantar") {
+            $('#myPicLabel').text('Jantar Mantar')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Jaipur/Monument/JantarMantar.jpg');
+            $('#pic-details').html("<p>Built In 1728, It Is One Of Sawai Jai Singh's Unique Observatories. It Has Instruments That Have Been Scientifically Designed To Predict The Movement Of The Major Stars Accurately. It Represents The High Point Of Medieval Indian Astronomy.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "HawaMahal") {
+            $('#myPicLabel').text('Hawa Mahal')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Jaipur/Monument/HawaMahal.jpg');
+            $('#pic-details').html('<p>Also Called The "Palace Of Winds" Was Built In 1799. It Is An Unusual Five Storeyed Structure With A Facade Of Extensive Lattice- Work In Stone. Aristocratic Rajput Women To Look Out At The Bustling Bazaar Below While Remaining Unseen Used It.</p>');
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Jaigarh") {
+            $('#myPicLabel').text('Jaigarh Fort ')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Jaipur/Monument/Jaigarh-Fort.jpg');
+            $('#pic-details').html("<p>The Jaigarh Fort Is A Majestic Stronghold Built By Sawan Jai Singh II. This Almost-Intact Fort Is Surrounded By Huge Battlements And Is Connected To The Amer Fort (Also Called 'Amber' Fort), With Subterranean Passages. Originally Built To Protect The Amer Fort And The Palace Within The Complex, The Jaigarh Fort Is Architecturally Similar To The Amer Fort, And Offers A Panoramic View Of The City Of Jaipur. </p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Nahargarh") {
+            $('#myPicLabel').text('Nahargarh Fort ')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Jaipur/Monument/Nahargarh-Fort.jpg');
+            $('#pic-details').html('<p>Nahargarh Fort Was Built In 1734 By Maharaja Sawai Jai Singh II, Founder Of Jaipur, On The Aravalli Hills, As A Retreat Place. Nahargarh Fort Is Connected To The Jaigarh Fort Through Its Fortifications. It Is Believed That The Construction Of This Fort Was Obstructed By The Spirit Of A Rathore Prince, Nahar Singh Bhomia. However, The Spirit Was Pacified When A Temple Dedicated To Him Was Built Inside The Fort. Sawai Ram Singh Renovated This Fort In 1868.</p>');
+            $('#myModal').modal('show');
+        }
+    });
+
+</script>
+

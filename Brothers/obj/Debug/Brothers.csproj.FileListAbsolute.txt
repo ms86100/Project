@@ -1,0 +1,360 @@
+F:\Working Folder\Brothers\Brothers\bin\Brothers.dll.config
+F:\Working Folder\Brothers\Brothers\bin\Brothers.dll
+F:\Working Folder\Brothers\Brothers\bin\Brothers.pdb
+F:\Working Folder\Brothers\Brothers\bin\Antlr3.Runtime.dll
+F:\Working Folder\Brothers\Brothers\bin\Brothers.Entities.dll
+F:\Working Folder\Brothers\Brothers\bin\EntityFramework.dll
+F:\Working Folder\Brothers\Brothers\bin\EntityFramework.SqlServer.dll
+F:\Working Folder\Brothers\Brothers\bin\Microsoft.AspNet.Identity.Core.dll
+F:\Working Folder\Brothers\Brothers\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Working Folder\Brothers\Brothers\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\Working Folder\Brothers\Brothers\bin\Microsoft.Owin.dll
+F:\Working Folder\Brothers\Brothers\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\Working Folder\Brothers\Brothers\bin\Microsoft.Owin.Security.Cookies.dll
+F:\Working Folder\Brothers\Brothers\bin\Microsoft.Owin.Security.dll
+F:\Working Folder\Brothers\Brothers\bin\Microsoft.Owin.Security.Facebook.dll
+F:\Working Folder\Brothers\Brothers\bin\Microsoft.Owin.Security.Google.dll
+F:\Working Folder\Brothers\Brothers\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\Working Folder\Brothers\Brothers\bin\Microsoft.Owin.Security.OAuth.dll
+F:\Working Folder\Brothers\Brothers\bin\Microsoft.Owin.Security.Twitter.dll
+F:\Working Folder\Brothers\Brothers\bin\Microsoft.Web.Infrastructure.dll
+F:\Working Folder\Brothers\Brothers\bin\Newtonsoft.Json.dll
+F:\Working Folder\Brothers\Brothers\bin\Owin.dll
+F:\Working Folder\Brothers\Brothers\bin\System.Web.Helpers.dll
+F:\Working Folder\Brothers\Brothers\bin\System.Web.Mvc.dll
+F:\Working Folder\Brothers\Brothers\bin\System.Web.Optimization.dll
+F:\Working Folder\Brothers\Brothers\bin\System.Web.Razor.dll
+F:\Working Folder\Brothers\Brothers\bin\System.Web.WebPages.Deployment.dll
+F:\Working Folder\Brothers\Brothers\bin\System.Web.WebPages.dll
+F:\Working Folder\Brothers\Brothers\bin\System.Web.WebPages.Razor.dll
+F:\Working Folder\Brothers\Brothers\bin\WebGrease.dll
+F:\Working Folder\Brothers\Brothers\bin\Brothers.Entities.pdb
+F:\Working Folder\Brothers\Brothers\bin\Antlr3.Runtime.pdb
+F:\Working Folder\Brothers\Brothers\bin\EntityFramework.xml
+F:\Working Folder\Brothers\Brothers\bin\EntityFramework.SqlServer.xml
+F:\Working Folder\Brothers\Brothers\bin\Microsoft.AspNet.Identity.Core.xml
+F:\Working Folder\Brothers\Brothers\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Working Folder\Brothers\Brothers\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\Working Folder\Brothers\Brothers\bin\Microsoft.Owin.xml
+F:\Working Folder\Brothers\Brothers\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\Working Folder\Brothers\Brothers\bin\Microsoft.Owin.Security.xml
+F:\Working Folder\Brothers\Brothers\bin\Microsoft.Owin.Security.Cookies.xml
+F:\Working Folder\Brothers\Brothers\bin\Microsoft.Owin.Security.Facebook.xml
+F:\Working Folder\Brothers\Brothers\bin\Microsoft.Owin.Security.Google.xml
+F:\Working Folder\Brothers\Brothers\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\Working Folder\Brothers\Brothers\bin\Microsoft.Owin.Security.OAuth.xml
+F:\Working Folder\Brothers\Brothers\bin\Microsoft.Owin.Security.Twitter.xml
+F:\Working Folder\Brothers\Brothers\bin\Newtonsoft.Json.xml
+F:\Working Folder\Brothers\Brothers\bin\System.Web.Helpers.xml
+F:\Working Folder\Brothers\Brothers\bin\System.Web.Mvc.xml
+F:\Working Folder\Brothers\Brothers\bin\System.Web.Optimization.xml
+F:\Working Folder\Brothers\Brothers\bin\System.Web.Razor.xml
+F:\Working Folder\Brothers\Brothers\bin\System.Web.WebPages.xml
+F:\Working Folder\Brothers\Brothers\bin\System.Web.WebPages.Deployment.xml
+F:\Working Folder\Brothers\Brothers\bin\System.Web.WebPages.Razor.xml
+F:\Working Folder\Brothers\Brothers\obj\Debug\Brothers.csprojResolveAssemblyReference.cache
+F:\Working Folder\Brothers\Brothers\obj\Debug\Brothers.Migrations.InitialCreate.resources
+F:\Working Folder\Brothers\Brothers\obj\Debug\Brothers.Migrations.Admin.resources
+F:\Working Folder\Brothers\Brothers\obj\Debug\Brothers.csproj.GenerateResource.Cache
+F:\Working Folder\Brothers\Brothers\obj\Debug\Brothers.dll
+F:\Working Folder\Brothers\Brothers\obj\Debug\Brothers.pdb
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Brothers.dll.config
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Brothers.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Brothers.pdb
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Antlr3.Runtime.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Brothers.Entities.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\EntityFramework.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\EntityFramework.SqlServer.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Microsoft.AspNet.Identity.Core.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Microsoft.Owin.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Microsoft.Owin.Security.Cookies.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Microsoft.Owin.Security.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Microsoft.Owin.Security.Facebook.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Microsoft.Owin.Security.Google.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Microsoft.Owin.Security.OAuth.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Microsoft.Owin.Security.Twitter.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Microsoft.Web.Infrastructure.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Newtonsoft.Json.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Owin.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\System.Web.Helpers.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\System.Web.Mvc.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\System.Web.Optimization.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\System.Web.Razor.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\System.Web.WebPages.Deployment.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\System.Web.WebPages.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\System.Web.WebPages.Razor.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\WebGrease.dll
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Brothers.Entities.pdb
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Antlr3.Runtime.pdb
+F:\Tours&Travel\Project\Brothers\Brothers\bin\EntityFramework.xml
+F:\Tours&Travel\Project\Brothers\Brothers\bin\EntityFramework.SqlServer.xml
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Microsoft.AspNet.Identity.Core.xml
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Microsoft.Owin.xml
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Microsoft.Owin.Security.xml
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Microsoft.Owin.Security.Cookies.xml
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Microsoft.Owin.Security.Facebook.xml
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Microsoft.Owin.Security.Google.xml
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Microsoft.Owin.Security.OAuth.xml
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Microsoft.Owin.Security.Twitter.xml
+F:\Tours&Travel\Project\Brothers\Brothers\bin\Newtonsoft.Json.xml
+F:\Tours&Travel\Project\Brothers\Brothers\bin\System.Web.Helpers.xml
+F:\Tours&Travel\Project\Brothers\Brothers\bin\System.Web.Mvc.xml
+F:\Tours&Travel\Project\Brothers\Brothers\bin\System.Web.Optimization.xml
+F:\Tours&Travel\Project\Brothers\Brothers\bin\System.Web.Razor.xml
+F:\Tours&Travel\Project\Brothers\Brothers\bin\System.Web.WebPages.xml
+F:\Tours&Travel\Project\Brothers\Brothers\bin\System.Web.WebPages.Deployment.xml
+F:\Tours&Travel\Project\Brothers\Brothers\bin\System.Web.WebPages.Razor.xml
+F:\Tours&Travel\Project\Brothers\Brothers\obj\Debug\Brothers.csprojResolveAssemblyReference.cache
+F:\Tours&Travel\Project\Brothers\Brothers\obj\Debug\Brothers.Migrations.InitialCreate.resources
+F:\Tours&Travel\Project\Brothers\Brothers\obj\Debug\Brothers.Migrations.Admin.resources
+F:\Tours&Travel\Project\Brothers\Brothers\obj\Debug\Brothers.csproj.GenerateResource.Cache
+F:\Tours&Travel\Project\Brothers\Brothers\obj\Debug\Brothers.dll
+F:\Tours&Travel\Project\Brothers\Brothers\obj\Debug\Brothers.pdb
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Brothers.dll.config
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Brothers.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Brothers.pdb
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Antlr3.Runtime.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Brothers.Entities.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\EntityFramework.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\EntityFramework.SqlServer.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Microsoft.AspNet.Identity.Core.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Microsoft.Owin.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Microsoft.Owin.Security.Cookies.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Microsoft.Owin.Security.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Microsoft.Owin.Security.Facebook.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Microsoft.Owin.Security.Google.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Microsoft.Owin.Security.OAuth.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Microsoft.Owin.Security.Twitter.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Microsoft.Web.Infrastructure.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Newtonsoft.Json.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Owin.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\System.Web.Helpers.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\System.Web.Mvc.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\System.Web.Optimization.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\System.Web.Razor.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\System.Web.WebPages.Deployment.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\System.Web.WebPages.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\System.Web.WebPages.Razor.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\WebGrease.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Brothers.Entities.pdb
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Antlr3.Runtime.pdb
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\EntityFramework.xml
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\EntityFramework.SqlServer.xml
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Microsoft.AspNet.Identity.Core.xml
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Microsoft.Owin.xml
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Microsoft.Owin.Security.xml
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Microsoft.Owin.Security.Cookies.xml
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Microsoft.Owin.Security.Facebook.xml
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Microsoft.Owin.Security.Google.xml
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Microsoft.Owin.Security.OAuth.xml
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Microsoft.Owin.Security.Twitter.xml
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\Newtonsoft.Json.xml
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\System.Web.Helpers.xml
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\System.Web.Mvc.xml
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\System.Web.Optimization.xml
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\System.Web.Razor.xml
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\System.Web.WebPages.xml
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\System.Web.WebPages.Deployment.xml
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\bin\System.Web.WebPages.Razor.xml
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\obj\Debug\Brothers.Migrations.InitialCreate.resources
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\obj\Debug\Brothers.Migrations.Admin.resources
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\obj\Debug\Brothers.csproj.GenerateResource.cache
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\obj\Debug\Brothers.dll
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\obj\Debug\Brothers.pdb
+G:\Sulochan\Projects\Sulochan\Sulochan\Brothers\Brothers\obj\Debug\Brothers.csprojResolveAssemblyReference.cache
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Brothers.dll.config
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Brothers.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Brothers.pdb
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Antlr3.Runtime.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Brothers.Entities.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\EntityFramework.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\EntityFramework.SqlServer.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Microsoft.Owin.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Microsoft.Owin.Security.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Newtonsoft.Json.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Owin.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\System.Web.Helpers.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\System.Web.Mvc.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\System.Web.Optimization.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\System.Web.Razor.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\System.Web.WebPages.Deployment.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\System.Web.WebPages.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\System.Web.WebPages.Razor.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\WebGrease.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Brothers.Entities.pdb
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Antlr3.Runtime.pdb
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\EntityFramework.xml
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\EntityFramework.SqlServer.xml
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Microsoft.Owin.xml
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Microsoft.Owin.Security.xml
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\Newtonsoft.Json.xml
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\System.Web.Helpers.xml
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\System.Web.Mvc.xml
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\System.Web.Optimization.xml
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\System.Web.Razor.xml
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\System.Web.WebPages.xml
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\System.Web.WebPages.Deployment.xml
+C:\Users\arpan\Desktop\Brothers\Brothers\bin\System.Web.WebPages.Razor.xml
+C:\Users\arpan\Desktop\Brothers\Brothers\obj\Debug\Brothers.csprojResolveAssemblyReference.cache
+C:\Users\arpan\Desktop\Brothers\Brothers\obj\Debug\Brothers.Migrations.InitialCreate.resources
+C:\Users\arpan\Desktop\Brothers\Brothers\obj\Debug\Brothers.Migrations.Admin.resources
+C:\Users\arpan\Desktop\Brothers\Brothers\obj\Debug\Brothers.csproj.GenerateResource.Cache
+C:\Users\arpan\Desktop\Brothers\Brothers\obj\Debug\Brothers.dll
+C:\Users\arpan\Desktop\Brothers\Brothers\obj\Debug\Brothers.pdb
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Brothers.dll.config
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Brothers.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Brothers.pdb
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Antlr3.Runtime.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Brothers.Entities.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\EntityFramework.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Microsoft.Owin.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Microsoft.Owin.Security.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Owin.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\System.Web.Helpers.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\System.Web.Mvc.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\System.Web.Optimization.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\System.Web.Razor.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\System.Web.WebPages.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\WebGrease.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Brothers.Entities.pdb
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Antlr3.Runtime.pdb
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\EntityFramework.xml
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\EntityFramework.SqlServer.xml
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Microsoft.Owin.xml
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Microsoft.Owin.Security.xml
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\System.Web.Helpers.xml
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\System.Web.Mvc.xml
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\System.Web.Optimization.xml
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\System.Web.Razor.xml
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\System.Web.WebPages.xml
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Desktop\update\Brothers\Brothers\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Desktop\update\Brothers\Brothers\obj\Debug\Brothers.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\update\Brothers\Brothers\obj\Debug\Brothers.Migrations.InitialCreate.resources
+C:\Users\Admin\Desktop\update\Brothers\Brothers\obj\Debug\Brothers.Migrations.Admin.resources
+C:\Users\Admin\Desktop\update\Brothers\Brothers\obj\Debug\Brothers.csproj.GenerateResource.Cache
+C:\Users\Admin\Desktop\update\Brothers\Brothers\obj\Debug\Brothers.dll
+C:\Users\Admin\Desktop\update\Brothers\Brothers\obj\Debug\Brothers.pdb
+F:\update\Brothers\Brothers\bin\Brothers.dll.config
+F:\update\Brothers\Brothers\bin\Brothers.dll
+F:\update\Brothers\Brothers\bin\Brothers.pdb
+F:\update\Brothers\Brothers\bin\Antlr3.Runtime.dll
+F:\update\Brothers\Brothers\bin\Brothers.Entities.dll
+F:\update\Brothers\Brothers\bin\EntityFramework.dll
+F:\update\Brothers\Brothers\bin\EntityFramework.SqlServer.dll
+F:\update\Brothers\Brothers\bin\Microsoft.AspNet.Identity.Core.dll
+F:\update\Brothers\Brothers\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\update\Brothers\Brothers\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\update\Brothers\Brothers\bin\Microsoft.Owin.dll
+F:\update\Brothers\Brothers\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\update\Brothers\Brothers\bin\Microsoft.Owin.Security.Cookies.dll
+F:\update\Brothers\Brothers\bin\Microsoft.Owin.Security.dll
+F:\update\Brothers\Brothers\bin\Microsoft.Owin.Security.Facebook.dll
+F:\update\Brothers\Brothers\bin\Microsoft.Owin.Security.Google.dll
+F:\update\Brothers\Brothers\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\update\Brothers\Brothers\bin\Microsoft.Owin.Security.OAuth.dll
+F:\update\Brothers\Brothers\bin\Microsoft.Owin.Security.Twitter.dll
+F:\update\Brothers\Brothers\bin\Microsoft.Web.Infrastructure.dll
+F:\update\Brothers\Brothers\bin\Newtonsoft.Json.dll
+F:\update\Brothers\Brothers\bin\Owin.dll
+F:\update\Brothers\Brothers\bin\System.Web.Helpers.dll
+F:\update\Brothers\Brothers\bin\System.Web.Mvc.dll
+F:\update\Brothers\Brothers\bin\System.Web.Optimization.dll
+F:\update\Brothers\Brothers\bin\System.Web.Razor.dll
+F:\update\Brothers\Brothers\bin\System.Web.WebPages.Deployment.dll
+F:\update\Brothers\Brothers\bin\System.Web.WebPages.dll
+F:\update\Brothers\Brothers\bin\System.Web.WebPages.Razor.dll
+F:\update\Brothers\Brothers\bin\WebGrease.dll
+F:\update\Brothers\Brothers\bin\Brothers.Entities.pdb
+F:\update\Brothers\Brothers\bin\Antlr3.Runtime.pdb
+F:\update\Brothers\Brothers\bin\EntityFramework.xml
+F:\update\Brothers\Brothers\bin\EntityFramework.SqlServer.xml
+F:\update\Brothers\Brothers\bin\Microsoft.AspNet.Identity.Core.xml
+F:\update\Brothers\Brothers\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\update\Brothers\Brothers\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\update\Brothers\Brothers\bin\Microsoft.Owin.xml
+F:\update\Brothers\Brothers\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\update\Brothers\Brothers\bin\Microsoft.Owin.Security.xml
+F:\update\Brothers\Brothers\bin\Microsoft.Owin.Security.Cookies.xml
+F:\update\Brothers\Brothers\bin\Microsoft.Owin.Security.Facebook.xml
+F:\update\Brothers\Brothers\bin\Microsoft.Owin.Security.Google.xml
+F:\update\Brothers\Brothers\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\update\Brothers\Brothers\bin\Microsoft.Owin.Security.OAuth.xml
+F:\update\Brothers\Brothers\bin\Microsoft.Owin.Security.Twitter.xml
+F:\update\Brothers\Brothers\bin\Newtonsoft.Json.xml
+F:\update\Brothers\Brothers\bin\System.Web.Helpers.xml
+F:\update\Brothers\Brothers\bin\System.Web.Mvc.xml
+F:\update\Brothers\Brothers\bin\System.Web.Optimization.xml
+F:\update\Brothers\Brothers\bin\System.Web.Razor.xml
+F:\update\Brothers\Brothers\bin\System.Web.WebPages.xml
+F:\update\Brothers\Brothers\bin\System.Web.WebPages.Deployment.xml
+F:\update\Brothers\Brothers\bin\System.Web.WebPages.Razor.xml
+F:\update\Brothers\Brothers\obj\Debug\Brothers.csprojResolveAssemblyReference.cache
+F:\update\Brothers\Brothers\obj\Debug\Brothers.Migrations.InitialCreate.resources
+F:\update\Brothers\Brothers\obj\Debug\Brothers.Migrations.Admin.resources
+F:\update\Brothers\Brothers\obj\Debug\Brothers.csproj.GenerateResource.Cache
+F:\update\Brothers\Brothers\obj\Debug\Brothers.dll
+F:\update\Brothers\Brothers\obj\Debug\Brothers.pdb

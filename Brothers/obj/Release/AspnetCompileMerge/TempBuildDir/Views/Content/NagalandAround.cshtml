@@ -1,0 +1,106 @@
+﻿
+@{
+    ViewBag.Title = "NagalandAround";
+    Layout = "~/Views/Shared/AboutNagalandLayout.cshtml";
+}
+<div class="well subheading-well">
+    <b class="subheading">Around Kohima</b>
+</div>
+
+<h4 class="text-info">Places Of Interest Around Kohima </h4>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/nagaland/khonoma-gate.jpg" alt="khonoma-gate" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="khonoma-gate" />
+            </div>
+        </div>
+        <h5>Khonoma Village</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/nagaland/Intank.jpg" alt="Intank" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Intank" />
+            </div>
+        </div>
+        <h5>The Intanki Wildlife Sanctuary</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/nagaland/longwa.jpg" alt="longwa" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="longwa" />
+            </div>
+        </div>
+        <h5>Longwa Village</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/nagaland/kisama.jpg" alt="kisama" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="kisama" />
+            </div>
+        </div>
+        <h5>Kisama Heritage Village </h5>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "khonoma-gate") {
+            $('#myPicLabel').text('Khonoma Village')
+            $('#pic-path').attr('src', '/Content/img/nagaland/khonoma-gate.jpg');
+            $('#pic-details').html("<p>This Village Considered By Many As The Last Bastion Of The Naga Warriors In Their Fight Against The British Empire Is Situated 20Kms. To The West Of Kohima. Once A Naga Stronghold, The Village Tells Hundreds Of Tales Of Acts Of Bravery And Heroism In Wake Of Attack On The Tribe. A Traditionally Carved Gate Permits Entry To The Highest Point In The Village. <br/>A Word Of Caution Here, The Frequency Of Buses To Khonoma Is Low And It May Necessitate Hiring Of A Vehicle To Visit The Village. The Villagers Have Carved Some Amazing Terraces Out Of The Hills To Grow 20 Different Types Of Paddy At Various Elevations.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Intank") {
+            $('#myPicLabel').text('The Intanki Wildlife Sanctuary')
+            $('#pic-path').attr('src', '/Content/img/nagaland/Intank.jpg');
+            $('#pic-details').html("<p>The Intanki Wildlife Sanctuary Is Situated About 111Kms. From Kohima. The Sanctuary Is Protected By The Forest Wildlife Department. The Sanctuary Covers An Area Of Around 202Sq.Kms. Which Abounds In Natural Vegetation. The Sanctuary Has A Large Number Of Mountains & Hills And The Altitude Of The Place Ranges Around 677M. The Place Is Very Rich In Natural Vegetation And Comprises Of Various Species Of Plants & Trees That Are Hard To Find Somewhere Else. The Time Period Between The Months Of November-February Is The Ideal Time For Visiting The Place. </p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "longwa") {
+            $('#myPicLabel').text('Longwa Village')
+            $('#pic-path').attr('src', '/Content/img/nagaland/longwa.jpg');
+            $('#pic-details').html("<p>Ever Heard Of An International Border That Passes Through A House? I Bet Not.Well, There Is One, At Least That I Know Of, In Longwa Village In Mon District Of Nagaland. The International Border Between India And Myanmar Apparently Runs Through The Village Chief’s House. They Call The Chief  “Angh” In The Local Dialect.<br/>Longwa Village Is About 40Kms. From The Mon District Headquarter, And Is Reachable Via Assam’s Sonari Town. The Road To Longwa Is Decently Motor-Able. The View Of Hills And Fields Along The Way Would Have Been Worth Much More If Traveled On Motor Cycle I Opine.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "kisama") {
+            $('#myPicLabel').text('Kisama Heritage Village ')
+            $('#pic-path').attr('src', '/Content/img/nagaland/kisama.jpg');
+            $('#pic-details').html("<p>Kisama Heritage Village For The Spectacular Hornbill Festival Of Nagaland. Revel In This Marvelous Riot Of Colour As You Watch All 16 Tribes Of Nagaland Show Off The Rich Fare Of Diverse Cultures And Traditional Arts That Is Nagaland. You Can Witness The Attire, Folk Music And Dance Forms, Headgear, Cuisines, Paintings, Handicrafts, And Other Intricacies Of The Varied Tribes And Sub Tribes Of The State. The Highlight Of This Nagaland Festival Is Not Only The Music, Both Traditional And Contemporary, And Dance You Will Also Be Enchanted By The Display Of Exquisite Handicraft And Handloom. Adding To The Excitement Is A Motor Rally, Traditional Sports Like Wrestling And Archery, A Literary Fest, And Fun Events Like Climbing A Greased Bamboo Pole Or Chilli Eating Contests.</p>");
+            $('#myModal').modal('show');
+        }
+
+       
+    });
+
+</script>

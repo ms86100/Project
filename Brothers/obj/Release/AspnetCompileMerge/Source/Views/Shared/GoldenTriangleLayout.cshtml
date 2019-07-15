@@ -1,0 +1,102 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-lg-3 col-md-3 col-sm-5" style="background-color:#ede8e8">
+    <h4 class="text-danger">DELHI</h4>
+    <hr class="row-margin-10" />
+    <nav>
+        <ul class="nav11 side-links" style="padding-left:10px;">
+            <li>
+                <a href="@Url.Action("aboutdelhi", "content")">About</a>
+            </li>
+            <li>
+                <a href="@Url.Action("delhimonuments", "content")">Monuments</a>
+            </li>
+            <li>
+                <a href="@Url.Action("delhitemples", "content")">Temples</a>
+            </li>
+
+            <li>
+                <a href="@Url.Action("delhigardens", "content")">Gardens</a>
+
+            </li>
+            <li>
+                <a href="@Url.Action("delhiexcursions", "content")">Excursion</a>
+            </li>
+            <li>
+                <a href="@Url.Action("delhifair", "content")">Fair & Festivals</a>
+            </li>
+            <li>
+                <a href="@Url.Action("delhishopping", "content")">Shopping</a>
+            </li>
+        </ul>
+    </nav>
+    <h4 class="text-danger">AGRA</h4>
+    <hr class="row-margin-10" />
+    <nav>
+        <ul class="side-links nav11" style="padding-left:10px;">
+            <li>
+                <a href="@Url.Action("aboutagra", "content")">About</a>
+            </li>
+            <li>
+                <a href="@Url.Action("agramonuments", "content")">Monuments</a>
+            </li>
+            <li>
+                <a href="@Url.Action("agratemples", "content")">Temples</a>
+            </li>
+
+            <li>
+                <a href="@Url.Action("agragardens", "content")">Gardens</a>
+
+            </li>
+            <li>
+                <a href="@Url.Action("agraexcursions", "content")">Excursions</a>
+            </li>
+            <li>
+                <a href="@Url.Action("agrafairs", "content")">Fair & Festivals</a>
+            </li>
+            <li>
+                <a href="@Url.Action("agrashopping", "content")">Shopping</a>
+            </li>
+        </ul>
+    </nav>
+    <h4 class="text-danger">JAIPUR</h4>
+    <hr class="row-margin-10" />
+    <nav>
+        <ul class="side-links nav11" style="padding-left:10px;">
+            <li>
+                <a href="@Url.Action("aboutjaipur", "content")">About</a>
+            </li>
+            <li>
+                <a href="@Url.Action("jaipurmonuments", "content")">Monuments</a>
+            </li>
+            <li>
+                <a href="@Url.Action("jaipurtemples", "content")">Temples</a>
+            </li>
+
+            <li>
+                <a href="@Url.Action("jaipurgardens", "content")">Gardens</a>
+
+            </li>
+            <li>
+                <a href="@Url.Action("jaipurexcursions", "content")">Excursions</a>
+            </li>
+            <li>
+                <a href="@Url.Action("jaipurfairs", "content")">Fair & Festivals</a>
+            </li>
+            <li>
+                <a href="@Url.Action("jaipurshopping", "content")">Shopping</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-7">
+    <div class="section-header text-center">
+        <h2 class="section-title">Golden Triangle Tour</h2>
+    </div>
+    @RenderBody()
+</div>
+
+
+

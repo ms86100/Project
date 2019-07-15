@@ -1,0 +1,90 @@
+﻿@{
+    ViewBag.Title = "JaipurGardens";
+    Layout = "~/Views/Shared/GoldenTriangleLayout.cshtml";
+}
+
+<div class="well subheading-well">
+    <b class="subheading">Gardens</b>
+</div>
+<div class="col-md-12">
+    <p>
+        One Might Consider Jaipur, A City Located Near The Thar Desert, As Barren But That Is Not The Case. Jaipur, The Pink City, Is Not Only Famous For Forts, Temples And Monuments But Also For Gardens Which Further Enhance Its Value On The Tourism Map. Jaipur Has Plenty Of Gardens, Both Natural And Artificial, And The Government Has Taken Ample Measures To Preserve It. When The Kachhwaha Rajput King, Maharaja Sawai Jai Singh II Planned The City, He Gave Special Importance To The Gardens In The City. Most Of The Gardens Were Dedicated To The Queens, As In The Case Of Sisodia Rani Ka Bagh Which Was Constructed For His Second Wife. Other Prominent Gardens In The City Are Kanak Vrindavan Valley And Vidyadhar Garden.
+    </p>
+</div>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Jaipur/Gardens/Kanak%20Vrindavan.jpg" alt="Kanak%20Vrindavan" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Kanak" />
+            </div>
+        </div>
+        <h5>Kanak Vrindavan Valley </h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Jaipur/Gardens/sisodia-rani-ka-bagh.jpg" alt="sisodia-rani-ka-bagh" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="sisodia" />
+            </div>
+        </div>
+        <h5>Sisodia Rani Ka Bagh </h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Jaipur/Gardens/Vidyadhar-Garden.jpg" alt="Vidyadhar-Garden" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Vidyadhar" />
+            </div>
+        </div>
+        <h5>Vidyadhar Garden </h5>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "Kanak") {
+            $('#myPicLabel').text('Kanak Vrindavan Valley ')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Jaipur/Gardens/Kanak%20Vrindavan.jpg');
+            $('#pic-details').html("<p>The Kanak Vrindavan Valley Is An Exotic Place In Jaipur, And Is Located On The Way To The Amer Fort. Nuzzled At The Bottom Of The Nahargarh Hill, The Garden Complex Is Surrounded By Popular Tourist Spots Such As The Amer Palace, Jaigarh Fort And Blankets Of Lush Greenery.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "sisodia") {
+            $('#myPicLabel').text('Sisodia Rani Ka Bagh ')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Jaipur/Gardens/sisodia-rani-ka-bagh.jpg');
+            $('#pic-details').html("<p>Sisodia Rani Ka Bagh Is Situated At A Distance Of 10 Km From Jaipur City And Lies On Jaipur-Agra Highway. This Royal Garden Was Built By Maharaja Sawai Jai Singh In 1728 For His Second Queen Sisodia. Sisodia Rani Garden Is Adorned With Beautiful Wall Paintings Of Radha-Krishna Love Story.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Vidyadhar") {
+            $('#myPicLabel').text('Vidyadhar Garden ')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Jaipur/Gardens/Vidyadhar-Garden.jpg');
+            $('#pic-details').html("<p>The Vidyadhar Garden Is A Pristine Garden Located In The Heart Of Jaipur. One Of Jaipur's Best-Preserved Gardens, This Picturesque Garden Is Aesthetically Designed And Was Built In The Memory Of Jaipur's Chief Architect, Vidyadhar Bhattacharya.</p>");
+            $('#myModal').modal('show');
+        }
+    });
+
+</script>
+

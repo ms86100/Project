@@ -1,0 +1,145 @@
+﻿
+@{
+    ViewBag.Title = "GoaLayout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="col-lg-3 col-md-3 col-sm-5" style="background-color:#ede8e8">
+    <h4 class="text-danger">Activities</h4>
+    <hr class="row-margin-10" />
+    <nav>
+        <ul class="nav11 side-links" style="padding-left:10px;">
+            <li>
+                <a href="@Url.Action("GoaTrek", "content")">Trekking & Hiking</a>
+            </li>
+            <li>
+                <a href="@Url.Action("GoaWhytrek", "content")">Why Trek In Goa</a>
+            </li>
+            <li>
+                <a href="@Url.Action("GoaPopulartrek", "content")">Popular Trek in Goa</a>
+            </li>
+            
+          
+        </ul>
+    </nav>
+    <h4 class="text-danger">Outdoor Activities</h4>
+    <hr class="row-margin-10" />
+    <nav>
+        <ul class="side-links nav11" style="padding-left:10px;">
+            <li>
+                <a href="@Url.Action("GoaScuba", "content")">Scuba Diving</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Goasailing", "content")">Sailing</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Goasports", "content")">Water Sports</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Goahiking", "content")">Hiking</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Goawildlife", "content")">Wildlife Spotting</a>
+            </li>
+       
+        </ul>
+    </nav>
+    <h4 class="text-danger">Attraction</h4>
+    <hr class="row-margin-10" />
+    <nav>
+        <ul class="side-links nav11" style="padding-left:10px;">
+            <li>
+                <a href="@Url.Action("Goacasino", "content")">Casino</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Goashopping", "content")">Shopping Guide</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Goanightlife", "content")">NightLife</a>
+            </li>
+            <li>
+                <a href="@Url.Action("GoaRestaurant", "content")">Restaurant</a>
+            </li>
+         
+            
+
+        </ul>
+    </nav>
+    <h4 class="text-danger">General Information</h4>
+    <hr class="row-margin-10" />
+    <nav>
+        <ul class="side-links nav11" style="padding-left:10px;">
+            <li>
+                <a href="@Url.Action("GoaGeography", "content")">Geography</a>
+            </li>
+            <li>
+                <a href="@Url.Action("GoaHistory", "content")">History</a>
+            </li>
+            <li>
+                <a href="@Url.Action("GoaReligion", "content")">Religion </a>
+            </li>
+
+            
+             <li>
+                <a href="@Url.Action("GoaEconomy", "content")">Economy</a>
+            </li>
+            <li>
+                <a href="@Url.Action("GoaCultutre", "content")">Culture</a>
+            </li>
+            <li>
+                <a href="@Url.Action("GoaPeople", "content")">People</a>
+            </li>
+            <li>
+                <a href="@Url.Action("GoaFestival", "content")">Festival & Events</a>
+            </li>
+            <li>
+                <a href="@Url.Action("GoaFacts", "content")">Facts & Figures</a>
+            </li>
+            <li>
+                <a href="@Url.Action("GoaClimate", "content")">Climate</a>
+            </li>
+           
+
+
+        </ul>
+    </nav>
+
+    <h4 class="text-danger">Travel Information</h4>
+    <hr class="row-margin-10" />
+    <ul class="nav11 side-links" style="padding-left:10px;">
+
+        <li>
+            <a href="@Url.Action("GoaEntering", "content")">Entering And Leaving </a>
+        </li>
+        <li>
+            <a href="@Url.Action("GoaRegistration", "content")">Registration Of Foreigners & NRI's </a>
+        </li>
+    </ul>
+
+
+    <h4 class="text-danger">What To See</h4>
+    <hr class="row-margin-10" />
+    <ul class="nav11 side-links" style="padding-left:10px;">
+        <li>
+            <a href="@Url.Action("GoaBeaches", "content")">Beaches</a>
+        </li>
+        <li>
+            <a href="@Url.Action("Goachurches", "content")">Churches Of Goa</a>
+        </li>
+        <li>
+            <a href="@Url.Action("GoaCuisine", "content")">Cuisine</a>
+        </li>
+        <li>
+            <a href="@Url.Action("GoaTourist", "content")">Tourist Destinations</a>
+        </li>
+    </ul>
+</div>
+
+<div class="col-lg-9 col-md-9 col-sm-7">
+    <div class="section-header text-center">
+        <h2 class="section-title">Goa</h2>
+    </div>
+    @RenderBody()
+</div>
+
+
+

@@ -1,0 +1,111 @@
+﻿@{
+    ViewBag.Title = "Jammulayout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-lg-3 col-md-3 col-sm-5" style="background-color:#ede8e8">
+    <h4 class="text-danger">Activities</h4>
+    <hr class="row-margin-10" />
+    <nav>
+        <ul class="nav11 side-links" style="padding-left:10px;">
+            <li>
+                <a href="@Url.Action("JammuTrekking", "content")">Trekking</a>
+            </li>
+            <li>
+                <a href="@Url.Action("JammuWhentrek", "content")">When To Trek</a>
+            </li>
+            <li>
+                <a href="@Url.Action("JammuTips", "content")">Must Remember Tips</a>
+            </li>
+
+
+        </ul>
+    </nav>
+    <h4 class="text-danger">Outdoor Activities</h4>
+    <hr class="row-margin-10" />
+    <nav>
+        <ul class="side-links nav11" style="padding-left:10px;">
+            <li>
+                <a href="@Url.Action("JammuTrek", "content")">Trekking</a>
+            </li>
+            <li>
+                <a href="@Url.Action("JammuSkiing", "content")">Skiing</a>
+            </li>
+            <li>
+                <a href="@Url.Action("JammuAero", "content")">Aero Sports</a>
+            </li>
+            <li>
+                <a href="@Url.Action("JammuWater", "content")">Water Sport</a>
+            </li>
+            <li>
+                <a href="@Url.Action("jammuGolf", "content")">Golfing</a>
+            </li>
+            <li>
+                <a href="@Url.Action("JammuAngling", "content")">Angling & Fishing</a>
+            </li>
+
+        </ul>
+    </nav>
+    <h4 class="text-danger">General Information</h4>
+    <hr class="row-margin-10" />
+    <nav>
+        <ul class="side-links nav11" style="padding-left:10px;">
+            <li>
+                <a href="@Url.Action("JammuGeography", "content")">Geography</a>
+            </li>
+            <li>
+                <a href="@Url.Action("JammuHistory", "content")">History</a>
+            </li>
+            <li>
+                <a href="@Url.Action("JammuReligion", "content")">Religion</a>
+            </li>
+            <li>
+                <a href="@Url.Action("JammuLanguage", "content")">Language</a>
+            </li>
+            <li>
+                <a href="@Url.Action("JammuEconomy", "content")">Economy</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Jammupeople", "content")">People & LifeStyle</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Jammucustom", "content")">Customs & people</a>
+            </li>
+            <li>
+                <a href="@Url.Action("JammuFacts", "content")">Facts & Figures</a>
+            </li>
+
+
+
+        </ul>
+    </nav>
+    <h4 class="text-danger">Travel Information</h4>
+    <hr class="row-margin-10" />
+    <nav>
+        <ul class="side-links nav11" style="padding-left:10px;">
+            <li>
+                <a href="@Url.Action("JammuEntering", "content")">Entering & Leaving</a>
+            </li>
+
+
+        </ul>
+    </nav>
+
+    <h4 class="text-danger">What To See</h4>
+    <hr class="row-margin-10" />
+    <ul class="nav11 side-links" style="padding-left:10px;">
+
+        <li>
+            <a href="@Url.Action("JammuTosee", "content")">Jammu & Kashmir </a>
+        </li>
+       
+    </ul>
+</div>
+
+<div class="col-lg-9 col-md-9 col-sm-7">
+    <div class="section-header text-center">
+        <h2 class="section-title">Jammu And Kashmir</h2>
+    </div>
+    @RenderBody()
+</div>
+

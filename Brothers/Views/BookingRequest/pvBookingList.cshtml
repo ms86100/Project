@@ -1,0 +1,116 @@
+﻿@model Brothers.Entities.ViewModels.MstBookingViewModel
+
+<div id="DataGrid" class="col-md-12">
+    @if (Model.MstBookingList.Count() > 0)
+    {
+        <div class="table-responsive">
+            <table class="table table-striped table-condensed table-bordered">
+                <thead>
+                    <tr>
+                        <th class="text-center" style="vertical-align:middle">
+                            Package Name
+                        </th>
+                        <th class="text-center" style="vertical-align:middle">
+                            Arrival Date
+                        </th>
+                        <th class="text-center" style="vertical-align:middle">
+                            Departure Date
+                        </th>
+                        <th class="text-center" style="vertical-align:middle">
+                            Total Persons
+                        </th>
+                        <th class="text-center" style="vertical-align:middle">
+                            Client Name
+                        </th>
+                        <th class="text-center" style="vertical-align:middle">
+                            Client Requirement
+                        </th>
+                        <th class="text-center" style="vertical-align:middle">
+                            Booking Date
+                        </th>
+                        <th class="text-center" style="vertical-align:middle">
+                            Status
+                        </th>
+                        <th class="text-center" style="vertical-align:middle">
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.MstBookingList)
+                    {
+                        <tr>
+                            <td class="text-center">
+                                @Html.DisplayFor(modelItem => item.PackageName)
+                            </td>
+                            <td class="text-center">
+                                @item.ArrivalDate.ToString("dd MMM yyyy")
+                            </td>
+                            <td class="text-center">
+                                @item.DepartureDate.ToString("dd MMM yyyy")
+                            </td>
+                            <td class="text-center">
+                                @item.AdultPax Adults/@item.ChildPax Child/@item.InfantPax Infants
+                            </td>
+                            <td class="text-center">
+                                @Html.DisplayFor(modelItem => item.ClientName)
+                            </td>
+                            @if (item.ClientRequirement != null)
+                            {
+                                <td class="text-center">
+                                    @Html.DisplayFor(modelItem => item.ClientRequirement)
+                                </td>
+                            }
+                            else
+                            {
+                                <td class="text-center">
+                                    Not Mentioned
+                                </td>
+                            }
+                            <td class="text-center">
+                                @item.BookingDate.ToString("dd MMM yyyy")
+                            </td>
+                            <td class="text-center">
+                                @Html.DisplayFor(modelItem => item.Status)
+                            </td>
+                            <td class="text-center" style="width: 70px; vertical-align:middle">
+                                <div style="float: right;">
+                                    <div style="float:left; padding-right: 8px;">
+                                        <a href="@Url.Action("reply", "bookingrequest", new { id = item.BookingID, packid = item.PackageID })" data-toggle="tooltip" data-placement="bottom" title="Reply">
+                                        <i class="glyphicon glyphicon-share-alt"></i>
+                                        </a>
+                                    </div>
+                                    <div style="float:left; padding-right: 10px;">
+                                        <a href="@Url.Action("export", "bookingrequest", new { packid = item.PackageID, id=item.BookingID })" data-toggle="tooltip" data-placement="bottom" title="Export To Word">
+                                            <i class="glyphicon glyphicon-export"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="ns-grid-pager" data-otf-target="#DataGrid">
+            <div class="hidden-xs col-md-3 col-sm-3">
+                @Model.pagingInfo.TotalItems Record(s)
+            </div>
+            <div class="visible-lg visible-md visible-sm visible-xs col-md-9 col-sm-9 ns-pagination" data-otf-target="#DataGrid" data-otf-actionlink="/bookingrequest/List">
+                @Html.PageLinks(Model.pagingInfo, x => Url.Action("list", "bookingrequest", new { PageNo = x, PageSize = Model.pagingInfo.ItemsPerPage }))
+            </div>
+        </div>
+    }
+    else
+    {
+        <h3>No record found...</h3>
+    }
+</div>
+@*error message*@
+<div id="ErrMsg" style="display:none;">
+    <input type="hidden" id="ErrMsgHiddenField" name="ErrMsg" value="@TempData["ErrMsg"]" />
+</div>
+
+
+
+

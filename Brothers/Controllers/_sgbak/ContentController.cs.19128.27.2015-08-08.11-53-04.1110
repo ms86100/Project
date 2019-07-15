@@ -1,0 +1,154 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace Brothers.Controllers
+{
+    public class ContentController : Controller
+    {
+        #region Who we are
+        public ActionResult Profile()
+        {
+            return View();
+        }
+        public ActionResult TeamMessage()
+        {
+            return View();
+        }
+        #endregion
+
+        #region customer care
+        public ActionResult FAQs()
+        {
+            return View();
+        }
+
+        public ActionResult ContactUs()
+        {
+            return View();
+        }
+        #endregion customer care
+
+        #region Sikkim
+        public ActionResult SikkimTravelInfo()
+        {
+            return View();
+        }
+        public ActionResult AboutSikkim()
+        {
+            return View();
+        }
+        public ActionResult SikkimPeople()
+        {
+            return View();
+        }
+        public ActionResult SikkimFestivals()
+        {
+            return View();
+        }
+        public ActionResult SikkimClimate()
+        {
+            return View();
+        }
+        public ActionResult FloraAndFauna()
+        {
+            return View();
+        }
+        public ActionResult SikkimHistory()
+        {
+            return View();
+        }
+        public ActionResult SikkimGeography()
+        {
+            return View();
+        }
+        public ActionResult SikkimEconomy()
+        {
+            return View();
+        }
+        public ActionResult SikkimActivities()
+        {
+            return View();
+        }
+        public ActionResult SikkimTrekking()
+        {
+            return View();
+        }
+        #endregion Sikkim
+
+        #region Darjeeling
+        public ActionResult DarjeelingTravelInfo()
+        {
+            return View();
+        }
+        public ActionResult AboutDarjeeling()
+        {
+            return View();
+        }
+        public ActionResult DarjeelingPeople()
+        {
+            return View();
+        }
+        public ActionResult DarjeelingClimate()
+        {
+            return View();
+        }
+        public ActionResult DarjFloraandFauna()
+        {
+            return View();
+        }
+        public ActionResult DarjeelingHistory()
+        {
+            return View();
+        }
+        public ActionResult DarjeelingEconomy()
+        {
+            return View();
+        }
+        #endregion Darjeeling
+
+        #region Kolkata
+        public ActionResult KolkataTravelInfo()
+        {
+            return View();
+        }
+        public ActionResult AboutKolkata()
+        {
+            return View();
+        }
+        public ActionResult KolkataPeople()
+        {
+            return View();
+        }
+        public ActionResult KolkataGeography()
+        {
+            return View();
+        }
+        public ActionResult KolkataHistory()
+        {
+            return View();
+        }
+        public ActionResult KolkataEconomy()
+        {
+            return View();
+        }
+        public ActionResult KolkataFloraAndFauna()
+        {
+            return View();
+        }
+        #endregion Kolkata
+        #region Bhutan
+        public ActionResult BhutanTravelInfo()
+        {
+            return View();
+        }
+        public ActionResult AboutBhutan()
+        {
+            return View();
+        }
+        #endregion Bhutan
+    }
+
+}

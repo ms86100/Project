@@ -1,0 +1,23 @@
+﻿@model Brothers.Entities.Models.utblGenEnquiry
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3 class="modal-title text-center text-primary" id="myModalLabel">Enquiry Details</h3>
+</div>
+<div class="modal-body" style="padding:30px">
+    <div>
+        <p>
+            <label><i class="glyphicon glyphicon-envelope">&nbsp;</i>Email ID:&nbsp;</label>@Html.DisplayFor(m => m.GuestEmailID)
+        </p>
+    </div>
+    <div>
+        <label>Enquiry</label>
+        <p style="padding:0px 10px;">@Html.DisplayFor(m => m.EnquiryDetails)</p>
+    </div>
+</div>
+
+<div class="modal-footer">
+    @Html.ActionLink("Reply", "reply", "enquiry", new { id = Model.EnquiryID }, new { @class = "btn btn-primary" })
+    &nbsp;
+    <button class="btn btn-default" type="button" data-dismiss="modal">Close</button>
+</div>

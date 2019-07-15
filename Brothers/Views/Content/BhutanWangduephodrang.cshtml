@@ -1,0 +1,64 @@
+﻿
+@{
+    Layout = "~/Views/Shared/BhutanLayout.cshtml";
+}
+
+<div class="well subheading-well">
+    <b class="subheading">Wangdue Phorang</b>
+</div>
+<div class="well hidden-xs" style="padding:10px;">
+    <img src="~/Content/img/Bhutan/Wangduephodrang.jpg" class="img-rounded resp-img" />
+</div>
+<div class="col-md-12">
+    <h4 class="text-info">Wangduephodrang (Alt. 4265 ft)</h4>
+    <p>
+        Wangduephodrang Is The Last Town On The Central Highway Before Central Bhutan. The Town Is Not More Than An Enlarged Village With A Few Well-Provided Shops. Located In The South Of Punakha, The Higher Reaches Of The Wangduephodrang Valley Provide Rich Pastureland For Cattle. This District Is Also Famous For Its Fine Bamboo Products, Slate And Stone Carvings.
+    </p>
+    <h4 class="text-info">Places Of Interest In And Around Wangduephodrang </h4>
+    <div class="row">
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/Wangduephodrangdz.jpg" alt="Wangduephodrangdz" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Wangduephodrangdz" />
+                </div>
+            </div>
+            <h5>Wangduephodrang Dzong</h5>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "Wangduephodrangdz") {
+            $('#myPicLabel').text('Wangduephodrang Dzong ')
+            $('#pic-path').attr('src', '/Content/img/Bhutan/Wangduephodrangdz.jpg');
+            $('#pic-details').html("<p>Sitting On Top Of The Hill At The Confluence Of Punakha Chhu And Tang Chhu Rivers, Wangduephodrang Dzong Is Town's Most Visible Features. The Dzong Is Open For Visitors During Wangduephodrang Tsechu Celebrated In Autumn.<br/>Now Wangduephodrang Dzong Is No Longer Available For Visit As It Is Completely Gutted Down By The Devastating Fire On 24th June 2012.</p>");
+            $('#myModal').modal('show');
+        }
+    });
+
+</script>

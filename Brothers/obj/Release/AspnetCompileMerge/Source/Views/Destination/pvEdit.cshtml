@@ -1,0 +1,46 @@
+﻿@model Brothers.Entities.ViewModels.MstDestinationManageModel
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3 class="modal-title text-center text-primary" id="myModalLabel">Edit Destination Details</h3>
+</div>
+@using (Html.BeginForm("edit", "destination", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="modal-body" style="padding:20px">
+        <div class="form-horizontal">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(m=>m.utblMstDestinations.DestinationID)
+            <div class="form-group">
+                @Html.LabelFor(m => m.utblMstDestinations.DestinationName, new { @class = "control-label col-md-3" })
+                <div class="col-md-8">
+                    @Html.TextBoxFor(m => m.utblMstDestinations.DestinationName, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.utblMstDestinations.DestinationName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.utblMstDestinations.CountryID, new { @class = "control-label col-md-3" })
+                <div class="col-md-8">
+                    @Html.DropDownListFor(m => m.utblMstDestinations.CountryID, new SelectList(Model.MstCountryDropDown, "CountryID", "CountryName"), "--- Select Country ---", new { @class = "form-control ddl-select2" })
+                    @Html.ValidationMessageFor(m => m.utblMstDestinations.CountryID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.utblMstDestinations.DestinationDesc, new { @class = "control-label col-md-3" })
+                <div class="col-md-8">
+                    @Html.TextAreaFor(m => m.utblMstDestinations.DestinationDesc, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.utblMstDestinations.DestinationDesc, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <input class="btn btn-primary" type="submit" value="Update" />
+        &nbsp;
+        <button class="btn btn-default" type="button" data-dismiss="modal">Cancel</button>
+    </div>
+}
+
+<script>
+    $('.ddl-select2').select2({ width: "100%" });
+</script>

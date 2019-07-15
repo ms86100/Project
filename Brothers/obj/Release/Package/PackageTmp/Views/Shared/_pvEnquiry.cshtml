@@ -1,0 +1,60 @@
+﻿@model Brothers.Entities.Models.utblGenEnquiry
+
+
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title" id="myModalLabel">Quick Enquiry</h4>
+</div>
+@using (Html.BeginForm("create", "content", FormMethod.Post))
+{
+    <div class="modal-body">
+        @Html.ValidationSummary(true)
+        <div class="row-no-margin">
+            @*<div class="form-group">
+                <div class="row-margin">
+                    <label class="control-label">Your Name</label>
+                </div>
+                <div class="row-no-margin">
+                    @Html.TextBoxFor(m => m.GuestName, null, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.GuestName, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+            <div class="form-group">
+                <div class="row-margin">
+                    <label class="control-label">Email ID</label>
+                </div>
+                <div class="row-no-margin">
+                    @Html.TextBoxFor(m => m.GuestEmailID, null, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.GuestEmailID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row-margin">
+                    <label class="control-label">Mobile No.</label>
+                </div>
+                <div class="row-no-margin">
+                    @Html.TextBoxFor(m => m.GuestMobileNo, null, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row-margin">
+                    <label class="control-label">Your Enquiry</label>
+                </div>
+                <div class="row-no-margin">
+                    @Html.TextAreaFor(m => m.EnquiryDetails, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.EnquiryDetails, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="CloseMyModal()">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+}
+<script>
+    function CloseMyModal() {
+        $("#myModal").modal('hide');
+    }
+</script>

@@ -1,0 +1,112 @@
+﻿
+@{
+    Layout = "~/Views/Shared/BhutanLayout.cshtml";
+}
+
+<div class="well subheading-well">
+    <b class="subheading">Mongar & Lhuntse</b>
+</div>
+<div class="well hidden-xs" style="padding:10px;">
+    <img src="~/Content/img/Bhutan/Mongar.jpg" class="img-rounded resp-img" />
+</div>
+<div class="col-md-12">
+    <h4 class="text-info">Mongar (Alt 5250ft) & Lhuntse(Alt. 7621ft)</h4>
+    <p>
+        The Journey From Bumthang To Mongar Is One Of The Most Beautiful In The Himalayas Crossing 4,000m High Thrumshing La (Pass). Gushing Waterfalls, Steep Cliffs With Even Steeper Drops, Blazing Flowers And Constantly Changing Vegetation Combine To Make This Journey As Varied As It Is Beautiful. Mongar Marks The Beginning Of Eastern Bhutan. The Second Largest Town In The Sub-Tropical East, Mongar Like Trashigang Further East, Is Situated On The Side Of A Hill In The Contrasts To Other Towns Of Western Bhutan Which Was Built On The Valley Floor. 
+    </p>
+    <h4 class="text-info">Places Of Interest In And Around Mongar </h4>
+    <div class="row">
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/MongarDzong.jpg" alt="MongarDzong" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="MongarDzong" />
+                </div>
+            </div>
+            <h5>Mongar Dzong</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/YakangLhakhang.jpg" alt="YakangLhakhang" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="YakangLhakhang" />
+                </div>
+            </div>
+            <h5>Yakang Lhakhang </h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/DrametseLhakhang.jpg" alt="DrametseLhakhang" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="DrametseLhakhang" />
+                </div>
+            </div>
+            <h5>Drametse Lhakhang</h5>
+        </div>
+    </div>
+    <h4 class="text-info">Excursion Around Mongar </h4>
+    <div class="row">
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/Lhuntse.jpg" alt="Lhuntse" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Lhuntse" />
+                </div>
+            </div>
+            <h5>Lhuntse</h5>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "MongarDzong") {
+            $('#myPicLabel').text('Mongar Dzong')
+            $('#pic-path').attr('src', '/Content/img/Bhutan/MongarDzong.jpg');
+            $('#pic-details').html("<p>It Is Site Of One Of Bhutan's Newest Dzong Built In 1930s. Yet The Dzong Is Built In The Same Method And Traditions Of All The Other Dzongs; No Drawings And Nails Have Been Used. A Visit Gives Visitors An Impression Of How Traditional Bhutanese Architecture Has Continued To Thrive Through The Centuries.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "YakangLhakhang") {
+            $('#myPicLabel').text('Yakang Lhakhang')
+            $('#pic-path').attr('src', '/Content/img/Bhutan/YakangLhakhang.jpg');
+            $('#pic-details').html("<p>Located At About 20 Minutes Walk From Mongar Town, This Privately Owned Monastery Was Founded By Lama Sangdag, The Sixth Son Of Terton Pema Lingpa. It Is Of Great Cultural Significance And A Repository Of A Wide Range Of Spiritual Treasures And Other Sacred Objects Known To Have Been Revealed By Terton Pema Lingpa.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "DrametseLhakhang") {
+            $('#myPicLabel').text('Drametse Lhakhang')
+            $('#pic-path').attr('src', '/Content/img/Bhutan/DrametseLhakhang.jpg');
+            $('#pic-details').html("<p>Dramtse Lhakhang Means, ‘The Peak Without Enemy’, Is One Of The Largest And Most Important Monastery In Eastern Bhutan, Situated About 18 Km Away From Trashigang To Monger Highway. The Lhakhang Was Founded By A Highly Accomplished Ani (Nun) Named Choten Zangmo In The 16th Century, The Granddaughter Of The Famous Religious Master Terton Pema Lingpa (The Treasure Discoverer).  </p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Lhuntse") {
+            $('#myPicLabel').text('Lhuntse')
+            $('#pic-path').attr('src', '/Content/img/Bhutan/Lhuntse.jpg');
+            $('#pic-details').html("<p>Lhuntse Is 77 Km From Mongar (3 Hours Drive) And Is One Of The Most Isolated Districts In The Country. The Landscape Here Is Spectacular With Stark Cliffs And Gorges And Dense Coniferous Forests. The Region Is Notably Famed For Its Weavers And Their Special Textiles Generally Considered To Be The Best In The Country. The Kurtoe Region Of Lhuntse Is Also The Ancestral Home Of Royal Dynasty.</p>");
+            $('#myModal').modal('show');
+        }
+    });
+
+</script>

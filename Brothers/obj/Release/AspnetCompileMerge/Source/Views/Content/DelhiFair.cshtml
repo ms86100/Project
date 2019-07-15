@@ -1,0 +1,152 @@
+﻿
+@{
+    ViewBag.Title = "DelhiFair";
+    Layout = "~/Views/Shared/GoldenTriangleLayout.cshtml";
+}
+
+<div class="well subheading-well">
+    <b class="subheading">Fairs & Festivals</b>
+</div>
+<div class="col-md-12">
+    <p>
+        Delhi Is One Of The Four Major Indian Metros. It Houses New Delhi, The Capital Of India, And Consists Of A Multicultural Population. Naturally, There Are A Large Numbers Of Fairs And Festivals Celebrated In Delhi Every Year. These Are Organized At Different Times By People Of Different Religion. It Would Be Unfair For You To Give These Colorful Events A Miss. Delhi Witnesses The Celebration Of A Large Number Of Fairs & Festivals All Year Round. Some Of These Wonderful Events Are.
+    </p>
+</div>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Delhi/Fairs%20&%20Festivals/LOHRI.jpg" alt="LOHRI" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="LOHRI" />
+            </div>
+        </div>
+        <h5>Lohri</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Delhi/Fairs%20&%20Festivals/KiteFlying.jpg" alt="KiteFlying" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="KiteFlying" />
+            </div>
+        </div>
+        <h5>Kite-Flying Festival</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Delhi/Fairs%20&%20Festivals/Republic-day.jpg" alt="Republic-day" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Republicday" />
+            </div>
+        </div>
+        <h5>Republic Day</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Delhi/Fairs%20&%20Festivals/Surajkund.jpg" alt="Surajkund" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Surajkund" />
+            </div>
+        </div>
+        <h5>Surajkund Crafts Mela </h5>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Delhi/Fairs%20&%20Festivals/Book-Fair.jpg" alt="Book-Fair" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="BookFair" />
+            </div>
+        </div>
+        <h5>Delhi Book Fair </h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Delhi/Fairs%20&%20Festivals/International-Trade-Fair.jpg" alt="International-Trade-Fair" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="InternationalTradeFair" />
+            </div>
+        </div>
+        <h5>India International Trade Fair</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Delhi/Fairs%20&%20Festivals/ArtCraft-Fair.jpg" alt="ArtCraft" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="ArtCraft" />
+            </div>
+        </div>
+        <h5>Art And Crafts Fair</h5>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "LOHRI") {
+            $('#myPicLabel').text('Lohri')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Delhi/Fairs%20&%20Festivals/LOHRI.jpg');
+            $('#pic-details').html("<p>It Is Celebrated In The Month Of January And Kicks Off The Festive Season In Delhi. It Marks The Peak Of The Winter Season And Is Observed With Great Enthusiasm. Singing And Dancing Around Bonfires Form The Main Part Of The Celebrations.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "KiteFlying") {
+            $('#myPicLabel').text('Kite-Flying Festival')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Delhi/Fairs%20&%20Festivals/KiteFlying.jpg');
+            $('#pic-details').html("<p>This Beautiful Festival Is Held On The Sacred Hindu Festive Day Of Makar Sankranti. This Annual Event Consists Of Kite Flying Tournaments That Are Held On The Green Lawns Close To Palika Bazaar. People From Different Parts Of India As Well As Abroad Take Part In These Tournaments. If You Stand On The Green Lawns In The Connaught Place In Delhi, You Can See A Spectacular Sight Of Hundreds Of Colorful Kites Competing With Each Other On This Day.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Republicday") {
+            $('#myPicLabel').text('Republic Day')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Delhi/Fairs%20&%20Festivals/Republic-day.jpg');
+            $('#pic-details').html("<p>The Indian Republic Day Is Held On 26th January. Spectacular Military Parades Complete With The Display Of Indian Weaponry, Horse Pageantry And Elephants Enthrall Millions Of Observes Across The Nation And Abroad. The Event Is Also Telecast Live On The National Channel. You May Miss Other Fairs And Festivals In Delhi. But You Must Not Let This One Pass By.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Surajkund") {
+            $('#myPicLabel').text('Surajkund Crafts Mela ')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Delhi/Fairs%20&%20Festivals/Surajkund.jpg');
+            $('#pic-details').html('<p>Surajkund Crafts Mela Is A Handloom And Handicrafts Fair Organized Annually By The Haryana Tourism. Held At Surajkund, Near Delhi, It Takes Place In The Month Of February And Goes On For Two Weeks. Delhi Surajkund Crafts Mela Was Organized For The First Time In The Year 1981. Skilled Artists, Painters, Weavers, Sculptors And Craftsmen From All Over India Come To Take Part In This Fair, Which Showcases Folk Arts And Crafts.</p>');
+            $('#myModal').modal('show');
+        }
+        else if (alt == "BookFair") {
+            $('#myPicLabel').text('Delhi Book Fair ')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Delhi/Fairs%20&%20Festivals/Book-Fair.jpg');
+            $('#pic-details').html("<p>Delhi Book Fair Is An Annual Fair, Organized By The India Trade Promotion Organization (ITPO) At Pragati Maidan. From All Types Of Books To Different Magazines To Maps To Teaching Aids And Computer Software, It Exhibits A Wide Range Of Items. At The Book Fair Of Delhi, You Can Expect To Get All The Books That Have Been Recently Published, That To At Discounted Prices. Also, If You Want To Buy Even The Rarest Of Books, Then The Delhi Book Fair Is The Place To Be. </p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "InternationalTradeFair") {
+            $('#myPicLabel').text('India International Trade Fair')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Delhi/Fairs%20&%20Festivals/International-Trade-Fair.jpg');
+            $('#pic-details').html("<p> The India International Trade Fair' (IITF) Or 'The Delhi Trade Fair' Is Generally Held Sometime Between 14th To 27th November Every Year. This Highly Popular Fair Is One Of The Biggest Fairs In Terms Of Visitor Count. Products From Almost All States Of India Are Displayed Here Items From About Hundred Nations Are Showcased Here You Can Shop For Almost Anything In This Gigantic Fair.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "ArtCraft") {
+            $('#myPicLabel').text('Art And Crafts Fair')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Delhi/Fairs%20&%20Festivals/ArtCraft-Fair.jpg');
+            $('#pic-details').html("<p>Beautiful Crafts And Objects Of Art Are Displayed In Well-Lit Stalls That Represent Almost Every Indian State. Special Stalls Are Also Set Up That Focus On Tribal Art And Crafts And Themes Like 'Global Warming, Going Green Etc.</p>");
+            $('#myModal').modal('show');
+        }
+    });
+
+</script>

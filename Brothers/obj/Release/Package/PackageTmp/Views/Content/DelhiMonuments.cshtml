@@ -1,0 +1,174 @@
+﻿
+@{
+    ViewBag.Title = "DelhiMonuments";
+    Layout = "~/Views/Shared/GoldenTriangleLayout.cshtml";
+}
+
+<div class="well subheading-well">
+    <b class="subheading">Monuments</b>
+</div>
+<div class="col-md-12">
+    <p>
+        Delhi Is An Ancient City. There Are Many Famous Monuments In Delhi Which Serve As Testaments To Delhi's Illustrious Past.
+    </p>
+    <p>
+        Though The Foundation Of Contemporary Delhi City Was Laid By The British, The Conquerors From England Continued To Make Delhi Their Administrative Capital Of The Indian Subcontinent. Like Their Forerunners, The British Also Contributed Many Famous Monuments In Delhi. The Greatest And Still Functional Is The Evergreen Architecture Of Edward Lutyens. His Seminal Work At Present Is The Pilot Architecture Of The Modern City Of New Delhi. The Grandiose Colonial Buildings Built By The Rulers Of The Medieval Period Of History Can Easily Be Counted As A Part Of The Famous Monuments Of Delhi. 
+    </p>
+</div>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Delhi/Monument/India%20Gate.jpg" alt="IndiaGate" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="IndiaGate" />
+            </div>
+        </div>
+        <h5>India Gate</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Delhi/Monument/red-fort.jpg" alt="redfort" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="redfort" />
+            </div>
+        </div>
+        <h5>Red Fort</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Delhi/Monument/Jama-Masjid.jpg" alt="Jama-Masjid" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="JamaMasjid" />
+            </div>
+        </div>
+        <h5>Jama Masjid</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Delhi/Monument/Humayuns-Tomb.jpg" alt="Humayuns-Tomb" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="HumayunsTomb" />
+            </div>
+        </div>
+        <h5>Humanyus’ Tomb</h5>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Delhi/Monument/Qutub-Minar.jpg" alt="Qutub-Minar" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="QutubMinar" />
+            </div>
+        </div>
+        <h5>Qutab Minar Complex</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Delhi/Monument/jantar-mantar.jpg" alt="jantar-mantar" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="jantarmantar" />
+            </div>
+        </div>
+        <h5>Jantar Mantar</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Delhi/Monument/Puran-Qila.jpg" alt="Puran-Qila" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="PuranQila" />
+            </div>
+        </div>
+        <h5>Puran Qila</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Delhi/Monument/Rajghat.jpg" alt="Rajghat" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Rajghat" />
+            </div>
+        </div>
+        <h5>Rajghat</h5>
+    </div>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "IndiaGate") {
+            $('#myPicLabel').text('India Gate')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Delhi/Monument/India%20Gate.jpg');
+            $('#pic-details').html("<p>Designed By Sir Edwin Lutyens And Completed In 1931 The Gate Is 160Ft. High An Has A 138Ft Arch. The Gate Also Houses The “Eternal Flame” That Burns In Memory Of Indian Soldiers Who Laid Down Their Lives In World War I.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "redfort") {
+            $('#myPicLabel').text('Red Fort')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Delhi/Monument/red-fort.jpg');
+            $('#pic-details').html("<p>The Foundation Of The Red Fort, So Named After Its Red Stone, Was Laid In 1618 When The Mughal Emperor, Shah Jahan, Shifted To Delhi After Ruling From Agra For 11 Years. Rich Silk From China And Velvet From Turkey Were Used To Drape The Main Halls Of The Palace When It Was Inaugurated In 1647.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "JamaMasjid") {
+            $('#myPicLabel').text('Jama Masjid')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Delhi/Monument/Jama-Masjid.jpg');
+            $('#pic-details').html("<p>Built By The Mughal Emperor Shah Jahan In 1650, More Than 5,000 Men Worked For Six Years To Complete This Largest Mosque In India.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "HumayunsTomb") {
+            $('#myPicLabel').text('Humanyus’ Tomb')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Delhi/Monument/Humayuns-Tomb.jpg');
+            $('#pic-details').html("<p>This Was Built By The Emperor's Grieving Widow, Haji Begum, In 1565 Ad. Made With Red Sandstone It Marks The Beginning Of A New Ornate Architectural Style That Reached Its Peak In The Taj Mahal Of Agra.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "QutubMinar") {
+            $('#myPicLabel').text('Qutab Minar Complex')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Delhi/Monument/Qutub-Minar.jpg');
+            $('#pic-details').html("<p>The Construction Of The Qutab Minar Was Started By Qutab-Ud-Din Aibak, The First Muslim Ruler Of Delhi In 1200Ad. He Could Finish Only The Basement And Later His Successor, Iltutmish, Added Three More Storeys. The Fifth And Final Storey Was Constructed By Firoz Shah Tughlak In 1368.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "jantarmantar") {
+            $('#myPicLabel').text('Jantar Mantar')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Delhi/Monument/jantar-mantar.jpg');
+            $('#pic-details').html("<p> The First Of Five Observatories Built By Sawai Jia Singh II Of Jaipur (1699-1743), The Structure Has Huge Masonry Instruments.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "PuranQila") {
+            $('#myPicLabel').text('Puran Qila')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Delhi/Monument/Puran-Qila.jpg');
+            $('#pic-details').html("<p>The Old Fort That Was Built By Humayun And Sher Shah On The Historic Site Of Indraprastha (900BC).</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Rajghat") {
+            $('#myPicLabel').text('Rajghat')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Delhi/Monument/Rajghat.jpg');
+            $('#pic-details').html("<p>The Place Where The Remains Of Mahatma Gandhi Have Been Placed, Set Amidst Exotic Trees And Fountains.</p>");
+            $('#myModal').modal('show');
+        }
+    });
+
+</script>
+
+

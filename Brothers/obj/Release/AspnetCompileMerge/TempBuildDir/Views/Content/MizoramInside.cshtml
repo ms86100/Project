@@ -1,0 +1,110 @@
+﻿
+@{
+    ViewBag.Title = "MizoramInside";
+    Layout = "~/Views/Shared/AboutMizoramLayout.cshtml";
+}
+<div class="well subheading-well">
+    <b class="subheading">Inside Aizawl</b>
+</div>
+
+<p>
+    Aizawl The Capital Of Mizoram, Is Situated At About 3,735Ft. It Is A Beautiful And Bustling 112 Years Old City Set On Rigdges Of Steep Hills. Flanked On The North By The Craggy Peaks Of Durtlang, The Hill City Overlooks The Valley Of The River Tlawng And  Ranges Of Blue Hill Beyond.  It Is Arilinked By Daily Flights From Kolkata And Guwahati.  It Is Connected To Imphal By Air And It Accessible From Shillong, Guwahati And Silchar By Road. 
+</p>
+<h4 class="text-info">Places Of Interest Inside Aizawl </h4>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/mizoram/Durtlang-Hills-Aizawl-(Mizo.jpg" alt="Durtlang-Hills-Aizawl-(Mizo" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Durtlang-Hills-Aizawl-(Mizo" />
+            </div>
+        </div>
+        <h5>Durtlang Hills</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/mizoram/State-Mesuem-(Mizoram).jpg" alt="State-Mesuem-(Mizoram)" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="State-Mesuem-(Mizoram)" />
+            </div>
+        </div>
+        <h5>State Museum</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/mizoram/mini-zoological-garden.jpg" alt="mini-zoological-garden" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="mini-zoological-garden" />
+            </div>
+        </div>
+        <h5>Mini Zoological Garden </h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/mizoram/Luangmual-Handicrafts-Centr.jpg" alt="Luangmual-Handicrafts-Centr" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Luangmual-Handicrafts-Centr" />
+            </div>
+        </div>
+        <h5>Luangmual Handicrafts Centre</h5>
+    </div>
+</div>
+
+
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "Durtlang-Hills-Aizawl-(Mizo") {
+            $('#myPicLabel').text('Durtlang Hills Aizawl')
+            $('#pic-path').attr('src', '/Content/img/mizoram/Durtlang-Hills-Aizawl-(Mizo.jpg');
+            $('#pic-details').html("<p>Situated To The North Of Aizwal High Above The City Provide Majestic View Of Entire Aizwal City From Beautiful And Craggy Hill Top. The Way To Durtlang Itself Offers Enjoyable Walk Along The Steep Climb With Scenic Rural Environment. One Never Gets A Complete Picture Of Aizwal Unless One Visits The Durtlang Hills. </p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "State-Mesuem-(Mizoram)") {
+            $('#myPicLabel').text('State Museum')
+            $('#pic-path').attr('src', '/Content/img/mizoram/State-Mesuem-(Mizoram).jpg');
+            $('#pic-details').html("<p>The Small Mizoram State Museum In Aizawl Has An Eclectic Collection Of Wildlife Specimens And Tribal Weapons. Visit Here To Grab A Quick Look Of The Captivating Culture Of This Exquisite Town. Located In The Heart Of The Town, Mizoram State Museum, Accommodates Several Items That Unravel The Cultural Heritage Of The State. Established In 1977, This Museum Spells Out Record Of 2500 Items, Each Of Which Confirms The Multifarious Past And Traditional Background Of Mizoram. The Entire Gallery At The Ethnological Museum Is Dedicated To Tribes Of Mizoram. Items Stored In The Museum Comprise Of Photographs, Musical Instruments, Archaeological Objects And Natural History Specimens. The Most Widely Loved Is The One That Unleashes Clothing Of The Tribes Of Mizoram. This Tiny Museum Is Positioned Close To The Chief Minister's Bungalow.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "mini-zoological-garden") {
+            $('#myPicLabel').text('Mini Zoological Garden')
+            $('#pic-path').attr('src', '/Content/img/mizoram/mini-zoological-garden.jpg');
+            $('#pic-details').html("<p>Mini Zoological Garden, Located On A Hill Known As Bethlehem Vengthlang, Is A Sanctuary Sheltering Wildlife That Is Unique To The Hilly Region. The Zoo Houses A Large Number Of Species Of Mammals And Birds, Including Some Of The Rarest Animals Found In Asia. A Major Attraction Of The Zoo Is The Endangered Sun Bear, Who Lures Maximum Tourists To This Place. This Zoo Can Be Visited By People Of All Ages.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Luangmual-Handicrafts-Centr") {
+            $('#myPicLabel').text('Luangmual Handicrafts Center')
+            $('#pic-path').attr('src', '/Content/img/mizoram/Luangmual-Handicrafts-Centr.jpg');
+            $('#pic-details').html("<p>Located At 07Kms. Of Distance From The Main Town Of Aizawl, Luangmual Handicrafts Centre Is A Well Renowned Centre Specializing In Handicrafts In The Region. It Is Here That The Traditional Bamboo Hat ‘Khumbeu’ The Ceremonial Bamboo Hat Is Made Here Using Waterproof ‘Hnahthial’ Leaves. These Leaves Are Exclusive To The Hilly Terrain. Here Are Also Available An Array Of Artifacts Such As Jewellery Baskets Made Of Bamboo, Wicker Baskets, Wooden Articles And Hand Woven Purses Etc At Much Economic Prices. </p>");
+            $('#myModal').modal('show');
+        }
+       
+
+    });
+
+</script>

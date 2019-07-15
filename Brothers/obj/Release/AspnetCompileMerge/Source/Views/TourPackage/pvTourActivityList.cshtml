@@ -1,0 +1,101 @@
+﻿@model Brothers.Entities.ViewModels.MstTourPackageActivityModel
+
+<div id="DataGrid" class="col-md-12">
+
+    @if (Model.MstTourPackageActivityList.Count() > 0)
+    {
+        <div class="table-responsive">
+            <table class="table table-striped table-condensed table-bordered">
+                <thead>
+                    <tr>
+                        <th class="text-center" style="vertical-align: middle;">
+                            Day List
+                        </th>
+                        <th class="text-center" style="vertical-align: middle;">
+                            Activity Title
+                        </th>
+                        <th class="text-center" style="vertical-align: middle;">
+                            Overnight Destination
+                        </th>
+                        <th class="text-center" style="vertical-align: middle;">
+                            Activity Remarks
+                        </th>
+                        <th class="text-center" style="vertical-align: middle;">
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.MstTourPackageActivityList)
+                    {
+                        <tr>
+                            <td class="text-center">
+                                Day @Html.DisplayFor(m => item.DayNo)
+                            </td>
+                            <td class="text-center">
+                                @Html.DisplayFor(m => item.ActivityTitle)
+                            </td>
+                            @if (item.DestinationID == null)
+                            {
+                                <td class="text-center">
+                                    Not Required
+                                </td>
+                            }
+                            else if(item.DestinationID==5)
+                            {
+                                <td class="text-center">
+                                    @Html.DisplayFor(m=>item.OvernightDestination)
+                                </td>
+                            }
+                            else
+                            {
+                                <td class="text-center">
+                                    @Html.DisplayFor(m => item.DestinationName)
+                                </td>
+                            }
+                            <td class="text-center">
+                                @Html.DisplayFor(m => item.ActivityRemarks)
+                            </td>
+                            <td class="text-center" style="width: 70px;">
+                                <div >
+                                    <form action="@Url.Action("edittouractivity","tourpackage")" method="get">
+                                        <div style="padding-right: 8px;">
+                                            <a href="@Url.Action("edittouractivity", "tourpackage", new { id = item.PackageActivityID, packid = item.PackageID })" data-toggle="tooltip" data-placement="bottom" title="Edit">
+                                                <i class="glyphicon glyphicon-edit"></i>
+                                            </a>
+                                        </div>
+                                    </form>
+                                    @*<div style="float:left; padding-right: 10px;">
+                                            <form action="@Url.Action("deletetouractivity", "tourpackage")" method="post" data-otf-ajax="true" data-otf-target="#DataGrid">
+                                                @Html.AntiForgeryToken()
+                                                <a href="@Url.Action("deletetouractivity", "tourpackage", new { id = item.ActivityID,packid=item.PackageID })" class="delete" data-toggle="tooltip" data-placement="bottom" title="Delete">
+                                                    <i class="glyphicon glyphicon-trash"></i>
+                                                </a>
+                                            </form>
+                                        </div>*@
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="ns-grid-pager" data-otf-target="#DataGrid">
+            <div class="hidden-xs col-md-3 col-sm-3">
+                @Model.PagingInfo.TotalItems Record(s)
+            </div>
+            <div class="visible-lg visible-md visible-sm visible-xs col-md-9 col-sm-9 ns-pagination" data-otf-target="#DataGrid" data-otf-actionlink="/touractivitylist/tourpackage">
+                @Html.PageLinks(Model.PagingInfo, x => Url.Action("touractivitylist", "tourpackage", new { PageNo = x, PageSize = Model.PagingInfo.ItemsPerPage }))
+            </div>
+        </div>
+    }
+    else
+    {
+        <h3>No record found...</h3>
+    }
+</div>
+@*error message*@
+<div id="ErrMsg" style="display:none;">
+    <input type="hidden" id="ErrMsgHiddenField" name="ErrMsg" value="@TempData["ErrMsg"]" />
+</div>
+

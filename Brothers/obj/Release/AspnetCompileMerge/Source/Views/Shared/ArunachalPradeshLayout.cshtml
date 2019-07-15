@@ -1,0 +1,153 @@
+﻿
+@{
+    ViewBag.Title = "ArunachalPradeshLayout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="col-lg-3 col-md-3 col-sm-5" style="background-color:#ede8e8">
+    <h4 class="text-danger">Activities</h4>
+    <hr class="row-margin-10" />
+    <nav>
+        <ul class="nav11 side-links" style="padding-left:10px;">
+            <li>
+                <a href="@Url.Action("APTrek", "content")">Trekking</a>
+            </li>
+            <li>
+                <a href="@Url.Action("APWhyTrek", "content")">Why Trek In Arunachal Pradesh</a>
+            </li>
+            <li>
+                <a href="@Url.Action("APWhenTrek", "content")">When To Trek</a>
+            </li>
+            <li>
+                <a href="@Url.Action("APTrekPermit", "content")">Trekking Permits</a>
+            </li>
+            <li>
+                <a href="@Url.Action("APMedical", "content")">Medical Matters & Advice</a>
+            </li>
+            @*<li>
+                <a href="@Url.Action("APHimalaya", "content")">Arunachal Pradesh Himalayas</a>
+            </li>*@
+        </ul>
+    </nav>
+    <h4 class="text-danger">Outdoor Activities</h4>
+    <hr class="row-margin-10" />
+    <nav>
+        <ul class="side-links nav11" style="padding-left:10px;">
+            <li>
+                <a href="@Url.Action("APRafting", "content")">Rafting</a>
+            </li>
+            <li>
+                <a href="@Url.Action("APAngling", "content")">Angling</a>
+            </li>
+            <li>
+                <a href="@Url.Action("APBoating", "content")">Boating</a>
+            </li>
+            <li>
+                <a href="@Url.Action("APWhiteWaterRafting", "content")">White Water Rafting</a>
+            </li>
+            <li>
+                <a href="@Url.Action("APMountainBiking", "content")">Mountain Biking</a>
+            </li>
+            <li>
+                <a href="@Url.Action("APMountaineering", "content")">Mountaineering</a>
+            </li>
+            <li>
+                <a href="@Url.Action("APRockClimbing", "content")">Rock Climbing</a>
+            </li>
+            <li>
+                <a href="@Url.Action("ApScuba", "content")">Scuba Diving </a>
+            </li>
+        </ul>
+    </nav>
+    <h4 class="text-danger">Attractions</h4>
+    <hr class="row-margin-10" />
+    <nav>
+        <ul class="side-links nav11" style="padding-left:10px;">
+            <li>
+                <a href="@Url.Action("ApMuseum", "content")">Museum</a>
+            </li>
+            <li>
+                <a href="@Url.Action("ApShopping", "content")">Shopping</a>
+            </li>
+            <li>
+                <a href="@Url.Action("ApRestaurant", "content")">Restaurant</a>
+            </li>
+            <li>
+                <a href="@Url.Action("ApArt", "content")">Art & Crafts</a>
+            </li>
+            <li>
+                <a href="@Url.Action("ApWildlife", "content")">Wildlife Sanctuary</a>
+            </li>
+            <li>
+                <a href="@Url.Action("ApJewelleries", "content")">Tribal Jewelleries</a>
+            </li>
+           
+            
+        </ul>
+    </nav>
+    <h4 class="text-danger">General Information</h4>
+    <hr class="row-margin-10" />
+    <nav>
+        <ul class="side-links nav11" style="padding-left:10px;">
+            <li>
+                <a href="@Url.Action("Apgeography", "content")">Geography</a>
+            </li>
+            <li>
+                <a href="@Url.Action("ApHistory", "content")">History</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Apreligion", "content")">Religion</a>
+            </li>
+            <li>
+                <a href="@Url.Action("ApEconomy", "content")">Economy</a>
+            </li>
+            <li>
+                <a href="@Url.Action("ApGovernment", "content")">Government</a>
+            </li>
+            <li>
+                <a href="@Url.Action("ApCulture", "content")">Culture</a>
+            </li>
+            <li>
+                <a href="@Url.Action("ApPeople", "content")">People</a>
+            </li>
+            <li>
+                <a href="@Url.Action("ApFestival", "content")">Festivals</a>
+            </li>
+         
+            <li>
+                <a href="@Url.Action("ApFacts", "content")">Facts & Figures</a>
+            </li>
+            <li>
+                <a href="@Url.Action("ApClimates", "content")">Climate</a>
+            </li>
+            
+        </ul>
+    </nav>
+    <h4 class="text-danger">Travel Information</h4>
+    <hr class="row-margin-10" />
+    <nav>
+        <ul class="side-links nav11" style="padding-left:10px;">
+            <li>
+                <a href="@Url.Action("ApEntering", "content")">Entering & Leaving</a>
+            </li>
+            
+        </ul>
+    </nav>
+    <h4 class="text-danger">What To See</h4>
+    <hr class="row-margin-10" />
+    <ul class="nav11 side-links" style="padding-left:10px;">
+        <li>
+            <a href="@Url.Action("ApInside", "content")">Inside Itanagar</a>
+        </li>
+        <li>
+            <a href="@Url.Action("Apoutside", "content")">Outside Itanagar</a>
+        </li>
+        
+    </ul>
+</div>
+
+<div class="col-lg-9 col-md-9 col-sm-7">
+    <div class="section-header text-center">
+        <h2 class="section-title">Arunachal pradesh</h2>
+    </div>
+    @RenderBody()
+</div>

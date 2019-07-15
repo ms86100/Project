@@ -1,0 +1,79 @@
+﻿
+@{
+    Layout = "~/Views/Shared/BhutanLayout.cshtml";
+}
+
+<div class="well subheading-well">
+    <b class="subheading">Phuentsholing </b>
+</div>
+<div class="well hidden-xs" style="padding:10px;">
+    <img src="~/Content/img/Bhutan/Phuentsholing.jpg" class="img-rounded resp-img" />
+</div>
+<div class="col-md-12">
+    <h4 class="text-info">Phuentsholing (Alt 985 Ft)</h4>
+    <p>
+        The Frontier Town, It Is A Thriving Commercial Centre, Situated Directly At The Base Of Himalayan Foothills. It Is A Fascinating Place Where Different Ethnic Groups Mingle Prominently Indian, Bhutanese And Nepalese. Being The Border Town, Phuentsholing Serves As The Convenient Entry/Exit Point For Bhutan And Also The Important Link To Visit The Indian State Of West Bengal, Sikkim And Assam.
+    </p>
+    <h4 class="text-info">Places Of Interest In And Around Phuentsholing </h4>
+    <div class="row">
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/Thimphu/Zangthopelri.jpg" alt="Zangthopelri" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Zangthopelri" />
+                </div>
+            </div>
+            <h5>Zangtho Pelri Lhakhang</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/kharbandi.jpg" alt="kharbandi" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="kharbandi" />
+                </div>
+            </div>
+            <h5>Kharbandi Goemba </h5>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "Zangthopelri") {
+            $('#myPicLabel').text('Zangtho Pelri Lhakhang')
+            $('#pic-path').attr('src', '/Content/img/Bhutan/Thimphu/Zangthopelri.jpg');
+            $('#pic-details').html("<p>Situated In City Centre, This Small Temple Represents The Heaven Of Guru Rinpoche. On Ground Floor There Are Statues Of Eight Manifestations Of Guru Rinpoche And Paintings On Buddha's Life While The Next Floor Contains Eight Bodhisattavas And Statues Of Avalokiteshvara And Shabdrung Ngawang Namgyal. On Top Floor, There Is A Main Statue Of Amitabha.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "kharbandi") {
+            $('#myPicLabel').text('Kharbandi Goemba')
+            $('#pic-path').attr('src', '/Content/img/Bhutan/kharbandi.jpg');
+            $('#pic-details').html("<p>Founded In 1967 By Royal Grand Mother, Ashi Phuntsho Choedron And Situated At The Altitude Of 400m, This Beautiful Monastery Contains Paintings On The Life Of Buddha, Statues Of Shabdrung Ngawang Namgyal And Guru Rinpoche. From The Monastery Garden There Is A Fascinating View Of Phuentsholing Town And Surrounding Plains.</p>");
+            $('#myModal').modal('show');
+        }
+    });
+
+</script>

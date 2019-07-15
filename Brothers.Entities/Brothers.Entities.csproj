@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CF0F530F-1BE4-4969-A21B-8168BB1C502B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Brothers.Entities</RootNamespace>
+    <AssemblyName>Brothers.Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccess\BRTContext.cs" />
+    <Compile Include="DataAccess\dalBlog.cs" />
+    <Compile Include="DataAccess\dalGenEnquiry.cs" />
+    <Compile Include="DataAccess\dalMstActivity.cs" />
+    <Compile Include="DataAccess\dalMstCountry.cs" />
+    <Compile Include="DataAccess\dalMstDestination.cs" />
+    <Compile Include="DataAccess\dalMstEnquire.cs" />
+    <Compile Include="DataAccess\dalMstPackageType.cs" />
+    <Compile Include="DataAccess\dalMstTourPackage.cs" />
+    <Compile Include="DataAccess\dalMstTourPackageActivity.cs" />
+    <Compile Include="DataAccess\dalMstTourPackagePhoto.cs" />
+    <Compile Include="DataAccess\dalTourPackageBooking.cs" />
+    <Compile Include="DataAccess\dalTourPackageMap.cs" />
+    <Compile Include="DataAccess\WordDocumentAttribute.cs" />
+    <Compile Include="Models\DateGreaterThanToday.cs" />
+    <Compile Include="Models\utblBlog.cs" />
+    <Compile Include="Models\utblGenCodeSeed.cs" />
+    <Compile Include="Models\utblGenEnquiry.cs" />
+    <Compile Include="Models\utblMail.cs" />
+    <Compile Include="Models\utblMstActivity.cs" />
+    <Compile Include="Models\utblMstArticleEnquire.cs" />
+    <Compile Include="Models\utblMstCountry.cs" />
+    <Compile Include="Models\utblMstDestination.cs" />
+    <Compile Include="Models\utblMstPackageType.cs" />
+    <Compile Include="Models\utblMstTourPackage.cs" />
+    <Compile Include="Models\utblMstTourPackageActivity.cs" />
+    <Compile Include="Models\utblMstTourPackageMap.cs" />
+    <Compile Include="Models\utblMstTourPackagePic.cs" />
+    <Compile Include="Models\utblTourPackageBooking.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\BrothersUtility.cs" />
+    <Compile Include="ViewModels\BlogView.cs" />
+    <Compile Include="ViewModels\BlogViewModel.cs" />
+    <Compile Include="ViewModels\MstActivityManageModel.cs" />
+    <Compile Include="ViewModels\MstActivityView.cs" />
+    <Compile Include="ViewModels\MstActivityViewModel.cs" />
+    <Compile Include="ViewModels\MstBookingExportModel.cs" />
+    <Compile Include="ViewModels\MstBookingReplyModel.cs" />
+    <Compile Include="ViewModels\MstBookingView.cs" />
+    <Compile Include="ViewModels\MstBookingViewModel.cs" />
+    <Compile Include="ViewModels\MstCountryViewModel.cs" />
+    <Compile Include="ViewModels\MstDestinationManageModel.cs" />
+    <Compile Include="ViewModels\MstDestinationView.cs" />
+    <Compile Include="ViewModels\MstDestinationViewModel.cs" />
+    <Compile Include="ViewModels\MstEnquiryReplyModel.cs" />
+    <Compile Include="ViewModels\MstEnquiryViewModel.cs" />
+    <Compile Include="ViewModels\MstPackageGeneralViewModel.cs" />
+    <Compile Include="ViewModels\MstPackageViewModel.cs" />
+    <Compile Include="ViewModels\MstTourPackageActivityModel.cs" />
+    <Compile Include="ViewModels\MstTourPackageActivityView.cs" />
+    <Compile Include="ViewModels\MstTourPackageDetailsModel.cs" />
+    <Compile Include="ViewModels\MstTourPackageFullDetailsViewModel.cs" />
+    <Compile Include="ViewModels\MstTourPackageGeneralViewAndSearch.cs" />
+    <Compile Include="ViewModels\MstTourPackageManageModel.cs" />
+    <Compile Include="ViewModels\MstTourPackageMapModel.cs" />
+    <Compile Include="ViewModels\MstTourPackagePhotoModel.cs" />
+    <Compile Include="ViewModels\MstTourPackageView.cs" />
+    <Compile Include="ViewModels\MstTourPackageViewModel.cs" />
+    <Compile Include="ViewModels\MstTourPhotoView.cs" />
+    <Compile Include="ViewModels\PagingInfo.cs" />
+    <Compile Include="ViewModels\SPErrorViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

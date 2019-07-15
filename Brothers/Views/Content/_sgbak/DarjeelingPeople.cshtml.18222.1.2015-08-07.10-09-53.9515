@@ -1,0 +1,59 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="home-area">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title">People of Darjeeling</h2>
+        </div>
+        <div class="row clearfix">
+            <div class="col-md-4 hidden-xs hidden-sm" style="padding-top:20px">
+                <img src="~/Content/img/lc2.jpg" class="resp-img img-rounded" />
+            </div>
+            <div class="col-md-8">
+                <h3>The Lepchas or Rongpas</h3>
+                <p>
+                    The inhabitants of Sikkim are of Mongolian origin and have been supplanted by the virile Nepalese through inter-marriage.
+                    Their white complexion, tinged with yellow, the women have graceful features and wear heavy ear-rings and necklaces studded with turquoise and coral.
+                    Flowing hair woven into plaited pigtails tops their graceful dress, reminiscent of the Roman gladiators.
+                    They are Buddhists and under the influence of their priests.
+                </p>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-md-8">
+                <h3>The Nepalese</h3>
+                <p>
+                    They are the dominant people and are divided into different castes, speaking various dialects. The short Mongolian type Nepalese, the Gorkhas .
+                    They carry the traditional weapon, the Khukri-a curved ornamental knife put to every conceivable use. They brought with them, Hinduism.
+                    There are also the Gurungs, Magars, Rais, Tamangs and Newars. The Magars are also sub-divided into the Ranas & Thapas.
+                </p>
+            </div>
+            <div class="col-md-4 hidden-sm hidden-xs" style="padding-top:20px">
+                <img src="~/Content/img/np2.jpg" class="resp-img img-rounded" />
+            </div>
+        </div>
+        <div class="row clearfix">
+            <h3>The Newars</h3>
+            <p>
+                Newars are the original inhabitants of the Nepal Valley possessing their own language, script and literature. Besides being good painters, 
+                they are also wood-carvers, sculptors and metal workers. 
+            </p>
+        </div>
+        <div class="row clearfix">
+            <div class="col-md-4 hidden-xs hidden-sm" style="padding-top:20px">
+                <img src="~/Content/img/bh2.jpg" class="resp-img img-rounded"/>
+            </div>
+            <div class="col-md-8">
+                <h3>The Bhutias</h3>
+                <p>
+                    The Bhutias are divided into Tibetan, Bhutan, Dharma and Sikkim Bhutias. 
+                </p>
+            </div>
+        </div>
+        <div class="pull-right">
+            <a href="@Url.Action("aboutdarjeeling","content")" style="font-size:20px"><u>Back</u></a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,105 @@
+﻿@{
+    ViewBag.Title = "JaipurFairs";
+    Layout = "~/Views/Shared/GoldenTriangleLayout.cshtml";
+}
+
+<div class="well subheading-well">
+    <b class="subheading">Fair & Festivals</b>
+</div>
+<div class="col-md-12">
+    <p>
+        Jaipur Is Immensely Famous For The Numerous Fairs And Festivals It Holds In Its Backyard. People Rejoice Various Festivals All Through The Year Along With The Exciting And Alluring Fairs. Every Region Of Rajasthan Has Its Own Form Of Folk Entertainment, Songs, Traditions, Dressing Sense, Etc. Which Shows The True Indian Diversity? Also, The People Of Rajasthan Are Well Known For Their Warm Welcome, Delicacies, Traditional Attires, Rituals, Culture, Etc. Irrespective Of Caste And Creed, People Come Together And Enjoy The Festivals And Fairs Held In The State. In The Capital City Of Rajasthan, The Festivals Such As Teej, Diwali, Gangaur, Kite Festival, Elephant Festival, Camel Festival, Etc. Are Celebrated With Great Fervour And Joy. Originating From Old Traditions, These Festivals And Fairs Are Being Rejoiced Since Ages. The Lively Colours And The Means Of Merriment During These Festivals Bind The People With Harmony And Peace. Read To Know More About The Fairs And Festivals Held In Jaipur.
+    </p>
+</div>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Jaipur/Fairs%20&%20Festivals/Gangaur.jpg" alt="Gangaur" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Gangaur" />
+            </div>
+        </div>
+        <h5>Gangaur Festival</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Jaipur/Fairs%20&%20Festivals/teej.jpg" alt="teej" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="teej" />
+            </div>
+        </div>
+        <h5>Teej Festival </h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Jaipur/Fairs%20&%20Festivals/Kite-Festival.jpg" alt="Kite-Festival" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Kite" />
+            </div>
+        </div>
+        <h5>Kite Festival </h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Jaipur/Fairs%20&%20Festivals/Elephant-Festival.jpg" alt="Elephant-Festival" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Elephant" />
+            </div>
+        </div>
+        <h5>Elephant Festival </h5>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "Gangaur") {
+            $('#myPicLabel').text('Gangaur Festival')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Jaipur/Fairs%20&%20Festivals/Gangaur.jpg');
+            $('#pic-details').html("<p>Gangaur Is The Most Significant And Colourful Festival Which Is Celebrated With Great Zeal All Over The Rajasthan And In Some Parts Of Gujarat And Madhya Pradesh. However, It Is Mainly Rejoiced By The Women And Girls. During This Auspicious Occasion, They Worship Lord Shiva And Goddess Parvati Or Gauri By Making Clay Idols Of Them. Married Women Pray For The Well Being, Long Life And Welfare Of Their Husbands And Unmarried Girls Worship For A Handsome And Intelligent Life Partner. This Festival Is Celebrated In The Hindu Month Of Chaitra, Between The Months Of March And April, According To The Gregorian Calendar.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "teej") {
+            $('#myPicLabel').text('Teej Festival ')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Jaipur/Fairs%20&%20Festivals/teej.jpg');
+            $('#pic-details').html("<p>Teej Is Another Important Festival Which Is Rejoiced In Jaipur. On This Day, Women And Girls Wear New Clothes, Jewelleries And Make Designs On Their Palms And Feet With Mehndi (Henna). They Gather In Group In A Temple And Perform Special Puja, Aarti And Offer Prasad To Goddess Parvati. Women Pray For Their Husbands Whereas Girls Pray For Their Future Husband. Women And Girls Perform Folk Dance, Sing Traditional Teej Songs And Enjoy Swinging. These Three Are The Unique Features Of This Festival.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Kite") {
+            $('#myPicLabel').text('Kite Festival ')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Jaipur/Fairs%20&%20Festivals/Kite-Festival.jpg');
+            $('#pic-details').html("<p>On 14th January, The Festival Of Makar Sakranti Is Celebrated All Over India. This Festive Time Is Rejoiced For Various Reasons But The Main Reason Is The Transition Of The Sun From Sagittarius (Dhanu Rashi), The Zodiac Sign To Capricorn (Makar Rashi). According To The Indian Astrology, The Northward Journey Of The Sun Begins On This Day. People Take Holy Bath In The Ganga River And Then Donate Things To The Needy People. Also, On This Day, People Enjoy The Flying Of Kites. Complete Sky Is Adorned With Beautiful, Big And Small Colourful Kites. In Jaipur, It Is Declared As The State Holiday. Various Kite Competitions Are Held In Jaipur As Well As Across The State In Which The Most Famous Is International Kite Festival Held By The State Government Which Goes On For Three Days. Many Competitors From All Over The World Participate In This Event.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Elephant") {
+            $('#myPicLabel').text('Elephant Festival ')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Jaipur/Fairs%20&%20Festivals/Elephant-Festival.jpg');
+            $('#pic-details').html("<p>The Elephant Festival Is An Annual Festival Which Is Held Every Year In The Pink City, Jaipur. This Matchless Event Is Organised On The Full Moon Day Of Phalgun Purnima Which Falls In The Month Of February/March. It Is Celebrated On The Day Before The Festivals Of Colours I.E. Holi. From The Ancient Times, Elephants Have Always Been An Important Part Of The Indian Society. The Elephant-Headed God.</p>");
+            $('#myModal').modal('show');
+        }
+    });
+
+</script>
+

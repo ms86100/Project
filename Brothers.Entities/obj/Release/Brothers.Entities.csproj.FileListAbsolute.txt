@@ -1,0 +1,12 @@
+F:\Tours&Travel\Project\Brothers\Brothers.Entities\bin\Release\Brothers.Entities.dll.config
+F:\Tours&Travel\Project\Brothers\Brothers.Entities\bin\Release\Brothers.Entities.dll
+F:\Tours&Travel\Project\Brothers\Brothers.Entities\bin\Release\Brothers.Entities.pdb
+F:\Tours&Travel\Project\Brothers\Brothers.Entities\bin\Release\EntityFramework.dll
+F:\Tours&Travel\Project\Brothers\Brothers.Entities\bin\Release\EntityFramework.SqlServer.dll
+F:\Tours&Travel\Project\Brothers\Brothers.Entities\bin\Release\System.Web.Mvc.dll
+F:\Tours&Travel\Project\Brothers\Brothers.Entities\bin\Release\EntityFramework.xml
+F:\Tours&Travel\Project\Brothers\Brothers.Entities\bin\Release\EntityFramework.SqlServer.xml
+F:\Tours&Travel\Project\Brothers\Brothers.Entities\bin\Release\System.Web.Mvc.xml
+F:\Tours&Travel\Project\Brothers\Brothers.Entities\obj\Release\Brothers.Entities.csprojResolveAssemblyReference.cache
+F:\Tours&Travel\Project\Brothers\Brothers.Entities\obj\Release\Brothers.Entities.dll
+F:\Tours&Travel\Project\Brothers\Brothers.Entities\obj\Release\Brothers.Entities.pdb

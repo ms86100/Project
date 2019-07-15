@@ -1,0 +1,10 @@
+﻿
+<nav class="navstyles col-md-12" style="padding-bottom:15px;">
+    <ul class="nav nav-pills" id="nav">
+        <li><a href="@Url.Action("aboutdooars", "content")" class="x1">Overview</a></li>
+        <li><a href="@Url.Action("dooarsenteringleaving", "content")" class="x1">Entering / Leaving</a></li>
+        <li><a href="@Url.Action("easterndooars", "content")" class="x1">Eastern Dooars</a></li>
+        <li><a href="@Url.Action("centraldooars", "content")" class="x1">Central Dooars</a></li>
+        <li><a href="@Url.Action("westerndooars", "content")" class="x1">Western Dooars</a></li>
+    </ul>
+</nav>

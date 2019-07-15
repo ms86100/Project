@@ -1,0 +1,20 @@
+﻿
+
+@model Brothers.Entities.ViewModels.MstEnquiryViewModel
+
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 class="page-header">Enquiry List</h1>
+
+@Html.Partial("_pvEnquiryList",Model)
+
+<div id='myModal' class='modal fade'>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id='myModalContent'></div>
+        </div>
+    </div>
+</div>

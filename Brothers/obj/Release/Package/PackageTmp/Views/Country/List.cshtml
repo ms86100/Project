@@ -1,0 +1,38 @@
+﻿@model Brothers.Entities.ViewModels.MstCountryViewModel
+@{
+    ViewBag.Title = "Country Master";
+    ViewBag.ViewHeader = "Country List";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="col-md-12">
+    <div class="well well-sm">
+        <div class="col-md-6 pull-left">
+            <form method="get" action="@Url.Action("list","country")" data-otf-ajax="true" data-otf-target="#DataGrid">
+                <div class="input-group">
+                    <input type="text" name="searchTerm" class="form-control" placeholder="Search blog..." />
+                    <span class="input-group-btn">
+                        <button class="btn btn-danger pull-left" type="submit" value="Search" id="search">Go!</button>
+                    </span>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-3 pull-right">
+            @Html.ActionLink("Add Country ", "create", null, new { data_modal = "", @class = "btn btn-primary pull-right" })
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    @Html.Partial("pvCountryList", Model)
+</div>
+<div class="col-md-12" style="display:none" id="allList">
+    <a href="@Url.Action("list","country")">Show All Entries</a>
+</div>
+
+<div id='myModal' class='modal fade'>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id='myModalContent'></div>
+        </div>
+    </div>
+</div>
+

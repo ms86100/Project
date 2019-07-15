@@ -1,0 +1,88 @@
+﻿
+@{
+    Layout = "~/Views/Shared/BhutanLayout.cshtml";
+}
+
+<div class="well subheading-well">
+    <b class="subheading">Gangtey & Phobjikha Valley</b>
+</div>
+<div class="well hidden-xs" style="padding:10px;">
+    <div class="col-md-6 col-sm-6" style="padding:0px;">
+        <img src="~/Content/img/Bhutan/Gangtey/Gangtey.jpg" class="img-bordered resp-img" />
+    </div>
+    <div class="col-md-6 col-sm-6" style="padding:0px;">
+        <img src="~/Content/img/Bhutan/Gangtey/Phobjikha.jpg" class="img-bordered resp-img" />
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div class="col-md-12">
+    <h4 class="text-info">Gangtey & Phobjikha (Alt. 9845ft)</h4>
+    <p>
+        The Valley Of Gangtey Is One Of The Most Beautiful Spots In Bhutan. The Surprise Of Finding Such A Wide, Flat Valley Without Any Trees After The Hard Climb Through Dense Forests Is Augmented By An Impression Of Vast Space, And Extremely Rare Experience In Bhutan Where Most Of The Valley’s Are Tightly Enclosed.
+    </p>
+    <p>
+        A Few Kilometers Beyond The Gangtey Monastery, On The Valley Floor Lies The Village Of Phobjikha. This Place Is The Winter Home Of Black Necked Cranes That Migrate From The Arid Plains In The North To Pass Winter In Milder And Lower Climate. Phobjikha, At An Altitude Of 2900 M, Falls Under The District Of Wangduephodrang And Lies On The Periphery Of The Black Mountain National Park. The Valley Boasts Two Beautiful Meandering Rivers, Nakay Chhu (Chhu Naap-Black Water) And Gay Chhu (Chhu Karp-White Water).
+    </p>
+    <h4 class="text-info">Places Of Interest In And Around Gangtey & Phobjikha Valley</h4>
+    <div class="row">
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/Gangtey/GangteyGoempa.jpg" alt="GangteyGoempa" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="GangteyGoempa" />
+                </div>
+            </div>
+            <h5>Gangtey Goempa</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/Gangtey/CraneInformationCentre.jpg" alt="CraneInformationCentre" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="CraneInformationCentre" />
+                </div>
+            </div>
+            <h5>Black Necked Crane Information Centre</h5>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "GangteyGoempa") {
+            $('#myPicLabel').text('Gangtey Goempa')
+            $('#pic-path').attr('src', '/Content/img/Bhutan/Gangtey/GangteyGoempa.jpg');
+            $('#pic-details').html('<p>Perched On A Small Hill That Rises From The Valley Floor, The Gangtey Monastery Is The Only Nyingmapa Monastery On The Western Side Of The Black Mountain’sGangtey Valley, Bhutan And Also The Biggest Nyingmapa Monastery In Bhutan. The Monastery Is Surrounded By A Large Village Inhabited Mainly By The Families Of The 140 Gomchens Who Take Care Of The Monastery.</p>');
+            $('#myModal').modal('show');
+        }
+        else if (alt == "CraneInformationCentre") {
+            $('#myPicLabel').text('Black Necked Crane Information Centre')
+            $('#pic-path').attr('src', '/Content/img/Bhutan/Gangtey/CraneInformationCentre.jpg');
+            $('#pic-details').html("<p>Situated On The Edge Of The Forest And Wetland Along The Main Road Of Phobjikha Valley, The Black-Necked Crane Information Centre Has An Observation Room Equipped With High Power Telescope And Spotting Scopes For Catching The Best View Of The Cranes. The Centre Also Offers Display Information That Outline The Natural And Cultural History Of The Area. There Is A Small Gift Shop, Which Sells Handicrafts Produced By The Local People.</p>");
+            $('#myModal').modal('show');
+        }
+    });
+
+</script>

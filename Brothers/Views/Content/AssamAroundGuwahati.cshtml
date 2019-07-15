@@ -1,0 +1,125 @@
+﻿
+@{
+    ViewBag.Title = "AssamAroundGuwahati";
+    Layout = "~/Views/Shared/AssamLayout.cshtml";
+}
+
+<div class="well subheading-well">
+    <b class="subheading">Around Guwahati</b>
+</div>
+<div class="col-md-12">
+   
+    <div class="row">
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Assam/Balaji-Mandir.jpg" alt="Balaji-Mandir" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Balaji-Mandir" />
+                </div>
+            </div>
+            <h5>Balaji Temple</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Assam/The_Assam_State_Zoo.jpg" alt="State_Zoo" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="State_Zoo" />
+                </div>
+            </div>
+            <h5>The Assam State Zoo Cum Botanical Garden </h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Assam/Dipor-Bil.jpg" alt="Dipor-Bil" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Dipor-Bil" />
+                </div>
+            </div>
+            <h5>Dipor Bil</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Assam/Srimanta-Shankardev-Kalaksh.jpg" alt="Srimanta-Shankardev-Kalaksh" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Srimanta-Shankardev-Kalaksh" />
+                </div>
+            </div>
+            <h5>Srimanta Shankardev Kalaksh</h5>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Assam/Saraighat_Bridge.jpg" alt="Saraighat_Bridge" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Saraighat_Bridge" />
+                </div>
+            </div>
+            <h5>Saraighat Bridge</h5>
+        </div>
+        
+    </div>
+
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "Balaji-Mandir") {
+            $('#myPicLabel').text('Balaji Temple')
+            $('#pic-path').attr('src', '/Content/img/Assam/Balaji-Mandir.jpg');
+            $('#pic-details').html("<p>The Purva Tirupati Balaji Temple Is A Beautiful Temple Of Guwahati located At Lokhra Area. The Balaji Temple Is A Replica Of The Famous Tirupati Venkateshwata Temple Of Southern India. The Tirupati Temple In Southern India Is Situated In Tirumala In Chittor District Of The State Of Andhra Pradesh. The Balaji Temple In Guwahati Is Dedicated To Lord Venkateshwara And Is Located Around 10Kms. From The City Center. The Temple Was Built In The Year 1998 With Pristine Architectural Structures. </p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "State_Zoo") {
+            $('#myPicLabel').text('The Assam State Zoo')
+            $('#pic-path').attr('src', '/Content/img/Assam/The_Assam_State_Zoo.jpg');
+            $('#pic-details').html("<p>The Assam State Zoo Cum Botanical Garden (Popularly Known As Guwahati Zoo) Is The Largest Of Its Kind In The North East Region And It Is Spread Across 432 Acre (175 Hectare). The Zoo Is Located Within The Hengrabari Reserved Forest At Guwahati, India. The Zoo Is Home To About 895 Animals, Birds And Reptiles Representing Almost 113 Species Of Animals And Birds From Around The World.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Dipor-Bil") {
+            $('#myPicLabel').text('Dipor Bil')
+            $('#pic-path').attr('src', '/Content/img/Assam/Dipor-Bil.jpg');
+            $('#pic-details').html("<p>Dipor Bil, Also Spelt Deepor Beel (Bil Or Beel Means 'Lake' In The Local Assamese Language), Is Located To The South-West Of Guwahati City, In Kamrup District Of Assam, India It Is A Permanent Freshwater Lake, In A Former Channel Of Thebrahmaputra, To The South Of The Main River. It Is Also Called A Wetland Under The Ramsar Which Has Listed The Lake In November 2002, As A Ramsar Site For Undertaking Conservation Measures On The Basis Of Its Biological And Environmental Importance. <br/>Considered As One Of The Largest Beels In The Brahmaputra Valley Of Lower Assam, It Is Categorised As Representative Of The Wetland Type Under The Burma Monsoon Forest Biogeographic Region. <br/>The Dipor Bil Is Reported To Provide, Directly Or Indirectly, Its Natural Resources For The Livelihood Of Fourteen Indigenous Villages (1,200 Families) Located In Its Precincts. Freshwater Fish Is A Vital Protein And Source Of Income For These Communities; The Health Of These People Is Stated To Be Directly Dependendent On The Health Of This Wetland Ecosystem. A Member Of Deepor Beel Fishermen’s Cooperative Society Has Succinctly Stated.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Srimanta-Shankardev-Kalaksh") {
+            $('#myPicLabel').text('Srimanta Shankardev Kalakshetra ')
+            $('#pic-path').attr('src', '/Content/img/Assam/Srimanta-Shankardev-Kalaksh.jpg');
+            $('#pic-details').html("<p>Srimanta Shankardev Kalakshetra Is A Premier Institution Exhibiting The Culture And Heritage Of Assam. Spread Over A Vast Amplitude, The Complex Houses Different Buildings That Are Systematically Arranged According To Art, Dance, Sculptures Etc. The Diverse Ethnic Groups And Subgroups Who Have Created The Cultural Mosaic Which Is The Essence Of The State, Are Displayed  In All Their Beauty And Splendour.<br/>Named After The Great Unifier And The Creator Of Modern Assamese Community, Srimanta Shankardev This Cultural Institution Will Introduce You To What Assam Is All About. The Displays And The Visuals Of The Place Is So Vast That It Can Barely Be Explained In Words. It Is Better Experienced Than Being Told About.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Saraighat_Bridge") {
+            $('#myPicLabel').text('Saraighat Bridge')
+            $('#pic-path').attr('src', '/Content/img/Assam/Saraighat_Bridge.jpg');
+            $('#pic-details').html("<p>The Saraighat Bridge Is A The Reason Why Guwahati Is Said To Be The Gateway To The Northeast. The Bridge Was Built With A View To Connect The Northeastern Region With Rest Of India. It Was The First Bridge Built Over The River Brahmaputra That Has Completed 50 Years In The Year 2008. It Has A Length Of 1,492 M (4,895 Ft) And Ranks Among The Longest Bridges Above Water In India. The Bridge Was Inaugurated By The First Prime Minister Of India, Jawaharlal Nehru In The Year 1963. It Is A Majestic Road Cum Rail Bridge That Is Today Maintained By The Northeast Frontier (NF) Railway. <br/>The View Of The Unfathomable Brahmaputra From The Bridge Is Quite Breathtaking. Stand In Between The Bridge And Look At The River Flowing And You Will Never Be Able To Erase This Sight From Your Mind. Besides If You Are Interested In Photography, Don't Forget To Carry Your Camera Because You Can Have Some Of The Best Shoots Of Your Life Here. Dawn And Dusk Is The Best Time To Be Here.</p>");
+            $('#myModal').modal('show');
+        }
+        
+    });
+
+</script>

@@ -1,0 +1,83 @@
+﻿
+@model Brothers.Entities.ViewModels.BlogViewModel
+
+<div class="blog-page" id="DataGrid">
+    @if (Model.BlogList.Count() > 0)
+    {
+        <div class="content-wrapper">
+
+            <div class="blog-sidebar">
+                <div class="blog-sidebar-l">
+                    <div class="blog-sidebar-lb">
+                        <div class="blog-sidebar-p">
+                            <div class="blog-row">
+                                @foreach (var item in Model.BlogList)
+                                {
+
+                                    <div class="blog-post">
+                                        <div class="blog-post-i">
+                                            <div class="blog-post-l">
+                                                <div class="blog-post-date">
+                                                    <b>@item.BlogCreatedOn.ToString("dd")</b>
+                                                    <span>@item.BlogCreatedOn.ToString("MMMM , yyyy")</span>
+                                                </div>
+
+                                            </div>
+                                            <div class="blog-post-c">
+                                                <div class="blog-post-cb">
+                                                    <div class="blog-post-p">
+                                                        <div class="blog-post-title"><a href="#">@Html.DisplayFor(modelItem => item.BlogTitle)</a></div>
+                                                        <div class="blog-post-preview">
+                                                            <div class="blog-post-img">
+                                                                <a href="@Url.Action("Recent","Article",new {@BlogID=item.BlogID})"><img alt="" height="320" width="625" src="~/UploadedFiles/Blogs/@item.BlogID@item.BlogFile" /></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="blog-post-txt">@item.BlogDescription</div>
+                                                        <a href="@Url.Action("Recent","Article",new {@BlogID=item.BlogID})" class="blog-post-more">more</a>
+                                                    </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </div>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+
+                                }
+                            </div>
+
+                            @if (Model.BlogList.Count() > 0)
+                            {
+                                <nav class="blog-pagination">
+
+
+
+                                    @if (Model.PagingInfo.CurrentPage > 1)
+                                    {
+
+                                        <button onclick="location.href= '@Url.Action("Post", new { SearchTerm = @ViewBag.SearchTerm, PageNo = Model.PagingInfo.CurrentPage -1 })'" ; class="post-comment-btn">< Previous</button>
+
+                                    }
+
+                                    @if (Model.PagingInfo.TotalItems > (Model.PagingInfo.CurrentPage * Model.PagingInfo.ItemsPerPage))
+                                    {
+
+
+                                        <button onclick="location.href= '@Url.Action("Post", new { SearchTerm = @ViewBag.SearchTerm, PageNo = Model.PagingInfo.CurrentPage + 1 })'"; class="post-comment-btn">Next ></button>
+
+                                    }
+
+                                    <div class="clear"></div>
+                                </nav>
+                            }
+
+
+                        </div>
+                    </div>
+                    <br class="clear" />
+                </div>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    }
+</div>

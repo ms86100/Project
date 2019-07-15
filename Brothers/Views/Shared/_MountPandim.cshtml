@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta charset="utf-8" />
+    <link rel="icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/sunny/jquery-ui.css">
+    @Styles.Render("~/Content/frontcss")
+    @Styles.Render("~/Content/css")
+   
+    @*<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>*@
+
+    @RenderSection("metatags", false)
+
+    
+</head>
+<body class="index-page">
+
+    <header id="top">
+        <div class="header-a">
+            <div class="wrapper-padding">
+                <div class="header-phone"><span><a href="tel:917001259482">+91- 821 - 961-9205</a></span></div>
+                <div class="header-account">
+                    <a href="@Url.Action("Login","Account")">Agent Login</a>
+                </div>
+                
+                
+                
+                
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="header-b">
+            <!-- // mobile menu // -->
+            <div class="mobile-menu">
+                <nav>
+                    <ul>
+                        <li><a href="@Url.Action("MountPandimTour","Home")">HOME</a></li>
+                        <li><a href="@Url.Action("About","Home")">ABOUT</a></li>
+                        <li><a href="@Url.Action("TourPackages","TripPlanner")">TOURS</a></li>
+                        <li><a href="@Url.Action("Post","Article")">BLOG</a></li>
+                        <li><a href="@Url.Action("Contact","Home")">CONTACTS</a></li>
+
+
+                        @*<li>
+                            <a class="has-child" href="#">HOME</a>
+                            <ul>
+                                <li><a href="index.html">Home style one</a></li>
+                                <li><a href="index_02.html">Home style two</a></li>
+                                <li><a href="index_03.html">Home style three</a></li>
+                                <li><a href="index_04.html">Home style four</a></li>
+                            </ul>
+                        </li>*@
+                     
+                    </ul>
+                </nav>
+            </div>
+            <!-- \\ mobile menu \\ -->
+
+            <div class="wrapper-padding">
+                <div class="header-logo"><a href="@Url.Action("MountPandimTour","Home")"><img alt="" src="~/MountPandim/img/Pandim.png" /></a></div>
+                <div class="header-right">
+                 
+                    <div class="hdr-srch-devider"></div>
+                    <a href="#" class="menu-btn"></a>
+                    <nav class="header-nav">
+                        <ul>
+                            <li><a href="@Url.Action("MountPandimTour","Home")">HOME</a></li>
+                            <li><a href="@Url.Action("About","Home")">ABOUT</a></li>
+                            <li><a href="@Url.Action("TourPackages","TripPlanner")">TOURS</a></li>
+                            <li><a href="@Url.Action("Post","Article")">BLOG</a></li>
+                            <li><a href="@Url.Action("Contact","Home")">CONTACTS</a></li>
+                            @*<li>
+                                <a href="#">Features</a>
+                                <ul>
+                                    <li><a href="typography.html">typography</a></li>
+                                    <li><a href="shortcodes.html">shortcodes</a></li>
+                                    <li><a href="interactive_elements.html">interactive elements</a></li>
+                                    <li><a href="cover_galleries.html">cover galleries</a></li>
+                                    <li><a href="columns.html">columns</a></li>
+                                </ul>
+                            </li>*@
+                        </ul>
+                    </nav>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- main-cont -->
+    <div class="main-cont">
+        @RenderBody()
+    </div>
+    <!-- /main-cont -->
+    
+
+    <footer class="footer-b">
+        <div class="wrapper-padding">
+            <div class="footer-left">© Copyright 2018 Mount Pandim Tours &amp; Travel. All rights reserved.</div>
+            <div class="footer-social">
+                <a href="#" class="footer-twitter"></a>
+                <a href="https://www.facebook.com/Mount-Pandim-Tours-Travels-239077919958569/" target="_blank" class="footer-facebook"></a>
+                <a href="#" class="footer-vimeo"></a>
+                <a href="#" class="footer-pinterest"></a>
+                <a href="#" class="footer-instagram"></a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </footer>
+  
+
+
+    <div class="text-center modal" id="waiting" style="display: none; box-shadow: 5px 5px 5px #888888;">
+        <div><h4>Sending Message</h4></div>
+        <div>
+            <img src="~/Content/img/496(1).GIF" alt="Loading" style="margin-bottom: 10px" /><br />
+            Please wait...
+        </div>
+    </div>
+
+    <div class="text-center panel" id="ajaxLoading" style="display: none">
+        <div class="panel-body">
+            <img src="~/Content/img/ajax-loader.gif" />
+            <p>Please wait..</p>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/FrontJS")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

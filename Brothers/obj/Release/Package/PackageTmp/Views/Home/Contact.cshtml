@@ -1,0 +1,121 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+
+
+    <div class="contacts-map">
+        <div id="map"></div>
+    </div>
+
+    <div class="contacts-page-holder">
+        <div class="contacts-page">
+            <header class="page-lbl">
+                <div class="offer-slider-lbl">GET IN TOUCH WITH US</div>
+            
+            </header>
+
+            <div class="contacts-colls">
+                <div class="contacts-colls-l">
+                    <div class="contact-colls-lbl">OUR OFFICE</div>
+                    <div class="contacts-colls-txt">
+                        <p>Address: luing Gangtok 737101 Gangtok, Sikkim </p>
+                        <p>Telephones: +91 700 125 9482</p>
+                        <p>E-mail: info@mountpandim.com</p>
+                        <div class="side-social">
+                            <a class="side-social-twitter" href="#"></a>
+                            <a class="side-social-facebook" href="#"></a>
+                            <a class="side-social-vimeo" href="#"></a>
+                            <a class="side-social-pinterest" href="#"></a>
+                            <a class="side-social-instagram" href="#"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts-colls-r">
+                    <div class="contacts-colls-rb">
+                        <div class="contact-colls-lbl">Contact Us</div>
+                        <div class="booking-form">
+                            <form id="contact_form" action="#">
+                                <div class="booking-form-i">
+                                    <label>First Name:</label>
+                                    <div class="input"><input type="text" name="FirstName" value="" required /></div>
+                                </div>
+                                <div class="booking-form-i">
+                                    <label>Last Name:</label>
+                                    <div class="input"><input type="text" name="lastName" value=""  required /></div>
+                                </div>
+                                <div class="booking-form-i">
+                                    <label>Email Adress:</label>
+                                    <div class="input"><input type="text" name="Email" value="" required /></div>
+                                </div>
+                                <div class="booking-form-i">
+                                    <label>Website:</label>
+                                    <div class="input"><input type="text" name="Website" value="" required /></div>
+                                </div>
+                                <div class="booking-form-i textarea">
+                                    <label>Message:</label>
+                                    <div class="textarea-wrapper">
+                                        <textarea name="Message" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                                <button class="contacts-send">Send message</button>
+                            </form>
+                            
+                        </div>
+
+                        
+
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAawqliBxwDYdgLhbfDAeLMz5NqNvrr-OE&libraries=places"></script>
+
+<script type="text/javascript">
+            google.maps.event.addDomListener(window, 'load', init);
+
+            function init() {
+                var mylat = '27.344129';
+                var mylong ='88.552699';
+                var mapOptions = {
+                    zoom: 13,
+                    disableDefaultUI: true,
+                    zoomControl: true,
+                    zoomControlOptions: {
+                      style: google.maps.ZoomControlStyle.LARGE,
+                      position: google.maps.ControlPosition.LEFT_CENTER
+                    },
+                    scrollwheel: false,
+                    center: new google.maps.LatLng(mylat, mylong), // New York
+              };
+                var mapElement = document.getElementById('map');
+                var map = new google.maps.Map(mapElement, mapOptions);
+                google.maps.event.addDomListener(window, 'resize', init);
+
+			google.maps.event.addListenerOnce(map, 'idle', function(){
+  			setTimeout( function() {
+  			    var place = new google.maps.LatLng(27.344129, 88.552699);
+    			var image = new google.maps.MarkerImage('../MountPandim/img/map.png',
+    					new google.maps.Size(19, 29),
+    					new google.maps.Point(0,0),
+    					new google.maps.Point(0, 32));
+     			var marker = new google.maps.Marker({
+        			map:map,
+        			icon: image,
+        			draggable:false,
+        			animation: google.maps.Animation.DROP,
+        			position: place
+      			});
+    			$('.map-contacts').each(function(index){
+          			$(this).delay(141*index).fadeIn();
+    			});
+  			} , 500);
+			});
+            }
+
+</script>

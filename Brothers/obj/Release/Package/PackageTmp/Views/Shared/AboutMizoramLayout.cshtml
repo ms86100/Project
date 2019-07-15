@@ -1,0 +1,152 @@
+﻿
+@{
+    ViewBag.Title = "AboutMizoram";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="col-lg-3 col-md-3 col-sm-5" style="background-color:#ede8e8">
+    <h4 class="text-danger">Activities</h4>
+    <hr class="row-margin-10" />
+    <nav>
+        <ul class="nav11 side-links" style="padding-left:10px;">
+            <li>
+                <a href="@Url.Action("MizoramTrek", "content")">Mountaineering/Trekking</a>
+            </li>
+            <li>
+                <a href="@Url.Action("MizoramWhyTrek", "content")">Why Trek In Mizoram</a>
+            </li>
+            <li>
+                <a href="@Url.Action("MizoramWhenTrek", "content")">When To Trek</a>
+            </li>
+            <li>
+                <a href="@Url.Action("MizoramMedical", "content")">Medical Matters & Advice</a>
+            </li>
+            <li>
+                    <a href="@Url.Action("MizoramMajorTrek", "content")">Major Trek</a>
+                </li>
+        </ul>
+    </nav>
+    <h4 class="text-danger">Outdoor Activities</h4>
+    <hr class="row-margin-10" />
+    <nav>
+        <ul class="side-links nav11" style="padding-left:10px;">
+           
+            <li>
+                <a href="@Url.Action("MizoramAngling", "content")">Angling</a>
+            </li>
+            <li>
+                <a href="@Url.Action("MizoramBoating", "content")">Boating</a>
+            </li>
+            <li>
+                <a href="@Url.Action("MizoramCamping", "content")">Camping</a>
+            </li>
+            <li>
+                <a href="@Url.Action("MizoramCaving", "content")">Caving</a>
+            </li>
+            <li>
+                <a href="@Url.Action("MizoramMountaineering", "content")">Mountaineering</a>
+            </li>
+            <li>
+                <a href="@Url.Action("MizoramTrekking", "content")">Trekking</a>
+            </li>
+            
+        </ul>
+    </nav>
+    <h4 class="text-danger">Attractions</h4>
+    <hr class="row-margin-10" />
+    <nav>
+        <ul class="side-links nav11" style="padding-left:10px;">
+            <li>
+                <a href="@Url.Action("MizoramShopping", "content")">Shopping</a>
+            </li>
+            <li>
+                <a href="@Url.Action("MizoramRestaurants", "content")">Restaurant</a>
+            </li>
+            <li>
+                <a href="@Url.Action("MizoramArts", "content")">Art & Crafts</a>
+            </li>
+           
+            <li>
+                <a href="@Url.Action("MizoramJewelleries", "content")">Jewelleries</a>
+            </li>
+
+
+        </ul>
+    </nav>
+    <h4 class="text-danger">General Information</h4>
+    <hr class="row-margin-10" />
+    <nav>
+        <ul class="side-links nav11" style="padding-left:10px;">
+            <li>
+                <a href="@Url.Action("MizoramGeography", "content")">Geography</a>
+            </li>
+            <li>
+                <a href="@Url.Action("MizoramHistory", "content")">History</a>
+            </li>
+            <li>
+                <a href="@Url.Action("MizoramReligion", "content")">Religion</a>
+            </li>
+            <li>
+                <a href="@Url.Action("MizoramEconomy", "content")">Economy</a>
+            </li>
+            <li>
+                <a href="@Url.Action("MizoramGovernment", "content")">Government</a>
+            </li>
+            <li>
+                <a href="@Url.Action("MizoramAgriculture", "content")">Agriculture</a>
+            </li>
+            <li>
+                <a href="@Url.Action("MizoramPeople", "content")">People</a>
+            </li>
+            <li>
+                <a href="@Url.Action("MizoramFestival", "content")">Festivals</a>
+            </li>
+
+            <li>
+                <a href="@Url.Action("MizoramFacts", "content")">Facts & Figures</a>
+            </li>
+            <li>
+                <a href="@Url.Action("MizoramThingstodo", "content")">Things To Do</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Mizoramclimate", "content")">Climate</a>
+            </li>
+
+        </ul>
+    </nav>
+    <h4 class="text-danger">Travel Information</h4>
+    <hr class="row-margin-10" />
+    <nav>
+        <ul class="side-links nav11" style="padding-left:10px;">
+            <li>
+                <a href="@Url.Action("MizoramEntering", "content")">Entering & Leaving</a>
+            </li>
+            <li>
+                <a href="@Url.Action("MizoramPermit", "content")">Entry Permit</a>
+            </li>
+            <li>
+                <a href="@Url.Action("MizoramTips", "content")">Travel Tips</a>
+            </li>
+        </ul>
+    </nav>
+    <h4 class="text-danger">What To See</h4>
+    <hr class="row-margin-10" />
+    <ul class="nav11 side-links" style="padding-left:10px;">
+        <li>
+            <a href="@Url.Action("MizoramInside", "content")">Inside Aizawl</a>
+        </li>
+        <li>
+            <a href="@Url.Action("MizoramAround", "content")">Around Aizawl</a>
+        </li>
+        <li>
+            <a href="@Url.Action("MizoramOutside", "content")">Outside Aizawl</a>
+        </li>
+
+    </ul>
+</div>
+
+<div class="col-lg-9 col-md-9 col-sm-7">
+    <div class="section-header text-center">
+        <h2 class="section-title">Mizoram</h2>
+    </div>
+    @RenderBody()
+</div>

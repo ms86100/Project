@@ -1,0 +1,67 @@
+﻿@model Brothers.Entities.ViewModels.MstEnquiryReplyModel
+
+@{
+    ViewBag.Title = "Enquiry Management";
+    ViewBag.ViewHeader = "Enquiry:- Reply";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="row" style="margin-bottom:20px;">
+    <div class="panel col-md-12">
+        <div class="panel-heading" style="background-color:#ccc6c6">
+            <h4 class="text-success">Enquiry by @Model.utblGenEnquiries.GuestEmailID</h4>
+        </div>
+        <div class="panel-body" style="background-color:#e8dfdf">
+            <p class="text-warning">Enquiry Date: @Model.utblGenEnquiries.EnquiryDate.ToString("dd MMM yyyy")</p>
+            <p>
+                @Model.utblGenEnquiries.EnquiryDetails
+            </p>
+        </div>
+    </div>
+    <div class="col-md-12">
+
+        @using (Html.BeginForm("reply", "enquiry"))
+        {
+            @Html.AntiForgeryToken()
+            <div class="form-horizontal">
+                @Html.HiddenFor(m => m.utblGenEnquiries.EnquiryID)
+                @Html.HiddenFor(m => m.utblGenEnquiries.GuestEmailID)
+                @Html.HiddenFor(m => m.utblGenEnquiries.EnquiryDetails)
+                <div class="form-group">
+                    <label class="col-md-2 text-right">To</label>
+                    <div class="col-md-9">
+                        <label>@Html.DisplayFor(m => m.utblGenEnquiries.GuestEmailID)</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 text-right">Subject</label>
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(m => m.utblMails.Subject, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.utblMails.Subject, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.utblMails.MessageBody, new { @class = "col-md-2 text-right" })
+                    <div class="col-md-9">
+                        @Html.TextAreaFor(m => m.utblMails.MessageBody, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.utblMails.MessageBody, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 well well-sm">
+                <div class="col-md-3">
+                    @Html.ActionLink("Back To List", "list", "enquiry", null, null)
+                </div>
+                <div class="col-md-9 text-right">
+                    <input type="submit" value="Send Reply" class="btn btn-primary" />
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        }
+    </div>
+</div>
+
+@*error message*@
+<div id="ErrMsg" style="display:none;">
+    <input type="hidden" id="ErrMsgHiddenField11" name="ErrMsg" value="@TempData["ErrMsg"]" />
+</div>

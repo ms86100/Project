@@ -1,0 +1,788 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7F76ED81-AEBF-4F6B-92D8-D89CECACADE9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Brothers</RootNamespace>
+    <AssemblyName>Brothers</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminHomeController.cs" />
+    <Compile Include="Controllers\ContentController.cs" />
+    <Compile Include="Controllers\CountryController.cs" />
+    <Compile Include="Controllers\DestinationController.cs" />
+    <Compile Include="Controllers\EnquiryController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Controllers\UserAdminController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HtmlHelpers\PagingHelper.cs" />
+    <Compile Include="Migrations\201508200620268_InitialCreate.cs" />
+    <Compile Include="Migrations\201508200620268_InitialCreate.Designer.cs">
+      <DependentUpon>201508200620268_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508200855544_Admin.cs" />
+    <Compile Include="Migrations\201508200855544_Admin.Designer.cs">
+      <DependentUpon>201508200855544_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ApplicationRole.cs" />
+    <Compile Include="Models\ApplicationUserRole.cs" />
+    <Compile Include="Models\EnquiryReplyManageModel.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\RoleViewModels.cs" />
+    <Compile Include="Models\UserListViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\AdminStyle.css" />
+    <Content Include="Content\application.css" />
+    <Content Include="Content\bootstrap-datetimepicker.min.css" />
+    <Content Include="Content\bootstrap-datetimepicker.min.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\img\1.jpg" />
+    <Content Include="Content\img\1111.jpg" />
+    <Content Include="Content\img\2.jpg" />
+    <Content Include="Content\img\3.jpg" />
+    <Content Include="Content\img\4.jpg" />
+    <Content Include="Content\img\496%281%29.GIF" />
+    <Content Include="Content\img\ag.jpg" />
+    <Content Include="Content\img\ajax-loader.gif" />
+    <Content Include="Content\img\bh.jpg" />
+    <Content Include="Content\img\bh2.jpg" />
+    <Content Include="Content\img\bhuf&amp;f.png" />
+    <Content Include="Content\img\bhuf&amp;f1.jpg" />
+    <Content Include="Content\img\bhuf&amp;f2.jpg" />
+    <Content Include="Content\img\bhuf&amp;f3.jpg" />
+    <Content Include="Content\img\bhufes.jpg" />
+    <Content Include="Content\img\bhufes1.jpg" />
+    <Content Include="Content\img\bhuhis.jpg" />
+    <Content Include="Content\img\bhuple-jpg.jpg" />
+    <Content Include="Content\img\BhutanPlaces\ganggom.jpg" />
+    <Content Include="Content\img\BhutanPlaces\Jambay_Lhakhang.jpg" />
+    <Content Include="Content\img\BhutanPlaces\khylhak.jpg" />
+    <Content Include="Content\img\BhutanPlaces\paro.jpg" />
+    <Content Include="Content\img\BhutanPlaces\phunslg.jpg" />
+    <Content Include="Content\img\BhutanPlaces\punadzg.jpg" />
+    <Content Include="Content\img\BhutanPlaces\ringdzg.jpg" />
+    <Content Include="Content\img\BhutanPlaces\simdz.jpg" />
+    <Content Include="Content\img\BhutanPlaces\Trashigang-Dzong.jpg" />
+    <Content Include="Content\img\BhutanPlaces\TrongsaDzong.jpg" />
+    <Content Include="Content\img\BhutanPlaces\wangdi.jpg" />
+    <Content Include="Content\img\bp.jpg" />
+    <Content Include="Content\img\bullet.png" />
+    <Content Include="Content\img\carpets_sk.jpg" />
+    <Content Include="Content\img\cchbhu.jpg" />
+    <Content Include="Content\img\Darjeeling\Ava-Art-Gallery.jpg" />
+    <Content Include="Content\img\Darjeeling\Botanical-Garden.jpg" />
+    <Content Include="Content\img\Darjeeling\Buddhist Temple.jpg" />
+    <Content Include="Content\img\Darjeeling\chowrasta3.jpg" />
+    <Content Include="Content\img\Darjeeling\darj-shopping.jpg" />
+    <Content Include="Content\img\Darjeeling\darj-tea.jpg" />
+    <Content Include="Content\img\Darjeeling\Darjeeling-Batasia-Loop.jpg" />
+    <Content Include="Content\img\Darjeeling\Darjeeling-Rock-Garden-1.jpg" />
+    <Content Include="Content\img\Darjeeling\Dello Hills.jpg" />
+    <Content Include="Content\img\Darjeeling\DhirdhamTemplem.jpg" />
+    <Content Include="Content\img\Darjeeling\dj.jpg" />
+    <Content Include="Content\img\Darjeeling\dj2.jpg" />
+    <Content Include="Content\img\Darjeeling\djbird.jpg" />
+    <Content Include="Content\img\Darjeeling\djfauna.jpg" />
+    <Content Include="Content\img\Darjeeling\djst.jpg" />
+    <Content Include="Content\img\Darjeeling\Ghoom Monastery.jpg" />
+    <Content Include="Content\img\Darjeeling\himmtinst.jpg" />
+    <Content Include="Content\img\Darjeeling\kalimpong.jpg" />
+    <Content Include="Content\img\Darjeeling\Kurseong.jpg" />
+    <Content Include="Content\img\Darjeeling\Lava.jpg" />
+    <Content Include="Content\img\Darjeeling\lolegaon-view.jpg" />
+    <Content Include="Content\img\Darjeeling\love-road.jpg" />
+    <Content Include="Content\img\Darjeeling\Mahakal-Temple.jpg" />
+    <Content Include="Content\img\Darjeeling\Mangal Dham,.jpg" />
+    <Content Include="Content\img\Darjeeling\mirik.jpg" />
+    <Content Include="Content\img\Darjeeling\darjzoo.jpg" />
+    <Content Include="Content\img\Darjeeling\rishap.jpg" />
+    <Content Include="Content\img\Darjeeling\Samendhu Lake.jpg" />
+    <Content Include="Content\img\Darjeeling\refugeecentr.jpg" />
+    <Content Include="Content\img\Darjeeling\samthar-village.jpg" />
+    <Content Include="Content\img\Darjeeling\Sandakphu.jpg" />
+    <Content Include="Content\img\Darjeeling\T-G-2.jpg" />
+    <Content Include="Content\img\Darjeeling\Tiger Hills.jpg" />
+    <Content Include="Content\img\Darjeeling\White Pagoda.jpg" />
+    <Content Include="Content\img\Darjeeling\Yiga-Choling.jpg" />
+    <Content Include="Content\img\dn.jpg" />
+    <Content Include="Content\img\East Sikkim\-ridge-park.jpg" />
+    <Content Include="Content\img\East Sikkim\aritar.jpg" />
+    <Content Include="Content\img\East Sikkim\bhanjhakri-falls.JPG" />
+    <Content Include="Content\img\East Sikkim\Do-drul-Chorten.jpg" />
+    <Content Include="Content\img\East Sikkim\enchey-monastery.jpg" />
+    <Content Include="Content\img\East Sikkim\Fambong-Lho-Sanctuary.jpg" />
+    <Content Include="Content\img\East Sikkim\ganesh tok.jpg" />
+    <Content Include="Content\img\East Sikkim\gangtok.jpg" />
+    <Content Include="Content\img\East Sikkim\hanuman.jpg" />
+    <Content Include="Content\img\East Sikkim\himalayan-zoological-park.jpg" />
+    <Content Include="Content\img\East Sikkim\m.g marg.jpg" />
+    <Content Include="Content\img\East Sikkim\menmecho-lake.jpg" />
+    <Content Include="Content\img\East Sikkim\namgyal-institute-of-tibetology.jpg" />
+    <Content Include="Content\img\East Sikkim\nathula.JPG" />
+    <Content Include="Content\img\East Sikkim\ropeway.jpg" />
+    <Content Include="Content\img\East Sikkim\rumtek-monastery.jpg" />
+    <Content Include="Content\img\East Sikkim\saramsag_gd.jpg" />
+    <Content Include="Content\img\East Sikkim\tashi-view-point.jpg" />
+    <Content Include="Content\img\East Sikkim\TSHANGU LAKE copy.jpg" />
+    <Content Include="Content\img\East Sikkim\tsuklakhang-palace.jpg" />
+    <Content Include="Content\img\East Sikkim\whitehall.jpg" />
+    <Content Include="Content\img\enquiry.png" />
+    <Content Include="Content\img\f1.jpg" />
+    <Content Include="Content\img\f2.jpg" />
+    <Content Include="Content\img\f3.jpg" />
+    <Content Include="Content\img\f4.JPG" />
+    <Content Include="Content\img\f5.jpg" />
+    <Content Include="Content\img\facebook.png" />
+    <Content Include="Content\img\footer-bg.jpg" />
+    <Content Include="Content\img\footr.png" />
+    <Content Include="Content\img\Goa\Anjuna-Flea-Market.png" />
+    <Content Include="Content\img\Goa\AnjunaBeach.jpg" />
+    <Content Include="Content\img\Goa\baga-beach.jpg" />
+    <Content Include="Content\img\Goa\bagmallo-beach.jpg" />
+    <Content Include="Content\img\Goa\CALANGUTE-BEACH.jpg" />
+    <Content Include="Content\img\Goa\Candolim-beach.jpg" />
+    <Content Include="Content\img\Goa\carnivalgoa.jpg" />
+    <Content Include="Content\img\Goa\church-goa.jpg" />
+    <Content Include="Content\img\Goa\colva-beach.jpg" />
+    <Content Include="Content\img\Goa\festgoa1.jpg" />
+    <Content Include="Content\img\Goa\Gaur.jpg" />
+    <Content Include="Content\img\Goa\geography.jpg" />
+    <Content Include="Content\img\Goa\goa.jpg" />
+    <Content Include="Content\img\Goa\goa1.jpg" />
+    <Content Include="Content\img\Goa\goa2.jpg" />
+    <Content Include="Content\img\Goa\goaclimate.jpg" />
+    <Content Include="Content\img\Goa\goan-cuisine.jpg" />
+    <Content Include="Content\img\Goa\goastbrd.jpg" />
+    <Content Include="Content\img\Goa\market-spots.jpg" />
+    <Content Include="Content\img\Goa\nightmarket.jpg" />
+    <Content Include="Content\img\Goa\savoi plantation01.jpg" />
+    <Content Include="Content\img\Goa\Savoi-Plantation.jpg" />
+    <Content Include="Content\img\Goa\shopping in goa.jpg" />
+    <Content Include="Content\img\Goa\Spice-Plantation.jpg" />
+    <Content Include="Content\img\Goa\vagatorbeach.jpg" />
+    <Content Include="Content\img\Goa\varcabeach.jpg" />
+    <Content Include="Content\img\google.png" />
+    <Content Include="Content\img\handicraft_sk.jpg" />
+    <Content Include="Content\img\hbkol.jpg" />
+    <Content Include="Content\img\header-bg.jpg" />
+    <Content Include="Content\img\jewel_sk.jpg" />
+    <Content Include="Content\img\kolcity.jpg" />
+    <Content Include="Content\img\KolkataPlaces\birlapl.jpg" />
+    <Content Include="Content\img\KolkataPlaces\ctycntr.jpg" />
+    <Content Include="Content\img\KolkataPlaces\ecnmy.jpg" />
+    <Content Include="Content\img\KolkataPlaces\edengd.jpg" />
+    <Content Include="Content\img\KolkataPlaces\fortwllm.jpg" />
+    <Content Include="Content\img\KolkataPlaces\forum.jpg" />
+    <Content Include="Content\img\KolkataPlaces\hwrhbd.jpg" />
+    <Content Include="Content\img\KolkataPlaces\marblpal.jpg" />
+    <Content Include="Content\img\KolkataPlaces\niccopk.jpg" />
+    <Content Include="Content\img\KolkataPlaces\ntnlibry.jpg" />
+    <Content Include="Content\img\KolkataPlaces\sccty.jpg" />
+    <Content Include="Content\img\KolkataPlaces\shdminr.jpg" />
+    <Content Include="Content\img\KolkataPlaces\thkrbari.jpg" />
+    <Content Include="Content\img\KolkataPlaces\vic-mem.jpg" />
+    <Content Include="Content\img\KolkataPlaces\wrtbld.jpg" />
+    <Content Include="Content\img\kolpl.jpg" />
+    <Content Include="Content\img\Ladakh\hemis-festival-leh.jpg" />
+    <Content Include="Content\img\Ladakh\Hemis-Monastery-ladakh.jpg" />
+    <Content Include="Content\img\Ladakh\Ladakh8.jpg" />
+    <Content Include="Content\img\Ladakh\Ladakhclimte.jpg" />
+    <Content Include="Content\img\Ladakh\ladakhfest.jpg" />
+    <Content Include="Content\img\Ladakh\ladakhfnf.jpg" />
+    <Content Include="Content\img\Ladakh\ladakhppl.jpg" />
+    <Content Include="Content\img\Ladakh\ladakhrd.jpg" />
+    <Content Include="Content\img\Ladakh\Ladakhrelgn.jpg" />
+    <Content Include="Content\img\Ladakh\Ladakh_Monastery.jpg" />
+    <Content Include="Content\img\Ladakh\leh_shopping.jpg" />
+    <Content Include="Content\img\Ladakh\leh_soma_gompa.jpg" />
+    <Content Include="Content\img\Ladakh\losarfest.jpg" />
+    <Content Include="Content\img\Ladakh\pangong-lake.jpg" />
+    <Content Include="Content\img\Ladakh\Thiksey-Gompa.jpg" />
+    <Content Include="Content\img\Ladakh\valley.jpg" />
+    <Content Include="Content\img\lbrbhu.jpg" />
+    <Content Include="Content\img\lc.jpg" />
+    <Content Include="Content\img\lc2.jpg" />
+    <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\mb.jpg" />
+    <Content Include="Content\img\members\a.jpg" />
+    <Content Include="Content\img\members\aaklesh.jpg" />
+    <Content Include="Content\img\members\Amrish.jpg" />
+    <Content Include="Content\img\members\b.jpg" />
+    <Content Include="Content\img\members\bharat.jpg" />
+    <Content Include="Content\img\members\bhim.jpg" />
+    <Content Include="Content\img\members\c.jpg" />
+    <Content Include="Content\img\members\chunku.jpg" />
+    <Content Include="Content\img\members\d.jpg" />
+    <Content Include="Content\img\members\deepandra.jpg" />
+    <Content Include="Content\img\members\krishna.jpg" />
+    <Content Include="Content\img\members\member_01.jpg" />
+    <Content Include="Content\img\members\member_02.jpg" />
+    <Content Include="Content\img\members\member_03.jpg" />
+    <Content Include="Content\img\members\member_04.jpg" />
+    <Content Include="Content\img\members\member_05.jpg" />
+    <Content Include="Content\img\members\member_06.jpg" />
+    <Content Include="Content\img\members\member_07.jpg" />
+    <Content Include="Content\img\members\member_08.jpg" />
+    <Content Include="Content\img\members\member_09.jpg" />
+    <Content Include="Content\img\members\member_10.jpg" />
+    <Content Include="Content\img\members\member_11.jpg" />
+    <Content Include="Content\img\members\member_12.jpg" />
+    <Content Include="Content\img\members\member_13.jpg" />
+    <Content Include="Content\img\members\member_14.jpg" />
+    <Content Include="Content\img\members\member_15.jpg" />
+    <Content Include="Content\img\members\member_16.jpg" />
+    <Content Include="Content\img\members\member_17.jpg" />
+    <Content Include="Content\img\members\member_18.jpg" />
+    <Content Include="Content\img\members\navin.jpg" />
+    <Content Include="Content\img\members\neelam.jpg" />
+    <Content Include="Content\img\members\robin.jpg" />
+    <Content Include="Content\img\members\sanjay-m.jpg" />
+    <Content Include="Content\img\members\Saran-Subba.jpg" />
+    <Content Include="Content\img\members\sumo.jpg" />
+    <Content Include="Content\img\members\Sunil-Subba.jpg" />
+    <Content Include="Content\img\members\x.jpg" />
+    <Content Include="Content\img\members\Xaviers-Goa.jpg" />
+    <Content Include="Content\img\mflyt.jpg" />
+    <Content Include="Content\img\Nepal\2.jpg" />
+    <Content Include="Content\img\Nepal\Bhaktapur-Durbar-Square.jpg" />
+    <Content Include="Content\img\Nepal\boudhastupa.jpeg" />
+    <Content Include="Content\img\Nepal\canyoning-in-nepal.jpg" />
+    <Content Include="Content\img\Nepal\climate_np.jpg" />
+    <Content Include="Content\img\Nepal\dabarsq.jpg" />
+    <Content Include="Content\img\Nepal\dange.jpg" />
+    <Content Include="Content\img\Nepal\dashain.jpg" />
+    <Content Include="Content\img\Nepal\Dhulikhel.jpg" />
+    <Content Include="Content\img\Nepal\gaijatra.jpg" />
+    <Content Include="Content\img\Nepal\gurass.jpg" />
+    <Content Include="Content\img\Nepal\history-of-nepal.jpg" />
+    <Content Include="Content\img\Nepal\Jungle_Safari.jpg" />
+    <Content Include="Content\img\Nepal\losarnp.jpg" />
+    <Content Include="Content\img\Nepal\lumbini.jpg" />
+    <Content Include="Content\img\Nepal\nagarkot.jpg" />
+    <Content Include="Content\img\Nepal\Nepal-2.jpg" />
+    <Content Include="Content\img\Nepal\nepal-rugs4.jpg" />
+    <Content Include="Content\img\Nepal\nepal-trekking.jpg" />
+    <Content Include="Content\img\Nepal\nepal.jpg" />
+    <Content Include="Content\img\Nepal\NepalEverest.jpg" />
+    <Content Include="Content\img\Nepal\Nepal_eco.jpg" />
+    <Content Include="Content\img\Nepal\np_geography.jpg" />
+    <Content Include="Content\img\Nepal\np_metalwork.jpg" />
+    <Content Include="Content\img\Nepal\patan_durbar_square.jpg" />
+    <Content Include="Content\img\Nepal\people-in-nepal.jpg" />
+    <Content Include="Content\img\Nepal\Pokhara.jpg" />
+    <Content Include="Content\img\Nepal\river_rafting.jpg" />
+    <Content Include="Content\img\Nepal\saraswati-puja.jpg" />
+    <Content Include="Content\img\Nepal\Snow_lpd.jpg" />
+    <Content Include="Content\img\Nepal\swayamstupa.jpg" />
+    <Content Include="Content\img\Nepal\teej.jpg" />
+    <Content Include="Content\img\Nepal\thankas.jpg" />
+    <Content Include="Content\img\Nepal\tiger.jpg" />
+    <Content Include="Content\img\Nepal\tihar.jpg" />
+    <Content Include="Content\img\Nepal\woodwork.jpg" />
+    <Content Include="Content\img\North Sikkim\dzongu.jpg" />
+    <Content Include="Content\img\North Sikkim\gurudongmar_lk.jpg" />
+    <Content Include="Content\img\North Sikkim\KABI.jpg" />
+    <Content Include="Content\img\North Sikkim\labrang-monastery.jpg" />
+    <Content Include="Content\img\North Sikkim\lachen valley.jpg" />
+    <Content Include="Content\img\North Sikkim\lachung.jpg" />
+    <Content Include="Content\img\North Sikkim\mangan.jpg" />
+    <Content Include="Content\img\North Sikkim\phensong-monastery.jpg" />
+    <Content Include="Content\img\North Sikkim\Phodong-Monastery-v1.jpg" />
+    <Content Include="Content\img\North Sikkim\shingba_sanc.jpg" />
+    <Content Include="Content\img\North Sikkim\singhik.jpg" />
+    <Content Include="Content\img\North Sikkim\tatopani %282%29.jpg" />
+    <Content Include="Content\img\North Sikkim\thangu_valley.jpg" />
+    <Content Include="Content\img\North Sikkim\tso-lhamo-lake.jpg" />
+    <Content Include="Content\img\North Sikkim\yumesamdong.jpg" />
+    <Content Include="Content\img\North Sikkim\Yumthang_1.JPG" />
+    <Content Include="Content\img\np.jpg" />
+    <Content Include="Content\img\np2.jpg" />
+    <Content Include="Content\img\paragld.jpg" />
+    <Content Include="Content\img\pdzbhu.jpg" />
+    <Content Include="Content\img\rckclb.jpg" />
+    <Content Include="Content\img\rdzbhu.jpg" />
+    <Content Include="Content\img\rp.jpg" />
+    <Content Include="Content\img\rr.jpg" />
+    <Content Include="Content\img\simdz.jpg" />
+    <Content Include="Content\img\skkg.jpg" />
+    <Content Include="Content\img\South Sikkim\chardham.jpg" />
+    <Content Include="Content\img\South Sikkim\guru-rimpoche.jpg" />
+    <Content Include="Content\img\South Sikkim\mainam_pk.jpg" />
+    <Content Include="Content\img\South Sikkim\namchi.jpg" />
+    <Content Include="Content\img\South Sikkim\ralong.jpg" />
+    <Content Include="Content\img\South Sikkim\ravangla.jpg" />
+    <Content Include="Content\img\South Sikkim\taray_vir.jpg" />
+    <Content Include="Content\img\South Sikkim\temi_teagd.JPG" />
+    <Content Include="Content\img\tashidz.jpg" />
+    <Content Include="Content\img\tea_sk.jpeg" />
+    <Content Include="Content\img\tgd.jpg" />
+    <Content Include="Content\img\top-bg.jpg" />
+    <Content Include="Content\img\tr.jpg" />
+    <Content Include="Content\img\trek.jpg" />
+    <Content Include="Content\img\twitter.png" />
+    <Content Include="Content\img\vmkol1.jpg" />
+    <Content Include="Content\img\WestSikkim\KanchanjungaFalls03.jpg" />
+    <Content Include="Content\img\WestSikkim\karthok lake.jpg" />
+    <Content Include="Content\img\WestSikkim\khechopari.jpg" />
+    <Content Include="Content\img\WestSikkim\Legship.JPG" />
+    <Content Include="Content\img\WestSikkim\Lepcha-Heritage-House.jpg" />
+    <Content Include="Content\img\WestSikkim\pelling02.jpg" />
+    <Content Include="Content\img\WestSikkim\pemayangtse.jpg" />
+    <Content Include="Content\img\WestSikkim\rabdensee-palace.jpg" />
+    <Content Include="Content\img\WestSikkim\richenphung_monastry.jpg" />
+    <Content Include="Content\img\WestSikkim\rimbi.jpg" />
+    <Content Include="Content\img\WestSikkim\rinchenpong.jpg" />
+    <Content Include="Content\img\WestSikkim\sangacholing.jpeg" />
+    <Content Include="Content\img\WestSikkim\singsore.jpg" />
+    <Content Include="Content\img\WestSikkim\Tashiding monastery.jpg" />
+    <Content Include="Content\img\WestSikkim\uttaray.jpeg" />
+    <Content Include="Content\img\WestSikkim\yuksom.jpg" />
+    <Content Include="Content\img\yakrd.jpg" />
+    <Content Include="Content\admin.css" />
+    <Content Include="Content\ns-pager-style.css" />
+    <Content Include="Content\Plugins\MetisMenu\metisMenu.css" />
+    <Content Include="Content\Plugins\MetisMenu\metisMenu.js" />
+    <Content Include="Content\Plugins\MetisMenu\metisMenu.min.css" />
+    <Content Include="Content\Plugins\TimePicker\bootstrap-timepicker.min.css" />
+    <Content Include="Content\Plugins\TimePicker\bootstrap-timepicker.min.js" />
+    <Content Include="Content\StyleSheet1.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\img\members\Thumbs.db" />
+    <Content Include="Scripts\application.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\custom.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <Content Include="Scripts\jquery.easing.min.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\owl.carousel.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\admin.js" />
+    <Content Include="Scripts\wow.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Content\Profile.cshtml" />
+    <Content Include="Views\Content\TeamMessage.cshtml" />
+    <Content Include="Views\Content\FAQs.cshtml" />
+    <Content Include="Views\Home\rough.cshtml" />
+    <Content Include="Views\Content\ContactUs.cshtml" />
+    <Content Include="Views\Content\SikkimTravelInfo.cshtml" />
+    <Content Include="Views\Content\AboutSikkim.cshtml" />
+    <Content Include="Views\Content\SikkimPeople.cshtml" />
+    <Content Include="Views\Content\SikkimFestivals.cshtml" />
+    <Content Include="Views\Content\SikkimClimate.cshtml" />
+    <Content Include="Views\Content\FloraAndFauna.cshtml" />
+    <Content Include="Views\Content\SikkimHistory.cshtml" />
+    <Content Include="Views\Content\SikkimGeography.cshtml" />
+    <Content Include="Views\Content\SikkimEconomy.cshtml" />
+    <Content Include="Views\Content\DarjeelingTravelInfo.cshtml" />
+    <Content Include="Views\Content\SikkimActivities.cshtml" />
+    <Content Include="Views\Content\AboutDarjeeling.cshtml" />
+    <Content Include="Views\Content\DarjeelingPeople.cshtml" />
+    <Content Include="Views\Content\DarjeelingClimate.cshtml" />
+    <Content Include="Views\Content\DarjFloraandFauna.cshtml" />
+    <Content Include="Views\Content\SikkimTrekking.cshtml" />
+    <Content Include="Views\Content\DarjeelingHistory.cshtml" />
+    <Content Include="Views\Content\DarjeelingEconomy.cshtml" />
+    <Content Include="Views\Content\KolkataTravelInfo.cshtml" />
+    <Content Include="Views\Content\AboutKolkata.cshtml" />
+    <Content Include="Views\Content\KolkataPeople.cshtml" />
+    <Content Include="Views\Content\KolkataGeography.cshtml" />
+    <Content Include="Views\Content\KolkataHistory.cshtml" />
+    <Content Include="Views\Content\KolkataEconomy.cshtml" />
+    <Content Include="Views\Content\KolkataFloraAndFauna.cshtml" />
+    <Content Include="Views\Content\BhutanTravelInfo.cshtml" />
+    <Content Include="Views\Content\AboutBhutan.cshtml" />
+    <Content Include="Views\Content\BhutanPeople.cshtml" />
+    <Content Include="Views\Content\BhutanFloraandFauna.cshtml" />
+    <Content Include="Views\Content\BhutanGeography.cshtml" />
+    <Content Include="Views\Content\BhutanHistory.cshtml" />
+    <Content Include="Views\Content\BhutanFestival.cshtml" />
+    <Content Include="Views\Content\BhutanTrekking.cshtml" />
+    <Content Include="Views\Content\BhutanPlaces.cshtml" />
+    <Content Include="Views\Content\DarjeelingTrekking.cshtml" />
+    <Content Include="Views\Shared\_pvSikkim.cshtml" />
+    <Content Include="Views\Content\DarjeelingAttraction.cshtml" />
+    <Content Include="Views\Shared\_pvBhutan.cshtml" />
+    <Content Include="Views\Content\KolkataPlaces.cshtml" />
+    <Content Include="Views\Shared\_pvDarjeeling.cshtml" />
+    <Content Include="Views\Content\KolkataFestival.cshtml" />
+    <Content Include="Views\Content\KolkataAttraction.cshtml" />
+    <Content Include="Views\Shared\_pvKolkata.cshtml" />
+    <Content Include="Views\Content\KolkataHeritageSite.cshtml" />
+    <Content Include="Views\Content\DarjeelingPlaces.cshtml" />
+    <Content Include="Views\Content\AroundDarjeeling.cshtml" />
+    <Content Include="Views\Content\OutsideDarjeeling.cshtml" />
+    <Content Include="Views\Content\AboutGoa.cshtml" />
+    <Content Include="Views\Content\GoaClimate.cshtml" />
+    <Content Include="Views\Content\GoaFloraAndFauna.cshtml" />
+    <Content Include="Views\Content\GoaPeople.cshtml" />
+    <Content Include="Views\Content\GoaTravelInfo.cshtml" />
+    <Content Include="Views\Content\GoaFestivals.cshtml" />
+    <Content Include="Views\Shared\_pvGoa.cshtml" />
+    <Content Include="Views\Content\GoaEconomy.cshtml" />
+    <Content Include="Views\Content\GoaGeography.cshtml" />
+    <Content Include="Views\Content\GoaBeaches.cshtml" />
+    <Content Include="Views\Content\GoaChurches.cshtml" />
+    <Content Include="Views\Content\GoaTouristDestination.cshtml" />
+    <Content Include="Views\Content\GoaShopping.cshtml" />
+    <Content Include="Views\Content\GoaPlantations.cshtml" />
+    <Content Include="Views\Content\GoaCuisine.cshtml" />
+    <Content Include="Views\Content\GoaSpices.cshtml" />
+    <Content Include="Views\Content\AboutLadakh.cshtml" />
+    <Content Include="Views\Content\LadakhClimate.cshtml" />
+    <Content Include="Views\Content\LadakhReligion.cshtml" />
+    <Content Include="Views\Content\LadakhPeople.cshtml" />
+    <Content Include="Views\Content\LadakhTravelInfo.cshtml" />
+    <Content Include="Views\Content\Ladakhfloraandfauna.cshtml" />
+    <Content Include="Views\Content\LadakhFestivals.cshtml" />
+    <Content Include="Views\Content\LadakhPlaces.cshtml" />
+    <Content Include="Views\Content\LadakhTrekking.cshtml" />
+    <Content Include="Views\Content\LadakhShopping.cshtml" />
+    <Content Include="Views\Shared\_pvLadakh.cshtml" />
+    <Content Include="Views\Content\AboutNepal.cshtml" />
+    <Content Include="Views\Content\NepalPeople.cshtml" />
+    <Content Include="Views\Content\NepalClimate.cshtml" />
+    <Content Include="Views\Content\NepalGeography.cshtml" />
+    <Content Include="Views\Content\NepalHistory.cshtml" />
+    <Content Include="Views\Content\NepalFloraAndFauna.cshtml" />
+    <Content Include="Views\Content\NepalFestivals.cshtml" />
+    <Content Include="Views\Content\NepalTravelInfo.cshtml" />
+    <Content Include="Views\Content\NepalAdventure.cshtml" />
+    <Content Include="Views\Content\NepalPlaces.cshtml" />
+    <Content Include="Views\Content\OutsideKathmandu.cshtml" />
+    <Content Include="Views\Content\NepalShopping.cshtml" />
+    <Content Include="Views\Shared\_pvNepal.cshtml" />
+    <Content Include="Views\Content\DarjeelingFestivals.cshtml" />
+    <Content Include="Views\Content\EastSikkim.cshtml" />
+    <Content Include="Views\Content\NorthSikkim.cshtml" />
+    <Content Include="Views\Content\WestSikkim.cshtml" />
+    <Content Include="Views\Content\SouthSikkim.cshtml" />
+    <Content Include="Views\Content\SikkimShopping.cshtml" />
+    <Content Include="Views\Content\OutsideThimphu.cshtml" />
+    <Content Include="Views\Shared\_pvEnquiry.cshtml" />
+    <Content Include="Views\Enquiry\List.cshtml" />
+    <Content Include="Views\Enquiry\_pvEnquiryList.cshtml" />
+    <Content Include="Views\Enquiry\_pvEnquiryDetails.cshtml" />
+    <Content Include="Views\Roles\List.cshtml" />
+    <Content Include="Views\Roles\Create.cshtml" />
+    <Content Include="Views\Roles\Edit.cshtml" />
+    <Content Include="Views\Roles\Delete.cshtml" />
+    <Content Include="Views\Shared\AdminLayout.cshtml" />
+    <Content Include="Views\AdminHome\Index.cshtml" />
+    <Content Include="Views\UserAdmin\List.cshtml" />
+    <Content Include="Views\UserAdmin\pvUserList.cshtml" />
+    <Content Include="Views\UserAdmin\Create.cshtml" />
+    <Content Include="Views\Enquiry\Reply.cshtml" />
+    <Content Include="Views\Country\List.cshtml" />
+    <Content Include="Views\Country\pvCountryList.cshtml" />
+    <Content Include="Views\Country\pvEdit.cshtml" />
+    <Content Include="Views\Country\pvCreate.cshtml" />
+    <Content Include="Views\Destination\List.cshtml" />
+    <Content Include="Views\Destination\pvDestinationList.cshtml" />
+    <Content Include="Views\Destination\pvCreate.cshtml" />
+    <Content Include="Views\Destination\pvEdit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Brothers.Entities\Brothers.Entities.csproj">
+      <Project>{cf0f530f-1be4-4969-a21b-8168bb1c502b}</Project>
+      <Name>Brothers.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201508200620268_InitialCreate.resx">
+      <DependentUpon>201508200620268_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508200855544_Admin.resx">
+      <DependentUpon>201508200855544_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60126</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60126/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

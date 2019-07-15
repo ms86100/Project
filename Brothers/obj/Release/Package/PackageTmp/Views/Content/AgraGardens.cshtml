@@ -1,0 +1,123 @@
+﻿
+@{
+    ViewBag.Title = "AgraGardens";
+    Layout = "~/Views/Shared/GoldenTriangleLayout.cshtml";
+}
+
+<div class="well subheading-well">
+    <b class="subheading">Gardens</b>
+</div>
+<div class="col-md-12">
+    <p>
+        As The City Of Agra Was Once The Capital Of The Mughals, This Resulted In The Establishment Of Large Number Of Beautiful Parks And Gardens In Agra. These Magnificent Agra Gardens Have Beautifully Withstand The Test Of Change And Time. Very Well Maintained, The Enticing Gardens In Agra Add To The Beauty Of The City. Some Of The Most Popular And Beautiful Agra Gardens Include The Mehtab Bagh, Dayal Bagh Gardens, Ram Bagh, Shah Jahan Park, Taj Mahal Garden, Aalsi Bagh, And The Mughal Gardens.
+    </p>
+</div>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Agra/Gardens/Mehtab-Bagh.jpg" alt="Mehtab-Bagh" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="MehtabBagh" />
+            </div>
+        </div>
+        <h5>Mehtab Bagh</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Agra/Gardens/dayal-bagh.jpg" alt="dayal-bagh" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="dayalbagh" />
+            </div>
+        </div>
+        <h5>Dayalbagh Gardens</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Agra/Gardens/Tajmahal-Garden.jpg" alt="Tajmahal" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Tajmahal" />
+            </div>
+        </div>
+        <h5>Taj Mahal Garden</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Agra/Gardens/Shahjahan-Park.jpg" alt="Shahjahan" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Shahjahan" />
+            </div>
+        </div>
+        <h5>Shah Jahan Park</h5>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Agra/Gardens/ram-bagh-agra.jpg" alt="ram-bagh" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="rambagh" />
+            </div>
+        </div>
+        <h5>Rambagh Gardens</h5>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "MehtabBagh") {
+            $('#myPicLabel').text('Mehtab Bagh')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Agra/Gardens/Mehtab-Bagh.jpg');
+            $('#pic-details').html("<p>Located In Close Proximity To The Famous Taj Mahal, Next To River Yamuna, Mehtab Bagh Is Among The Most Popular Gardens In Agra, That Offers The Most Beautiful View Of The Taj. Also Known As The Moonlit Garden, It Is Comparatively Among The Latest Addition To The List Of City’s Tourist Attraction. Giving You A Feel Of The Royal Mughal Times With Its Splendid Architectural Style, The Garden Is A Must Visit For You. A Beautiful Walk Along The Banks Of River Yamuna, Watching The Wading Birds That Come Down To This Beautiful Spot, Watching The Taj Under The Romantic Moonlight Are All Unmatched Experiences.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "dayalbagh") {
+            $('#myPicLabel').text('Dayalbagh Gardens')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Agra/Gardens/dayal-bagh.jpg');
+            $('#pic-details').html("<p>Situated Only 15kms From Agra The Dayal Bagh Garden Is Visited By Many. Founded In The Fond Memory Of Shiv Dayal Sahib, Who Was The Founder Of The “ Radhasoami Satsang Movement”, This Beautiful Garden In Agra Puts Up An Impressive Form Of Architecture. Completely Built Of White Marbels, The Garden Is 110 Feet High And Replete With Majestic Pillars. The Garden Is The Prefect Blend Of Viharas, Mosques, Temples And Gurudwaras.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Tajmahal") {
+            $('#myPicLabel').text('Taj Mahal Garden')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Agra/Gardens/Tajmahal-Garden.jpg');
+            $('#pic-details').html("<p>The Taj Mahal In Agra Boasts Of A Beautiful Garden Built In A Persian Style And Is Known As The Taj Mahal Garden. One Of The Popular Gardens In Agra, It Mostly Features The Religious Motifs. Built In A Persian Style Of Architecture, The Taj Mahal Garden Symbolizes Heaven As In The Sacred Quran, Beautiful Gardens Are Meant To Be Paradise. The Unique Style Of Architecture And Structure Surprises Many And Draws A Large Number Of Viewers.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Shahjahan") {
+            $('#myPicLabel').text('Shah Jahan Park')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Agra/Gardens/Shahjahan-Park.jpg');
+            $('#pic-details').html("<p>One Garden That Stands Out In Agra Is The Shah Jahan Park Which Is Known For Its Enchanting Environment And Panoramic Beauty. Nestled Within Beautiful Lush Greenery, This Mughal Garden Is Surely There To Offer You A Nice Timeout. It Is The Perfect Place To Unwind And Relax Amidst The Pristine Fresh Air And Rich History Of The Place.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "rambagh") {
+            $('#myPicLabel').text('Rambagh Gardens')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Agra/Gardens/ram-bagh-agra.jpg');
+            $('#pic-details').html("<p>Situated Only Two Kms In The North Of The Taj, Agra’s Rambagh Gardens Has Been Made In The Charbagh Style And Pattern. It Comprises Of 4 Divisions Created By Waterways And Paths. Also Known As The Bagh-I-Gul Afshan, This Garden Also Consists Of Channels And Fountains. This Garden In Agra Is Yet Another Famous Garden Dubbed With Architectural Splendor.</p>");
+            $('#myModal').modal('show');
+        }
+    });
+
+</script>
+

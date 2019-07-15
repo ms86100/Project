@@ -1,0 +1,216 @@
+﻿@model Brothers.Entities.ViewModels.MstPackageGeneralViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="col-md-12">
+    <div class="col-md-4 col-sm-4">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4 class="text-center">Book This Package</h4>
+            </div>
+            @using (Html.BeginForm("BookingRequest", "tripplanner", FormMethod.Post, new { data_otf_ajax = "true" }))
+            {
+                <div class="panel-body" style="padding:20px">
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+                    @Html.HiddenFor(m => m.MstTourPackage.PackageID)
+                    <div class="form-horizontal" style="margin:10px;">
+                        <div class="form-group">
+                            <label class="control-label col-md-4" style="padding:5px 0px; width:90px;">Arrival Date</label>
+                            <div class="control-group">
+                                <div class="controls">
+                                    <div class="input-group col-md-8">
+                                        @Html.TextBoxFor(m => m.MstPackageBooking.ArrivalDate, new { @class = "form-control col-md-4 date-picker", id = "date-picker-2" })
+                                        @*<input id="date-picker-2" type="text" class="date-picker form-control" />*@
+                                        <label for="date-picker-2" class="input-group-addon btn">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            @Html.ValidationMessageFor(m => m.MstPackageBooking.ArrivalDate, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-3" style="margin:5px;padding:0px">
+                                <label class="control-label">Adult</label>
+                                @Html.DropDownListFor(m => m.MstPackageBooking.AdultPax, Enumerable.Range(1, 10).Select(m => new SelectListItem { Text = m.ToString(), Value = m.ToString() }), "0", new { @class = "form-control ddl-select2" })
+                                @Html.ValidationMessageFor(m => m.MstPackageBooking.AdultPax, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group col-md-4" style="margin: 5px; padding:0px">
+                                <label class="control-label">Child (3-5yrs)</label>
+                                @Html.DropDownListFor(m => m.MstPackageBooking.ChildPax, Enumerable.Range(0, 10).Select(m => new SelectListItem { Text = m.ToString(), Value = m.ToString() }), new { @class = "form-control ddl-select2" })
+                                @Html.ValidationMessageFor(m => m.MstPackageBooking.ChildPax, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group col-md-4" style="margin: 5px 0px; padding:0px">
+                                <label class="control-label">Infant (< 3yrs)</label>
+                                @Html.DropDownListFor(m => m.MstPackageBooking.InfantPax, Enumerable.Range(0, 5).Select(m => new SelectListItem { Text = m.ToString(), Value = m.ToString() }), new { @class = "form-control ddl-select2" })
+                                @Html.ValidationMessageFor(m => m.MstPackageBooking.InfantPax, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label">Your Name</label>
+                            @Html.TextBoxFor(m => m.MstPackageBooking.ClientName, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.MstPackageBooking.ClientName, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Email ID</label>
+                            @Html.TextBoxFor(m => m.MstPackageBooking.ClientEmailID, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.MstPackageBooking.ClientEmailID, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Contact No</label>
+                            @Html.TextBoxFor(m => m.MstPackageBooking.ClientContactNo, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.MstPackageBooking.ClientContactNo, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Your Requirement</label>
+                            @Html.TextAreaFor(m => m.MstPackageBooking.ClientRequirement, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <input type="submit" value="Post Request" class="btn btn-danger pull-right" />
+                    <div class="clearfix"></div>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="col-md-8 col-sm-8">
+        <div class="well" style="background-color:#808080; padding:10px">
+            <h3 style="margin:0px; color:white; font-family:Verdana">@Model.MstTourPackage.PackageName</h3>
+        </div>
+        <div class="col-md-12">
+            <div class="well">
+                <div>
+                    <ul id="ulSlider">
+                        @foreach (var image in Model.MstTourPhotoList)
+                        {
+                            <li>
+                                <img src="@image.PhotoNormal" />
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+            <div style="border:1px solid rgba(0, 0, 0, 0.30); padding:7px;">
+                <div class="col-md-12" style="padding:0px;">
+                    <div class="col-md-7">
+                        <h4 class="text-primary">Tour Package Details</h4>
+                    </div>
+                    <div class="col-md-5 text-right" style="padding:7px;">
+                        <button class="btn btn-danger btn-sm" id="tourMap"><i class="glyphicon glyphicon-globe">&nbsp;</i>View Map</button>
+                        @*<i class="glyphicon glyphicon-globe text-danger">&nbsp;</i><a href="#" class="text-danger">View Map</a>*@
+                    </div>
+                </div>
+                <table class="table table-striped">
+                    <tr>
+                        <td style="width:200px;"><span class="glyphicon glyphicon-map-marker text-danger">&nbsp;</span>Package Routing</td>
+                        <td>@Model.MstTourPackage.PackageRouting</td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-th text-danger">&nbsp;</span>Package Description</td>
+                        <td>@Model.MstTourPackage.PackageRemarks</td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-plane text-danger">&nbsp;</span>Pickup Point</td>
+                        <td>@Model.MstTourPackage.PickupPoint</td>
+                    </tr>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-plane text-danger">&nbsp;</span>Drop Point</td>
+                        <td>@Model.MstTourPackage.DropPoint</td>
+                    </tr>
+                </table>
+            </div>
+            <div style="border:1px solid rgba(0, 0, 0, 0.30); padding:7px;margin-top:3px;">
+                <h4 class="text-primary">Itinerary Details</h4>
+                @if (Model.MstTourActivityList.Count() > 0)
+                {
+                    foreach (var item in Model.MstTourActivityList)
+                    {
+                        <table class="table table-responsive table-bordered">
+                            <thead>
+                                <tr>
+                                    <th style="width:100px; background-color:#4acaed; color:white">Day @item.DayNo</th>
+                                    <th style="background-color:#808080; color:white">@item.ActivityTitle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Activity</td>
+                                    <td>@item.ActivityRemarks</td>
+                                </tr>
+                                <tr>
+                                    <td>Overnight</td>
+                                    @if (item.DestinationID != null && item.DestinationID != 5)
+                                    {
+                                        <td>@item.DestinationName</td>
+                                    }
+                                    else if (item.DestinationID == 5)
+                                    {
+                                        <td>@item.OvernightDestination</td>
+                                    }
+                                    else
+                                    {
+                                        <td>Not Required</td>
+                                    }
+                                </tr>
+                            </tbody>
+                        </table>
+                    }
+                }
+            </div>
+            <div class="well well-sm" style="padding-top:15px; margin-top:10px;">
+                <p class="text-right text-info" style="font-size:20px;font-weight:bold;">Total Views: @Model.MstTourPackage.PackageHitCount</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="map-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:#4acaed">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 id="myModalLabel" class="text-center">Tour Map for @Model.MstTourPackage.PackageName</h4>
+            </div>
+            <div class="modal-body" style="padding:10px;">
+                <img src="@Model.MstTourMap.MapNormal" class="img-responsive"/>
+            </div>
+            @*<div class="modal-footer">
+                <button class="btn btn-info" data-dismiss="modal" aria-hidden="true">Close</button>
+            </div>*@
+        </div>
+    </div>
+</div>
+
+
+@*error message*@
+<div id="ErrMsg" style="display:none;">
+    <input type="hidden" id="ErrMsgHiddenField" name="ErrMsg" value="@TempData["ErrMsg"]" />
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $('.ddl-select2').select2({ width: "100%" });
+        $("#date-picker-2").datepicker({
+            format: "dd/mm/yy",
+        });
+        $('#ulSlider').bxSlider({
+            auto: true,
+            minSlides: 2,
+            maxSlides: 3,
+            slideWidth: 200,
+            slideMargin: 10,
+            easing: 'ease'
+        });
+        $('.bx-wrapper').width('100%');
+
+        $("#tourMap").on('click', function () {
+            $('#map-modal').removeClass('hide');
+            $('#map-modal').modal('show');
+        });
+    });
+</script>

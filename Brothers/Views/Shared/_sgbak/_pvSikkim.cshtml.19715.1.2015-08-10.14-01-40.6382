@@ -1,0 +1,15 @@
+﻿
+
+<nav class="navstyles">
+    <ul class="nav nav-pills" id="nav">
+        <li><a href="@Url.Action("aboutsikkim","content")" class="x1">OVERVIEW</a></li>
+        <li><a href="@Url.Action("sikkimfestivals","content")" class="x1">FESTIVALS</a></li>
+        <li><a href="@Url.Action("sikkimhistory","content")" class="x1">HISTORY</a></li>
+        <li><a href="@Url.Action("sikkimgeography","content")" class="x1">GEOGRAPHY</a></li>
+        <li><a href="@Url.Action("sikkimeconomy","content")" class="x1">ECONOMY</a></li>
+        <li><a href="@Url.Action("sikkimactivities","content")" class="x1">ACTIVITIES</a></li>
+        <li><a href="@Url.Action("sikkimtrekking","content")" class="x1">TREKKING</a></li>
+    </ul>
+</nav>
+
+

@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Casino";
+    Layout = "~/Views/Shared/SikkimLayout.cshtml";
+}
+
+<div class="well subheading-well">
+    <b class="subheading">Casino</b>
+</div>
+
+<div class="col-md-12">
+    <div class="well hidden-xs" style="padding:10px;">
+        <img src="~/Content/img/SikkimImages/casino.jpg" class="resp-img img-bordered" />
+    </div>
+    <div class="col-md-3" style="padding-left:5px;">
+        <h4 class="text-success">CASINOS IN SIKKIM</h4>
+        <b class="subheading">Casino Royal Plaza </b>
+        <p class="row-margin-bottom-20">Open: 24 Hours</p>
+        <b class="subheading">Casino Mahjong </b>
+        <p>
+            Mayfair Spa & Resort<br />
+            Open: 24 Hours
+        </p>
+    </div>
+    <div class="col-md-9" style="padding-left:5px;">
+        <p>
+            Nights Fall Early At Sikkim, But Not On The Two Casinos Of Gangtok Where International Games Like Blackjack, Baccarat, Pontoon, Roulette, Flush, Beat The Dealer And Slot Machines Go Round The Clock, Seven Days A Week.
+        </p>
+        <p>
+            The Atmosphere Are One Of Stylish Enjoyment And It Is Tempting To Linger. Even Those Visitors Who Have Never Gambled Before Soon Learn How To Play. There Is No Pressure. Charming Guest Relations Executives Are At Your Service No Sooner Than You Enter The Casinos, And If You So Wish, Will Take You Around To Explain The Various Games. Or You Can Simply  Wander Around The Casinos On Your Own Without Feeling You're Being Watched, And Enjoy The Facilities Laid Out For Your Entertainment.
+        </p>
+        <p>
+            It's A Non-Stop Party. The Facilities At All The Casinos Are First Class, Yet The Minimum Stake Is Quite Low, So Even Novices Can Enjoy Themselves. The Dealers Are Young And Enjoy Their Work. Waiters Provide Everything A Guest Requires, Including A Light For A Cigarette.
+            The Casinos Are Perfect Places To Unwind During A Visit To Sikkim Whether You've Flown In From Overseas For A Few Days Or Are In Gangtok For A Few Hours. Any Time Is Casino Time.
+        </p>
+        <h4 class="text-info">Refreshment And Dining</h4>
+        <p>
+            The Casinos Operate Their Own International Standard Bar, Making Hot, Cold, Hard Or Soft Drinks Available 24 Hours A Day. Along With Drinks, You'll Enjoy Indian, Chinese And Continental Dishes Sold At Very Reasonable Entry Fees, Take Your Snack Or Meal While You Play At The Game side Tables, Or In A Quiet Spot Away From The Action.
+            Enjoy A Morning, Afternoon, Evening Or Late Night Out At The Casinos.
+        </p>
+        <h4 class="text-info">Foreign Exchange</h4>
+        <p>
+            All Games At The Casinos Are Played In Chips Purchased With Either US Dollar Or Indian Rupees. If Chips Are Purchased In US Dollars, Winnings May Be Received In The Same Currency. Traveler’s Checks, Can Be Exchanged On The Premises
+            Major Credit Cards May Also Be Used. Winnings May Be Taken Out Of The State.
+        </p>
+        <h4 class="text-info">Chips</h4>
+        <p>
+            Chips Have To Be Purchased At The Cashier's Counter Before You Sit Down To Play At Any Of The Tables. Indians, All Foreign Nationals Have To Present Their Identity Card, Passport While Entering & Purchasing Chips.
+        </p>
+        <h4 class="text-info">Free Transport</h4>
+        <p>
+            Regular Transport Services Are Organized By All Casinos For The Players' Convenience.
+        </p>
+    </div>
+</div>

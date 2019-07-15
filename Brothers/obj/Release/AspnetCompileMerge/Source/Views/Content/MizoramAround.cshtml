@@ -1,0 +1,169 @@
+﻿
+@{
+    ViewBag.Title = "MizoramAround";
+    Layout = "~/Views/Shared/AboutMizoramLayout.cshtml";
+}
+
+<div class="well subheading-well">
+    <b class="subheading">Around Aizawl</b>
+</div>
+
+
+<h4 class="text-info">Places Of Interest Around Aizawl </h4>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/mizoram/falklawn-village.jpg" alt="falklawn-village" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="falklawn-village" />
+            </div>
+        </div>
+        <h5>Falklawn Mizo Village </h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/mizoram/nubg-npaikai.jpg" alt="nubg-npaikai" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="nubg-npaikai" />
+            </div>
+        </div>
+        <h5>Bung And Paikhai</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/mizoram/Tamdil-Lake.jpg" alt="Tamdil-Lake" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Tamdil-Lake" />
+            </div>
+        </div>
+        <h5>Tamdil Lake</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/mizoram/Thenzawl-Village.jpg" alt="Thenzawl-Village" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Thenzawl-Village" />
+            </div>
+        </div>
+        <h5>Thenzawl Village</h5>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/mizoram/sibuta-lung.jpg" alt="sibuta-lung" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="sibuta-lung" />
+            </div>
+        </div>
+        <h5>Sibuta Lung</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/mizoram/memorial-of-chhingpui.jpg" alt="memorial-of-chhingpui" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="memorial-of-chhingpui" />
+            </div>
+        </div>
+        <h5>Memorial Of Chhingpui</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/mizoram/khuangchera.jpg" alt="khuangchera" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="khuangchera" />
+            </div>
+        </div>
+        <h5>Khuangchera Puk</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/mizoram/tomb-od-vahi.jpg" alt="tomb-od-vahi" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="tomb-od-vahi" />
+            </div>
+        </div>
+        <h5>Tomb Of Vanhimailian</h5>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "falklawn-village") {
+            $('#myPicLabel').text('Falklawn village')
+            $('#pic-path').attr('src', '/Content/img/mizoram/falklawn-village.jpg');
+            $('#pic-details').html("<p>Falklawn Mizo Village Has Sprung Up 18Kms. From Aizawl To Give Tourists An Opportunity To Explore The Mizo Heritage In Comfort. There Are Picturesque Picnic Spots Like Bung Nearby. Tamdil Lake Is Known For Its Fish And Prawns And Is An 85Kms. Drive From Aizawl. The Drive Gives You A Chance To See Some Of The Prettiest Areas Of Mizoram. Boat Rides Can Be Had At The Lake, Or You Can Drive Into The Nearby Forests, And Witness Fascinating Flora And Fauna. The Resort Village Of Saitual Is Just 10Kms. Away, Making It Ideal For People Who Want To Stay Overnight And Explore The Area A Little More.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "nubg-npaikai") {
+            $('#myPicLabel').text('Bung Anf Paikhai')
+            $('#pic-path').attr('src', '/Content/img/mizoram/nubg-npaikai.jpg');
+            $('#pic-details').html("<p>Venture Into Bung And Paikhai Which Are Known To Be Very Exciting Tourist Destinations Of Mizoram. Both Of Them Are The Perfect Places To Spend Some Quality Time With Your Loved Ones. Their Picture Perfect Vistas, Pollution Free Air And Peaceful Surroundings Leave The Tourists With Treasured Memories When They Go Back Home. Bung Is Located Around 16Kms. From Aizawl And Paikhai Is Also Located Nearby. Aizawl Is A Wonderful Place In Mizoram Which Is Located Atop High Hills. It Is A Versatile Destination With Several Attractions Such As Different Landscapes, Hills, Gushing Streams, Deep Gorges And A Wide Variety Of Flora And Fauna.<br/>Aizawl Offers Many Attractions Which Are Not Located Very Far From Each Other. When You Plan To Visit Bung And Paikhai, You Can Enjoy Some Other Destinations Also. Bara Bazar Is A Famous Shopping Centre Where Wonderful Handicrafts And Other Handmade Dishes Are Available. These Shopping Items Are Made From The Raw Material Obtained From The Farms Or Forests. </p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Tamdil-Lake") {
+            $('#myPicLabel').text('Tamdil Lake')
+            $('#pic-path').attr('src', '/Content/img/mizoram/Tamdil-Lake.jpg');
+            $('#pic-details').html("<p>Ṭamdil Lake Is A Reservoir Lake Situated 64Kms. From Aizawl, The Capital City Of Mizoram, India. In Mizo Language, The Word Tam Is A Contraction Of Antam, Which Means A Mustard Plant,  And Dil Means “Lake” A New Species Of Frog Called Leptolalax Tamdil Was Described From This Lake In 2010.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Thenzawl-Village") {
+            $('#myPicLabel').text('Thenzawl Village ')
+            $('#pic-path').attr('src', '/Content/img/mizoram/Thenzawl-Village.jpg');
+            $('#pic-details').html("<p>Close To The Waterfall Of Vantawang, Thenjawal Is A Small Town Known For Its Grassy Slopes And Tranquil Environment. It Is A Flat Area Where One Can See Translucent Green Paddy Fields Meeting The Horizon With Various Shades Of Wild Flowers. Head To This Place For Capturing Some Of The Best Views And Make Your Trip Memorable.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "sibuta-lung") {
+            $('#myPicLabel').text('Sibuta Lung')
+            $('#pic-path').attr('src', '/Content/img/mizoram/sibuta-lung.jpg');
+            $('#pic-details').html("<p>Sibuta Lung Is A Memorial Stone Found At Tachhip Village, 20Kms. From Aizawl Town. Sibuta Lung Was Raised By A Palian Chief About 300 Years Ago. The Memorial Sibuta Lung Offer A Story Of Jilted Love And Lust For Revenge.<br/>It Is Said That, A Young Orphan, Sibuta, Was Adopted By The Chief. Sibuta Killed His Adoptive Father And Became The Chief Of Over 2,000 Houses. But He Failed In His Love Life And Was Jilted By A Girl. Sibuta Went Mad For Revenge And He Put A Young And Beautiful Girl, Darlai, In A Big Pit On Which He Wanted To Erect A Memorial For Himself. The Huge Rock Was Pulled With Great Pains From The Bed Of The Tlawng River, 10 Km Away. The Stone Was Bathed With The Blood Of Three Human Beings Who Were Sacrificed. The Stone Was Raised Putting Darlai Alive On The Pit Below The Stone.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "memorial-of-chhingpui") {
+            $('#myPicLabel').text('Memorial Of Chhingpui')
+            $('#pic-path').attr('src', '/Content/img/mizoram/memorial-of-chhingpui.jpg');
+            $('#pic-details').html("<p>Built As A Symbol Of Eternal Love, The Memorial Of Chhingpui Is Located On The Aizawl-Lunglei Road Between Baktawng And Chhingchhip Villages. Behind The Formation Of This Memorial An Interesting Story Works Which States That There Was A Very Beautiful Lady In This Region Whose Name Was Chhingpuii. She Was Born In An Aristocratic Family. A Huge Group Of Young Lads Were Ready To Sacrifice Their Life To Marry Her, But She Decided To Marry Kaptluanga As Her Husband. But After A Few Years Of Her Marriage, She Was Abducted And Killed And The Life Of Those Happily Married Couple Shattered. The Heinous Incident Broke Kaptluanga Into Pieces And Resulted In Taking His Life. One Of The Most Famous Tourist Destinations Of Mizoram, This Monument Today Reminds The Legendary Love Story Of Chhingpuii And Kaptluanga.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "khuangchera") {
+            $('#myPicLabel').text('Khuangchera Puk')
+            $('#pic-path').attr('src', '/Content/img/mizoram/khuangchera.jpg');
+            $('#pic-details').html("<p>There Are A Few Caves In Mizoram That Can Be Explored Without Much Hassle. Among Which Khuangchera Puk Is The Best Pick Ever. The Cave Is Located In Ailawng Near Reiek, At A Distance Of Around 30Kms. From Aizawl In The West. It Is Claimed To Be The Longest Cave In Mizoram With A Length Of Around 162m. The Darkness Inside The Cave, Peculiar Acoustics, And Stalagmite Formations Make This Cave An Ideal Pick For The Thrillseekers.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "tomb-od-vahi") {
+            $('#myPicLabel').text('Tomb Of Vanhimailian')
+            $('#pic-path').attr('src', '/Content/img/mizoram/tomb-od-vahi.jpg');
+            $('#pic-details').html("<p>Tomb Of Vanhimailan Was Bulit In The Memory Of Vanhimailan Sailo. Vanhimailian Sailo Was A Great Chief Who Ruled Over Champhai. It Overlooks The Vast Champhai Plain. Champhai Is Situated In The Aizawl District And Is About 194 Km From Aizawl In Mizoram India.</p>");
+            $('#myModal').modal('show');
+        }
+
+    });
+
+</script>

@@ -1,0 +1,108 @@
+﻿@{
+    ViewBag.Title = "JaipurShopping";
+    Layout = "~/Views/Shared/GoldenTriangleLayout.cshtml";
+}
+
+<div class="well subheading-well">
+    <b class="subheading">Shopping</b>
+</div>
+<div class="col-md-12">
+    <p>
+        Jaipur Is A Shoppers' Elysium. You Can Find Many Different Kinds Of Handicrafts, Jewelry, Fabrics And Even Carpets Here. Jaipur Represents The Rich And Vibrant Lifestyle And Tradition Of Rajasthan. It Offers The Best Traditional Rajasthani Artwork And Textiles From This City Are World Famous. They Have Different Types Of Products Like Tie-N-Dye And Bandhej Sarees, Kurtas And Dress Materials. These Products Are Most Popular For Their Patterns And Designs. Jaipur Is Also Famous For Its Jewelry Which Is A Beautiful Combination Of Traditional And Contemporary Styles With Thewa And Kundan Being The Most Popular. In Jaipur, There Are A Great Many Stores Where You Can Find A Lot Of Different Things That Cater To The Authenticity And The Flavors Of Rajasthan. Jaipur Is A Vibrant And Beautiful City, Filled With Bazaars Which Are Hospitable To Anyone.
+    </p>
+    <p>
+        Make Sure That You Have Shopping On Your List Of Things To Do When You Get To Jaipur. 'Haldiyon Ka Rasta', 'M.I Road', 'Bapu Bazar', 'Kishanpol Bazar', Etc Are Some Of The Main Bazaars In Jaipur. These Are Places Where You Can Find Some Excellent Fabrics And Carpets. If You Are Looking For Handicrafts, The Marketplace Is Rich In Variety As Jaipur Is Recognized As The Crafts Capital Of India. For Something Different, Jaipur Is Famous For Their Camel Leather Also So Don't Forget To Check Out Some Of That Also. And Last, But Not The Least, A Pair Of 'Jutis' Or 'Mojaris' From Jaipur Would Make Your Trip Worth The While. Get One Pair Or A Dozen; You Will Love It For Sure. A Trip To Jaipur Is Incomplete Without Shopping In This Beautiful City! So Make Sure You Factor In Enough Time For That As Well.
+    </p>
+</div>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Jaipur/Shopping/Jaipur-Fabric-And-Carpets.jpg" alt="Fabric" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Fabric" />
+            </div>
+        </div>
+        <h5>Jaipur Fabric And Carpets </h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Jaipur/Shopping/Jaipur-Handicrafts.jpg" alt="Handicrafts" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Handicrafts" />
+            </div>
+        </div>
+        <h5>Jaipur Handicrafts </h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Jaipur/Shopping/Jaipur-Camel-Leather-Items.jpg" alt="Camel-Leather-Items" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Camel" />
+            </div>
+        </div>
+        <h5>Jaipur Camel Leather Items </h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Jaipur/Shopping/Jaipur-Jewelry-And-Gems.jpg" alt="Jewelry-And-Gems" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Jewelry" />
+            </div>
+        </div>
+        <h5>Jaipur Jewelry And Gems </h5>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "Fabric") {
+            $('#myPicLabel').text('Jaipur Fabric And Carpets ')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Jaipur/Shopping/Jaipur-Fabric-And-Carpets.jpg');
+            $('#pic-details').html("<p>The Magnificent City Of Jaipur Is Famous For Its Vibrant And Artistically Woven Fabrics And Carpets. Since Ages, This City Has Offered The Best Traditional Designs, And The Fabrics Are The Best In The World. The Art Of The Colorful Province Of Rajasthan.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Handicrafts") {
+            $('#myPicLabel').text('Jaipur Handicrafts ')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Jaipur/Shopping/Jaipur-Handicrafts.jpg');
+            $('#pic-details').html("<p>For All Shopaholics, Jaipur Is The Perfect Destination; A Haven Actually. The Splendid City Of Jaipur Takes Pride In Its Remarkable Handiworks That Preserve Its Ancient Art And Crafts, Which Are Renowned Worldwide.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Camel") {
+            $('#myPicLabel').text('Jaipur Camel Leather Items ')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Jaipur/Shopping/Jaipur-Camel-Leather-Items.jpg');
+            $('#pic-details').html("<p>Jaipur Is Famous For Its Leather Craft Industries. Camel Leather Items Like Bags, Shoes, Wallets And Sandals Have Gained International Fame For Their Elegance And Designs. You Will Find The Best Quality Camel Leather Products In Jaipur. They Are Available In A Large Number Or Designs And Styles.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Jewelry") {
+            $('#myPicLabel').text('Jaipur Jewelry And Gems ')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Jaipur/Shopping/Jaipur-Jewelry-And-Gems.jpg');
+            $('#pic-details').html("<p>Jaipur Is A Charming And Attractive City, Especially For Those Who Love Ancient Heritage And Exquisite Jewelry. Jewelry Is A Very Integral And Inherent Part Of Rajasthani Culture. To Add To The Lovely Fabrics And Vibrant Colors, The Jewelry Here Is Contemporary, Yet Conventional.</p>");
+            $('#myModal').modal('show');
+        }
+    });
+
+</script>
+

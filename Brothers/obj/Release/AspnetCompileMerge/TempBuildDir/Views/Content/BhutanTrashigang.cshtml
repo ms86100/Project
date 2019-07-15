@@ -1,0 +1,78 @@
+﻿
+@{
+    Layout = "~/Views/Shared/BhutanLayout.cshtml";
+}
+<div class="well subheading-well">
+    <b class="subheading">Trashigang</b>
+</div>
+<div class="well hidden-xs" style="padding:10px;">
+    <img src="~/Content/img/Bhutan/trashigang.jpg" class="img-rounded resp-img" />
+</div>
+<div class="col-md-12">
+    <h4 class="text-info">Trashigang (Alt. 3610ft)</h4>
+    <p>
+        In The Far East Of Bhutan, On The Bank Of Gamri Chhu River Lies Trashigang, The Country's Largest District. Trashigang, Once The Centre Of A Busy Trade Route With Tibet, Is Today The Junction Of East-West Highway With Road Connecting To Samdrup Jongkhar And Then To The Indian States Of Assam. This Town Is Also Used As The Market Place For The Semi Nomadic People From Merak And Sakteng Whose Costumes Are Unique In Bhutan. 
+    </p>
+    <h4 class="text-info">Places Of Interest In And Around Trashigang</h4>
+    <div class="row">
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/TrashigangDzong.JPG" alt="TrashigangDzong" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="TrashigangDzong" />
+                </div>
+            </div>
+            <h5>Trashigang Dzong</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/GomKora.jpg" alt="GomKora" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="GomKora" />
+                </div>
+            </div>
+            <h5>Gom Kora </h5>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "TrashigangDzong") {
+            $('#myPicLabel').text('Trashigang Dzong')
+            $('#pic-path').attr('src', '/Content/img/Bhutan/TrashigangDzong.JPG');
+            $('#pic-details').html("<p>Built In 1659, The Dzong Serves As The Administrative Seat For The District As Well As The Home Of The Monk Body. The Dzong Commands A Remarkable View Over The Surrounding Countryside.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "GomKora") {
+            $('#myPicLabel').text('Gom Kora')
+            $('#pic-path').attr('src', '/Content/img/Bhutan/GomKora.jpg');
+            $('#pic-details').html("<p>24 Km From Trashigang, The Temple Of Gom Kora Is Set On A Small Alluvial Plateau Overlooking The River. Surrounded By Rice Fields And Clumps Of Banana Tress, It Looks Like An Oasis In An Arid Landscape. It Is One Of The Famous Places Where Guru Rinpoche Meditated In Order To Subdue A Demon Who Dwelt In A Huge Black Rock.</p>");
+            $('#myModal').modal('show');
+        }
+    });
+
+</script>

@@ -1,0 +1,23 @@
+﻿@model Brothers.Entities.ViewModels.BlogViewModel
+@{
+    ViewBag.Title = "Post";
+    Layout = "~/Views/Shared/_MountPandim.cshtml";
+}
+
+
+<div class="main-cont">
+
+    <div class="inner-page">
+        <div class="inner-breadcrumbs">
+            <div class="content-wrapper">
+                <div class="page-title">Blogs</div>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+
+    </div>
+
+    @Html.Partial("pvArticleList", Model)
+
+</div>

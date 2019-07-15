@@ -1,0 +1,53 @@
+﻿@model Brothers.Models.RegisterViewModel
+
+@{
+    ViewBag.Title = "User Management";
+    ViewBag.ViewHeader = "Add User";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<div class="col-md-12">
+    @using (Html.BeginForm("create", "useradmin", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="row">
+            @Html.ValidationSummary("", new { @class = "text-danger" })
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Email, new { @class = "col-md-4 control-label" })
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PhoneNumber, new { @class = "col-md-4 control-label" })
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.UserRole, new { @class = "col-md-4 control-label" })
+                    <div class="col-md-8">
+                        @Html.DropDownList("UserRole", (IEnumerable<SelectListItem>)ViewBag.Roles, "--- Select User Role ---", new { @class = "form-control ddl-select2" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+
+            </div>
+        </div>
+        <div class="well well-sm col-md-12 col-lg-12 text-right">
+            @Html.ActionLink("Back to List", "list", "useradmin", null, new { @class = "btn btn-default pull-left" })
+            <input type="submit" value="Create User" class="btn btn-primary" />
+            <div class="clearfix"></div>
+        </div>
+    }
+</div>
+@*error message*@
+<div id="ErrMsg" style="display:none;">
+    <input type="hidden" id="ErrMsgHiddenField" name="ErrMsg" value="@TempData["ErrMsg"]" />
+</div>
+<script>
+    $('.ddl-select2').select2({ width: "100%" });
+</script>
+

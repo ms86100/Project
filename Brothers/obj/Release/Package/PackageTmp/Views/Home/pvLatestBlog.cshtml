@@ -1,0 +1,32 @@
+﻿@model Brothers.Entities.ViewModels.MstTourPackageGeneralViewAndSearch
+
+
+
+<div id="DataGrid">
+    @if (Model.BlogList.Count() > 0)
+    {
+        <div class="fly-in advantages-row flat">
+            @foreach (var item in Model.BlogList)
+            {
+
+                <div class="flat-adv large">
+                    <div class="flat-adv-a">
+                        <div class="flat-adv-l">
+                            <img alt="" width="99" height="99" class="img-rounded" src="~/UploadedFiles/Blogs/@item.BlogID@item.BlogFile" />
+                        </div>
+                        <div class="flat-adv-r">
+                            <div class="flat-adv-rb">
+                                <div class="flat-adv-b">@Html.DisplayFor(modelItem => item.BlogTitle)</div>
+                                @{
+                                    string BlogDescription = item.BlogDescription.ToString().Substring(0, 10);
+                                }
+                                <div class="flat-adv-c">@Html.DisplayFor(modelItem => BlogDescription)...</div>
+                                <a class="flat-adv-btn" href="@Url.Action("Recent","Article",new {@BlogID=item.BlogID})">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>

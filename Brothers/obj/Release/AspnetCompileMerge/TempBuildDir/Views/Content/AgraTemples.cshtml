@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewBag.Title = "AgraTemples";
+    Layout = "~/Views/Shared/GoldenTriangleLayout.cshtml";
+}
+
+<div class="well subheading-well">
+    <b class="subheading">Temples</b>
+</div>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Agra/Temples/Balkeshwa-Mandir.jpg" alt="Balkeshwar" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Balkeshwar" />
+            </div>
+        </div>
+        <h5>Balkeshwar</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Agra/Temples/Kailash-Temple.jpg" alt="Kailash-Temple" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="KailashTemple" />
+            </div>
+        </div>
+        <h5>Kailash Temple</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Agra/Temples/Mankameshwar.jpg" alt="Mankameshwar" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Mankameshwar" />
+            </div>
+        </div>
+        <h5>Mankameshwar</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Agra/Temples/Dayal-Bagh.jpg" alt="Dayal-Bagh" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="DayalBagh" />
+            </div>
+        </div>
+        <h5>Dayal Bagh</h5>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "Balkeshwar") {
+            $('#myPicLabel').text('Balkeshwar')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Agra/Temples/Balkeshwa-Mandir.jpg');
+            $('#pic-details').html("<p>Located At Balkeshwar, At River Side Of Yamuna It Is A Temple Dedicated To Lord Shiva. It Is One Amongst The Four Temples In Agra Dedicated To Lord Shiva (Located At The Four Corners Of Agra). The Temple Is Built On A Huge Expanse Of Land.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "KailashTemple") {
+            $('#myPicLabel').text('Kailash Temple')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Agra/Temples/Kailash-Temple.jpg');
+            $('#pic-details').html("<p>It Is Located On The Banks Of The Yamuna At Sikandra. This Is A Temple Dedicated To Lord Shiva. The Temple Remains Open Between 6AM To 9PM On All Days. The Kailash Fair Is Held Here In Honor Of Lord Shiva, Celebrated To Commemorate His Appearance As A Shiva Linga Here In The Monsoon Months Of August And September.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Mankameshwar") {
+            $('#myPicLabel').text('Mankameshwar')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Agra/Temples/Mankameshwar.jpg');
+            $('#pic-details').html("<p>It Is One Amongst The Four Temples Dedicated To Lord Shiva. It Is Located Very Near To The Railway Station. The Temple Is Surrounded By A Market Place Dating Back To The Mughal Era. This Was The Heart Of The Mughal Agra. The Locals Believe It Is Auspicious To Visit The Temple During Evenings Especially During The Monsoon.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "DayalBagh") {
+            $('#myPicLabel').text('Dayal Bagh')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Agra/Temples/Dayal-Bagh.jpg');
+            $('#pic-details').html("<p>Dayal Bagh Temple Is Located At Dayal Bagh, A Sacred Place In Agra District Of Uttar Pradesh. This Beautiful Temple Is Believed To Have Been Built In 1861. It Is A Magnificent Structure, 110 Ft High, Built Of Pure White Marble. It Houses The Samadhi Of Swamiji Maharaj, The Founder Of Radha Swami Faith. Dayal Bagh Temple Has Been Under Construction For The Last 100 Years. Some People Consider This Building As An Alternative To The Great Taj Mahal.</p>");
+            $('#myModal').modal('show');
+        }
+    });
+
+</script>

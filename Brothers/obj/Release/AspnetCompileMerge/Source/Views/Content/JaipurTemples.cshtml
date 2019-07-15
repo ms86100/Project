@@ -1,0 +1,105 @@
+﻿@{
+    ViewBag.Title = "JaipurTemples";
+    Layout = "~/Views/Shared/GoldenTriangleLayout.cshtml";
+}
+
+<div class="well subheading-well">
+    <b class="subheading">Temples</b>
+</div>
+<div class="col-md-12">
+    <p>
+        Jaipur, The Capital Of The State Of Rajasthan, Was Founded On 18 November 1727, By Raja Sawai Singh II. It Is One Of The Planned Cities Of India And Is A Principal Tourist Destination. It Is Filled With Ancient Forts And Monuments That Boast Of Its Glorious Past. A Large Number Of Temples And Other Religious Places Reflect The Spiritual Value Of The Dynasties Of The Past, Who Built Them. Apart From The Forts And Temples, A Good Number Of Gardens Also Enhance The Effervescent Beauty Of Jaipur.
+    </p>
+</div>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Jaipur/Temples/Galtaji-Temple.jpg" alt="Galtaji-Temple" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Galtaji" />
+            </div>
+        </div>
+        <h5>Galtaji</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Jaipur/Temples/Birla-Temple.jpg" alt="Birla-Temple" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Birla" />
+            </div>
+        </div>
+        <h5>Birla Temple </h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Jaipur/Temples/govind-devji-temple.jpg" alt="govind-devji-temple" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="govind" />
+            </div>
+        </div>
+        <h5>Govind Dev Ji Temple </h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Jaipur/Temples/moti-doongri.jpg" alt="moti-doongri" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="motidoongri" />
+            </div>
+        </div>
+        <h5>Moti Dungri</h5>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "Galtaji") {
+            $('#myPicLabel').text('Galtaji')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Jaipur/Temples/Galtaji-Temple.jpg');
+            $('#pic-details').html("<p>A Pre-Historic Hindu Pilgrimage Site, The Galtaji Temple, Is Located Only 10Kms. Away From Jaipur. One Of The Jewels Of Jaipur, The Temple Complex Encompasses Natural Fresh Water Springs And 7 Holy ‘Kunds' Or Water Tanks. Among These Kunds, The ‘Galta Kund', Is The Holiest One And Is Believed To Never Get Dry.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Birla") {
+            $('#myPicLabel').text('Birla Temple ')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Jaipur/Temples/Birla-Temple.jpg');
+            $('#pic-details').html("<p>The Birla Temple, Originally Known As Lakshmi Narayan Temple, And Is Situated Below The Moti Dungri Fort In Jaipur. Dedicated To Lord Vishnu And Goddess Lakshmi, This Temple Is A Proud Architectural Landmark Of Jaipur. Built In Pure White Marble, The Birla Temple Is Unlike The Traditional Ancient Hindu Temples, And Is Built With A Modern Approach.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "govind") {
+            $('#myPicLabel').text('Govind Dev Ji Temple ')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Jaipur/Temples/govind-devji-temple.jpg');
+            $('#pic-details').html("<p>The Temple Of Govind Dev Ji Is One Of The Most Sacred And Famous Tourist Destinations In India. It Is Located In The City Palace Complex, In Jaipur, Rajasthan. The Deity, Govind Dev Ji, Is None Other Than Lord Shri Krishna Himself. It Is Believed That The Image In This Temple Looks Exactly How Lord Krishna Looked During His Incarnation On Earth. </p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "motidoongri") {
+            $('#myPicLabel').text('Moti Dungri ')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Jaipur/Temples/moti-doongri.jpg');
+            $('#pic-details').html("<p>The Moti Dungri Ganesh Temple Was Constructed By Seth Jai Ram Paliwal In The Early Eighteenth Century, And Continues To Be One The Most Popular Tourist Destinations In Jaipur. Situated In The Heart Of Jaipur, The Moti Dungri Temple Is Perched On A Small Hill, And Is Surrounded By An Exotic Palace. In The Recent Past.</p>");
+            $('#myModal').modal('show');
+        }
+    });
+
+</script>
+

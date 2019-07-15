@@ -1,0 +1,174 @@
+﻿
+@{
+    ViewBag.Title = "ApInside";
+    Layout = "~/Views/Shared/ArunachalPradeshLayout.cshtml";
+}
+<div class="well subheading-well">
+<b class="subheading">Inside Itanagar</b>
+</div>
+
+<div class="col-md-12">
+    <h4 class="text-info">Itanagar</h4>
+    <p>
+        Itanagar Is The Capital Of Arunachal Pradesh And Is Located At The Foothills Of The Himalayas.
+        The City Comes Under The Papum Pare Administrative District And Is Well Connected To The Rest Of The Country By Road And Air. Itanagar Got Its Name From The Historical Ita Fort Which Goes Back To The 15th Century.
+        Itanagar's Climate Is Warm, Yet Pleasant Most Of The Year. Post-Monsoon And Winter Months Are Cool, Though Summer Months Can Get Hot.
+    </p>
+    <h4 class="text-info">Places Of Interest Inside Itanagar </h4>
+    <div class="row">
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Arunachal_Pradesh/gangalake.jpg" alt="GangaLake" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="GangaLake" />
+                </div>
+            </div>
+            <h5> Ganga Lake</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Arunachal_Pradesh/jnm-itanagar.jpg" alt="JawaharlalNehruMuseum" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="JawaharlalNehruMuseum" />
+                </div>
+            </div>
+            <h5>Jawaharlal Nehru Museum </h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Arunachal_Pradesh/Itanagar Wildlife Sanctuary.jpg" alt="ItanagarWildlifeSanctuary" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="ItanagarWildlifeSanctuary" />
+                </div>
+            </div>
+            <h5>Itanagar Wildlife Sanctuary</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Arunachal_Pradesh/itanagarzoo.jpg" alt="itanagarzoo" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="itanagarzoo" />
+                </div>
+            </div>
+            <h5>Zoological Park (Zoo)</h5>
+        </div>
+    </div>
+    
+    
+    <div class="row">
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Arunachal_Pradesh/ita-fort.jpg" alt="Ita-Fort" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Ita-Fort" />
+                </div>
+            </div>
+            <h5>Ita Fort</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Arunachal_Pradesh/buddhatemple.jpg" alt="BuddhaPark" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="BuddhaPark" />
+                </div>
+            </div>
+            <h5>Buddha Temple </h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Arunachal_Pradesh/polopark.jpg" alt="polopark" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="polopark" />
+                </div>
+            </div>
+            <h5>Polo Park </h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Arunachal_Pradesh/craftcentre.jpg" alt="Craft" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Craft" />
+                </div>
+            </div>
+            <h5>Craft Centre & Emporium</h5>
+        </div>
+    </div>
+    
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "GangaLake") {
+            $('#myPicLabel').text('Ganga Lake')
+            $('#pic-path').attr('src', '/Content/img/Arunachal_Pradesh/gangalake.jpg');
+            $('#pic-details').html("<p>The Ganga Lake, Also Known As The Gyaka Sinyi Is A Beautiful Lake Which Is A Popular Tourist Attraction In Itanagar. The Lake Is Set In The Middle Of A Lot Of Greenery And Is Also Known As The Forest Lake. </p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Ita-Fort") {
+            $('#myPicLabel').text('Ita Fort')
+            $('#pic-path').attr('src', '/Content/img/Arunachal_Pradesh/ita-fort.jpg');
+            $('#pic-details').html("<p>This Is The Fort From Which Itanagar Got Its Name. The Fort Dates Back To The 14th Or The 15th Century And Was Constructed By The Ahom Rulers. The Fort Was Built Using 8 Million Bricks And Stood Guarding The City. The Reason Why This Fort Is Unique Is Because It Was Not Common For First To Be Constructed In The North East. </p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "JawaharlalNehruMuseum") {
+            $('#myPicLabel').text('Jawaharlal Nehru Museum')
+            $('#pic-path').attr('src', '/Content/img/Arunachal_Pradesh/jnm-itanagar.jpg');
+            $('#pic-details').html("<p>A Museum Full Of Interesting Information Regarding Woodwork, Musical Instruments And Different Kinds Of Textiles And Handicrafts, This Museum Is A Must Visit. There Is A Workshop Located Within The Presence Of This Museum And One Can See Craftsmen Working On Cane Products. There Is Also A Library Within The Museum Complex, Which Is Open To The Public.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "ItanagarWildlifeSanctuary") {
+            $('#myPicLabel').text('Itanagar Wildlife Sanctuary')
+            $('#pic-path').attr('src', '/Content/img/Arunachal_Pradesh/Itanagar Wildlife Sanctuary.jpg');
+            $('#pic-details').html("<p>One Of The Major Tourist Attractions In The City, This Sanctuary Is An Animal Lover's Delight. The Park Is Home To Many Species Of Animals, Birds And Plants, Such As Macaque, Hillock Gibbon, Musk Deer, Himalayan Black Bear, Red Panda, Apart From Being Home To Over Four Hundred Species Of Birds. </p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "BuddhaPark") {
+            $('#myPicLabel').text('Buddha Temple')
+            $('#pic-path').attr('src', '/Content/img/Arunachal_Pradesh/buddhatemple.jpg');
+            $('#pic-details').html("<p>This Temple Was Consecrated By The Dalai Lama Himself And Sits In A Peaceful Spot Surrounded By Mighty Hills All Around. </p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "polopark") {
+            $('#myPicLabel').text('Polo Park')
+            $('#pic-path').attr('src', '/Content/img/Arunachal_Pradesh/buddhatemple.jpg');
+            $('#pic-details').html("<p>This Is A Beautiful Botanical Garden And Has Evolved As A Popular Tourist Attraction In Itanagar. The Park Also Has A Mini Zoo, Which Houses Reptiles, Rabbits, And Guinea Pigs. <br/>Apart From These Tourist Attractions, Itanagar Is Also Popular For Trekking Options For Adventure Lovers. The Itanagar-Ziro-Daporijo-Pashighat Is A Beautiful Trekking Route Which Begins In Itanagar And Is Gaining Popularity Among Tourists. </p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Craft") {
+            $('#myPicLabel').text('Craft Centre & Emporium')
+            $('#pic-path').attr('src', '/Content/img/Arunachal_Pradesh/craftcentre.jpg');
+            $('#pic-details').html("<p>Craft Centre & Emporium At Itanagar Is Worth Visiting Where One Can See And Buy Local Artifacts Like Wall Paintings, Traditional Costumes Made Of Natural Vegetable And Herbal Dye Yarns, And Attractive Utility Items Made Of Cane And Bamboo</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "itanagarzoo") {
+            $('#myPicLabel').text('Zoological Park (Zoo) ')
+            $('#pic-path').attr('src', '/Content/img/Arunachal_Pradesh/itanagarzoo.jpg');
+            $('#pic-details').html("<p>Zoological Park (Zoo) Is Located At Chimpu. The Park Has A Variety Of Fauna Including Avi-Fauna Species.</p>");
+            $('#myModal').modal('show');
+        }
+    });
+
+</script>

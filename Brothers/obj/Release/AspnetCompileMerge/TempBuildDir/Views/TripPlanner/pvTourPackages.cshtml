@@ -1,0 +1,38 @@
+﻿@model Brothers.Entities.ViewModels.MstTourPackageGeneralViewAndSearch
+<div id="DataGrid">
+    @if (Model.MstTourPackageList.Count() > 0)
+    {
+        
+        <table class="table table-responsive table-bordered table-striped" >
+            @foreach (var item in Model.MstTourPackageList)
+            {
+                <tr>
+                    <td style="width:125px;">
+                        <img src="@item.DefaultPhoto" class="img-rounded resp-img img-thumbnail" style="width:128px; height:100px" />
+                    </td>
+                    <td>
+                        <div style="padding: 0px;">
+                            <h4 class="text-primary row-no-margin">Name: @Html.DisplayFor(m => item.PackageName)</h4>
+                            <p style="margin-bottom:2px;">
+                                Duration: @item.TotalDays Days / @(item.TotalDays - 1) Nights<br />
+                                Routing: @Html.DisplayFor(m => item.PackageRouting)
+                            </p>
+                            <div class="pull-right">
+                                @Html.ActionLink("View Details", "tourpackagedetails", "tripplanner", new { id = @item.PackageID }, new { @class = "btn btn-sm btn-info" })
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+    else
+    {
+        <h3>No Records Found.</h3>
+    }
+</div>
+@*@*error message*@
+@*<div id="ErrMsg" style="display:none;">
+    <input type="hidden" id="ErrMsgHiddenField" name="ErrMsg" value="@TempData["ErrMsg"]" />
+</div>*@
+

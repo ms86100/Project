@@ -1,0 +1,238 @@
+﻿@model Brothers.Entities.ViewModels.MstTourPackageGeneralViewAndSearch
+@{
+    Layout = "~/Views/Shared/_MountPandim.cshtml";
+
+}
+<style>
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+    }
+</style>
+
+<div class="main-cont">
+    <div class="body-wrapper">
+        <div class="wrapper-padding">
+            <div class="page-head">
+                <div class="page-title">Tours </div>
+                <div class="breadcrumbs">
+                    <a href="@Url.Action("MountPandimTour","Home")">Home</a> / <a href="#">Tours</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="two-colls">
+                <div class="two-colls-left">
+
+                    <div class="srch-results-lbl fly-in">
+                        @if (Model.MstTourPackageList.Count() > 0)
+                        {
+                            <span>@Model.MstTourPackageList.Count() results found.</span>
+                        }
+                    </div>
+                    @using (Html.BeginForm("searchtourpackages", "tripplanner", FormMethod.Get, new { id = "SearchForm" }))
+                    {
+                        <div class="side-block fly-in">
+
+
+                            <div class="side-block-search">
+
+
+                                <div class="page-search-p">
+
+                                    <button type="submit" class="srch-btn check btn btn-sm btn-danger">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                        Search
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                        if (Model.MstDestinationList.Count() > 0)
+                        {
+                            int i = 0;
+                            <div class="side-block fly-in">
+                                <div class="side-stars">
+                                    <div class="side-padding">
+                                        <div class="side-lbl">Destination</div>
+                                        @foreach (var item in Model.MstDestinationList)
+                                            {
+                                            <div class="checkbox">
+                                                <label>
+                                                    @Html.CheckBox("[" + i + "].ckbox", false, new { Value = item.DestinationID,@class = "DestName" })
+
+                                                    @Html.DisplayFor(m => item.DestinationName)
+                                                </label>
+                                            </div>
+
+                                            }
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        }
+                        if (Model.MstDurationList.Count() > 0)
+                        {
+
+                            <div class="side-block fly-in">
+                                <div class="side-stars">
+                                    <div class="side-padding">
+                                        <div class="side-lbl">Tour duration</div>
+                                        <div class="checkbox">
+                                            <label>
+                                                @Html.CheckBox("1", false, new { Value = "1|2|3", @class = "Duration" })
+                                                1 - 3 Days
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                @Html.CheckBox("2", false, new { Value = "4|5|6", @class = "Duration" })
+                                                4-6 Days
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                @Html.CheckBox("3", false, new { Value = "7|8|9", @class = "Duration" })
+                                                7 - 9 Days
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                @Html.CheckBox("4", false, new { Value = "10|11|12", @class = "Duration" })
+                                                10 -12 Days
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                @Html.CheckBox("5", false, new { Value = "13|14|15", @class = "Duration" })
+                                                13 -15 Days
+                                            </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                @Html.CheckBox("66", false, new { Value = "", id = "6", @class = "Duration" })
+                                                15+ Days
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                        if (Model.MstPackageTypeList.Count() > 0)
+                        {
+                            int i = 0;
+
+                            <div class="side-block fly-in">
+                                <div class="side-stars">
+                                    <div class="side-padding">
+                                        <div class="side-lbl">Tour type</div>
+                                        @foreach (var type in Model.MstPackageTypeList)
+                                    {
+                                    <div class="checkbox">
+                                        <label>
+                                            @Html.CheckBox("[" + i + "].Type", false, new { Value = type.PackageTypeID, @class = "PackType" })
+                                            @Html.DisplayFor(m => type.PackageTypeName)
+                                        </label>
+                                    </div>
+
+
+                                    }
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        }
+                        
+
+                    }
+                </div>
+                <div class="two-colls-right">
+                    <div class="two-colls-right-b">
+                        <div class="padding">
+                            <div class="catalog-row grid">
+
+                                <div id="replacetarget">
+                                    @Html.Partial("pvTourPackages", Model)
+                                </div>
+
+                            </div>
+
+                            <div class="clear"></div>
+
+
+                        </div>
+                    </div>
+                    <br class="clear" />
+                </div>
+            </div>
+            <div class="clear"></div>
+
+        </div>
+    </div>
+</div>
+
+<div id="ErrMsg" style="display:none;">
+    <input type="hidden" id="ErrMsgHiddenField11" name="ErrMsg" value="@TempData["ErrMsg"]" />
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(':checkbox:checked').removeAttr('checked');
+        $('#heading').text('Our Popular Tour Packages');
+        $(".check").click(ajxformSubmit);
+    });
+
+    $('#6').click(function () {
+        var thischeck = $(this);
+        if (thischeck.is(':checked')) {
+            var chkValue = null;
+            chkValue = [];
+            for (var i = 16; i < 50; i++) {
+                chkValue.push(i);
+            }
+            var chkedVal = chkValue.join("|");
+            thischeck.val(chkedVal);
+        }
+        else {
+            thischeck.val("");
+        }
+    });
+
+
+    var ajxformSubmit = function () {
+        var destinationList = null;
+        destinationList = [];
+
+        $(".DestName:checkbox:checked").each(function () {
+            destinationList.push($(this).attr("value"));
+        });
+        var dayList = null;
+        dayList = [];
+        $(".Duration:checkbox:checked").each(function () {
+            dayList.push($(this).attr("value"));
+        });
+        var typeList = null;
+        typeList = [];
+        $(".PackType:checkbox:checked").each(function () {
+            typeList.push($(this).attr("value"));
+        });
+        $.ajax({
+            type: "Post",
+            url: "@Url.Action("searchtourpackages", "tripplanner")",
+            data: { Destination: destinationList, Duration: dayList, PackType: typeList },
+            success: function (result) {
+                if (result.success) {
+                    $('#heading').text('Search Results');
+                    $('#replacetarget').load(result.url); //  Load data from the server and place the returned HTML into the matched element
+                }
+            }
+        });
+        return false;
+    };
+
+</script>

@@ -1,0 +1,174 @@
+﻿@using Microsoft.AspNet.Identity
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    @*<link href="~/Content/StyleSheet1.css" rel="stylesheet" />*@
+    <link href="~/Content/AdminStyle.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/ns-pager-style.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <script src="~/Scripts/admin.js"></script>
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/application.js"></script>
+    <link href="~/Content/Plugins/Select2/select2.min.css" rel="stylesheet" />
+    <script src="~/Content/Plugins/Select2/select2.min.js"></script>
+</head>
+<body class="main page">
+    <div class="navbar navbar-default" id="navbar">
+        <a class="navbar-brand" href="#">
+            <img src="~/Content/img/logo.png" />
+        </a>
+        <ul class="nav navbar-nav pull-right user-nav">
+            @Html.Partial("_LoginPartial")
+            @*<li class="dropdown user">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="icon-user"></i>
+                        <strong>John DOE</strong>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="@Url.Action("changepassword","manage")">Change Password</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="http://lab2023.github.io/">Sign out</a>
+                        </li>
+                    </ul>
+                </li>*@
+        </ul>
+    </div>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <section id="sidebar">
+            @*<i class="icon-align-justify icon-large" id="toggle"></i>*@
+            <ul id="dock">
+                <li class="launcher">
+                    <i class="glyphicon glyphicon-home"></i>
+                    <a href="@Url.Action("index","adminhome")">Dashboard</a>
+                </li>
+                <li class="launcher">
+                    <i class="glyphicon glyphicon-envelope"></i>
+                    <a href="@Url.Action("list","enquiry")">Enquiry</a>
+                </li>
+                @*<li class="launcher dropdown hover">
+                    <i class="glyphicon glyphicon-globe"></i>
+                    <a href="#">Configuration</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">Country Master</a>
+                        </li>
+                        <li>
+                            <a href="#">Destination Master</a>
+                        </li>
+                    </ul>
+                </li>*@
+                <li class="launcher dropdown hover">
+                    <i class="glyphicon glyphicon-globe"></i>
+                    <a href="#">Packages</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="@Url.Action("list","country")">Country Master</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("list","destination")">Destination Master</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("list","packagetype")">Package Type Master</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("list","activity")">Activity Master</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("list","tourpackage")">Tour Package</a>
+                        </li>
+                        <li>
+                            <a href="#">Booking Request</a>
+                        </li>
+                    </ul>
+                </li>
+                @if (User.IsInRole("Admin"))
+                {
+                    <li class="launcher">
+                        <i class="glyphicon glyphicon-user"></i>
+                        <a href="@Url.Action("list", "useradmin")">
+                            <span>User</span>
+                        </a>
+                    </li>
+                }
+            </ul>
+        </section>
+        <!-- Tools -->
+        <section id="tools">
+            <ul class="breadcrumb" id="breadcrumb">
+                <li class="title">@ViewBag.ViewHeader</li>
+            </ul>
+            <div id="toolbar">
+
+            </div>
+        </section>
+        <!-- Content -->
+        <div id="content">
+            @RenderBody()
+        </div>
+        <div class="text-center panel" id="ajaxLoading" style="display: none">
+            <div class="panel-body">
+                <img src="~/Content/img/ajax-loader.gif" />
+                <p>Please wait..</p>
+            </div>
+        </div>
+        <div class="modal modal-styled" id="myErroMsgModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="CloseMyModal()"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title text-center" id="myModalLabel"></h4>
+                    </div>
+                    <div class="modal-body text-center">
+                        <h4 id="SomeMsg"></h4>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col-md-offset-2 col-md-10 text-right">
+                            <input type="button" id="myErroMsgModalYesButton" value="Yes" class="btn btn-info btn-sm hidden" onclick="OkMyModal()" />
+                            <input type="button" id="myErroMsgModalNoButton" class="btn btn-info btn-sm" data-dismiss="modal" onclick="CloseMyModal()" value="Close" />
+                        </div>
+                    </div>
+                    <input type="hidden" id="eventSender" name="name" value=" " />
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="myMailMsgModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title text-center" id="myMailModalLabel"></h4>
+                    </div>
+                    <div class="modal-body text-center">
+                        <h4 id="customMsg"></h4>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col-md-offset-2 col-md-10 text-right">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" aria-hidden="true">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<style type="text/css">
+    .user-nav {
+        height: 50px;
+        padding-right: 20px;
+        padding-top: 20px;
+    }
+</style>
+

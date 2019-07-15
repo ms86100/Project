@@ -1,0 +1,156 @@
+﻿
+@{
+    ViewBag.Title = "MizoramOutside";
+    Layout = "~/Views/Shared/AboutMizoramLayout.cshtml";
+}
+
+<div class="well subheading-well">
+    <b class="subheading">Outside Aizawl</b>
+</div>
+
+
+<h4 class="text-info">Places Of Interest Outside Aizawl </h4>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/mizoram/Vantawang-Water-Fall-(Mizor.jpg" alt="Vantawang-Water-Fall-(Mizor" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Vantawang-Water-Fall-(Mizor" />
+            </div>
+        </div>
+        <h5>Vantawang Water Fall</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/mizoram/Phawngpui-(Blue-Mountain)-M.jpg" alt="Phawngpui-(Blue-Mountain)-M" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Phawngpui-(Blue-Mountain)-M" />
+            </div>
+        </div>
+        <h5>Phawngpui</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/mizoram/Chhimtuipui--river.jpg" alt="Chhimtuipui--river" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Chhimtuipui--river" />
+            </div>
+        </div>
+        <h5>Chhimtuipui river</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/mizoram/mangkahia-lung_thumbs.jpg" alt="mangkahia-lung_thumbs" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="mangkahia-lung_thumbs" />
+            </div>
+        </div>
+        <h5>Mangkahia Lung</h5>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/mizoram/phulpui_grave_thumbs.jpg" alt="phulpui_grave_thumbs" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="phulpui_grave_thumbs" />
+            </div>
+        </div>
+        <h5>Phulpui Grave</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/mizoram/Palak-Lake-(Mizoram).jpg" alt="Palak-Lake-(Mizoram)" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Palak-Lake-(Mizoram)" />
+            </div>
+        </div>
+        <h5>Palak Lake</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/mizoram/Dampa-Sanctuary-(Mizoram).jpg" alt="Dampa-Sanctuary-(Mizoram)" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Dampa-Sanctuary-(Mizoram)" />
+            </div>
+        </div>
+        <h5>Dampa-Sanctuary-(Mizoram)</h5>
+    </div>
+    
+</div>
+
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "Vantawang-Water-Fall-(Mizor") {
+            $('#myPicLabel').text('Vantawang Water Fall')
+            $('#pic-path').attr('src', '/Content/img/mizoram/Vantawang-Water-Fall-(Mizor.jpg');
+            $('#pic-details').html("<p>A Lively Waterfall In Serchhip District Of Mizoram, Vantawang Falls Is Around 137km From Aizawl And Attracts Travellers For Its Scenic Surroundings. Vantawang Falls Is Claimed To Be The Highest And Most Spectacular Waterfalls In The State. The Fall Is Located In Vanva River Near Thenzawl And Is Surrounded By Lush Greenery And Rocky Terrain. Reach There In The Afternoon For An Awesome Photography Session And Carry The Best Memories Of Mizoram With You.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Phawngpui-(Blue-Mountain)-M") {
+            $('#myPicLabel').text('Phawngpui')
+            $('#pic-path').attr('src', '/Content/img/mizoram/Phawngpui-(Blue-Mountain)-M.jpg');
+            $('#pic-details').html("<p>Located In Chhimtuipui District Near Myanmar Border, Phawngpui Hills Is The Highest Mountain Peak In Mizoram And Claimed To Be One Of The Best Places To Visit In Mizoram. Dubbed As The ‘House Of Gods’, This Quaint Hill Station Is Rich In Vibrant Species Of Orchids, Fragrant Herbs, Exotic Fauna And Colourful Rhododendron. The Panoramic Views Of The Lush Green Hillocks Spread Across The Region Of Phawngpui And The Bamboo Groves Enriched Surroundings Are Must Witness During Your Trip To Mizoram.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Chhimtuipui--river") {
+            $('#myPicLabel').text('Chhimtuipui river')
+            $('#pic-path').attr('src', '/Content/img/mizoram/Chhimtuipui--river.jpg');
+            $('#pic-details').html("<p>The River Rises In Central Chin State Of Myanmar As The Timit And Flows Towards South And Is Soon Joined By The Chal, After Which It Is Known As The Boinu River. It Continues South Until Just Before It Is Joined By The Twe River Then It Turns North And Becomes The International Border Between India And Myanmar(Burma). It Flows North As International Border And Continues Northward Along The Tyao River, And The Boinu Heads Northwest Into Mizoram State, At Which Point It Is Known As The Kaladan Or Chhimtuipui.<br/>Within Mizoram It Turns South West And Is Joined By The Tuichong River From The Right And Then Heads South. The Kaladan Is Joined From The Right By The Mat River.. It Continues South And Is Joined By The Kawrthingdeng River From The Right. It Again Enters Chin State,Myanmar At Raithaw Ferry, Just Northwest Of Khenkhar. The Mi River Joins From The Left And Then By Ngame, Thereafter The River Enters The Rakhine State Of Myanmar And Continues South To Sittwe Where It Enters The Bay Of Bengal.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "mangkahia-lung_thumbs") {
+            $('#myPicLabel').text('Mangkahia Lung')
+            $('#pic-path').attr('src', '/Content/img/mizoram/mangkahia-lung_thumbs.jpg');
+            $('#pic-details').html("<p>Mangkahia Lung Is Located At Champhai In Aizawl District Of Mizoram India, Near The Myanmar Border. Mangkahia Lung Is A Very Large Memorial Stone Also Called Mangkhaia's Stone. Mangkahia Lung Is 5M High With Heads Of Mithun (The Animal Found In The Northeast India) Engraved On It. Mangkahia Lung Was Raised In And Around 1700 AD In The Memory Of Mangkhaia, Who Was A Very Prominent Chief Of The Ralte Tribe.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "phulpui_grave_thumbs") {
+            $('#myPicLabel').text('Phulpui Grave')
+            $('#pic-path').attr('src', '/Content/img/mizoram/phulpui_grave_thumbs.jpg');
+            $('#pic-details').html("<p>Around 159Kms. From Main Aizawl Town, Phulpui Grave Is A Popular Element Of Sightseeing Tour In Mizoram And Known Among The Travellers For Its Twin Graves. The Legend Behind The Formation Of The Grave Revolves Around A Love Story Which States That Once Zawlpala, The Chief Of Phulpui Village, Married The Gorgeous Beauty, Talvungi Of Thenzawl. During Those Days Polygamy Used To Be Practised. That Is Why Talvungi Was Later Married To The Chief Of Rothai, Punthia. But She Could Not Forget Her Former Husband. After A Long Time When Zawlpala Died She Could Not Resist The Shock And Out Of Grief She Dug A Grave Next To The One Of Zawlpala And Asked An Old Lady To Kill Her And Burry In The Grave.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Palak-Lake-(Mizoram)") {
+            $('#myPicLabel').text('Palak Lake')
+            $('#pic-path').attr('src', '/Content/img/mizoram/Palak-Lake-(Mizoram).jpg');
+            $('#pic-details').html("<p>Situated Near Phura Village At A Distance Of Around 400 Kms. South Of Aizawl, Palak Lake Is An Oval Shape Natural Lake. One Of The Most Popular Lakes In Mizoram, This Beautiful Waterbody Covers An Area Of Around 1 Sq Km And Is Surrounded By Lush Virgin Forests. Apart From The Scenic Landscape The Lake Vicinity Is Also Popular For Housing Exotic Species Of Flora And Fauna. The Adjacent Areas To The Lake Are Inhabited By The Most Common Wetland Birds And Birds From Hill. Palak Lake Is Also Considered As The Stop-Over For Migrating Pintail Duck.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Dampa-Sanctuary-(Mizoram)") {
+            $('#myPicLabel').text('Dampa Sanctuary')
+            $('#pic-path').attr('src', '/Content/img/mizoram/Dampa-Sanctuary-(Mizoram).jpg');
+            $('#pic-details').html("<p>In The Northwestern Tip Of Mizo Hills. The Sanctuary Houses Swamp Deer, Tiger, Leopard, Elephant And Hoolock Gibbon</p>");
+            $('#myModal').modal('show');
+        }
+      
+
+    });
+
+</script>

@@ -1,0 +1,125 @@
+﻿@model Brothers.Entities.ViewModels.MstTourPackageActivityModel
+@{
+    ViewBag.Title = "Tour Package Management";
+    ViewBag.ViewHeader = "Edit Tour Activity";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<h3>Tour Package Name: @Html.DisplayFor(m => m.MstTourPackage.PackageName)</h3>
+<div class="col-md-12">
+    Manage Tour Package Activities<br />
+    @using (Html.BeginForm("edittouractivity", "tourpackage", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(m => m.MstTourPackage.PackageID)
+        @Html.HiddenFor(m => m.MstTourPackageActivity.PackageActivityID)
+        @Html.HiddenFor(m => m.MstTourPackageActivity.DayNo)
+        <div class="col-md-12">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.MstTourPackageActivity.DayNo, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-6" style="padding-top:7px;">
+                        @Html.DisplayFor(m => m.MstTourPackageActivity.DayNo)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.MstTourPackageActivity.ActivityID, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-6">
+                        @Html.DropDownListFor(m => m.MstTourPackageActivity.ActivityID, new SelectList(Model.MstActDropDownList, "ActivityID", "ActivityTitle"), "--Select an Activity--", new { @class = "form-control ddl-select2" })
+                        @Html.ValidationMessageFor(m => m.MstTourPackageActivity.ActivityID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group" id="desp" style="display:none">
+                    <label class="col-md-3 control-label">Activity Description</label>
+                    <div class="col-md-6">
+                        <p id="actDes" style="padding: 5px 10px; background-color: #DCDCDC;"></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.MstTourPackageActivity.OvernightDestinationID, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-6">
+                        @Html.DropDownListFor(m => m.MstTourPackageActivity.OvernightDestinationID, new SelectList(Model.MstDestDropDownList, "DestinationID", "DestinationName"), "--Select Destination--", new { @class = "form-control ddl-select2", id = "nightdest" })
+                        @Html.ValidationMessageFor(m => m.MstTourPackageActivity.OvernightDestinationID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                @*<div class="form-group" id="overnightdes" style="display:none">
+                    @Html.LabelFor(m => m.MstTourPackageActivity.OvernightDestination, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-6">
+                        @Html.TextBoxFor(m => m.MstTourPackageActivity.OvernightDestination, new { @class = "form-control", placeholder = "Enter Destination Name", id = "newDest" })
+                        @Html.ValidationMessageFor(m => m.MstTourPackageActivity.OvernightDestination, "", new { @class = "text-danger" })
+                    </div>
+                </div>*@
+                <div class="form-group">
+                    @Html.LabelFor(m => m.MstTourPackageActivity.ActivityRemarks, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-6">
+                        @Html.TextAreaFor(m => m.MstTourPackageActivity.ActivityRemarks, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-9 text-right">
+                        @Html.ActionLink("Back", "managetouractivities", new { id = @Model.MstTourPackage.PackageID }, new { @class = "btn btn-default" })
+                        <input type="submit" value="Edit Activity" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+@*error message*@
+<div id="ErrMsg" style="display:none;">
+    <input type="hidden" id="ErrMsgHiddenField" name="ErrMsg" value="@TempData["ErrMsg"]" />
+</div>
+<div id="LastDayCheck" style="display:none;">
+    <input type="hidden" id="LastDayHiddenFiled" name="LastDay" value="@ViewBag.LastDay" />
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        getActivityDetails();
+        var check = $('#LastDayHiddenFiled').val();
+        if (check == "lastday")
+        {
+            $('#nightdest').attr('disabled', true);
+        }
+        else
+        {
+            $('#nightdest').attr('disabled', false);
+        }
+        $("#MstTourPackageActivity_ActivityID").on('change', getActivityDetails);
+
+        //$('#nightdest').on('change', function () {
+        //    var destid = $('#nightdest').val();
+        //    if (destid == "5") {
+        //        $('#overnightdes').show();
+        //    }
+        //    else {
+        //        $('#newDest').val("");
+        //        $('#overnightdes').hide();
+        //    }
+        //});
+    });
+    var getActivityDetails = function () {
+        $.ajax({
+            type: 'Get',
+            url: '@Url.Action("getActivityDetails","tourpackage")',
+            dataType: 'json',
+            data: { id: $("#MstTourPackageActivity_ActivityID").val() },
+            success: function (data) {
+                var details = data.ActivityDetails
+                //alert(details);
+                if (details != null && details.toString().trim() != "") {
+                    $('#actDes').text(details);
+                    $('#desp').show();
+                }
+                else {
+                    $('#desp').hide();
+                }
+            },
+            error: function (ex) {
+                $('#desp').hide();
+                //alert('Failed to retrieve properties.' + ex);
+            }
+        });
+        return false;
+    };
+    $('.ddl-select2').select2({ width: "100%" });
+</script>

@@ -1,0 +1,37 @@
+﻿@model Brothers.Entities.Models.utblMstCountry
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3 class="modal-title text-center text-primary" id="myModalLabel">Edit Country Details</h3>
+</div>
+
+@using (Html.BeginForm("edit","country",FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="modal-body" style="padding:20px">
+        <div class="form-horizontal">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(m => m.CountryID)
+            <div class="form-group">
+                @Html.LabelFor(m => m.CountryName, new { @class = "control-label col-md-3" })
+                <div class="col-md-8">
+                    @Html.TextBoxFor(m => m.CountryName, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.CountryName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.NationalityName, new { @class = "control-label col-md-3" })
+                <div class="col-md-8">
+                    @Html.TextBoxFor(m => m.NationalityName, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.NationalityName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        @*@Html.ActionLink("Update", "edit", "country", new { id = Model.CountryID }, new { @class = "btn btn-primary" })*@
+        <input class="btn btn-primary" type="submit" value="Update" />
+        &nbsp;
+        <button class="btn btn-default" type="button" data-dismiss="modal">Cancel</button>
+    </div>
+}

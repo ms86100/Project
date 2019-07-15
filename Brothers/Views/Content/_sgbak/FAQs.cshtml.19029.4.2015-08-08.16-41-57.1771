@@ -1,0 +1,289 @@
+﻿@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="home-area">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title">FAQs</h2>
+        </div>
+        <nav class="nav-tabs-justified">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="active"><a href="#Arrival" role="tab" aria-controls="Arrival" data-toggle="tab">During Arrival</a></li>
+                <li><a href="#Transfer" role="tab" aria-controls="Transfer" data-toggle="tab">During Transfer</a></li>
+                <li><a href="#Stay" role="tab" aria-controls="Stay" data-toggle="tab">During Stay</a></li>
+                <li><a href="#Departure" role="tab" aria-controls="Departure" data-toggle="tab">During Departure</a></li>
+                <li><a href="#Information" role="tab" aria-controls="Information" data-toggle="tab">Information Pack</a></li>
+            </ul>
+        </nav>
+        <div class="tab-row">
+            <div class="col-md-12 tab-content">
+                <div id="Arrival" role="tabpanel" class="tab-pane active">
+                    <h3>During arrival</h3>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>Where are the passengers received after they arrive at the airport ?</b>
+                    </p>
+                    <p>
+                        The incoming passengers are met just outside the arrival lounge of the airport as the government regulations do not allow hosts to enter the airport.
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>Where are the passengers received after they arrive at the Railway Station ?</b>
+                    </p>
+                    <p>
+                        The incoming passengers are always met just outside the main exit gate of the station near the enquiry counter.
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>How do they identify your representative ?</b>
+                    </p>
+                    <p>
+                        Our representative can be identified easily having the passengers placard displaying the name of the group (individuals in case of FITs).
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>After meeting your representative, will they be taken to their vehicle immediately or they have to wait for other travellers who have also booked a transfer ?</b>
+                    </p>
+                    <p>
+                        We provide separate transfer by separate private vehicles to our different clients coming at the same time. The passengers have to wait for a few minutes till our vehicle waiting for them arrives at the spot from the parking place.
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>Do they carry their luggage themselves ?</b>
+                    </p>
+                    <p>
+                        As the guests can meet our representative only outside the arrival lounge, they have to carry their luggage in the trolleys through the customs upto the exit point on their own and can hand over the same
+                        to our representative after meeting him. He takes care of their luggage till they check in at the hotel.
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>On arrival at the hotel, does your representative escort them to the	front desk and assist them in check-in formalities ?</b>
+                    </p>
+                    <p>
+                        The guests are escorted upto the hotel's front office and our representative assist them in the check-in formalities.
+                    </p>
+                </div>
+
+                <div id="Transfer" role="tabpanel" class="tab-pane">
+                    <h3>During Transfer</h3>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>What type of vehicles are used for transfers ? (Are they air-conditioned) ?</b>
+                    </p>
+                    <p>
+                        Our fleet consists of vehicles of Indian make cars, Maruti Vans & Hard Top Covered Jeeps coaches. The type of vehicle provided for a
+                        particular transfer depends upon the request and contract made between the two parties (Brother's & clients/agent on behalf of the clients) and the size and strength of the arriving group.
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>Are the tourists given a city orientation tour as a part of their transfer?</b>
+                    </p>
+                    <p>
+                        During their transfer from the airport to the hotel, the tourists are generally briefed on India and if time permits, on tourist destination(s). The transfer is not an orientation tour of the city.
+                    </p>
+                </div>
+
+                <div id="Stay" role="tabpanel" class="tab-pane">
+                    <h3>During Stay</h3>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>Whom should the tourist contact during their stay ?</b>
+                    </p>
+                    <p>
+                        We assign one of our tour executives to look after our clients, who constantly stays in touch with them during their stay in India and they keep informing/briefing them about their itinerary
+                        including sightseeing and every other information.
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>If passengers have booked sightseeing tours in your city, are they provided with vouchers/pick-up information ?</b>
+                    </p>
+                    <p>
+                        As we have only organised tours for our clients, they do not need vouchers for their sightseeing.
+                    </p>
+                </div>
+
+                <div id="Departure" role="tabpanel" class="tab-pane">
+                    <h3>During Departure</h3>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>How many hours prior	to the departure flight are passengers picked -up from their hotel ?</b>
+                    </p>
+                    <p>
+                        The clients are picked from their hotel well in advance so that they report the airport 2-3 hours before the time of their departure flight.
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>How are the passengers assisted in their transfer ?</b>
+                    </p>
+                    <p>
+                        At the hotels our executive meets them in the lobby of the hotel in which they are staying by prior appointment. In case personal contact fails, our
+                        representative leaves a message in the key-hole mentioning the details of their departure, such as, departure details of their onward flight, where to
+                        meet, whom to meet and when to meet.
+                    </p>
+                </div>
+
+                <div id="Information" role="tabpanel" class="tab-pane">
+                    <h3>Information Pack</h3>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>How FIT do I have to be to trek ?</b>
+                    </p>
+                    <p>
+                        If you enjoy a day's walking and can walk up and down hills, you will be fine. If you participate in any sport, you will be fine. The trek has an easy
+                        grading although everyone will be out of breath at times. We would suggest some program of exercise starting one to two months prior to your arrival in
+                        India. Step classes/stair master best prepare one for the hills.
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>How long do we trek per day and how high ?</b>
+                    </p>
+                    <p>
+                        Up to a maximum of 5-6 hours a day with lunch breaks along the trail. The maximum altitude reached during
+                        the trek will be 7,000 feet or 2,100 meters. Altitude sickness will not affect you at these heights as it is only a concern above 10,000 feet or
+                        3,000 meters. However, everyone suffers shortness of breath on some uphill sections.
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>What kind of footwear will I need ?</b>
+                    </p>
+                    <p>
+                        You will require a light weight pair of boots that have rubber soles with thick tread and good ankle
+                        support. Hi-Tech and Nike produce good walking comfortable shoes.
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>What kind of food will be served while on trek ?</b>
+                    </p>
+                    <p>
+                        A general idea will be: <br>
+                        Breakfast : Cereal/Muesli/Porridge/Eggs/Tomatoes/Toast/Jam/Honey/Tea/Coffee.<br>
+                        Lunch : Salad/Spring Rolls/Pizza/Quiche.<br>
+                        Dinner : Soup/Curry/Pasta/Dumplings/Vegetables/Cake/Fruit Fritters. <br>
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>Will I need to be inoculated ?</b>
+                    </p>
+                    <p>
+                        Consult your local doctor who will have an updated list. However, most important are Gamma Globulin (for Hepatitis) and Tetanus. Do not go over the top
+                        otherwise you will end up cholera, rabies, malaria tablets and many others. In case, it is always worth
+                        talking to two doctors and then using your own judgement.
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>What happens in the event of an emergency ?</b>
+                    </p>
+                    <p>
+                        On trek, if you are not feeling well we make neccesscary ( potter / guide ) arrangements and will be made to descends to the nearest road where you will be met by our office staff and taken to the
+                        nearest hospital if necessary a helicopter will be summoned as per the availability. You will then be flown with your guide. If necessary, an onward
+                        International medical flight will be arranged in consult with the concerned embassy. Anywhere else on the trip, you will be taken by road to nearest
+                        Hospital where the same process will occur. Ensure that your insurance policy covers you for such unlike eventualities.
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>How hot/cold does it get ?</b>
+                    </p>
+                    <p>
+                        As general rule, it is hot enough during the days to wear an open-neck shirt with shorts and you will not be cold. During the evening, it gets cold so, long
+                        trousers and a warm jersey are essential.
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>What are the season in Sikkim & Darjeeling ?</b>
+                    </p>
+                    <p>
+                        Mid October/November :<br>
+                        Very clear skies, flowers in bloom, hot during the day and cold evenings. Temperatures steadily decrease during these months. October high and low temperatures about 80/55° F, 26/13° C. November
+                        highs and lows are about 66/37° F, 19/3° C. In the Terai, October high and low temperatures are 88/72° F, 31/22° C; November high and low temperatures are about 83/72° F, 28/22° C. <br>
+                        December/January/February:<br>
+                        Clear skies, frosty mornings, warm days but cold at night. Day time highs in the mid 60's F, 18° C. and lows dip into the mid 30's F, 2° C. throughout the state.<br>
+                        March/April:<br>
+                        Some times hazy skies, flowers in bloom, hot during the day, warm at night, Daytime temperature reach the low to mid 80's F, 28 C. and lows range from
+                        about 50° F to 60° F, 10° to 15° C. <br>
+                        June/July/August:<br>
+                        This is rainy season, although fascinating for those interested in the flora and fauna of the state. Daytime temperatures are consistently in the mid to klupper 80's F, 30° C. through out.<br>
+                        May/September/Early October :<br>
+                        These are the transition months between the wet and dry season. The rain is not as frequent as the summer months; however, it is unpredictable. The temperatures, flora and fauna are the same as the
+                        summer month.
+                    </p>
+                    <p>
+                        <em>Note: </em>The Plain, where Kalimpong & Mirik is locate, is about 400 feet, 120 meters, lower in altitude than Darjeeling & Gangtok and is consistently warmer than the rest of State.
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>Should I bring my own medicine ?</b>
+                    </p>
+                    <p>
+                        Please consult your local doctor and follow his advise. However, if you are taking any particular medicines, it would be best to bring these with you.
+                        <br>
+                        <b>Baggage:</b><br>
+                        We suggest that you bring a suitcase to India in which you have a zip-down duffel bag and small duffel overnight bag. The suitcase can be left in Hotel with your town cloths. The duffel bags travel
+                        with you to your trek/rafting and jungle clothes. The small overnight bag is used for the rafting.
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>What do I need to pack for the trek ?</b>
+                    </p>
+                    <p>
+                        Walking boots, tennis shoes for evening, 3 T-shirts or short sleeved shirts, 2 pairs of shots made from strong cotton, (women can wear shorts in India or
+                        skirts if they prefer), 2 long sleeved shirts for evenings, I long pair of trousers, one track suite, one extra sweat shirt or sweater for evenings,
+                        wind-breaker, warm sleeping wear for Dec/Jan/Feb; 5 pairs of thick walking socks underwear, personal toiletries including a small face towel, sun cream, sunglasses camera with approximately 20 rolls of
+                        film, binos if you'd like walking sticks, sun hats, cotton scarves, rain ponchos, umbrellas, and gear bags which the porters carry, You can leave any town clothes at your hotel and a set of clean cloths, as
+                        well as rafting/safari clothes.
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>What do I need to pack for the trek ?</b>
+                    </p>
+                    <p>
+                        Walking boots, tennis shoes for evening, 3 T-shirts or short sleeved shirts, 2 pairs of shots made from strong cotton, (women can wear shorts in India or
+                        skirts if they prefer), 2 long sleeved shirts for evenings, I long pair of trousers, one track suite, one extra sweat shirt or sweater for evenings,
+                        wind-breaker, warm sleeping wear for Dec/Jan/Feb; 5 pairs of thick walking socks underwear, personal toiletries including a small face towel, sun cream, sunglasses camera with approximately 20 rolls of
+                        film, binos if you'd like walking sticks, sun hats, cotton scarves, rain ponchos, umbrellas, and gear bags which the porters carry, You can leave any town clothes at your hotel and a set of clean cloths, as
+                        well as rafting/safari clothes.
+                        <br>
+                        <b>For rafting:</b><br>
+                        Flip-flops, sandals, or booties while rafting (barefoot is OK too), tennis shoes with socks for evening during otherwise flip-flops or sandal are warm enough. T-shirt bathing suit, and light-weight
+                        shorts during the day (they will get wet so nylon shorts dry the fastest); track suit or trousers and a sweat-shirt for the evening (warm sweater or jacket during the winter months); an overnight bag
+                        to bring these clothes to the campsite, Note: What ever you don't need at the campsite will be kept in our vehicle which is guarded at all times. <br>
+                        <b>For Safaris:</b><br>
+                        Your walking boots and evening shoes; light-weight long trousers and long-sleeved shirt for safaris; short sleeved shirt and shorts for daytime in
+                        between safaris; casual clothes for the evenings.<br>
+                        <b>About the river:</b><br>
+                        It is an excellent introduction to rafting. There is only 1 grade III rapid and about 5 to 6 grade II rapids. For those who are already experienced, they
+                        can try guiding or our guide can aim to get you wet.
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>How much currency will I need ?</b>
+                    </p>
+                    <p>
+                        You will need very little during the activity phases of the holiday : says USD 200 This should be carried in small denominations as change is hard to come by
+                        in the villages. There are good deals to be found on the ways, on jewelry especially. However, when shopping in town, there are many items to buy (wall hangings, carvings, artifacts, clothes, etc.) Credit
+                        cards are only accepted in some shops. <br>
+                        <b>Electricity:</b><br>
+                        The current is 220V/50 cycles and is available in India. Sockets have either three round pairs or two thick round pains. If you are traveling with electrical appliance, an international converter kit
+                        and a set of adapter plugs will be required. Alternatively, it is more practical to travel with battery-operated appliance, where possible. While on
+                        trek, you can recharge your batteries in some lodges as they use generators. However, no electricity is available on the river while rafting. <br>
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>Can I drink the water ?</b>
+                    </p>
+                    <p>
+                        Do not drink tap water or stream water. All lodge/hotel water has been boiled and filtered and is safe. Local mineral water is also provided and is
+                        perfectly safe to drink.
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>What alcoholic beverages are available in India ?</b>
+                    </p>
+                    <p>
+                        Produces different types of bottled beers, which are excellent. They are very much like a lager. Some lodges have a good supply of local as well as foreign whisky, gin vodka, rum and soft drinks. A
+                        local "wine" is produced in the hills which is served hot and resembles sake. If you have a special preference, buy it at a duty free shop on your way to India.
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>Can I avail the facility of phone/fax/e-mail in India?</b>
+                    </p>
+                    <p>
+                        A good standard communication system is readily available in India Neither phone nor fax are available while rafting or on trek.
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>Can I get a VISA on arrival ?</b>
+                    </p>
+                    <p>
+                        No, you can obtain your entry visa at the consulate in your home country. In either case, you need 2 passport size photograph and the visa fee which varies from country to country. Check with your
+                        travel agents for an update. Please bring 12 more photos for rafting / trekking / Restricted Area Visit.
+                    </p>
+                    <p>
+                        <span class="glyphicon glyphicon-play">&nbsp;</span><b>What is the policy on excess baggage ?</b>
+                    </p>
+                    <p>
+                        Even if your originating ticket states you are allowed 2 bags at any weight, the airports in Asia have their own regulations which are strictly enforced. For international flights, you are allowed
+                        44 lb. (20 kilos) per person anything after that is charged. For domestic flights, 33 lb. (15 kilos) is the limit. Excess baggage is permissible but is
+                        charged.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,625 @@
+﻿@model Brothers.Entities.ViewModels.MstPackageGeneralViewModel
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- Mirrored from Mount Pandim-html.weblionmedia.com/tour_detail.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 Jun 2018 09:30:43 GMT -->
+<head>
+    <title>Mount Pandim | Travel Agency</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta charset="utf-8" />
+    <link rel="icon" href="favicon.png" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="~/MountPandim/css/style.css" />
+    <link href="~/MountPandim/css/jquery.formstyler.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <style>
+        textarea.form-control {
+            height: 100px;
+            width: 248px;
+        }
+
+        .textsmall input[type='text'] {
+            width: 255px;
+        }
+
+        textarea {
+            overflow: auto;
+            border: 1px solid #ebebeb;
+            background: #fff;
+            width: 255px;
+            border-radius: 3px;
+            font-size: 11px;
+            padding: 10px 8px 10px 8px;
+            text-transform: uppercase;
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            
+            font-weight: 600;
+            color: #8a8a8a;
+            margin-bottom: 15px;
+        }
+
+        .form-group input[type='text'] {
+            border: 1px solid #ebebeb;
+            background: #fff;
+            width: 255px;
+            border-radius: 3px;
+            font-size: 11px;
+            padding: 10px 8px 10px 8px;
+            text-transform: uppercase;
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-weight: 600;
+            color: #8a8a8a;
+            /*margin-bottom: 15px;*/
+        }
+        .booking-form-i {
+            width: unset;
+        }
+        .form-calendar-a {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="top">
+        <div class="header-a">
+            <div class="wrapper-padding">
+                <div class="header-phone"><span>+91- 700 - 125-9482 / +91- 947- 596- 8561</span></div>
+                <div class="header-account">
+                    <a href="@Url.Action("Login","Account")">Agent Login</a>
+                </div>
+                <div class="header-social">
+                    <a href="#" class="social-twitter"></a>
+                    <a href="https://www.facebook.com/Mount-Pandim-Tours-Travels-239077919958569/" target="_blank" class="social-facebook"></a>
+                    <a href="#" class="social-vimeo"></a>
+                    <a href="#" class="social-pinterest"></a>
+                    <a href="#" class="social-instagram"></a>
+                </div>
+
+
+
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="header-b">
+            <!-- // mobile menu // -->
+            <div class="mobile-menu">
+                <nav>
+                    <ul>
+                        <li><a href="@Url.Action("MountPandimTour","Home")">HOME</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="@Url.Action("TourPackages","TripPlanner")">TOURS</a></li>
+                        <li><a href="#">BLOG</a></li>
+                        <li><a href="@Url.Action("Contact","Home")">CONTACTS</a></li>
+
+
+                        @*<li>
+                                <a class="has-child" href="#">HOME</a>
+                                <ul>
+                                    <li><a href="index.html">Home style one</a></li>
+                                    <li><a href="index_02.html">Home style two</a></li>
+                                    <li><a href="index_03.html">Home style three</a></li>
+                                    <li><a href="index_04.html">Home style four</a></li>
+                                </ul>
+                            </li>*@
+
+                    </ul>
+                </nav>
+            </div>
+            <!-- \\ mobile menu \\ -->
+
+            <div class="wrapper-padding">
+                <div class="header-logo"><a href="#"><img alt="" src="~/MountPandim/img/Pandim.png" /></a></div>
+                <div class="header-right">
+                    <div class="hdr-srch">
+                        <a href="#" class="hdr-srch-btn"></a>
+                    </div>
+                    <div class="hdr-srch-overlay">
+                        <div class="hdr-srch-overlay-a">
+                            <input type="text" value="" placeholder="Start typing...">
+                            <a href="#" class="srch-close"></a>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="hdr-srch-devider"></div>
+                    <a href="#" class="menu-btn"></a>
+                    <nav class="header-nav">
+                        <ul>
+                            <li><a href="@Url.Action("MountPandimTour","Home")">HOME</a></li>
+                            <li><a href="#">ABOUT</a></li>
+                            <li><a href="@Url.Action("TourPackages","TripPlanner")">TOURS</a></li>
+                            <li><a href="#">BLOG</a></li>
+                            <li><a href="@Url.Action("Contact","Home")">CONTACTS</a></li>
+                            @*<li>
+                                    <a href="#">Features</a>
+                                    <ul>
+                                        <li><a href="typography.html">typography</a></li>
+                                        <li><a href="shortcodes.html">shortcodes</a></li>
+                                        <li><a href="interactive_elements.html">interactive elements</a></li>
+                                        <li><a href="cover_galleries.html">cover galleries</a></li>
+                                        <li><a href="columns.html">columns</a></li>
+                                    </ul>
+                                </li>*@
+                        </ul>
+                    </nav>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </header>
+    <!-- main-cont -->
+    <div class="main-cont">
+        <div class="body-wrapper">
+            <div class="wrapper-padding">
+                <div class="page-head">
+                    <div class="page-title">Tours - <span>detail </span></div>
+                    <div class="breadcrumbs">
+                        <a href="@Url.Action("MountPandimTour","Home")">Home</a> / <a href="@Url.Action("TourPackages","TripPlanner")">Tours</a> / <span>detail </span>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="sp-page">
+
+                    <div class="sp-page-a">
+                        <div class="sp-page-l">
+                            <div class="sp-page-lb">
+                                <div class="sp-page-p">
+                                    <div class="h-tabs">
+                                        <div class="h-tabs-left">
+                                            <div class="h-tab-i active">
+                                                <a href="#" class="h-tab-item-01">
+                                                    <i></i>
+                                                    <span>photos</span>
+                                                    <span class="clear"></span>
+                                                </a>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="clear"></div>
+                                    </div>
+
+                                    <div class="mm-tabs-wrapper">
+                                        <!-- // tab item // -->
+                                        <div class="tab-item">
+                                            <div class="tab-gallery-big">
+
+                                                @foreach (var image in Model.MstTourPhotoList)
+                                                {
+
+                                                    <img src="@image.PhotoThumb" />
+                                                    break;
+                                                }
+
+                                            </div>
+                                            <div class="tab-gallery-preview">
+                                                <div id="gallery">
+                                                    <!-- // -->
+                                                    @foreach (var image in Model.MstTourPhotoList)
+                                                    {
+
+                                                        <div class="gallery-i ">
+                                                            <a href="@image.PhotoThumb"><img alt="" src="@image.PhotoThumb" height="75" width="108"><span></span></a>
+                                                        </div>
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="content-tabs">
+
+                                        <div class="content-tabs-body">
+                                            <!-- // content-tabs-i // -->
+                                            <div class="content-tabs-i">
+                                                <h2>Overview</h2>
+                                                <p>@Model.MstTourPackage.PackageRemarks</p>
+                                                <div class="tab-reasons">
+                                                    <div class="facilities">
+                                                        <h2>Package Details</h2>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="facilities-a">Package Routing</td>
+                                                                <td class="facilities-b">@Model.MstTourPackage.PackageRouting</td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td class="facilities-a">Pickup Point</td>
+                                                                <td class="facilities-b">@Model.MstTourPackage.PickupPoint</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="facilities-a">Drop Point</td>
+                                                                <td class="facilities-b">@Model.MstTourPackage.DropPoint</td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+
+                                                </div>
+
+
+                                                <div class="tab-reasons">
+                                                    <div class="facilities">
+                                                        <h2>Itinerary Details</h2>
+
+                                                        @if (Model.MstTourActivityList.Count() > 0)
+                                                        {
+                                                            foreach (var item in Model.MstTourActivityList)
+                                                            {
+
+                                                                <table>
+                                                                    <tr>
+                                                                        <td class="facilities-a">DAY @item.DayNo.ToString("00")</td>
+                                                                        <td class="facilities-b">@item.ActivityTitle</td>
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td class="facilities-a">Activity</td>
+                                                                        <td class="facilities-b">@item.ActivityRemarks</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="facilities-a">Overnight</td>
+                                                                        @if (item.DestinationID != null && item.DestinationID != 5)
+                                                                        {
+                                                                            <td class="facilities-b">@item.DestinationName</td>
+
+
+                                                                        }
+                                                                        else if (item.DestinationID == 5)
+                                                                        {
+                                                                            <td class="facilities-b">@item.OvernightDestination</td>
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            <td class="facilities-b">Not Required</td>
+                                                                        }
+                                                                    </tr>
+                                                                </table>
+                                                            }
+                                                        }
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="sp-page-r">
+                        <div class="h-detail-r">
+                            <div class="h-detail-lbl">
+                                <div class="h-detail-lbl-a">Book Now</div>
+                            </div>
+
+                            @using (Html.BeginForm("bookingrequest", "tripplanner", FormMethod.Post, new { data_otf_ajax = "true", id = "BookForm" }))
+                            {
+                                @Html.AntiForgeryToken()
+                                @Html.ValidationSummary(true)
+                                @Html.HiddenFor(m => m.MstTourPackage.PackageID)
+                                @Html.HiddenFor(m => m.MstTourPackage.PackageName)
+
+                                <div class="booking-form">
+
+                                </div>
+                                <div class="booking-form">
+                                    <div class="booking-form-i form-group">
+                                        <label>Arrival Date:</label>
+
+                                        <div class="form-group">
+                                            <div class="control-group">
+                                                <div class="input-group date" id="datetimepicker5" data-date-format="dd M yyyy">
+                                                    @Html.TextBoxFor(m => m.MstPackageBooking.ArrivalDate, null, new { @class = "date form-control" })
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            @Html.ValidationMessageFor(m => m.MstPackageBooking.ArrivalDate, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <span class="clear"></span>
+                                    <div class="booking-form-i form-group">
+                                        <label>Departure Date:</label>
+                                        <div class="form-group">
+                                            <div class="control-group">
+                                                <div class="input-group date" id="datetimepicker6" data-date-format="dd M yyyy">
+                                                    @Html.TextBoxFor(m => m.MstPackageBooking.DepartureDate, null, new { @class = "date form-control" })
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            @Html.ValidationMessageFor(m => m.MstPackageBooking.DepartureDate, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="booking-form-i">
+
+                                            <div class="form-calendar">
+                                                <label>Adult</label>
+                                                <div class="form-calendar-a">
+                                                    @Html.DropDownListFor(m => m.MstPackageBooking.AdultPax, Enumerable.Range(1, 10).Select(m => new SelectListItem { Text = m.ToString(), Value = m.ToString() }), new { @class = "form-control custom-select" })
+                                                </div>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="booking-form-i">
+                                            <div class="form-calendar">
+                                                <label>Child(< 5yrs)</label>
+                                                <div class="form-calendar-a">
+                                                    @Html.DropDownListFor(m => m.MstPackageBooking.ChildPax, Enumerable.Range(0, 5).Select(m => new SelectListItem { Text = m.ToString(), Value = m.ToString() }), new { @class = "form-control custom-select" })
+                                                </div>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="booking-form-i">
+                                            <div class="form-calendar">
+                                                <label>Infant(< 3yrs)</label>
+                                                <div class="form-calendar-a">
+                                                    @Html.DropDownListFor(m => m.MstPackageBooking.InfantPax, Enumerable.Range(0, 5).Select(m => new SelectListItem { Text = m.ToString(), Value = m.ToString() }), new { @class = "form-control ddl-select2 custom-select" })
+                                                </div>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                    <div class="booking-form-i form-group">
+                                        <div class="form-group">
+                                            @Html.ValidationMessageFor(m => m.MstPackageBooking.AdultPax, "", new { @class = "text-danger" })
+                                            @Html.ValidationMessageFor(m => m.MstPackageBooking.ChildPax, "", new { @class = "text-danger" })
+                                            @Html.ValidationMessageFor(m => m.MstPackageBooking.InfantPax, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group booking-form-i">
+                                        <label>Name</label>
+                                        @Html.TextBoxFor(m => m.MstPackageBooking.ClientName, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.MstPackageBooking.ClientName, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="form-group booking-form-i">
+                                        <label>Email</label>
+
+                                        @Html.TextBoxFor(m => m.MstPackageBooking.ClientEmailID, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.MstPackageBooking.ClientEmailID, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="form-group booking-form-i">
+                                        <label>Phone</label>
+                                        @Html.TextBoxFor(m => m.MstPackageBooking.ClientContactNo, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.MstPackageBooking.ClientContactNo, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="form-group booking-form-i">
+                                        <label>Requirement</label>
+
+                                        @Html.TextAreaFor(m => m.MstPackageBooking.ClientRequirement, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="page-search-p">
+
+                                    <button type="submit" class="srch-btn check book-btn-r  btn-danger">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                        Send Request
+                                    </button>
+                                </div>
+                            }
+
+
+                        </div>
+
+                        <div class="h-help">
+                            <div class="h-help-lbl">Need Mount Pandim Help?</div>
+                            <div class="h-help-lbl-a">We would be happy to help you!</div>
+                            <div class="h-help-phone">+91- 700 - 125-9482 / +91- 947- 596- 8561</div>
+                            <div class="h-help-email">info@MountPandim.com</div>
+                        </div>
+
+
+
+
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /main-cont -->
+
+    <footer class="footer-b">
+        <div class="wrapper-padding">
+            <div class="footer-left">© Copyright 2018 Mount Pandim Tours &amp; Travel. All rights reserved.</div>
+            <div class="footer-social">
+                <a href="#" class="footer-twitter"></a>
+                <a href="https://www.facebook.com/Mount-Pandim-Tours-Travels-239077919958569/" target="_blank" class="footer-facebook"></a>
+                <a href="#" class="footer-vimeo"></a>
+                <a href="#" class="footer-pinterest"></a>
+                <a href="#" class="footer-instagram"></a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </footer>
+    @*error message*@
+    <div id="ErrMsg" style="display:none;">
+        <input type="hidden" id="ErrMsgHiddenField11" name="ErrMsg" value="@TempData["ErrMsg"]" />
+    </div>
+
+    <!-- // scripts // -->
+    <script src="~/Scripts/jquery-2.1.4.js"></script>
+    <script src="~/MountPandim/js/jqeury.appear.js"></script>
+    @*<script src="~/MountPandim/js/jquery.ui.js"></script>*@
+    @*<script src="~/MountPandim/js/script.js"></script>*@
+    <script src="~/MountPandim/js/bxSlider.js"></script>
+    <script src="~/MountPandim/js/custom.select.js"></script>
+    <script src="~/MountPandim/js/jquery.formstyler.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $('.custom-select').customSelect();
+            $('.review-ranger').each(function () {
+                var $this = $(this);
+                var $index = $(this).index();
+                if ($index == '0') {
+                    var $val = '3.0'
+                } else if ($index == '1') {
+                    var $val = '3.8'
+                } else if ($index == '2') {
+                    var $val = '2.8'
+                } else if ($index == '3') {
+                    var $val = '4.8'
+                } else if ($index == '4') {
+                    var $val = '4.3'
+                } else if ($index == '5') {
+                    var $val = '5.0'
+                }
+                $this.find('.slider-range-min').slider({
+                    range: "min",
+                    step: 0.1,
+                    value: $val,
+                    min: 0.1,
+                    max: 5.1,
+                    create: function (event, ui) {
+                        $this.find('.ui-slider-handle').append('<span class="range-holder"><i></i></span>');
+                    },
+                    slide: function (event, ui) {
+                        $this.find(".range-holder i").text(ui.value);
+                    }
+                });
+                $this.find(".range-holder i").text($val);
+            });
+
+            $('#reasons-slider').bxSlider({
+                infiniteLoop: true,
+                speed: 500,
+                mode: 'fade',
+                minSlides: 1,
+                maxSlides: 1,
+                moveSlides: 1,
+                auto: true,
+                slideMargin: 0
+            });
+
+            $('#gallery').bxSlider({
+                infiniteLoop: true,
+                speed: 500,
+                slideWidth: 108,
+                minSlides: 1,
+                maxSlides: 6,
+                moveSlides: 1,
+                auto: false,
+                slideMargin: 7
+            });
+
+            $(function () {
+                $(document.body).on('appear', '.fly-in', function (e, $affected) {
+                    $(this).addClass("appeared");
+                });
+                $('.fly-in').appear({ force_process: true });
+            });
+        });
+    </script>
+    <!-- \\ scripts \\ -->
+
+
+
+
+
+    <script>
+        $(document).ready(function () {
+
+            $headerDown = function () {
+                $('.header-a').slideUp(120);
+                $('.header-b').css('height', '59px');
+                $('.header-b').addClass('fixed');
+                $('.header-logo').css('margin-top', '10px')
+                $('.header-right').css('margin-top', '21px');
+                $('.header-logo').find('img').attr('src', '../../MountPandim/img/Pandim.png');
+
+            }
+            $headerUp = function () {
+                $('.header-a').slideDown(150);
+                $('.header-b').removeClass('fixed');
+                $('.header-b').css('height', '89px');
+                $('.header-logo').css('margin-top', '26px');
+                $('.header-right').css('margin-top', '37px');
+                $('.header-logo').find('img').attr('src', '../../MountPandim/img/Pandim.png');
+            }
+
+            $(window).scroll(function () {
+                var $scrollTop = $(window).scrollTop();
+                if ($scrollTop > 140) {
+                    $headerDown();
+                } else {
+                    $headerUp();
+                }
+            });
+
+        });
+    </script>
+    <script src="~/Content/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#tourMap").on('click', function () {
+                $('#map-modal').removeClass('hide');
+                $('#map-modal').modal('show');
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#datetimepicker5").datetimepicker({
+                format: "dd M yyyy",
+                weekStart: 1,
+                todayBtn: 1,
+                autoclose: 1,
+                todayHighlight: 1,
+                startView: 2,
+                minView: 2,
+                forceParse: 0,
+                startDate: new Date(),
+                onClose: function (selectedDate) {
+                    jQuery("#datetimepicker6").datepicker("option", "minDate", selectedDate);
+                }
+            });
+            $("#datetimepicker6").datetimepicker({
+                format: "dd M yyyy",
+                weekStart: 1,
+                todayBtn: 1,
+                autoclose: 1,
+                todayHighlight: 1,
+                startView: 2,
+                minView: 2,
+                forceParse: 0,
+                startDate: new Date(),
+                onClose: function (selectedDate) {
+                    jQuery("#datetimepicker5").datepicker("option", "maxDate", selectedDate);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

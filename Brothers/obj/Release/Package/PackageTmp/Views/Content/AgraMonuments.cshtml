@@ -1,0 +1,121 @@
+﻿@{
+    ViewBag.Title = "AgraMonuments";
+    Layout = "~/Views/Shared/GoldenTriangleLayout.cshtml";
+}
+
+<div class="well subheading-well">
+    <b class="subheading">Monuments</b>
+</div>
+<div class="col-md-12">
+    <p>
+        There Are Monuments At Every Nook And Corner Of Agra. It Is Hardly A Wonder Considering The Important Position That It Held In Mughal India. The Moghuls Were Known For Their Love Of Architecture And Both The Red Sandstone And Marble Architecture Abounds In The Region. Here, We Have Discussed Some Of The Monuments That Have Largely Remained Unknown And Have Lost Their Place In The Memories Of The Common People Yet Are Notable For Their Unique Architectural Traits. The Funny Thing Is That Even Most Of The Locals Do Not Know Even The Names Of Most Of These Monuments.
+    </p>
+</div>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Agra/Monument/Agra-Fort.jpg" alt="Agra-Fort" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="AgraFort" />
+            </div>
+        </div>
+        <h5>Agra Fort</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Agra/Monument/Taj-Mahal.jpg" alt="Taj-Mahal" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="TajMahal" />
+            </div>
+        </div>
+        <h5>Taj Mahal</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Agra/Monument/Fatehpu-Sikri.jpg" alt="Fatehpu-Sikri" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="FatehpuSikri" />
+            </div>
+        </div>
+        <h5>Fatehpur Sikri</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Agra/Monument/Daulah.jpg" alt="Daulah" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Daulah" />
+            </div>
+        </div>
+        <h5>Itmad-Ud Dual</h5>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/GoldenTriangle/Agra/Monument/Chini-Ka-Rauza.jpg" alt="Chini-Ka-Rauza" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="ChiniKaRauza" />
+            </div>
+        </div>
+        <h5>Chini Ka Roza</h5>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "AgraFort") {
+            $('#myPicLabel').text('Agra Fort')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Agra/Monument/Agra-Fort.jpg');
+            $('#pic-details').html("<p>Built In Red Sand Stone; It Is The One Of The Famous Sights Of Agra Other Than Taj Mahal. The Semi Circular Fort Was Started By Akbhar In 1565, And Completed In 1574.  </p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "TajMahal") {
+            $('#myPicLabel').text('Taj Mahal')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Agra/Monument/Taj-Mahal.jpg');
+            $('#pic-details').html("<p>The Most Photographed Monument In The World, The Taj Stands In Its Splendor Of White Marble, An Imposing Citadel On The Banks Of River Yamuna. Built In 17th Century By Shah Jahan, The Fifth Mughal Emperor, In The Memory Of His Wife Mumtaz Mahal, The Taj Mahal Is An Ode To The Emperor's Eternal Love For His Wife. It Took Over 20,000 Skilled Workers From Across The Country, Working Day And Night, For 22 Years For This Architectural Wonder To Be Created.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "FatehpuSikri") {
+            $('#myPicLabel').text('Fatehpur Sikri')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Agra/Monument/Fatehpu-Sikri.jpg');
+            $('#pic-details').html("<p>40Kms. From Agra, It Is A City Completely Made Of Red Sand Stone. Built By Akbar And Dedicated To A Saint, Fatehpur Sikri Was Conceived In 1571. Worth Visiting Are The Jama Masjid, Salim Chisti's Tomb, The Diwan- I-Aam, The Diwan- I- Khas And The Queen's Palaces Within The City.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Daulah") {
+            $('#myPicLabel').text('Itmad-Ud Dual')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Agra/Monument/Daulah.jpg');
+            $('#pic-details').html("<p>The Tomb Of Mirza Ghiyas Beg, Emperor Jehangir's Father-In-Law. It Was Built By Empress Noor Jehan And Is Exquisitely Decorated With Pietra Dura Inlay And Latticed Marble Screens And Is Another Fine Example Of Mughal Architecture.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "ChiniKaRauza") {
+            $('#myPicLabel').text('Chini Ka Roza')
+            $('#pic-path').attr('src', '/Content/img/GoldenTriangle/Agra/Monument/Chini-Ka-Rauza.jpg');
+            $('#pic-details').html("<p>Chini Ka Roza Which Is The Tomb Of Afzal Khan, A Persian Poet And Minister In The Court Of Emperor Shah Jahan. The Name Of This Monument Is Inspired By The Bright Glazed Tiles That Have Been Used To Decorate It And Enhance Its Beauty.</p>");
+            $('#myModal').modal('show');
+        }
+    });
+
+</script>

@@ -1,0 +1,160 @@
+﻿
+@{
+    Layout = "~/Views/Shared/BhutanLayout.cshtml";
+}
+
+<div class="well subheading-well">
+    <b class="subheading">Punakha</b>
+</div>
+<div class="well hidden-xs" style="padding:10px;">
+    <img src="~/Content/img/Bhutan/Punakha.jpg" class="img-rounded resp-img" />
+</div>
+<div class="col-md-12">
+    <h4 class="text-info">Punakha (Alt. 4265ft)</h4>
+    <p>
+        Punakha Served As The Capital Of Bhutan Until And Still It Is The Winter Seat Of Je Khenpo (The Chief Abbot). Blessed With Temperate Climate And Owing To Its Natural Drainage From Pho Chhu (Male) And Mo Chhu (Female) Rivers, The Punakha Valley Produces Abundant Crops And Fruits. There Are Splendid Views Of The Distant Himalayas At Dochula Pas (Alt. 3,050m) On Thimphu – Punakha Road.
+    </p>
+    <h4 class="text-info">Places Of Interest In And Around Punakha</h4>
+    <b>Punakha Dzong</b>
+    <p>
+        Built Strategically At The Junction Of Pho Chhu And Mo Chhu Rivers In 1637, By Shabdrung Ngawang Namgyal To Serve As The Religious And Administrative Centre Of The Region, Punakha Dzong Has Played An Important Role In Bhutan's History. Damaged By Four Catastrophic Fires And An Earthquake.The Dzong Is Open For Visitors During Punakha Festival And In Summer Months When The Monk Body Moves To Thimphu.
+    </p>
+    <h4 class="text-info">Excursions Around Punakha</h4>
+    <div class="row">
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/Punakha/ChimiLhakhang.jpg" alt="ChimiLhakhang" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="ChimiLhakhang" />
+                </div>
+            </div>
+            <h5>Chimi Lhakhang</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/Punakha/KhamsumYulley.jpg" alt="KhamsumYulley" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="KhamsumYulley" />
+                </div>
+            </div>
+            <h5>Khamsum Yulley Namgyal Chorten</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/Punakha/SangchhenNunnery.jpg" alt="SangchhenNunnery" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="SangchhenNunnery" />
+                </div>
+            </div>
+            <h5>Sangchhen Dorji Lhuendrup Lhakhang Nunnery </h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/Punakha/Limbukha.jpg" alt="Limbukha" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Limbukha" />
+                </div>
+            </div>
+            <h5>Limbukha</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/Punakha/TaloVillage.jpg" alt="TaloVillage" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="TaloVillage" />
+                </div>
+            </div>
+            <h5>Talo</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/Punakha/RitshaVillage.jpg" alt="RitshaVillage" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="RitshaVillage" />
+                </div>
+            </div>
+            <h5>Punakha Ritsha Village</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/Punakha/Nalanda.jpg" alt="Nalanda" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="Nalanda" />
+                </div>
+            </div>
+            <h5>Nalanda Buddhist College </h5>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "ChimiLhakhang") {
+            $('#myPicLabel').text('Chimi Lhakhang')
+            $('#pic-path').attr('src', '/Content/img/Bhutan/Punakha/ChimiLhakhang.jpg');
+            $('#pic-details').html('<p>This Small 16th Century Temple Of Fertility Is Dedicated To The Lama Drukpa Kunley, The ‘Divine Madman’, Decorated With Colourful Phalluses And Visited By Childless Couples Seeking A Special Blessing To Beget Children.  This Is One Of The Most Revered Temples In All Of Bhutan.It Is About 30 Minute Walk Across Field From The Road To The Temple. The Trail Leads Across Rice Fields To The Tiny Settlement Of Pana, Meaning "Field". It Then Follows A Tiny Stream Downhill To Yoaka And Across More Fields Before Making A Short Climb.</p>');
+            $('#myModal').modal('show');
+        }
+        else if (alt == "KhamsumYulley") {
+            $('#myPicLabel').text('Khamsum Yulley Namgyal Chorten')
+            $('#pic-path').attr('src', '/Content/img/Bhutan/Punakha/KhamsumYulley.jpg');
+            $('#pic-details').html("<p>A Beautiful Hike Takes One To The Regal Khamsum Yuelley Namgel Chorten, Which Was Built To Remove Negative Forces And Promote Peace, Stability And Harmony In The Changing World. The Chorten Dominates The Upper Punakha Valley With Commanding Views Across The Mo Chhu And Up Towards The Mountainous Peaks Of Gasa And Beyond.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "SangchhenNunnery") {
+            $('#myPicLabel').text('Sangchhen Dorji Lhuendrup Lhakhang Nunnery ')
+            $('#pic-path').attr('src', '/Content/img/Bhutan/Punakha/SangchhenNunnery.jpg');
+            $('#pic-details').html('<p>Perched On A Ridge Amid Pine Trees And Overlooking Valleys Of Punakha And Wangduephodrang, Gleams The Magnificent Structures Of Sangchhen Dorji Lhuendrup Lhakhang(Temple). The Temple Houses A 14-Foot Main Bronze Statue Of Avalokiteshvara (Chenrigzig Chagtong Chentong). Other Statues Include Those Of Guru Padmasambawa, Gautama Buddha, Zhabdrung Ngawang Namgyel, Tsela Namsum, The 21 Taras And Tsepamay (Buddha Of Longevity). The Avalokiteshvara Statue, One Of The Biggest In The Country, Was The Handiwork Of Entirely Local Bhutanese Artisans.   </p>');
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Limbukha") {
+            $('#myPicLabel').text('Limbukha')
+            $('#pic-path').attr('src', '/Content/img/Bhutan/Punakha/Limbukha.jpg');
+            $('#pic-details').html("<p>Drive Towards Punakha  Dzong And Later Walk Across The Suspension Bridge (About 200m Long) Through Absolutely Fresh Breeze And Fascinating View Of Dzong. Follow The Farm Houses Gradually Climbing Towards Dompala Hills. The View Of Dzong, Pho Chhu, Mo Chhu Rivers And Surrounding Village Is Superb Amidst Chirpine Forests. The Climb Is Another Two And A Half Hours To Limbukha. Limbukha Farmers Grow Bhutan's Famous Red Rice Which Is Supposed To Have Medicinal Values. This Particular Rice Needs Clean Mountain Spring So That The Taste Is Good And Nutritional Value Maintained. Limbukha Is Also Known For Its Love Of Peace And Tranquility. Legends Says That During Medieval Wars The 'Limpus' Or The People Of Limbukha Always Volunteered As Peace Negotiators. This Is Also Depicted During Yearly Festival Called 'Serda' When The Men Are Found Carrying Peace Flags Instead Of Swords And Fireworks.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "TaloVillage") {
+            $('#myPicLabel').text('Talo')
+            $('#pic-path').attr('src', '/Content/img/Bhutan/Punakha/TaloVillage.jpg');
+            $('#pic-details').html("<p>The Village Of Talo (Alt. 2,800m) Which Is Scattered Along The Hill Slopes, Known For Its Cleanliness And Hygiene Among Punakha Villages. Talo Sangnacholing Is Built On A Plateau And Has Majestic View Of Surrounding Villages. The Beautiful Farm Houses Of The Village Have Its Own Flower Gardens And On The Hill Slope Corns And Sweet Peas Are Grown In Abundance. The Women Of Talo Are Particular Known For Their Beauty.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "RitshaVillage") {
+            $('#myPicLabel').text('Punakha Ritsha Village')
+            $('#pic-path').attr('src', '/Content/img/Bhutan/Punakha/RitshaVillage.jpg');
+            $('#pic-details').html("<p>Bhutan’s Punakha Valley Is Famous For Rice Farming Where Both Red And White Rice Are Grown Along The River Valleys Of Pho And Mo Chhu, Two Of The Most Prominent Rivers In Bhutan. ‘Ritsha’meaning ‘At The Base Of A Hill’ Is A Typical Village In Punakha. The Village Houses Are Made Of Pounded Mud With Stone Foundations. Each House Is Only Two Storey High Surrounded With Gardens And The Rice Fields. The Gardens Also Usually Have Fruit Bearing Plants Like Oranges And Papaya Among The Organic Vegetables. In The Recent Years, The Farming Work Is Mechanized And Power-Tillers Instead Of Bullocks Are Used To Plough The Fields And Villagers Have Become Relatively Prosperous. This Is A Model Rice Growing Village In Western Bhutan.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Nalanda") {
+            $('#myPicLabel').text('Nalanda Buddhist College')
+            $('#pic-path').attr('src', '/Content/img/Bhutan/Punakha/Nalanda.jpg');
+            $('#pic-details').html("<p>Locals Call This Place ‘Dalayna’ While The Monks Refer It As ‘Nalanda Buddhist College’. Drive Here In The Afternoon And Enjoy Your Evening Tea Supplemented By The Ravishing View In Front, Along With Interaction With Local Monks.</p>");
+            $('#myModal').modal('show');
+        }
+    });
+</script>

@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div id="home-area">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title">Contact Us</h2>
+        </div>
+        <div class="col-md-4 col-md-push-1" >
+            <h3>Gangtok Office</h3>
+            <address>
+                <b>THE BROTHERS'</b><br />
+                M.G. Marg.<br />
+                Gangtok (Sikkim), India<br />
+                Tel : 91-3592-204220,<br />
+                Fax : 91-3592202794<br />
+                (M)  :91- 98320- 92219<br />
+            </address>
+            <address>
+                E-mail : <a href="mailto:info@brothersonline.com">info@brothershorizons.com</a>
+            </address>
+            <br />
+            <h3>Kolkata Office</h3>
+            <address>
+                278, C.R. Avenue,<br />
+                Kolkata- West Bengal, India<br />
+                Ph: 91- 3340081723<br />
+                (M): 91-98312-59188<br />
+                Fax: 91 -3340081724<br />
+            </address>
+            <address>
+                E-mail: <a href="mailto:info@brothers">brothers_tours@vsnl.com</a>
+            </address>
+        </div>
+    </div>
+</div>

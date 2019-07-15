@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tours & Travels</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/utility")
+</head>
+<body id="top">
+    
+    <div id="home-area">
+        <div class="container">
+            @RenderBody()
+        </div>
+    </div>
+
+
+    <!-- CONTENT WRAPPER -->
+    <!-- END CONTENT WRAPPER -->
+    <!--Quick enquiry-->
+    <div>
+        @Html.ActionLink("Quick Enquiry", "create", "content", null, new { data_modal = "", @class = "quick-enquiry" })
+    </div>
+    <!--modal placeholder-->
+    <div id='myEnquiryModal' class='modal fade'>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div id='myModalContent'></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-styled" id="myErroMsgModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myLabel1"></h4>
+                </div>
+                <div class="modal-body text-center">
+                    <h4 id="Msg"></h4>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-md-offset-2 col-md-10 text-right">
+                        <input type="button" id="myErroMsgModalNoButton" class="btn btn-info btn-sm" data-dismiss="modal" onclick="CloseMyModal()" value="Close" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="text-center modal" id="waiting" style="display: none; box-shadow: 5px 5px 5px #888888;">
+        <div><h4>Sending Message</h4></div>
+        <div>
+            <img src="~/Content/img/496(1).GIF" alt="Loading" style="margin-bottom: 10px" /><br />
+            Please wait...
+        </div>
+    </div>
+
+    <div class="text-center panel" id="ajaxLoading" style="display: none">
+        <div class="panel-body">
+            <img src="~/Content/img/ajax-loader.gif" />
+            <p>Please wait..</p>
+        </div>
+    </div>
+
+    
+
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>
+
+
+<script type="text/javascript">
+    $(function () {
+
+        $.ajaxSetup({ cache: false });
+
+        $("a[data-modal]").on("click", function (e) {
+            // hide dropdown if any (this is used wehen invoking modal from link in bootstrap dropdown )
+            //$(e.target).closest('.btn-group').children('.dropdown-toggle').dropdown('toggle');
+
+            $('#myModalContent').load(this.href, function () {
+                $('#myEnquiryModal').modal({
+                    /*backdrop: 'static',*/
+                    keyboard: true
+                }, 'show');
+                bindForm(this);
+            });
+            return false;
+        });
+    });
+
+    function bindForm(dialog) {
+        $('form', dialog).submit(function (e) {
+            e.preventDefault();
+            $('#myEnquiryModal').modal('hide');
+            //$('#ajaxLoading').css("display","none");
+            $("#waiting").css("display", "block");
+            $.ajax({
+                url: this.action,
+                type: this.method,
+                data: $(this).serialize(),
+                success: function (result) {
+                    $("#waiting").css("display", "none");
+                    if (result.success) {
+                        $('#myEnquiryModal').modal('hide');
+                        ShowMessageBox1(result.Message);
+                    } else {
+                        $('#myModalContent').html(result);
+                        $('#myEnquiryModal').modal('show');
+                        bindForm(dialog);
+                    }
+                }
+            });
+            return false;
+        });
+    }
+    function ShowMessageBox1(message) {
+        var msgId = message;
+        if (msgId != null && msgId.toString().trim() != "") {
+            if (msgId == "1") {
+                $('#myLabel1').html('<h3>Thank You</h3>');
+                $('#Msg').html('<h4 class="text-success">Your message has been sent</h4><p>We will be in touch soon.</p>');
+                $('#myErroMsgModal').modal('show');
+            }
+            else if (msgId == "0"){
+                $('#myLabel1').html('<h3 class="text-danger">Sorry</h3>');
+                $('#Msg').text('Your Request cannot be completed at this time. Please Try Again.');
+                $('#myErroMsgModal').modal('show');
+            }
+            //$('#myErroMsgModal').modal('show');
+        }
+    }
+
+</script>

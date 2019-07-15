@@ -1,0 +1,51 @@
+﻿@model Brothers.Entities.ViewModels.MstTourPackageGeneralViewAndSearch
+<div id="DataGrid">
+    @if (Model.MstTourPackageList.Count() > 0)
+    {
+        foreach (var item in Model.MstTourPackageList)
+        {
+
+        <div class="offer-slider-i catalog-i tour-grid fly-in">
+            <a href="@Url.Action("tourpackagedetails","tripplanner",new {id = @item.PackageID  })" class="offer-slider-img">
+                <img alt="" src="@item.DefaultPhoto" height="250" width="344">
+                <span class="offer-slider-overlay">
+                    <span class="offer-slider-btn"> view details</span><span></span>
+                </span>
+            </a>
+            <div class="offer-slider-txt">
+                <div class="offer-slider-link"><a href="#">@Html.DisplayFor(m => item.PackageName)</a></div>
+                <div class="offer-slider-l">
+                    <div class="offer-slider-location">Duration @item.TotalDays Days / @(item.TotalDays - 1) Nights</div>
+                    <nav class="stars">
+                        
+                        <div class="clear"></div>
+                    </nav>
+                </div>
+                <div class="offer-slider-r">
+                    <b>@item.Price.ToString("#,##0") INR</b>
+                    <span>tour price</span>
+                </div>
+                <div class="offer-slider-devider"></div>
+              
+                <div class="offer-slider-lead">@*@Html.DisplayFor(m => item.PackageRouting)*@</div>
+            
+                    <a href="@Url.Action("tourpackagedetails","tripplanner",new {id = @item.PackageID  })" class="cat-list-btn" style="margin-top: 50px;">Select</a>
+            </div>
+        </div>
+
+        }
+
+    }
+
+  
+</div>
+@*@*error message*@
+@*<div id="ErrMsg" style="display:none;">
+        <input type="hidden" id="ErrMsgHiddenField" name="ErrMsg" value="@TempData["ErrMsg"]" />
+    </div>*@
+
+<style>
+  .offer-slider-r{
+      float:left;
+  }
+</style>

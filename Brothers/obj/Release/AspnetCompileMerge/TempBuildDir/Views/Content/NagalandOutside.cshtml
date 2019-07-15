@@ -1,0 +1,142 @@
+﻿
+@{
+    ViewBag.Title = "NagalandOutside";
+    Layout = "~/Views/Shared/AboutNagalandLayout.cshtml";
+}
+
+<div class="well subheading-well">
+    <b class="subheading">Outside Kohima</b>
+</div>
+
+
+<h4 class="text-info">Places Of Interest Outside Kohima </h4>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/nagaland/ungma.jpg" alt="ungma" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="ungma" />
+            </div>
+        </div>
+        <h5>Ungma</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/nagaland/Chuchuyimlang.jpg" alt="Chuchuyimlang" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Chuchuyimlang" />
+            </div>
+        </div>
+        <h5>Chuchuyimlang</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/nagaland/mopungchuket.jpg" alt="mopungchuket" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="mopungchuket" />
+            </div>
+        </div>
+        <h5>Mopungchuket </h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/nagaland/Aliba.jpg" alt="Aliba" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="Aliba" />
+            </div>
+        </div>
+        <h5>Aliba Village</h5>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/nagaland/tuensang.jpg" alt="tuensang" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="tuensang" />
+            </div>
+        </div>
+        <h5>Tuensang</h5>
+    </div>
+    <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+        <div class="view view-first">
+            <img src="~/Content/img/nagaland/konyak.jpg" alt="konyak" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+            <div class="mask">
+                <input type="button" class="info" value="Know More" id="konyak" />
+            </div>
+        </div>
+        <h5>Konyak Village</h5>
+    </div>
+    
+    
+</div>
+
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "ungma") {
+            $('#myPicLabel').text('Ungma')
+            $('#pic-path').attr('src', '/Content/img/nagaland/ungma.jpg');
+            $('#pic-details').html("<p>Ungma This Is The Oldest And The Largest Of All The Ao Villages And The Second Largest Village In Nagaland, Next Only To Bara Basti Of Kohima. It Occupies A Unique Position In The History Of The Ao Nagas, For It Is Said That The Whole Ao Tribe Founded This Village When They First Entered The Land From Their Ancestral Home At Chungliyimti (Now Within The Sangtam Naga Territory). The Rich Ao Culture And Tradition Is Jealously Guarded And Practiced By The Villagers Even Today And The Place Is Considered To Be A Living Museum Of The Traditions Of The Tribe.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Chuchuyimlang") {
+            $('#myPicLabel').text('Chuchuyimlang')
+            $('#pic-path').attr('src', '/Content/img/nagaland/Chuchuyimlang.jpg');
+            $('#pic-details').html("<p>Chuchuyimlang It Is The Village Of Festivals For The Ao Nagas. The Moatsu Festival, Based On Community Bonding, Takes Place Here From The First Of May Till The Third. During This Period, The Villagers Expressed Their Friendship Towards Villagers By Exchanging Gifts Etc. The Tourist Village Established There Is A Showcase Of This Spirit Of The Villagers In The Most Natural And Uncontaminated Manner.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "mopungchuket") {
+            $('#myPicLabel').text('Mopungchuket ')
+            $('#pic-path').attr('src', '/Content/img/nagaland/mopungchuket.jpg');
+            $('#pic-details').html("<p>Mopungchuket Is An Ao Village. Legend Has It That The Village Was Chosen By “Mopung “ - A Palm Leaf In Their Dialect. The Village Is Enriched With Many Folklore Story Depicted By Time-Pillar Erected In The Village. In The Village, There Is Two Monuments Cum Watch Towers Dedicated To Jinah And Etiphen I.E Romeo And Juliet Of The Village. Small Museum, Morungs Are Worth Visiting.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "Aliba") {
+            $('#myPicLabel').text('Aliba Village')
+            $('#pic-path').attr('src', '/Content/img/nagaland/Aliba.jpg');
+            $('#pic-details').html("<p>Aliba Village Situated At An Altitude Of 3,465Ft. On The Ongpangkong Range Is One Of The Most Developed & Cleanest Villages In Mokokchung District. The Prime Attraction Of This Village Is A Giant Süngkong (Log-Drum As Called By The Ao Nagas). This Massive Log 36 Feet In Length, And 6.8 Feet In Diameter, Implying Some 21.37 Feet In Circumference Or Girth Is Probably The Biggest Log-Drum In The World. The Echoes Of Pounding Of This Drum Can Be Heard As Far As Changki, Longkhum, Mangmetong & Khensa Villages. </p>");
+            $('#myModal').modal('show');
+        }
+
+        if (alt == "tuensang") {
+            $('#myPicLabel').text('Tuensang')
+            $('#pic-path').attr('src', '/Content/img/nagaland/tuensang.jpg');
+            $('#pic-details').html("<p>Tuensang Is One Of The Eight Districts Of Nagaland. It Lies In The Easternmost Part Of Nagaland, And Is Named After The Village Which Is Situated Closed By The District Headquarter. The District Is Populated By 5 (Five) Major Tribes Namely, Chang, Sangtam, Khiamniungan, Yimchunger, Phom And A Part Of Sumi.</p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "konyak") {
+            $('#myPicLabel').text('Konyak Village')
+            $('#pic-path').attr('src', '/Content/img/nagaland/konyak.jpg');
+            $('#pic-details').html("<p>The Konyakare Recognised Among Other Naga By Their Tattoos, Which They Have All Over Their Face And Hands Facial Tattoos Were Earned For Taking An Enemy's Head. They Are Called The Land Of Angh's. They Have The Largest Population Among The Nagas.</p>");
+            $('#myModal').modal('show');
+        }
+        
+    });
+
+</script>

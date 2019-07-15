@@ -1,0 +1,175 @@
+﻿@model Brothers.Entities.ViewModels.MstTourPackageGeneralViewAndSearch
+
+@{
+    ViewBag.Title = "MountPandimTour";
+    Layout = "~/Views/Shared/_MountPandim.cshtml";
+}
+
+<div class="body-padding">
+    <div class="mp-slider">
+        <!-- // slider // -->
+        <div class="mp-slider-row">
+            <div class="swiper-container">
+                <div class="swiper-preloader-bg"></div>
+                <div id="preloader">
+                    <div id="spinner"></div>
+                </div>
+
+                <a href="#" class="arrow-left"></a>
+                <a href="#" class="arrow-right"></a>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slide-section" style="background:url(../../Content/img/2.jpg) center top no-repeat;">
+                            <div class="mp-slider-lbl">Great journey begins with a small step</div>
+                            <div class="mp-slider-lbl-a">Make Your Life Better and Bright!  You must trip with Us!</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-section slide-b" style="background:url(../../Content/img/1.jpg) center top no-repeat;">
+                            <div class="mp-slider-lbl">Relax with us. we love our clients</div>
+                            <div class="mp-slider-lbl-a">Make Your Life Better and Bright!  You must trip with Us!</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-section slide-b" style="background:url(../../Content/img/5.jpg) center top no-repeat;">
+                            <div class="mp-slider-lbl">the best relax with us</div>
+                            <div class="mp-slider-lbl-a">Make Your Life Better and Bright!  You must trip with Us!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- \\ slider \\ -->
+    </div>
+</div>
+<div class="main-cont">
+  
+    <div class="mp-pop">
+        <div class="wrapper-padding-a">
+            <div class="popular-slider">
+                <header class="fly-in page-lbl">
+                    <b>We are Offering the hottest offers</b>
+                    <p>Packages for Best-Selling Destinations in India.</p>
+                </header>
+                <div class="pop-destinations">
+                    
+                    <div class="mp-popular-row popular-flat">
+
+                        @Html.Partial("pvTourPackages", Model);
+
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <div class="mp-popular">
+                <header class="fly-in">
+                    <b>Our travel Agency</b>
+                    <p>SOME GOOD REASONS TO BOOK WITH MOUNT PANDIM TOURS AND TRAVEL</p>
+                </header>
+                <div class="fly-in advantages-row flat">
+                    <div class="flat-adv">
+                        <div class="flat-adv-a">
+                            <div class="flat-adv-l">
+                                <img alt="" src="~/MountPandim/img/adv-a-01.png" />
+                            </div>
+                            <div class="flat-adv-r">
+                                <div class="flat-adv-rb">
+                                    <div class="flat-adv-b">+2500 Premium tours</div>
+                                    <div class="flat-adv-c">We organize customised holiday packages , both domestic and international , for Families as well as Honeymooners.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flat-adv">
+                        <div class="flat-adv-a">
+                            <div class="flat-adv-l">
+                                <img alt="" src="~/MountPandim/img/adv-a-02.png" />
+                            </div>
+                            <div class="flat-adv-r">
+                                <div class="flat-adv-rb">
+                                    <div class="flat-adv-b">+50,000 Customers</div>
+                                    <div class="flat-adv-c">Customer satisfaction is Prime for us , Our strength is that more than 70% business is through repeat customers </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flat-adv">
+                        <div class="flat-adv-a">
+                            <div class="flat-adv-l">
+                                <img alt="" src="~/MountPandim/img/adv-a-03.png" />
+                            </div>
+                            <div class="flat-adv-r">
+                                <div class="flat-adv-rb">
+                                    <div class="flat-adv-b">Why Choose Us?</div>
+                                    <div class="flat-adv-c">We provide customized travel services in all directions, from Premium luxury hotels to Holiday packages, all of which cover both Domestic and International destinations.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flat-adv">
+                        <div class="flat-adv-a">
+                            <div class="flat-adv-l">
+                                <img alt="" src="~/MountPandim/img/adv-a-04.png" />
+                            </div>
+                            <div class="flat-adv-r">
+                                <div class="flat-adv-rb">
+                                    <div class="flat-adv-b">customer support</div>
+                                    <div class="flat-adv-c">10 AM to 7 PM, Monday – Saturday Email : info@mountpandim.com, <br />
+                                     Phone: +91-700 125 8482 , +91-947 596 8561 </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="testimonials-flat">
+        <div class="testimonials-holder fly-in">
+            <div id="testimonials-slider">
+                <!-- // -->
+                <div class="testimonials-i">
+                    <div class="testimonials-a"><img alt="" src="~/MountPandim/img/testimonials-02.png" /></div>
+                    <div class="testimonials-b">"I had planned my honeymoon to Sikkim through Mount Pandim. I am delighted to have such amazing services at better quotes than competitors. Special thanks to Deepen and his team from Mount Pandim."</div>
+                    <div class="testimonials-c">
+                        
+                    </div>
+                    <div class="testimonials-d">Sweta Badhwar, New Delhi</div>
+                </div>
+                <!-- \\ -->
+            </div>
+        </div>
+    </div>
+
+    <div class="inform-block">
+        <div class="wrapper-padding">
+            <header class="fly-in page-lbl">
+                <b>helpful information</b>
+                <p>Latest from the Blog</p>
+            </header>
+
+            @Html.Partial("pvLatestBlog", Model)
+            
+
+
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    
+    
+</div>
+
+<style>
+    .mp-pop {
+    padding: 44px 0px 0px 0px;
+}
+    .testimonials-flat {
+        padding: 80px 0 0 0;
+  
+    background: url('../../img/TestimonialBanner.png') center top no-repeat;
+}
+</style>

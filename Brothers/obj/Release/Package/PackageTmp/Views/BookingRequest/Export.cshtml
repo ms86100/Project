@@ -1,0 +1,123 @@
+﻿@model Brothers.Entities.ViewModels.MstBookingExportModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Export</title>
+    <style>
+        .text-primary {
+            color: #428bca;
+        }
+
+        .text-danger {
+            color: #b94a48;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="padding:0px;">
+        <div>
+            <div style="background-color:#808080; padding:10px">
+                <h3 style="margin:0px; color:white; font-family:Verdana">@Model.MstTourPackages.PackageName</h3>
+            </div>
+            <div>
+                <div style="border:1px solid rgba(0, 0, 0, 0.30); padding:7px;">
+                    <table>
+                        <tr>
+                            <td style="width:200px;">Package Routing</td>
+                            <td>@Model.MstTourPackages.PackageRouting</td>
+                        </tr>
+                        <tr>
+                            <td>Package Description</td>
+                            <td>@Model.MstTourPackages.PackageRemarks</td>
+                        </tr>
+                        <tr>
+                            <td>Pickup Point</td>
+                            <td>@Model.MstTourPackages.PickupPoint</td>
+                        </tr>
+                        <tr>
+                            <td>Drop Point</td>
+                            <td>@Model.MstTourPackages.DropPoint</td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="border:1px solid rgba(0, 0, 0, 0.30); padding:7px;margin-top:3px;">
+                    <h4 class="text-primary">Itinerary Details</h4>
+                    @if (Model.MstTourActivityList.Count() > 0)
+                    {
+                        foreach (var item in Model.MstTourActivityList)
+                        {
+                            <table border="1">
+                                <thead>
+                                    <tr>
+                                        <th style="min-width:170px; background-color:#4acaed; color:white;">Day @item.DayNo</th>
+                                        <th style="background-color:#808080; color:white; min-width:400px;">@item.ActivityTitle</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align:center">Activity</td>
+                                        <td style="text-align:center">@item.ActivityRemarks</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:center">Overnight</td>
+                                        @if (item.DestinationID != null && item.DestinationID != 5)
+                                        {
+                                            <td style="text-align:center">@item.DestinationName</td>
+                                        }
+                                        else
+                                        {
+                                            <td style="text-align:center">Not Required</td>
+                                        }
+                                    </tr>
+                                </tbody>
+                            </table>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+        <div>
+            <div style="border:1px solid rgba(0, 0, 0, 0.30); padding:7px;margin-top:3px;">
+                <h4 class="text-primary">Personal Details</h4>
+                <table>
+                    <tr>
+                        <td style="width:200px;text-transform:capitalize">Name</td>
+                        <td>@Model.MstTourBooking.ClientName</td>
+                    </tr>
+                    <tr>
+                        <td style="width:200px;">Email Address</td>
+                        <td>@Model.MstTourBooking.ClientEmailID</td>
+                    </tr>
+                    <tr>
+                        <td style="width:200px;">Contact No.</td>
+                        <td>@Model.MstTourBooking.ClientContactNo</td>
+                    </tr>
+                    <tr>
+                        <td style="width:200px;">Arrival Date</td>
+                        <td>@Model.MstTourBooking.ArrivalDate.ToString("dd MMM yyyy")</td>
+                    </tr>
+                    <tr>
+                        <td style="width:200px;">Total Persons</td>
+                        <td>@Model.MstTourBooking.AdultPax Adults/@Model.MstTourBooking.ChildPax Child/@Model.MstTourBooking.InfantPax Infants</td>
+                    </tr>
+                    <tr>
+                        <td style="width:200px;">Requirements</td>
+                        <td>@Model.MstTourBooking.ClientRequirement</td>
+                    </tr>
+                    <tr>
+                        <td style="width:200px;">Booking Date</td>
+                        <td>@Model.MstTourBooking.BookingDate.ToString("dd MMM yyyy")</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

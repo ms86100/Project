@@ -1,0 +1,5 @@
+SCC = This is a source code control file
+
+[Brothers.sln]
+SCC_Aux_Path = http://netspeqpc/VaultService|:5
+SCC_Project_Name = $/Brothers

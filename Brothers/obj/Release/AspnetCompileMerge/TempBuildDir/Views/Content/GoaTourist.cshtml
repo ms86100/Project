@@ -1,0 +1,155 @@
+﻿@{
+    ViewBag.Title = "GoaTourist";
+    Layout = "~/Views/Shared/GoaLayout.cshtml";
+}
+<div class="well subheading-well">
+    <b class="subheading">Tourist Destination</b>
+</div>
+<div class="col-md-12">
+  
+    <p>
+        In Past, The Natural Beauty Of Goa Attracted A Number Of Contenders, Vying To Rule Over Its Fortunes. In Effect, They Gifted To It, Some Of Its Priceless Monuments And A Rich Cultural Heritage. The Bhija, Silahara And Kadamba Rulers Gifted A Number Of Magnificent Temples, While The Adil Shahi Rulers Left Behind Fine Mosques And Forts.
+    </p>
+    <p>
+        Geographically Divided Into North And South, Goa Has Panaji As Its Capital. In Panaji You Can Still Find The Portuguese Influence In Its Narrow Cobbled Streets, Latin Villas, Overhanging Balconies And White Washed Churches. Nine Km Off Panaji Is Old Goa, The Old Hub Of Portugal's Eastern Empire. Here, In Old Goa, You Can See The Remains Of This Once Magnificent City, In The Form Of Half A Dozen Cathedrals And Churches.
+    </p>
+    <p>
+        South Goa Is Home To Beaches Like Colva And Bogmalo And Some Other Popular Beach Resorts. Its Capital Margao, Is An Important Commercial Centre Of South Goa. East Of The Margao Is Ponda, A Town Known For Its Complex Of Hindu Temples.
+    </p>
+    <div class="row">
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+
+                <img src="~/Content/img/goaimg/1.-Panji.jpg" alt="1.-Panji" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="1.-Panji" />
+                </div>
+            </div>
+            <h5>Panaji</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/goaimg/2.-Old-GoaSe_cathedral_goa.jpg" alt="2.-Old-GoaSe_cathedral_goa" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="2.-Old-GoaSe_cathedral_goa" />
+                </div>
+            </div>
+            <h5>Old Goa</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/goaimg/3.-Margao.jpg" alt="3.-Margao" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="3.-Margao" />
+                </div>
+            </div>
+            <h5>Margao</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/goaimg/4.-Ponda.jpg" alt="4.-Ponda" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="4.-Ponda" />
+                </div>
+            </div>
+            <h5>Ponda</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/goaimg/5.-Mapusa.jpg" alt="5.-Mapusa" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="5.-Mapusa" />
+                </div>
+            </div>
+            <h5>Mapusa</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/goaimg/6.-Vasco-da-Gama.jpg" alt="6.-Vasco-da-Gama" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="6.-Vasco-da-Gama" />
+                </div>
+            </div>
+            <h5>Vasco da Gama</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/goaimg/6.-Canacona.jpg" alt="6.-Canacona" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="6.-Canacona" />
+                </div>
+            </div>
+            <h5>Canacona</h5>
+        </div>
+        
+    </div>
+    
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "1.-Panji") {
+            $('#myPicLabel').text('Panaji')
+            $('#pic-path').attr('src', '/Content/img/goaimg/1.-Panji.jpg');
+            $('#pic-details').html('<p>One Of India’s Smallest And Most Relaxed State Capitals, Panaji (Also Still Widely Known By Its Former Portuguese Name Panjim) Crowds Around The Peninsula Overlooking The Broad Mandovi River, Where Cruise Boats And Floating Casinos Ply The Waters, Casting Neon Reflections In The Night.<br/>One Of India’s Smallest And Most Relaxed State Capitals, Panaji (Also Still Widely Known By Its Former Portuguese Name Panjim) Crowds Around The Peninsula Overlooking The Broad Mandovi River, Where Cruise Boats And Floating Casinos Ply The Waters, Casting Neon Reflections In The Night.<br/>But It’s The Tangle Of Narrow Streets In The Old Latin Quarter That Really Steal The Show. Nowhere Is The Portuguese Influence Felt More Strongly Than Here, Where The Late Afternoon Sun Lights Up Yellow Houses With Purple Doors, And Around Each Corner You’ll Find Restored Ochre-Coloured Mansions With Terracotta-Tiled Roofs, Wrought Iron Balconies And Arched Oyster-Shell Windows.<br/>Panjim Is A Place For Walking, Enjoying The Peace Of An Afternoon Siesta, Eating Well And Meeting Real Goans. It’s Also A Place To Catch A Movie, A Cultural Show Or To Take The Kids To The Planetarium.<br/>A Day Or Two In Panaji Really Is An Essential Part Of The Goan Experience.</p>');
+        }
+        else if (alt == "2.-Old-GoaSe_cathedral_goa") {
+            $('#myPicLabel').text('Old Goa')
+            $('#pic-path').attr('src', '/Content/img/goaimg/2.-Old-GoaSe_cathedral_goa.jpg');
+            $('#pic-details').html('<p>Old Goa Or Velha Goa Is A Historical City In North Goa District In The Indian State Of Goa. The City Was Constructed By The Bijapur In The 15th Century, And Served As Capital Of Portuguese India From The 16th Century Until Its Abandonment In The 18th Century Due To A Plague. It Is Said To Have Once Been A City Of Nearly 200,000 Where From, Before The Plague, The Portuguese Traded Across Continents. The Remains Of The City Are A UNESCO World Heritage Site. Old Goa Is Approximately 10Kms. East Of The State Capital Panjim.</p>');
+        }
+        else if (alt == "3.-Margao") {
+            $('#myPicLabel').text('Margao')
+            $('#pic-path').attr('src', '/Content/img/goaimg/3.-Margao.jpg');
+            $('#pic-details').html('<p>Margao (Also Known As Madgaon) Is The Capital Of South Goa, A Busy At Times Traffic-Clogged – Market Town Of A Manageable Size For Getting Things Done. As The Major Transport Hub Of The South, Lots Of Travellers Pass Through Margao’s Train Station Or Kadamba Bus Stand; Fewer Choose To Stay Here But It’s A Useful Place For Shopping, Catching A Local Sporting Event Or Simply Enjoying The Busy Energy Of Big City India In Small-Town Form.<br/>Though The Modern Town Favours Commerce Over Culture It Certainly Lacks Panaji’s Charms This Wasn’t Always The Case. Before The Portuguese Conquests Of The 16th Century Onward, Margao Was A Centre For Both Pilgrimage And Learning, With Dozens Of Hindu Temples And A Library Of Thousands Upon Thousands Of Volumes. However, All Traces Were Destroyed By The Portuguese, As Margao Became Absorbed Into Their 17th -Century Novas Conquistas (New Conquests). The Small Shiva Temple, Just South Of The Covered Market, Still Attracts Hindus Each Evening, To Light Candles And Incense, And Leave Offerings Of Garlanded Marigolds And Coconuts To The Ever-Popular God.<br/>Margao’s Compact Town Centre Ranges Around The Oblong Municipal Gardens, With Shops, Restaurants, Atms And The Covered Market All Within Easy Reach. To The North Of Town, Is The Old Portuguese-Flavoured Largo De Igreja District; About 1km North Further Is The Main (Kadamba) Bus Station, And 1.5km Southeast Of The Municipal Garden Is Margao’s Train Station.</p>');
+        }
+        else if (alt == "4.-Ponda") {
+            $('#myPicLabel').text('Ponda')
+            $('#pic-path').attr('src', '/Content/img/goaimg/4.-Ponda.jpg');
+            $('#pic-details').html("<p>Ponda, Also Known As Fonda, Is A City And A Municipal Council In The North Goa District Of Goa, India. Located In The Central Area Of Goa, Ponda Lies 29Kms. (18 Mi) Southeast Of Panji, The Capital Of Goa. The Industrial Center Of The State, Ponda Is Home To Many Large Factories And Industrial Estates, And Is Goa's Fastest-Growing City.</p>");
+        }
+        else if (alt == "5.-Mapusa") {
+            $('#myPicLabel').text('Mapusa')
+            $('#pic-path').attr('src', '/Content/img/goaimg/5.-Mapusa.jpg');
+            $('#pic-details').html("<p>Mapusa Is The Largest Town In Northern Goa, And Is Most Often Visited For Its Busy Friday Market, Which Attracts Scores Of Buyers And Sellers From Neighbouring Towns And Villages, As Well As A Healthy Intake Of Tourists From The Northern Beaches. It’s A Good Place To Pick Up The Usual Range Of Embroidered Bed Sheets And The Like, At Prices Far Lower Than In The Beach Resorts.<br/>Many Travellers Pass Through Mapusa Anyway As It’s The Major Transport Hub For Northern Goa Buses. Most Amenities Are Arranged Around The Municipal Gardens, Just North Of The Kadamba Bus Station And Main Market Site.<br/>Environmental Action Group Goa Foundation Has Its Headquarters In Mapusa, While Numerous Charity Organisations, Including International Animal Rescue And El Shaddai Are Nearby In Assagao.</p>");
+        }
+        else if (alt == "6.-Vasco-da-Gama") {
+            $('#myPicLabel').text('Vasco Da Gama')
+            $('#pic-path').attr('src', '/Content/img/goaimg/6.-Vasco-da-Gama.jpg');
+            $('#pic-details').html("<p>Vasco Da Gama Is A Port City In The West Coast Indian State Goa. Vasco As Goa's Most Populous Overgrown Town Is Referred To, And The Adjoining Mormugao Port Are Busy, Dusty And Mainly Commercial Centres Today. Mormugao Port Was Constructed In 1888, And Is Today One Of The Major Ports Of India. Between One-Third Of India's Ore Exports Leave From Here.<br/>Ship-Builder Goa Shipyard Limited, That Builds Navy And Coast Guard Vessels, Is Built On The 1957-Formed Colonial Barge-Repair Yard Estaleiros Navais De Goa.<br/>The Indian Navy Also Has A Conspicuous Presence In Mormugao, With Its Vast Campus, And Its Contested Control Over The Dabolim Airport Enclave. INS Gomantak Is The Headquarters Of The Indian Navy In Goa And Sits On The Hill Overlooking St Andrew's Church And The Zuari River. Nearby Is The Naval Hospital INS Jeevanti. Overlooking The Mormugao Port Is The Navy's Hydrographic School. This Area's Largest Naval Presence Is INS Hansa, Which Includes The Dabolim Airport.</p>");
+        }
+        else if (alt == "6.-Canacona") {
+            $('#myPicLabel').text('Canacona')
+            $('#pic-path').attr('src', '/Content/img/goaimg/6.-Canacona.jpg');
+            $('#pic-details').html("<p>Canacona Is A City And A Municipal Council In South Goa District In The State Of Goa, India. Canacona Or Kankon Taluka Includes Places Such As Patnem, Chaudi, Poinguinim, Loliye, Agonda And Gaumdongre.</p>");
+        }
+       
+        $('#myModal').modal('show');
+    });
+
+</script>

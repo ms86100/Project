@@ -1,0 +1,153 @@
+﻿
+@{
+    Layout = "~/Views/Shared/BhutanLayout.cshtml";
+}
+
+<div class="well subheading-well">
+    <b class="subheading">Trongsa</b>
+</div>
+<div class="well hidden-xs" style="padding:10px;">
+    <img src="~/Content/img/Bhutan/Trongsa/Trongsa.jpg" class="img-rounded resp-img" />
+</div>
+<div class="col-md-12">
+    <h4 class="text-info">Trongsa (Alt. 7545ft.)</h4>
+    <p>
+        Trongsa Forms The Central Hub Of The Nation And Is Historically The Place From Where Attempts At Unifying The Country Were Launched. Both His Majesty King Ugyen Wangchuck, The Penlop Of Trongsa, Who Was Elected The Country's First Hereditary Monarch And His Successor, King Jigme Wangchuck, Ruled The Country From Trongsa Ancient Seat. The Crown Prince Of Bhutan Normally Holds The Position Of The Trongsa Penlop Prior To Ascending The Throne. Including The Present King. The Entire Landscape Around Trongsa Is Spectacular.
+    </p>
+    <h4 class="text-info">Places Of Interest In And Around Trongsa </h4>
+    <div class="row">
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/Trongsa/ChendbjiChorten.JPG" alt="ChendbjiChorten" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="ChendbjiChorten" />
+                </div>
+            </div>
+            <h5>Chendbji Chorten</h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/Trongsa/TrongsaDzong.jpg" alt="TrongsaDzong" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="TrongsaDzong" />
+                </div>
+            </div>
+            <h5>Trongsa Dzong </h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/Trongsa/TaDzong.jpg" alt="TaDzong" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="TaDzong" />
+                </div>
+            </div>
+            <h5>Ta Dzong</h5>
+        </div>
+    </div>
+    <h4 class="text-info">Excursion Around Trongsa </h4>
+    <div class="row">
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/Trongsa/KuengaRabten.JPG" alt="KuengaRabten" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="KuengaRabten" />
+                </div>
+            </div>
+            <h5>Kuenga Rabten </h5>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+            <div class="view view-first">
+                <img src="~/Content/img/Bhutan/Trongsa/SemjiVillage.jpg" alt="SemjiVillage" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                <div class="mask">
+                    <input type="button" class="info" value="Know More" id="SemjiVillage" />
+                </div>
+            </div>
+            <h5>Semji Village</h5>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myPicLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="" id="pic-path" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7" id="pic-details">
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<div class="modal fade" id="TaModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Ta Dzong</h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-4 col-sm-5" style="padding:8px;">
+                    <img src="~/Content/img/Bhutan/Trongsa/TaDzong.jpg" class="img-rounded resp-img" />
+                </div>
+                <div class="col-md-8 col-sm-7">
+                    <p>
+                        The Ta Dzong, A Cylindrical Stone Structure Rising Five Storeys, Was Built In 1652 By Chogyal Minjur Tempa, A Task Entrusted To Him By Zhabdrung Ngawang Namgyal. After More Than 350 Years, It Has Been Resurrected Into A Classy Museum, That Represents A Tasteful Blend Of Tradition And Modernity. There Are 224 Items On Display Including A Sacred Image Of Sung Joenma Dorji Chang (Self Spoken Vajradharna), A Bronze Statue Of Pema Lingpa, Made By Himself, And A Number Of Centuries-Old Treasures Like Dance And Ritual Costumes And Objects, Ancient Prayer Books, Paintings And Scrolls, And Textiles. 
+                    </p>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12">
+                    <p>
+                        The Ta Dzong Is A Living Museum And The Main Lhakhang In The Utse Is Dedicated To The Maitreya Buddha (Gyaltsab Jampa), Also Known As The Future Buddha). A Khesar Lhakhang Is Dedicated To Khesar Of Ling. The Tower Has Always Been A Place Of Retreat And There Are Hermits In Practice, Including Two Yogis, Who Are In Life Long Meditation. The Ta Dzong Is The Only Structure That Has Been Restored Specifically To Tribute The Wangchuck Dynasty As Bhutan Celebrates The Centenary Of The Monarchy.
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $('.view input').on('click', function (e) {
+        e.preventDefault();
+        var alt = $(this).attr('id');
+        if (alt == "ChendbjiChorten") {
+            $('#myPicLabel').text('Chendbji Chorten')
+            $('#pic-path').attr('src', '/Content/img/Bhutan/Trongsa/ChendbjiChorten.JPG');
+            $('#pic-details').html('<p>Approximate Four Hours Drive From Wangduephodrang Is Chendbji Chorten, Patterned On Swayambhunath Temple In Kathmandu. It Was Built In 18th Century By Lama Shida, From Tibet, To Cover The Remains Of An Evil Spirit That Was Subdued At This Spot.</p>');
+            $('#myModal').modal('show');
+        }
+        else if (alt == "TrongsaDzong") {
+            $('#myPicLabel').text('Trongsa Dzong ')
+            $('#pic-path').attr('src', '/Content/img/Bhutan/Trongsa/TrongsaDzong.jpg');
+            $('#pic-details').html("<p>Like Almost All Towns In The Kingdom, This Dzong Architecture Dominates The Entire Trongsa Horizon Dwarfing The Surrounding Buildings. Built In 1648, It Was The Seat Of Power Over Central And Eastern Bhutan. Both The First And Second King Ruled The Country From This Ancient Seat. Protected From Invaders By An Impenetrable Valley, Trongsa Dzong Is An Impregnable Fortress. </p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "TaDzong") {
+            $('#TaModal').modal('show');
+        }
+        else if (alt == "KuengaRabten") {
+            $('#myPicLabel').text('Kuenga Rabten ')
+            $('#pic-path').attr('src', '/Content/img/Bhutan/Trongsa/KuengaRabten.JPG');
+            $('#pic-details').html("<p>The 23 Km Drive From Trongsa To Kuenga Rabten Takes About An Hour And Passes Through Open Countryside, High Above A River Gorge. The Land Slopes Quite Gently In This Region, And Farming Is Well Developed, So There Is Much Of Interest To Observe In The Field And In The Villages As One Speeds Along. Kuenga Rabten ,At Present Part Of The Palace Is Used As Library. From The Palace, One Can Take A Hike Up To The Road And Further Along The Village To A Nunnery. The Duration Of The Hike Is About 25 Minutes, With Gradual Ascent. </p>");
+            $('#myModal').modal('show');
+        }
+        else if (alt == "SemjiVillage") {
+            $('#myPicLabel').text('Semji Village – Trongsa')
+            $('#pic-path').attr('src', '/Content/img/Bhutan/Trongsa/SemjiVillage.jpg');
+            $('#pic-details').html("<p>This Ancient Village Is Approx. 7km From Trongsa And Ideal For Bird Watching. Weather Permitting, Hiking Through The Dense Forest Provide Ample Opportunity To See Various Species Of Birds. At Semji, One Can Visit The Village And Subsequently Continue Hiking Downhill Till The High Way, Where Your Transportation Can Shuttle You Back To Trongsa Town. The Whole Hiking Trip Takes Approximately 4-5 Hours.</p>");
+            $('#myModal').modal('show');
+        }
+    });
+
+</script>

@@ -1,0 +1,145 @@
+﻿
+@{
+    ViewBag.Title = "AssamOutsideGuwahati";
+    Layout = "~/Views/Shared/AssamLayout.cshtml";
+}
+
+<div class="well subheading-well">
+    <b class="subheading">Outside  Guwahati</b>
+</div>
+<div class="well" style="padding:18px;">
+    <img src="~/Content/img/Assam/Majuli-Island.jpg" class="img-bordered resp-img" />
+</div>
+
+
+    <h4 class="text-info">Majuli Island</h4> 
+       <p>
+
+        The Biggest River Island In The World, Majuli Is Located On The River Brahmaputra In Aassam And Is Formed By Brahmaputra In The South And The Kherkutia Xuti Joined By The River Subansiri In The North. Making You Feel At Peace With Nature, It Is Home To Many Migratory Birds.
+        Located 1100Kms. Away From The Mouth Of The Brahmaputra, Majuli Had An Area Of 1,256Sq. Kms. In 1991 But Due To Soil Erosion, It Has Now Reduced To 8,75Sq. Km.
+
+    </p>
+    <p>
+        <b> How To Reach</b><br />
+
+
+        The Island Of Majuli Is Situated At A Distance Of 200Kms. To The East Of Guwahati, Which Is The Largest City Of Assam. Jorhat, An Important Town Within The State, Falls Nearest To The Island, Being Hardly 20 Kilometers Away. For Reaching Majuli, You Will First Have To Reach Jorhat, By Air, By Rail Or By Road. From There, Regular Ferries Operate Every Day To Take People To The Island. In Order To Know More About How To Reach Majuli, Go Through The Information Provided Below.
+    </p>
+
+   
+        <h4 class="text-info">Traveling To Majuli Island</h4>
+    <p>
+        By Air
+
+               The Township Of Jorhat, Situated In Upper Assam, Presents The Nearest Air Link From Majuli. It Is Well Connected With All The Major Cities Of Assam As Well As India, By Air. For Instance, There Are Flights To Jorhat Daily From Guwahati And Four Flights A Week From Calcutta. From Jorhat, There Is A Short Distance Travel Of Fourteen Kilometers To Neemati Ghat, Where Ferries Are Available To Majuli, From Around 10 A.M.
+    </p>
+    <p>
+        <b>By Road</b><br />
+
+        Jorhat Also Serves As The Nearest Road Link From Majuli. The ASTC Buses, Operating On A Regular Basis Within The State, Have Day As Well As Night Deluxe Buses Covering The Distance From Guwahati To Jorhat In Seven Hours. You Can Easily Find Buses Connecting The City With Other Parts Of Assam As Well.
+    </p>
+    <p>
+        <b>By Ferry</b><br />
+
+        There Are At Least Two Ferry Rides To Majuli. The First Ferry Ride Lasts For About An Hour. After This, There Is A Ten Minutes Bus Ride Across Major Sapori Which Is Yet Another Small Island En Route Majuli. The Second Ferry Starts Around 3 P.M. In The Afternoon And Is Only For A Short Time. Finally, After Another Bus Ride, The Main Town Of Majuli, Kamalabari, Is Reached.
+    </p>
+    <div class="col-md-12">
+
+        <div class="row">
+            <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+                <div class="view view-first">
+                    <img src="~/Content/img/Assam/Kaziranga-National-Park-Ass.jpg" alt="Kaziranga-National-Park-Ass" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                    <div class="mask">
+                        <input type="button" class="info" value="Know More" id="Kaziranga-National-Park-Ass" />
+                    </div>
+                </div>
+                <h5>Kaziranga National Park</h5>
+            </div>
+            <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+                <div class="view view-first">
+                    <img src="~/Content/img/Assam/Manas.jpg" alt="Manas" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                    <div class="mask">
+                        <input type="button" class="info" value="Know More" id="Manas" />
+                    </div>
+                </div>
+                <h5>Manas National Park</h5>
+            </div>
+            <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+                <div class="view view-first">
+                    <img src="~/Content/img/Assam/Pobitora-Wildlife-Sanctuary.jpg" alt="Pobitora-Wildlife-Sanctuary" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                    <div class="mask">
+                        <input type="button" class="info" value="Know More" id="Pobitora-Wildlife-Sanctuary" />
+                    </div>
+                </div>
+                <h5>Pobitora Wildlife Sanctuary</h5>
+            </div>
+            <div class="col-md-3 col-lg-3 col-sm-6 thumbbox">
+                <div class="view view-first">
+                    <img src="~/Content/img/Assam/Hayagriba-Madhaba-Temple.jpg" alt="Hayagriba-Madhaba-Temple" class="img-thumbnail resp-img" style="width:200px; height:210px;" />
+                    <div class="mask">
+                        <input type="button" class="info" value="Know More" id="Hayagriba-Madhaba-Temple" />
+                    </div>
+                </div>
+                <h5>Hayagriba-Madhaba-Temple</h5>
+            </div>
+        </div>
+
+
+        
+
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myPicLabel"></h4>
+                </div>
+                <div class="modal-body">
+                    <div class="col-md-4 col-sm-5" style="padding:8px;">
+                        <img src="" id="pic-path" class="img-rounded resp-img" />
+                    </div>
+                    <div class="col-md-8 col-sm-7" id="pic-details">
+
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+    <script>
+        $('.view input').on('click', function (e) {
+            e.preventDefault();
+            var alt = $(this).attr('id');
+            if (alt == "Kaziranga-National-Park-Ass") {
+                $('#myPicLabel').text('Kaziranga National Park')
+                $('#pic-path').attr('src', '/Content/img/Assam/Kaziranga-National-Park-Ass.jpg');
+                $('#pic-details').html("<p>A World Heritage Site, The Park Hosts Two Thirds Of The World’s Great One-Horned Rhinoceros. Kaziranga Also Boasts The Highest Density Of Tigers Among The Protected Areas In The World And Was Declared A Tiger Reserve In 2006. Though Sighting Of Tigers Are Difficult Because Of The Tall Grasses That Provide Excellent Camouflage, Their Presence Can Be Felt Everywhere By Way Of Pug Marks, Kills And Territorial Markings. The Park Is Home To Large Breeding Populations Of Elephants, Wild Water Buffalo And Swamp Deer.</p>");
+                $('#myModal').modal('show');
+            }
+            else if (alt == "Manas") {
+                $('#myPicLabel').text('Manas National Park')
+                $('#pic-path').attr('src', '/Content/img/Assam/Manas.jpg');
+                $('#pic-details').html("<p>Manas Has An Exotic Feel To It, With A Stunning Dense Forest And The Blue Hills Of Bhutan Looming In The Distance. Home To The Tiger, Elephant, Wild Buffalo And Gaur As Also That Golden Langur And Red Panda, Manas Is Classified As A World Heritage Site In Danger. <br/>You Get Permits To Enter The Park At Barpeta Road. You Can Enter In Your Own 4-Wheeler Or A Hired One. There Are No Forest Department Safaris But Private Resorts Offer Safaris. There Are Elephant Rides, Walks, Tea Plantation And Village Visits On Offer.</p>");
+                $('#myModal').modal('show');
+            }
+            else if (alt == "Pobitora-Wildlife-Sanctuary") {
+                $('#myPicLabel').text('Pobitora Wildlife Sanctuary')
+                $('#pic-path').attr('src', '/Content/img/Assam/Pobitora-Wildlife-Sanctuary.jpg');
+                $('#pic-details').html("<p>Pobitora Wildlife Sanctuary Is A Small Reserve Of 38 Sq. Kms. With A Large Habitation Of The Famous Great Indian One Horned Rhino. According To The Estimation Made In 2006 There Are More Than 80 Rhinos In The Forest, Which Is Considerably A Pretty High Density. You Can Spot Atleast 5 Rhinos In One Elephant Safari. The Wildlife Sanctuary Has Played A Strong Role In The Conservation Of This Majestic Species, That Is Regarded As The 'Pride Of Assam'. One Horned Rhinos Are Also Translocated From Here To Manas National Park.<br/>Apart From Rhinos There Is Also Inhabitation Of Other Majestic Mammals Here That Includes Leopard, Wild Cat, Fishing Cat, Feral Buffalo, Chinese Pangolin, Wild Pigs, Etc. It Is Also A Significant Breeding Ground For A Variety Of Fishes. There Are About 27 Species Of Reptile That Has Been Recorded Here And About 9 Species Of Amphibians. The Bird Life In Pobitora Is Also Very Rich That Come Down To Around 375 Species Of Both Migratory And Local Birds Out Of Which 14 Species Are Recorded In The Red Data Book.</p>");
+                $('#myModal').modal('show');
+            }
+            else if (alt == "Hayagriba-Madhaba-Temple") {
+                $('#myPicLabel').text('Hayagriba Madhaba Temple')
+                $('#pic-path').attr('src', '/Content/img/Assam/Hayagriba-Madhaba-Temple.jpg');
+                $('#pic-details').html("<p>Right On The Northern Banks Of The Brahmaputra, Hajo Is An Ancient Pilgrim Spot Of Three Religions - Hindu, Islam And Buddhism. The Most Famous Attraction Happens To Be The Hayagriba Madhaba Temple, Which Is Frequented By Both Hindus And Buddhists. Some Believe That Buddha Attained Nirvana In This Place, Hence The Temple Is Frequented By Both Buddhist Lamas And Bhutiyas, Especially During The Winter Season. <br/>The Temple Is Divided Into 3 Parts - The Basement, The Main Room In The Center, And The Spire Which Is Shaped Like A Pyramid. This Entire Structure Rests On Huge Brick Pillars. Believed To Be Built By The Koch King, Maharaja Naranarayan, During The 15th Century. The Inner Sanctum Sanctorum Can Be Reached Via A Flight Of Stone Steps. The Entryway Of The Temple Leads To An Anteroom With Two Lotus Shaped Stone Screen Placed On Either Side, Each Having Small Apertures To Let In Light. <br/>Outside The Temple, There Are Sculptures Of The 10 Incarnations Of Lord Vishnu, With Buddha Being Depicted As The Ninth One. Within The Temple, There Is An Idol Of Lord Vishnu, Which Is Quite Similar To The Jagannath Idol In Puri, Orissa. Hayagriba Is The Name Given To An Incarnation Of Vishnu, Where The Deity Appeared With A Horse Head In Order To Kill Two Demons Who Had Stolen The Vedas From Lord Brahma.</p>");
+                $('#myModal').modal('show');
+            }
+        
+
+        });
+
+    </script>

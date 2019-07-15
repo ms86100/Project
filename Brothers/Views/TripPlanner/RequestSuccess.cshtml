@@ -1,0 +1,55 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_MountPandim.cshtml";
+}
+<style type="text/css">
+    .success{
+        height:500px;
+        margin-top:150px;
+    }
+</style>
+<div class="main-cont">
+    <div class="body-wrapper">
+        <div class="wrapper-padding">
+            <div class="page-head">
+                <div class="page-title">Tours </div>
+                <div class="breadcrumbs">
+                    <a href="@Url.Action("MountPandimTour","Home")">Home</a> / <a href="#">Tours</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <h3 class="text-success">Request Successful</h3>
+            <hr />
+            <span class="text-info" style="font-size:15px;">
+                Thank You for submitting your request for the following Tour Package:
+            </span>
+            <table class="table table-bordered row-margin-top-20">
+                <tr>
+                    <td>Tour Package Name</td>
+                    <td>@ViewBag.PackageName</td>
+                </tr>
+                <tr>
+                    <td>Tour Duration</td>
+                    <td>@ViewBag.Duration Days / @(ViewBag.Duration - 1) Nights</td>
+                </tr>
+            </table>
+            <span>
+                Our Tour experts will get Back to you Soon with further Details.
+            </span>
+            <p>
+                A copy of your request has been sent to your Email-id. Please check your inbox or spam folder for the mail.
+            </p>
+            <div class="well well-sm">
+                @Html.ActionLink("Back to Home Page", "MountPandimTour", "Home", null, new { @class = "btn btn-primary btn-sm" })
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="ErrMsg" style="display:none;">
+    <input type="hidden" id="ErrMsgHiddenField11" name="ErrMsg" value="@TempData["ErrMsg"]" />
+</div>
+
+
+
