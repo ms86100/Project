@@ -1,0 +1,21 @@
+
+USE [Prod_FileImportEngine]
+GO
+/****** Object:  StoredProcedure [dbo].[udspMstColumnRename]    Script Date: 5/17/2021 9:24:52 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROC [dbo].[udspMstColumnRename]
+@TableAndColumnName varchar(max),
+@NewColumnName varchar(Max)
+AS
+
+BEGIN
+
+--EXEC sp_RENAME 'tbl_NH_Ownership.OwnerFullName' , '@NewColumnName', 'COLUMN'
+
+
+EXEC sp_RENAME @TableAndColumnName , @NewColumnName, 'COLUMN'
+
+END
