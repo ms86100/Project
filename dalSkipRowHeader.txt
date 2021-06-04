@@ -1,0 +1,51 @@
+  public class dalSkipRowHeader
+    {
+      
+        public static DataTable RemoveRow(DataTable dtFromExternal, int SkipRowHeader)
+        {
+            dtFromExternal = RemoveColumn(dtFromExternal, SkipRowHeader);
+
+            try
+            {
+                if (SkipRowHeader > 0)
+                {
+                    for (int i = SkipRowHeader - 1; i >= 0; i--)
+                    {
+                        DataRow row = dtFromExternal.Rows[0];
+                        dtFromExternal.Rows.Remove(row);
+
+                    }
+                }
+                dtFromExternal.AcceptChanges();
+                return dtFromExternal;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+          
+        }
+
+        public static DataTable RemoveColumn(DataTable dtFromExternal,int SkipRowHeader)
+        {
+            foreach(DataColumn column in dtFromExternal.Columns)
+            {
+                string cName = dtFromExternal.Rows[SkipRowHeader -1][column.ColumnName].ToString();
+                if (!dtFromExternal.Columns.Contains(cName) && cName != "")
+                {
+                    column.ColumnName = cName;
+                }
+            }
+            //dtFromExternal.Rows[0].Delete();
+           
+            return dtFromExternal;
+
+        }
+    }
+
+
+                    if (Source.Contains("[Month]") && Source.Contains("[Year]"))
+                    {
+                        Source= Source.Replace("[Month]", System.DateTime.Now.ToString("MMMM"));
+                        Source= Source.Replace("[Year]", System.DateTime.Now.ToString("yyyy"));
+                    }
