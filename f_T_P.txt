@@ -1,0 +1,38 @@
+				try
+                                {
+                                    item.Parameter1 = item.Parameter1 != null ? item.Parameter1.Substring(item.Parameter1.LastIndexOf(':') + 1) : null;
+                                    item.Parameter2 = item.Parameter2 != null ? item.Parameter2.Substring(item.Parameter2.LastIndexOf(':') + 1) : null;
+                                    item.Parameter3 = item.Parameter3.Substring(item.Parameter3.LastIndexOf(':') + 1);
+                                    Model.utblMstConnections = dalFTP.MstGetFTPConnection(TryParseNullable(item.Parameter1));
+                                    dalFTP.GETFTPFILE(Model.utblMstConnections.Url, item.Parameter2, Model.utblMstConnections.UserName, Model.utblMstConnections.Password, item.Parameter3);
+                                }
+
+
+
+            using (WebClient ftpClient = new WebClient())
+            {
+                ftpClient.Credentials = new System.Net.NetworkCredential(UserName, Password);
+
+                for (int i = 0; i <= directories.Count - 1; i++)
+                {
+                    if (directories[i].Contains("."))
+                    {
+                        
+                        var match =  Regex.Match(directories[i].ToString(), Pattern);
+
+                        if (match.Success && match.Value.Length == directories[i].Length)
+                        {
+                            string path = FtpURL + directories[i].ToString();
+                            string trnsfrpth = @"" + DownloadPath + "" + directories[i].ToString();
+                            //string trnsfrpth = @"C:\Test\" + directories[i].ToString();
+                            ftpClient.DownloadFile(path, trnsfrpth);
+                        }
+                        else
+                        {
+                            //fail
+                        }
+
+                        
+                    }
+                }
+            }
