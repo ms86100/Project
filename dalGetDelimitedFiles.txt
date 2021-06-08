@@ -1,0 +1,88 @@
+        public DataTable GetFile(string Source, string Destination, string Delimiter, string TempPathToDumpFileName, int? SkipRowHeader)
+        {
+            DataTable dt = null;
+            try
+            {
+                if (Source.Contains("http"))
+                {
+
+                    if (Source.Contains("[Month]") && Source.Contains("[Year]"))
+                    {
+                        Source = Source.Replace("[Month]", System.DateTime.Now.ToString("MMMM"));
+                        Source = Source.Replace("[Year]", System.DateTime.Now.ToString("yyyy"));
+                    }
+
+
+                    WebClient clients = new WebClient();
+                    TempPathToDumpFileName = TempPathToDumpFileName + "Filehttp_http" + ".csv";
+                    clients.DownloadFile(Source, TempPathToDumpFileName);
+                    var FilePath = string.Format("{0}{1}", AppDomain.CurrentDomain.BaseDirectory, "Uploads\\");
+                    string fileName = Path.GetFileName(TempPathToDumpFileName);
+                    string connectionString = string.Format(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source={0}; Extended Properties=""text;HDR=YES;FMT=Delimited""", FilePath);
+                    dt = GetAPIData(connectionString, FilePath, fileName);
+                    return dt;
+                }
+                else
+                {
+
+                    var FilePath = string.Format("{0}{1}", AppDomain.CurrentDomain.BaseDirectory, "Uploads\\");
+                    string Extension = Path.GetExtension(Source);
+                    if (Extension.Equals(".txt"))
+                    {
+                        Delimiter = Delimiter != null ? Delimiter : throw new NullReferenceException("Text file without delimiter");
+                        dalTexttoExcel txtToExcel = new dalTexttoExcel();
+                        dt = txtToExcel.TxtToDataTable(Source, Delimiter);
+
+                        if (SkipRowHeader != null)
+                        {
+                            string connectionString = string.Format(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source={0}; Extended Properties=""text;HDR=NO;FMT=Delimited""", FilePath);
+                            string Filepath = CustopmDataTableExtensions.WriteToCsvFile(dt, FilePath);
+                            string fileName = Path.GetFileName(Filepath);
+                            dt = GetAPIData(connectionString, FilePath, fileName);
+                            dt = ConvertExcelToDataTable(connectionString);
+                            dt = dalSkipRowHeader.RemoveRow(dt, (int)SkipRowHeader);
+                        }
+
+                        return dt;
+
+                    }
+
+                    if (Extension.Equals(".xlsx") || Extension.Equals(".csv"))
+                    {
+                        dalTexttoExcel txtToExcel = new dalTexttoExcel();
+                        if (Delimiter != null)
+                        {
+                            dt = txtToExcel.TxtToDataTable(Source, Delimiter);
+                        }
+                        else
+                        {
+                            string conn = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Source + ";Extended Properties='Excel 12.0;HDR=YES;IMEX=1;';";
+                            dt = ConvertExcelToDataTable(conn);
+                        }
+
+                        if (SkipRowHeader != null && SkipRowHeader > 1)
+                        {
+                            //string conn = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Source + ";Extended Properties='Excel 12.0;HDR=NO;IMEX=1;';";
+                            //dt = ConvertExcelToDataTable(conn);
+                            dt = dalSkipRowHeader.RemoveRow(dt, (int)SkipRowHeader);
+                        }
+                        //else
+                        //{
+                        //    //string conn = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Source + ";Extended Properties='Excel 12.0;HDR=YES;IMEX=1;';";
+                        //    //dt = ConvertExcelToDataTable(conn);
+                        //    dt = dalSkipRowHeader.RemoveRow(dt, (int)SkipRowHeader);
+                        //}
+
+                    }
+
+                }
+
+
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return dt;
+        }

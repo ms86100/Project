@@ -1,0 +1,171 @@
+ public DataTable TxtToDataTable(string sourcefile, string Delimiter)
+        {
+            var dt = new DataTable();
+            try
+            {
+                if (Delimiter.ToLower() == "tab")
+                {
+                    var tfp = new TextFieldParser(@"" + sourcefile + "")
+
+                    //var tfp = new TextFieldParser(@"C:\\Test\SampleText.txt")
+                    {
+
+                        Delimiters = new[] { "\t" },
+                        HasFieldsEnclosedInQuotes = true,
+                        TrimWhiteSpace = true
+                    };
+
+                    using (tfp)
+                    {
+                        if (!tfp.EndOfData)
+                        {
+                            string[] fields = tfp.ReadFields();
+
+                            dt.Columns.AddRange(fields.Select(f => new DataColumn(f)).ToArray());
+
+                            while (!tfp.EndOfData)
+                            {
+                                fields = tfp.ReadFields();
+
+                                dt.Rows.Add(fields);
+                            }
+                        }
+                    }
+                }
+                if (Delimiter.ToLower() == "comma")
+                {
+                    var tfp = new TextFieldParser(@"" + sourcefile + "")
+
+                    //var tfp = new TextFieldParser(@"C:\\Test\SampleText.txt")
+                    {
+
+                        Delimiters = new[] { "," },
+                        HasFieldsEnclosedInQuotes = true,
+                        TrimWhiteSpace = true
+                    };
+
+                    using (tfp)
+                    {
+                        if (!tfp.EndOfData)
+                        {
+                            string[] fields = tfp.ReadFields();
+
+                            dt.Columns.AddRange(fields.Select(f => new DataColumn(f)).ToArray());
+
+                            while (!tfp.EndOfData)
+                            {
+                                fields = tfp.ReadFields();
+
+                                dt.Rows.Add(fields);
+                            }
+                        }
+                    }
+                }
+
+                if (Delimiter.ToLower() == "pipe")
+                {
+                    var tfp = new TextFieldParser(@"" + sourcefile + "")
+
+                    //var tfp = new TextFieldParser(@"C:\\Test\SampleText.txt")
+                    {
+
+                        Delimiters = new[] { "|" },
+                        HasFieldsEnclosedInQuotes = true,
+                        TrimWhiteSpace = true
+                    };
+
+                    using (tfp)
+                    {
+                        if (!tfp.EndOfData)
+                        {
+                            string[] fields = tfp.ReadFields();
+
+                            dt.Columns.AddRange(fields.Select(f => new DataColumn(f)).ToArray());
+
+                            while (!tfp.EndOfData)
+                            {
+                                fields = tfp.ReadFields();
+
+                                dt.Rows.Add(fields);
+                            }
+                        }
+                    }
+                }
+
+
+            }
+            catch (Exception)
+            {
+                throw new Exception("error parsing txt file");
+            }
+            return dt;
+        }
+
+
+        public  DataTable DelimitedCSV(string strFilePath, string Delimiter)
+        {
+            DataTable dt = new DataTable();
+            using (StreamReader sr = new StreamReader(strFilePath))
+            {
+                if (Delimiter.ToLower() == "tab")
+                {
+                    string[] headers = sr.ReadLine().Split('\t');
+                    foreach (string header in headers)
+                    {
+                        dt.Columns.Add(header);
+                    }
+                    while (!sr.EndOfStream)
+                    {
+                        string[] rows = sr.ReadLine().Split('\t');
+                        DataRow dr = dt.NewRow();
+                        for (int i = 0; i < headers.Length; i++)
+                        {
+                            dr[i] = rows[i];
+                        }
+                        dt.Rows.Add(dr);
+                    }
+                }
+
+                if (Delimiter.ToLower() == "comma")
+                {
+                    string[] headers = sr.ReadLine().Split(',');
+                    foreach (string header in headers)
+                    {
+                        dt.Columns.Add(header);
+                    }
+                    while (!sr.EndOfStream)
+                    {
+                        string[] rows = sr.ReadLine().Split(',');
+                        DataRow dr = dt.NewRow();
+                        for (int i = 0; i < headers.Length; i++)
+                        {
+                            dr[i] = rows[i];
+                        }
+                        dt.Rows.Add(dr);
+                    }
+                }
+                if (Delimiter.ToLower() == "pipe")
+                {
+                    string[] headers = sr.ReadLine().Split('|');
+                    foreach (string header in headers)
+                    {
+                        dt.Columns.Add(header);
+                    }
+                    while (!sr.EndOfStream)
+                    {
+                        string[] rows = sr.ReadLine().Split('|');
+                        DataRow dr = dt.NewRow();
+                        for (int i = 0; i < headers.Length; i++)
+                        {
+                            dr[i] = rows[i];
+                        }
+                        dt.Rows.Add(dr);
+                    }
+                }
+
+
+            }
+
+
+            return dt;
+        }
