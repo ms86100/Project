@@ -1,0 +1,15 @@
+Review
+https://www.gartner.com/reviews/market/application-security-testing/vendor/veracode/product/veracode/alternatives
+
+https://portswigger.net/burp/enterprise/trial
+https://www.qualys.com/free-trial/#/was
+
+fortify
+
+https://www.microfocus.com/en-us/cyberres/application-security/static-code-analyzer
+https://www.hcltechsw.com/products/appscan
+
+https://marketplace.visualstudio.com/items?itemName=JaroslavLobacevski.SecurityCodeScanVS2019
+
+fortify video documentation 
+https://www.microfocus.com/en-us/fortify-integrations/visual-studio#section3
