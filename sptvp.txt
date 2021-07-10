@@ -1,0 +1,101 @@
+USE [SUBMMIT_DB]
+GO
+/****** Object:  StoredProcedure [dbo].[UdspMstMIPInputsInsert]    Script Date: 7/10/2021 2:41:55 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+ALTER PROCEDURE [dbo].[UdspMstMIPInputsInsert]
+@BasicInput  dbo.TVP_utblMstMIPInputs READONLY,
+@Metrices  dbo.TVP_utblMstMIPInputMetrices READONLY,
+@Disqualifier TVP_utblMstMIPInputDisqualifiers READONLY
+
+AS  
+BEGIN  
+  
+       DECLARE   @error_number INT, @ErMessage NVARCHAR(2048), @ErSeverity INT, @ErState INT
+       BEGIN TRY  
+	   BEGIN TRANSACTION 
+
+                           Insert INTO utblMstMIPInputs 
+                           ([MIPInputID],
+                           [CountryID],
+                           [ProcessID],
+                           [SkillID],
+                           [Emp_Code],
+                           [FullName],
+                           [HRStatus],
+                           [Designation],
+                           [TeamLeader],
+                           [PRNO],
+                           [Comments],
+                           [UpdatedOn],
+						   [MIPForDate],
+						   [Month],
+						   [Year],
+						   [Coordinator],
+						   [IsSlabDown],
+                           [IsArchive]  
+                           )
+                           select * from  @BasicInput
+                           Insert Into [dbo].[utblMstMIPInputMetrices]
+                           ([MIPTransactionID],
+                           [MIPInputID],
+                           [CountryID],
+                           [ProcessID],
+                           [SkillID],
+                           [ProcessMetrixID],
+                           [Metrix],
+                           [MetrixPoint],
+                           [UpdatedOn],
+                           [IsArchive]
+                           )
+                           select * from @Metrices
+
+                           Insert Into [dbo].[utblMstMIPInputDisqualifiers]
+                           (
+                           [MIPDisqualifierID],
+                           [MIPInputID],
+                           [CountryID],
+                           [ProcessID],
+                           [SkillID],
+                           [DisqualifierID],
+                           [Disqualifier],
+                           [DisqualifierPoint],
+                           [UpdatedOn],
+                           [IsArchive]
+                           )
+                           SELECT * from @Disqualifier
+                           
+
+       set @error_number = 0
+	   set @ErMessage = ''
+	   COMMIT TRANSACTION
+       END TRY 
+       BEGIN CATCH  
+	    IF (@@TRANCOUNT > 0)
+		   BEGIN
+			  ROLLBACK TRANSACTION 
+			  
+		   END 
+              SELECT @error_number = ERROR_NUMBER(), @ErMessage = ERROR_MESSAGE(),  @ErSeverity = ERROR_SEVERITY(), @ErState = ERROR_STATE()  
+              
+              IF @error_number = 2627 -- check constraint violation   
+                     BEGIN
+                           set @error_number = 2601    
+                           set @ErMessage = 'Cannot insert duplicate record, please check the record...'
+                     END  
+              ELSE -- some other "untrapped" error has occured   
+              BEGIN 
+                     RAISERROR (@ErMessage, @ErSeverity, @ErState )
+              END 
+       END CATCH
+       select @error_number as ErrorCode, @ErMessage as ErrorMessage
+
+
+       END
+
+
